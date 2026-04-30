@@ -52,6 +52,8 @@ const energyRoutes = require('./routes/energyRoutes');
 app.use('/api/energy', energyRoutes);
 const flywheelRoutes = require('./routes/flywheelRoutes');
 app.use('/api/flywheel', flywheelRoutes);
+const frictionRoutes = require('./routes/frictionRoutes');
+app.use('/api/friction', frictionRoutes);
 attachPythonLabSocket(io);
 
 async function start() {

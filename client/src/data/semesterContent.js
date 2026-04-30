@@ -193,7 +193,12 @@ export const PRACTICAL_CONTENT = {
           slug: 'flywheel',
           path: '/flywheel'
         },
-        'Study friction on surfaces.',
+                {
+          id: 10,
+          title: 'Study friction on surfaces.',
+          slug: 'friction',
+          path: '/friction'
+        },
         'Determine coefficient of friction using inclined plane.',
       ],
       outcomes: [
