@@ -187,7 +187,12 @@ export const PRACTICAL_CONTENT = {
           slug: 'energy-conservation',
           path: '/energy-conservation'
         },
-        'Determine moment of inertia of a flywheel.',
+                {
+          id: 9,
+          title: 'Determine moment of inertia of a flywheel.',
+          slug: 'flywheel',
+          path: '/flywheel'
+        },
         'Study friction on surfaces.',
         'Determine coefficient of friction using inclined plane.',
       ],
