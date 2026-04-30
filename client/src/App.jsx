@@ -21,6 +21,7 @@ import FunctionPlotterPage from './pages/FunctionPlotterPage.jsx';
 import FlywheelPage from './pages/FlywheelPage.jsx';
 import GraphTransformationsPage from './pages/GraphTransformationsPage.jsx';
 import FrictionPage from './pages/FrictionPage.jsx';
+import LimitsContinuityPage from './pages/LimitsContinuityPage.jsx';
 
 export default function App() {
   return (
@@ -48,6 +49,7 @@ export default function App() {
         <Route path="/flywheel" element={<FlywheelPage />} />
         <Route path="/graph-transformations" element={<GraphTransformationsPage />} />
         <Route path="/friction" element={<FrictionPage />} />
+        <Route path="/limits-continuity" element={<LimitsContinuityPage />} />
       </Route>
     </Routes>
   );
