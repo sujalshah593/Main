@@ -175,7 +175,12 @@ export const PRACTICAL_CONTENT = {
         { title: 'Study pendulum motion.', path: '/pendulum' },
         { title: 'Determine acceleration due to gravity using pendulum.', path: '/pendulum-gravity' },
         { title: 'Verify equations of motion using graph method.', path: '/motion-equations' },
-        "Verify Hooke's law and determine spring constant.",
+        {
+          id: 7,
+          title: "Verification of Hooke's Law and determination of spring constant.",
+          slug: "hookes-law",
+          path: "/hookes-law"
+        },
         'Study conservation of mechanical energy.',
         'Determine moment of inertia of a flywheel.',
         'Study friction on surfaces.',

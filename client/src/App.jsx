@@ -15,6 +15,7 @@ import VolumeDensityPage from './pages/VolumeDensityPage.jsx';
 import ErrorsAndSigFigPage from './pages/ErrorsAndSigFigPage.jsx';
 import PendulumPage from './pages/PendulumPage.jsx';
 import MotionEquationsPage from './pages/MotionEquationsPage.jsx';
+import SpringLawPage from './pages/SpringLawPage.jsx';
 
 export default function App() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="/pendulum" element={<PendulumPage mode="motion" />} />
         <Route path="/pendulum-gravity" element={<PendulumPage mode="gravity" />} />
         <Route path="/motion-equations" element={<MotionEquationsPage />} />
+        <Route path="/hookes-law" element={<SpringLawPage />} />
       </Route>
     </Routes>
   );
