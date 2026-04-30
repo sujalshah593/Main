@@ -24,17 +24,17 @@ export default function SigFigModule() {
         <p className="text-slate-300">{question}</p>
       </div>
 
-      <div className="flex gap-3 items-center">
+      <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center w-full">
         <input 
           type="text" 
           value={userAns}
           onChange={(e) => setUserAns(e.target.value)}
           placeholder="Enter your answer..."
-          className="flex-1 bg-slate-900 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-sky-500 transition-colors"
+          className="flex-1 w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500 transition-colors"
         />
         <button 
           onClick={checkAnswer}
-          className="bg-sky-600 hover:bg-sky-500 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+          className="bg-sky-600 hover:bg-sky-500 text-white px-8 py-3 rounded-lg font-bold transition-colors whitespace-nowrap shadow-lg shadow-sky-600/20"
         >
           Check
         </button>

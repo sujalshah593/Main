@@ -21,57 +21,53 @@ export default function ErrorsAndSigFigPage() {
   const [errors, setErrors] = useState({ systematic: false, random: false, human: false });
   const [trials, setTrials] = useState([]);
   const [currentReading, setCurrentReading] = useState(0);
+  const [jawPosition, setJawPosition] = useState(0);
   const [isSaving, setIsSaving] = useState(false);
 
   const selectedInstrument = INSTRUMENTS.find(i => i.id === instrumentId);
 
-  // Generate reading based on errors
-  const generateReading = () => {
-    let reading = selectedInstrument.trueValue;
-    let totalError = 0;
-
+  // Generate continuous reading for the UI while sliding
+  const generateLiveReading = (baseValue) => {
+    let reading = baseValue;
+    
     if (errors.systematic) {
-      const sysError = 0.02; // constant offset
-      reading += sysError;
-      totalError += sysError;
+      reading += 0.02; 
     }
     
-    if (errors.random) {
-      // random noise +/- 0.03
-      const randError = (Math.random() * 0.06) - 0.03;
-      reading += randError;
-      totalError += randError;
-    }
-
     if (errors.human) {
-      // human misreading, maybe rounding error or parallax
-      const humanError = (Math.random() * 0.05) - 0.025;
-      reading += humanError;
-      totalError += humanError;
+      // Small constant misread factor while sliding
+      reading += 0.015;
     }
 
     // round to least count
     const factor = 1 / selectedInstrument.leastCount;
-    const finalReading = Math.round(reading * factor) / factor;
-    const finalTotalError = finalReading - selectedInstrument.trueValue;
-
-    return { value: finalReading, error: finalTotalError };
+    return Math.round(reading * factor) / factor;
   };
 
   useEffect(() => {
-    const reading = generateReading();
-    setCurrentReading(reading.value);
-  }, [instrumentId, errors]); // Regenerate when instrument or error settings change
+    setCurrentReading(generateLiveReading(jawPosition));
+  }, [jawPosition, errors, instrumentId]); 
 
   const takeMeasurement = () => {
-    const reading = generateReading();
+    let finalReading = currentReading;
+    
+    if (errors.random) {
+      // Apply random noise ONLY when taking measurement
+      const randError = (Math.random() * 0.06) - 0.03;
+      finalReading += randError;
+    }
+    
+    // round to least count again
+    const factor = 1 / selectedInstrument.leastCount;
+    finalReading = Math.round(finalReading * factor) / factor;
+    
+    const finalTotalError = finalReading - selectedInstrument.trueValue;
+
     setTrials([...trials, { 
-      measuredValue: reading.value, 
-      error: reading.error,
+      measuredValue: finalReading, 
+      error: finalTotalError,
       correctedValue: selectedInstrument.trueValue
     }]);
-    // Also slightly jitter the current display for the next reading
-    setCurrentReading(generateReading().value);
   };
 
   const removeTrial = (index) => {
@@ -165,6 +161,7 @@ export default function ErrorsAndSigFigPage() {
             instrument={instrumentId} 
             measuredValue={currentReading} 
             trueValue={selectedInstrument.trueValue} 
+            onJawMove={setJawPosition}
           />
           
           <div className="flex justify-center">
