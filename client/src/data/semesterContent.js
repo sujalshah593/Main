@@ -146,7 +146,7 @@ export const PRACTICAL_CONTENT = {
       experiments: [
         { title: 'Plot linear, polynomial, exponential, and logarithmic functions.', path: '/function-plotter' },
         { title: 'Visualize graph transformations.', path: '/graph-transformations' },
-        'Explore limits and continuity.',
+        { title: 'Explore limits and continuity.', path: '/limits-continuity' },
         'Visualize AI activation functions.',
         'Represent vectors and matrices.',
         'Perform matrix operations and solve linear equations.',

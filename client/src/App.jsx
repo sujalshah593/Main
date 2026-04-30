@@ -19,6 +19,7 @@ import SpringLawPage from './pages/SpringLawPage.jsx';
 import EnergyConservationPage from './pages/EnergyConservationPage.jsx';
 import FunctionPlotterPage from './pages/FunctionPlotterPage.jsx';
 import GraphTransformationsPage from './pages/GraphTransformationsPage.jsx';
+import LimitsContinuityPage from './pages/LimitsContinuityPage.jsx';
 
 export default function App() {
   return (
@@ -44,6 +45,7 @@ export default function App() {
         <Route path="/energy-conservation" element={<EnergyConservationPage />} />
         <Route path="/function-plotter" element={<FunctionPlotterPage />} />
         <Route path="/graph-transformations" element={<GraphTransformationsPage />} />
+        <Route path="/limits-continuity" element={<LimitsContinuityPage />} />
       </Route>
     </Routes>
   );
