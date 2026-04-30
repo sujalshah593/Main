@@ -31,16 +31,16 @@ export default function MotionSimulation({
 
     // Draw track
     ctx.fillStyle = '#475569';
-    ctx.fillRect(0, canvas.height - 30, canvas.width, 10);
+    ctx.fillRect(0, canvas.height - 20, canvas.width, 6);
     
     // Draw markings (every 10 meters)
     ctx.fillStyle = '#94a3b8';
-    ctx.font = '10px monospace';
+    ctx.font = '8px monospace';
     for (let m = 0; m <= canvas.width / pixelPerMeter; m += 10) {
       const x = m * pixelPerMeter;
-      ctx.fillRect(x, canvas.height - 35, 2, 15);
+      ctx.fillRect(x, canvas.height - 25, 1, 10);
       if (m % 20 === 0) {
-        ctx.fillText(`${m}m`, x - 10, canvas.height - 40);
+        ctx.fillText(`${m}m`, x - 8, canvas.height - 30);
       }
     }
 
@@ -49,23 +49,23 @@ export default function MotionSimulation({
     
     // Car body
     ctx.fillStyle = '#38bdf8'; // sky-400
-    ctx.fillRect(carX, canvas.height - 60, 40, 20);
+    ctx.fillRect(carX, canvas.height - 45, 30, 15);
     
     // Car cabin
     ctx.fillStyle = '#0284c7'; // sky-600
-    ctx.fillRect(carX + 10, canvas.height - 75, 20, 15);
+    ctx.fillRect(carX + 8, canvas.height - 55, 15, 10);
     
     // Wheels
     ctx.fillStyle = '#1e293b'; // slate-800
     ctx.beginPath();
-    ctx.arc(carX + 10, canvas.height - 40, 6, 0, 2 * Math.PI);
-    ctx.arc(carX + 30, canvas.height - 40, 6, 0, 2 * Math.PI);
+    ctx.arc(carX + 8, canvas.height - 30, 4, 0, 2 * Math.PI);
+    ctx.arc(carX + 22, canvas.height - 30, 4, 0, 2 * Math.PI);
     ctx.fill();
 
     // Data overlay
     ctx.fillStyle = 'white';
-    ctx.font = '12px monospace';
-    ctx.fillText(`t: ${timeRef.current.toFixed(1)}s | v: ${velocityRef.current.toFixed(1)}m/s | s: ${positionRef.current.toFixed(1)}m`, 10, 20);
+    ctx.font = '10px monospace';
+    ctx.fillText(`t: ${timeRef.current.toFixed(1)}s | v: ${velocityRef.current.toFixed(1)}m/s | s: ${positionRef.current.toFixed(1)}m`, 10, 15);
   };
 
   const animate = (time) => {
@@ -141,14 +141,14 @@ export default function MotionSimulation({
   }, [initialVelocity, acceleration]);
 
   return (
-    <div className="bg-slate-800 p-4 rounded-xl border border-slate-700 flex flex-col items-center">
-      <h3 className="text-sm font-bold text-slate-300 mb-2 uppercase tracking-wider w-full text-left">Linear Motion Track</h3>
+    <div className="bg-slate-800 p-3 rounded-xl border border-slate-700 flex flex-col items-center">
+      <h3 className="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-wider w-full text-left">Linear Motion Track</h3>
       <div className="w-full overflow-x-auto custom-scrollbar">
         <div className="relative bg-[#0f172a] rounded-lg border border-slate-600 shadow-inner min-w-[800px]">
           <canvas 
             ref={canvasRef} 
             width={trackLengthPixels} 
-            height={150} 
+            height={100} 
             className="w-full h-auto"
           />
         </div>

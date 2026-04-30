@@ -27,48 +27,39 @@ export default function MotionCalculations({ dataPoints, theoreticalU, theoretic
   const isSVerified = percentErrorS < 5.0;
 
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 h-full flex flex-col gap-6">
-      <h3 className="text-sm font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
-        <Calculator size={16} className="text-purple-400" /> Equation Verification
+    <div className="bg-slate-800 p-4 rounded-xl border border-slate-700 h-full flex flex-col gap-4">
+      <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+        <Calculator size={12} className="text-purple-400" /> Equation Verification
       </h3>
       
-      <div className="space-y-4">
+      <div className="space-y-3">
         
         {/* First Equation Verification */}
-        <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
-          <div className="flex items-center justify-between mb-2">
-            <div className="text-xs font-semibold text-slate-400">1. Verify v = u + at (Acceleration)</div>
-            {isAVerified ? <CheckCircle2 size={16} className="text-emerald-500" /> : <XCircle size={16} className="text-rose-500" />}
+        <div className="bg-slate-900 p-3 rounded-lg border border-slate-700">
+          <div className="flex items-center justify-between mb-1.5">
+            <div className="text-[10px] font-semibold text-slate-500">1. Verify v = u + at</div>
+            {isAVerified ? <CheckCircle2 size={14} className="text-emerald-500" /> : <XCircle size={14} className="text-rose-500" />}
           </div>
-          <div className="text-sm text-slate-300 font-mono space-y-1">
-            <div>a = Slope = Δv / Δt</div>
-            <div>a = ({last.velocity.toFixed(2)} - {first.velocity.toFixed(2)}) / {deltaT.toFixed(1)}</div>
-            <div className="pt-2 border-t border-slate-700 mt-2">
-              <span className="text-sky-400">Exp a: {expA.toFixed(2)} m/s²</span><br/>
-              <span className="text-slate-500">True a: {theoreticalA.toFixed(2)} m/s²</span>
-            </div>
-            <div className={`text-xs mt-1 ${isAVerified ? 'text-emerald-400/80' : 'text-rose-400/80'}`}>
-              Error: {percentErrorA.toFixed(1)}%
+          <div className="text-xs text-slate-300 font-mono space-y-0.5">
+            <div>a = Δv / Δt = ({last.velocity.toFixed(1)} - {first.velocity.toFixed(1)}) / {deltaT.toFixed(1)}</div>
+            <div className="pt-1.5 border-t border-slate-700/50 mt-1.5 flex justify-between">
+              <span className="text-sky-400">Exp: {expA.toFixed(2)}</span>
+              <span className="text-slate-500">True: {theoreticalA.toFixed(1)}</span>
             </div>
           </div>
         </div>
 
         {/* Second Equation Verification */}
-        <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
-          <div className="flex items-center justify-between mb-2">
-            <div className="text-xs font-semibold text-slate-400">2. Verify s = ut + ½at² (Displacement)</div>
-            {isSVerified ? <CheckCircle2 size={16} className="text-emerald-500" /> : <XCircle size={16} className="text-rose-500" />}
+        <div className="bg-slate-900 p-3 rounded-lg border border-slate-700">
+          <div className="flex items-center justify-between mb-1.5">
+            <div className="text-[10px] font-semibold text-slate-500">2. Verify s = ut + ½at²</div>
+            {isSVerified ? <CheckCircle2 size={14} className="text-emerald-500" /> : <XCircle size={14} className="text-rose-500" />}
           </div>
-          <div className="text-sm text-slate-300 font-mono space-y-1">
-            <div>s = Area of v-t Graph</div>
-            <div>s = ½(v₁ + v₂) * Δt</div>
-            <div>s = 0.5 * ({first.velocity.toFixed(2)} + {last.velocity.toFixed(2)}) * {deltaT.toFixed(1)}</div>
-            <div className="pt-2 border-t border-slate-700 mt-2">
-              <span className="text-purple-400">Exp s: {expS.toFixed(2)} m</span><br/>
-              <span className="text-slate-500">True s: {theoreticalS.toFixed(2)} m</span>
-            </div>
-            <div className={`text-xs mt-1 ${isSVerified ? 'text-emerald-400/80' : 'text-rose-400/80'}`}>
-              Error: {percentErrorS.toFixed(1)}%
+          <div className="text-xs text-slate-300 font-mono space-y-0.5">
+            <div>s = Area = ½(v₁ + v₂) * Δt</div>
+            <div className="pt-1.5 border-t border-slate-700/50 mt-1.5 flex justify-between">
+              <span className="text-purple-400">Exp: {expS.toFixed(2)}</span>
+              <span className="text-slate-500">True: {theoreticalS.toFixed(1)}</span>
             </div>
           </div>
         </div>

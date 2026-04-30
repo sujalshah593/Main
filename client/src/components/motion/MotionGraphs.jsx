@@ -18,9 +18,9 @@ export default function MotionGraphs({ dataPoints, theoreticalU, theoreticalA })
   const maxS = Math.max(1, theoreticalU * maxT + 0.5 * theoreticalA * maxT * maxT, ...dataPoints.map(dp => dp.displacement));
   
   const width = 300;
-  const height = 150;
+  const height = 200;
   const paddingX = 40;
-  const paddingY = 20;
+  const paddingY = 25;
 
   // Helpers to map data to SVG coordinates
   const getX = (t) => paddingX + (t / maxT) * (width - paddingX * 2);
@@ -45,69 +45,69 @@ export default function MotionGraphs({ dataPoints, theoreticalU, theoreticalA })
   }
 
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 flex flex-col gap-6">
+    <div className="bg-slate-800 p-4 rounded-xl border border-slate-700 flex flex-col gap-4 h-full">
       
-      {/* V-T Graph */}
-      <div>
-        <h3 className="text-sm font-bold text-slate-300 mb-2 flex items-center gap-2">
-          <LineChart size={16} className="text-rose-400" /> Velocity vs Time (v-t)
-        </h3>
-        <div className="bg-slate-900 rounded-lg border border-slate-600 p-2 flex items-center justify-center relative">
-          <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto max-h-[150px] overflow-visible text-slate-400 text-[8px]">
-            {/* Zero line if minV < 0 */}
-            {minV < 0 && <line x1={paddingX} y1={getY_v(0)} x2={width - paddingX} y2={getY_v(0)} stroke="#475569" strokeDasharray="2 2" />}
-            
-            {/* Axes */}
-            <line x1={paddingX} y1={10} x2={paddingX} y2={height - paddingY} stroke="currentColor" />
-            <line x1={paddingX} y1={height - paddingY} x2={width - paddingX} y2={height - paddingY} stroke="currentColor" />
-            
-            {/* Theoretical Line */}
-            <path d={vTheoPath} stroke="#f43f5e" strokeWidth="2" strokeDasharray="4 4" fill="none" opacity="0.5" />
-            
-            {/* Experimental Line */}
-            <path d={vPointsPath} stroke="#fb7185" strokeWidth="1.5" fill="none" />
-            
-            {/* Data Points */}
-            {dataPoints.map((dp, i) => (
-              <circle key={i} cx={getX(dp.time)} cy={getY_v(dp.velocity)} r="2" fill="#fda4af" />
-            ))}
-          </svg>
-          <div className="absolute top-2 right-2 flex flex-col items-end text-[10px]">
-             <span className="text-rose-500 flex items-center gap-1"><div className="w-2 h-0.5 bg-rose-500"></div> Exp. Data</span>
-             <span className="text-rose-500/50 flex items-center gap-1"><div className="w-2 h-0.5 bg-rose-500/50 border-t border-dashed"></div> Theory</span>
+      <div className="flex flex-col sm:flex-row gap-4 h-full">
+        {/* V-T Graph */}
+        <div className="flex-1 min-w-0 flex flex-col">
+          <h3 className="text-[10px] font-bold text-slate-400 mb-1 flex items-center gap-2 uppercase">
+            <LineChart size={12} className="text-rose-400" /> Velocity vs Time
+          </h3>
+          <div className="bg-slate-900 rounded-lg border border-slate-600 p-2 flex-1 flex items-center justify-center relative min-h-[150px]">
+            <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-full max-h-[250px] overflow-visible text-slate-400 text-[8px]">
+              {/* Zero line if minV < 0 */}
+              {minV < 0 && <line x1={paddingX} y1={getY_v(0)} x2={width - paddingX} y2={getY_v(0)} stroke="#475569" strokeDasharray="2 2" />}
+              
+              {/* Axes */}
+              <line x1={paddingX} y1={10} x2={paddingX} y2={height - paddingY} stroke="currentColor" />
+              <line x1={paddingX} y1={height - paddingY} x2={width - paddingX} y2={height - paddingY} stroke="currentColor" />
+              
+              {/* Theoretical Line */}
+              <path d={vTheoPath} stroke="#f43f5e" strokeWidth="2" strokeDasharray="4 4" fill="none" opacity="0.5" />
+              
+              {/* Experimental Line */}
+              <path d={vPointsPath} stroke="#fb7185" strokeWidth="1.5" fill="none" />
+              
+              {/* Data Points */}
+              {dataPoints.map((dp, i) => (
+                <circle key={i} cx={getX(dp.time)} cy={getY_v(dp.velocity)} r="2" fill="#fda4af" />
+              ))}
+            </svg>
+            <div className="absolute top-1 right-1 flex flex-col items-end text-[7px]">
+               <span className="text-rose-500 flex items-center gap-1"><div className="w-2 h-0.5 bg-rose-500"></div> Exp</span>
+               <span className="text-rose-500/50 flex items-center gap-1"><div className="w-2 h-0.5 bg-rose-500/50 border-t border-dashed"></div> Theo</span>
+            </div>
           </div>
         </div>
-        <p className="text-[10px] text-slate-500 mt-1 text-center">Slope = Acceleration (a)</p>
-      </div>
 
-      {/* S-T Graph */}
-      <div>
-        <h3 className="text-sm font-bold text-slate-300 mb-2 flex items-center gap-2">
-          <AreaChart size={16} className="text-emerald-400" /> Displacement vs Time (s-t)
-        </h3>
-        <div className="bg-slate-900 rounded-lg border border-slate-600 p-2 flex items-center justify-center relative">
-          <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto max-h-[150px] overflow-visible text-slate-400 text-[8px]">
-            {/* Axes */}
-            <line x1={paddingX} y1={10} x2={paddingX} y2={height - paddingY} stroke="currentColor" />
-            <line x1={paddingX} y1={height - paddingY} x2={width - paddingX} y2={height - paddingY} stroke="currentColor" />
-            
-            {/* Theoretical Line */}
-            <path d={sTheoPath} stroke="#10b981" strokeWidth="2" strokeDasharray="4 4" fill="none" opacity="0.5" />
-            
-            {/* Experimental Line */}
-            <path d={sPointsPath} stroke="#34d399" strokeWidth="1.5" fill="none" />
-            
-            {/* Data Points */}
-            {dataPoints.map((dp, i) => (
-              <circle key={i} cx={getX(dp.time)} cy={getY_s(dp.displacement)} r="2" fill="#6ee7b7" />
-            ))}
-          </svg>
-          <div className="absolute top-2 right-2 flex flex-col items-end text-[10px]">
-             <span className="text-emerald-500 flex items-center gap-1"><div className="w-2 h-0.5 bg-emerald-500"></div> Exp. Data</span>
-             <span className="text-emerald-500/50 flex items-center gap-1"><div className="w-2 h-0.5 bg-emerald-500/50 border-t border-dashed"></div> Theory</span>
+        {/* S-T Graph */}
+        <div className="flex-1 min-w-0 flex flex-col">
+          <h3 className="text-[10px] font-bold text-slate-400 mb-1 flex items-center gap-2 uppercase">
+            <AreaChart size={12} className="text-emerald-400" /> Displacement vs Time
+          </h3>
+          <div className="bg-slate-900 rounded-lg border border-slate-600 p-2 flex-1 flex items-center justify-center relative min-h-[150px]">
+            <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-full max-h-[250px] overflow-visible text-slate-400 text-[8px]">
+              {/* Axes */}
+              <line x1={paddingX} y1={10} x2={paddingX} y2={height - paddingY} stroke="currentColor" />
+              <line x1={paddingX} y1={height - paddingY} x2={width - paddingX} y2={height - paddingY} stroke="currentColor" />
+              
+              {/* Theoretical Line */}
+              <path d={sTheoPath} stroke="#10b981" strokeWidth="2" strokeDasharray="4 4" fill="none" opacity="0.5" />
+              
+              {/* Experimental Line */}
+              <path d={sPointsPath} stroke="#34d399" strokeWidth="1.5" fill="none" />
+              
+              {/* Data Points */}
+              {dataPoints.map((dp, i) => (
+                <circle key={i} cx={getX(dp.time)} cy={getY_s(dp.displacement)} r="2" fill="#6ee7b7" />
+              ))}
+            </svg>
+            <div className="absolute top-1 right-1 flex flex-col items-end text-[7px]">
+               <span className="text-emerald-500 flex items-center gap-1"><div className="w-2 h-0.5 bg-emerald-500"></div> Exp</span>
+               <span className="text-emerald-500/50 flex items-center gap-1"><div className="w-2 h-0.5 bg-emerald-500/50 border-t border-dashed"></div> Theo</span>
+            </div>
           </div>
         </div>
-        <p className="text-[10px] text-slate-500 mt-1 text-center">Curve = Parabolic (if a ≠ 0)</p>
       </div>
 
     </div>
