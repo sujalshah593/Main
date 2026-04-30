@@ -171,7 +171,7 @@ export const PRACTICAL_CONTENT = {
         { title: 'Measure length with vernier caliper and least count.', path: '/vernier-caliper' },
         { title: 'Measure wire diameter with screw gauge.', path: '/screw-gauge' },
         { title: 'Determine volume and density of an object.', path: '/volume-density' },
-        'Study errors and significant figures.',
+        { title: 'Study errors and significant figures.', path: '/errors-and-sig-figs' },
         'Study pendulum motion.',
         'Determine acceleration due to gravity using pendulum.',
         'Verify equations of motion using graph method.',

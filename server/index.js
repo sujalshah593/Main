@@ -40,6 +40,8 @@ app.use('/api/labs', labRoutes);
 app.use('/api/experiments', experimentRoutes);
 app.use('/api/experiment', singleExperimentRoutes);
 app.use('/api/feedback', feedbackRoutes);
+const measurementRoutes = require('./routes/measurementRoutes');
+app.use('/api/measurements', measurementRoutes);
 attachPythonLabSocket(io);
 
 async function start() {

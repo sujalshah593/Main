@@ -12,6 +12,7 @@ import PythonEditorPage from './pages/PythonEditorPage.jsx';
 import VernierCaliperPage from './pages/VernierCaliperPage.jsx';
 import ScrewGaugePage from './pages/ScrewGaugePage.jsx';
 import VolumeDensityPage from './pages/VolumeDensityPage.jsx';
+import ErrorsAndSigFigPage from './pages/ErrorsAndSigFigPage.jsx';
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/vernier-caliper" element={<VernierCaliperPage />} />
         <Route path="/screw-gauge" element={<ScrewGaugePage />} />
         <Route path="/volume-density" element={<VolumeDensityPage />} />
+        <Route path="/errors-and-sig-figs" element={<ErrorsAndSigFigPage />} />
       </Route>
     </Routes>
   );
