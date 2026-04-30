@@ -48,6 +48,8 @@ const motionRoutes = require('./routes/motionRoutes');
 app.use('/api/motion', motionRoutes);
 const springRoutes = require('./routes/springRoutes');
 app.use('/api/spring', springRoutes);
+const energyRoutes = require('./routes/energyRoutes');
+app.use('/api/energy', energyRoutes);
 attachPythonLabSocket(io);
 
 async function start() {

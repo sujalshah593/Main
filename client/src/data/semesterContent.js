@@ -181,7 +181,12 @@ export const PRACTICAL_CONTENT = {
           slug: "hookes-law",
           path: "/hookes-law"
         },
-        'Study conservation of mechanical energy.',
+        {
+          id: 8,
+          title: 'Study of conservation of mechanical energy.',
+          slug: 'energy-conservation',
+          path: '/energy-conservation'
+        },
         'Determine moment of inertia of a flywheel.',
         'Study friction on surfaces.',
         'Determine coefficient of friction using inclined plane.',
