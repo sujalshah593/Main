@@ -46,6 +46,8 @@ const pendulumRoutes = require('./routes/pendulumRoutes');
 app.use('/api/pendulum', pendulumRoutes);
 const motionRoutes = require('./routes/motionRoutes');
 app.use('/api/motion', motionRoutes);
+const springRoutes = require('./routes/springRoutes');
+app.use('/api/spring', springRoutes);
 attachPythonLabSocket(io);
 
 async function start() {
