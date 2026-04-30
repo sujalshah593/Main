@@ -18,6 +18,7 @@ import MotionEquationsPage from './pages/MotionEquationsPage.jsx';
 import SpringLawPage from './pages/SpringLawPage.jsx';
 import EnergyConservationPage from './pages/EnergyConservationPage.jsx';
 import FunctionPlotterPage from './pages/FunctionPlotterPage.jsx';
+import GraphTransformationsPage from './pages/GraphTransformationsPage.jsx';
 
 export default function App() {
   return (
@@ -42,6 +43,7 @@ export default function App() {
         <Route path="/hookes-law" element={<SpringLawPage />} />
         <Route path="/energy-conservation" element={<EnergyConservationPage />} />
         <Route path="/function-plotter" element={<FunctionPlotterPage />} />
+        <Route path="/graph-transformations" element={<GraphTransformationsPage />} />
       </Route>
     </Routes>
   );

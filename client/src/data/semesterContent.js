@@ -145,7 +145,7 @@ export const PRACTICAL_CONTENT = {
       meta: { credits: 2, hours: 60, type: 'Major (Practical)' },
       experiments: [
         { title: 'Plot linear, polynomial, exponential, and logarithmic functions.', path: '/function-plotter' },
-        'Visualize graph transformations.',
+        { title: 'Visualize graph transformations.', path: '/graph-transformations' },
         'Explore limits and continuity.',
         'Visualize AI activation functions.',
         'Represent vectors and matrices.',
