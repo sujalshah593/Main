@@ -54,6 +54,8 @@ const flywheelRoutes = require('./routes/flywheelRoutes');
 app.use('/api/flywheel', flywheelRoutes);
 const frictionRoutes = require('./routes/frictionRoutes');
 app.use('/api/friction', frictionRoutes);
+const inclinedFrictionRoutes = require('./routes/inclinedFrictionRoutes');
+app.use('/api/inclined-friction', inclinedFrictionRoutes);
 attachPythonLabSocket(io);
 
 async function start() {

@@ -22,6 +22,7 @@ import FlywheelPage from './pages/FlywheelPage.jsx';
 import GraphTransformationsPage from './pages/GraphTransformationsPage.jsx';
 import FrictionPage from './pages/FrictionPage.jsx';
 import LimitsContinuityPage from './pages/LimitsContinuityPage.jsx';
+import InclinedFrictionPage from './pages/InclinedFrictionPage.jsx';
 
 export default function App() {
   return (
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/graph-transformations" element={<GraphTransformationsPage />} />
         <Route path="/friction" element={<FrictionPage />} />
         <Route path="/limits-continuity" element={<LimitsContinuityPage />} />
+        <Route path="/inclined-plane" element={<InclinedFrictionPage />} />
       </Route>
     </Routes>
   );

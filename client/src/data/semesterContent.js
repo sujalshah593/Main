@@ -199,7 +199,12 @@ export const PRACTICAL_CONTENT = {
           slug: 'friction',
           path: '/friction'
         },
-        'Determine coefficient of friction using inclined plane.',
+                {
+          id: 11,
+          title: 'Determine coefficient of friction using inclined plane.',
+          slug: 'inclined-plane',
+          path: '/inclined-plane'
+        },
       ],
       outcomes: [
         'Perform accurate measurements with standard instruments.',
