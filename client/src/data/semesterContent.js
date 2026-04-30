@@ -174,7 +174,7 @@ export const PRACTICAL_CONTENT = {
         { title: 'Study errors and significant figures.', path: '/errors-and-sig-figs' },
         { title: 'Study pendulum motion.', path: '/pendulum' },
         { title: 'Determine acceleration due to gravity using pendulum.', path: '/pendulum-gravity' },
-        'Verify equations of motion using graph method.',
+        { title: 'Verify equations of motion using graph method.', path: '/motion-equations' },
         "Verify Hooke's law and determine spring constant.",
         'Study conservation of mechanical energy.',
         'Determine moment of inertia of a flywheel.',
