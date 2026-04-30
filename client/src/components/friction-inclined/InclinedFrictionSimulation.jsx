@@ -1,184 +1,244 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export default function InclinedFrictionSimulation({
-  angle, // degrees
+  angle,
   surfaceType,
   setSimulationState
 }) {
   const canvasRef = useRef(null);
   const requestRef = useRef(null);
-  const startTimeRef = useRef(null);
+  const lastTimeRef = useRef(null);
 
-  // Surface properties (matching previous friction experiment)
   const SURFACES = {
-    'Wood on Wood': { us: 0.4, uk: 0.3, color: '#92400e' },
-    'Metal on Metal': { us: 0.6, uk: 0.4, color: '#475569' },
-    'Rubber on Concrete': { us: 0.8, uk: 0.6, color: '#1e293b' },
-    'Ice on Ice': { us: 0.1, uk: 0.05, color: '#e0f2fe' }
+    'Wood on Wood':       { us: 0.4, uk: 0.3, color: '#b45309' },
+    'Metal on Metal':    { us: 0.6, uk: 0.4, color: '#64748b' },
+    'Rubber on Concrete': { us: 0.8, uk: 0.6, color: '#374151' },
+    'Ice on Ice':         { us: 0.1, uk: 0.05, color: '#bae6fd' }
   };
-
-  // Physics state
-  const stateRef = useRef({
-    distance: 0,
-    v: 0,
-    a: 0,
-    isSliding: false,
-    angleReached: 0
-  });
 
   const g = 9.81;
 
-  const updatePhysics = (deltaTime) => {
-    const s = stateRef.current;
-    const surface = SURFACES[surfaceType] || SURFACES['Wood on Wood'];
+  const physicsRef = useRef({
+    distance: 0,
+    v: 0,
+    isSliding: false,
+    criticalAngle: 0,
+  });
+
+  // Capture latest props via refs so the loop doesn't restart
+  const angleRef = useRef(angle);
+  const surfaceTypeRef = useRef(surfaceType);
+
+  useEffect(() => {
+    const prev = angleRef.current;
+    angleRef.current = angle;
+
+    const p = physicsRef.current;
+    const surface = SURFACES[surfaceTypeRef.current] || SURFACES['Wood on Wood'];
     const rad = (angle * Math.PI) / 180;
+    const isNowAboveLimit = Math.tan(rad) > surface.us;
 
-    // Check if sliding should start
-    // Sliding starts if tan(theta) > mu_s
-    if (!s.isSliding) {
-      if (Math.tan(rad) > surface.us) {
-        s.isSliding = true;
-        s.angleReached = angle;
-      } else {
-        s.distance = 0;
-        s.v = 0;
-        s.a = 0;
-      }
+    // If angle is decreased below critical, reset block
+    if (p.isSliding && !isNowAboveLimit) {
+      p.isSliding = false;
+      p.distance = 0;
+      p.v = 0;
+      p.criticalAngle = 0;
     }
 
-    if (s.isSliding) {
-      // a = g * sin(theta) - mu_k * g * cos(theta)
-      s.a = g * Math.sin(rad) - surface.uk * g * Math.cos(rad);
-      if (s.a < 0) s.a = 0; // Should not happen if mu_s > mu_k
-      
-      s.v += s.a * deltaTime;
-      s.distance += s.v * deltaTime * 50; // Scale for visualization
-      
-      // Stop at end of plane
-      if (s.distance > 400) {
-        s.distance = 400;
-        s.v = 0;
-        s.a = 0;
-      }
-    }
+    // If block hit bottom and we're still above critical, just cap it
+    // (don't reset on increase)
+  }, [angle]);
 
-    setSimulationState({
-      isSliding: s.isSliding,
-      angleReached: s.angleReached,
-      distance: s.distance,
-      v: s.v,
-      a: s.a
-    });
+  useEffect(() => {
+    surfaceTypeRef.current = surfaceType;
+    // Reset on surface change
+    const p = physicsRef.current;
+    p.isSliding = false;
+    p.distance = 0;
+    p.v = 0;
+    p.criticalAngle = 0;
+  }, [surfaceType]);
+
+  const drawArrow = (ctx, x1, y1, x2, y2, color, lw = 2) => {
+    const dx = x2 - x1, dy = y2 - y1;
+    const len = Math.sqrt(dx * dx + dy * dy);
+    if (len < 6) return;
+    const ux = dx / len, uy = dy / len;
+    ctx.strokeStyle = color;
+    ctx.lineWidth = lw;
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(x2, y2);
+    ctx.lineTo(x2 - ux * 10 - uy * 5, y2 - uy * 10 + ux * 5);
+    ctx.lineTo(x2 - ux * 10 + uy * 5, y2 - uy * 10 - ux * 5);
+    ctx.closePath(); ctx.fill();
   };
 
   const draw = (ctx) => {
-    const s = stateRef.current;
-    const width = ctx.canvas.width;
-    const height = ctx.canvas.height;
-    const surface = SURFACES[surfaceType] || SURFACES['Wood on Wood'];
-    const rad = (angle * Math.PI) / 180;
+    const p = physicsRef.current;
+    const surface = SURFACES[surfaceTypeRef.current] || SURFACES['Wood on Wood'];
+    const w = ctx.canvas.width;
+    const h = ctx.canvas.height;
+    const ang = angleRef.current;
+    const rad = (ang * Math.PI) / 180;
 
-    ctx.clearRect(0, 0, width, height);
+    ctx.clearRect(0, 0, w, h);
 
-    const pivotX = 100;
-    const pivotY = height - 100;
-    const planeLength = 500;
+    const pivotX = 80;
+    const pivotY = h - 70;
+    const planeLen = 560;
 
-    // Draw Base
-    ctx.strokeStyle = '#334155';
-    ctx.lineWidth = 4;
+    // Ground
+    ctx.fillStyle = '#1e293b';
+    ctx.fillRect(0, pivotY, w, h - pivotY);
+    ctx.fillStyle = '#334155';
+    ctx.fillRect(0, pivotY, w, 3);
+
+    // Protractor arc
     ctx.beginPath();
-    ctx.moveTo(pivotX, pivotY);
-    ctx.lineTo(pivotX + planeLength, pivotY);
+    ctx.arc(pivotX, pivotY, 70, 0, -rad, true);
+    ctx.strokeStyle = '#6366f1';
+    ctx.lineWidth = 1.5;
+    ctx.setLineDash([4, 4]);
     ctx.stroke();
+    ctx.setLineDash([]);
 
-    // Draw Plane
+    // Angle label
+    const midAng = -rad / 2;
+    ctx.font = 'bold 13px monospace';
+    ctx.fillStyle = '#818cf8';
+    ctx.fillText(`${ang.toFixed(1)}°`, pivotX + 75 * Math.cos(midAng) - 16, pivotY + 75 * Math.sin(midAng) + 4);
+
+    // === Draw inclined plane in rotated space ===
     ctx.save();
     ctx.translate(pivotX, pivotY);
     ctx.rotate(-rad);
-    
-    ctx.fillStyle = '#1e293b';
-    ctx.fillRect(0, 0, planeLength, 10);
+
+    // Plane surface (thick slab)
+    ctx.fillStyle = '#0f172a';
+    ctx.fillRect(0, 0, planeLen, 14);
+    ctx.fillStyle = '#334155';
+    ctx.fillRect(0, 0, planeLen, 3);
     ctx.strokeStyle = '#475569';
-    ctx.strokeRect(0, 0, planeLength, 10);
+    ctx.lineWidth = 1;
+    ctx.strokeRect(0, 0, planeLen, 14);
 
-    // Draw Block
-    const blockWidth = 60;
-    const blockHeight = 40;
-    const blockX = s.distance;
-    const blockY = -blockHeight;
+    // Surface type label on plane
+    ctx.font = 'bold 10px monospace';
+    ctx.fillStyle = '#64748b';
+    ctx.fillText(surfaceTypeRef.current.toUpperCase(), 10, 10);
 
+    // Block position along the plane
+    const blockW = 70;
+    const blockH = 48;
+    const blockX = Math.min(p.distance + 10, planeLen - blockW - 5);
+    const blockY = -blockH; // sits on top of plane surface
+
+    // Block shadow
+    ctx.fillStyle = 'rgba(0,0,0,0.25)';
+    ctx.fillRect(blockX + 3, blockY + blockH + 2, blockW, 5);
+
+    // Block body
     ctx.fillStyle = surface.color;
-    ctx.fillRect(blockX, blockY, blockWidth, blockHeight);
-    ctx.strokeStyle = '#fff';
+    ctx.fillRect(blockX, blockY, blockW, blockH);
+    ctx.strokeStyle = 'rgba(255,255,255,0.3)';
     ctx.lineWidth = 2;
-    ctx.strokeRect(blockX, blockY, blockWidth, blockHeight);
+    ctx.strokeRect(blockX, blockY, blockW, blockH);
 
-    // Force Vectors (if sliding or high angle)
-    if (angle > 5) {
-      // mg sin theta (along plane)
-      ctx.strokeStyle = '#10b981';
-      ctx.beginPath();
-      ctx.moveTo(blockX + blockWidth / 2, blockY + blockHeight / 2);
-      ctx.lineTo(blockX + blockWidth / 2 + 50, blockY + blockHeight / 2);
-      ctx.stroke();
-      
-      // friction (backwards)
-      ctx.strokeStyle = '#ef4444';
-      ctx.beginPath();
-      ctx.moveTo(blockX + blockWidth / 2, blockY + blockHeight / 2);
-      ctx.lineTo(blockX + blockWidth / 2 - 40, blockY + blockHeight / 2);
-      ctx.stroke();
+    const cx = blockX + blockW / 2;
+    const cy = blockY + blockH / 2;
+
+    // Force vectors along the plane
+    if (ang > 3) {
+      // mg sinθ  — sliding component (down the plane = positive x in rotated space)
+      const gravComp = Math.sin(rad) * 60;
+      drawArrow(ctx, cx, cy, cx + gravComp, cy, '#10b981', 2.5);
+
+      // Friction — opposing motion (up the plane)
+      const frComp = surface.uk * Math.cos(rad) * 60;
+      if (p.isSliding) {
+        drawArrow(ctx, cx, cy, cx - frComp, cy, '#ef4444', 2.5);
+      } else {
+        drawArrow(ctx, cx, cy, cx - Math.min(gravComp, frComp), cy, '#ef4444', 2.5);
+      }
+
+      // Normal force (perpendicular = negative y in rotated space)
+      const normComp = Math.cos(rad) * 50;
+      drawArrow(ctx, cx, cy, cx, cy - normComp, '#818cf8', 2);
     }
 
     ctx.restore();
 
-    // Protractor/Angle display (UI on canvas)
+    // Status badge (drawn in screen space)
+    const sliding = p.isSliding;
+    ctx.fillStyle = sliding ? 'rgba(16,185,129,0.12)' : 'rgba(245,158,11,0.12)';
+    ctx.strokeStyle = sliding ? '#10b981' : '#f59e0b';
+    ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.arc(pivotX, pivotY, 80, 0, -rad, true);
-    ctx.strokeStyle = '#6366f1';
-    ctx.setLineDash([5, 5]);
-    ctx.stroke();
-    ctx.setLineDash([]);
+    ctx.roundRect(10, 10, 190, 36, 6);
+    ctx.fill(); ctx.stroke();
+    ctx.font = 'bold 12px monospace';
+    ctx.fillStyle = sliding ? '#10b981' : '#f59e0b';
+    ctx.fillText(sliding ? '▶ SLIDING (Kinetic)' : '■ STATIC (Stationary)', 20, 34);
   };
 
   const animate = (time) => {
-    if (!startTimeRef.current) startTimeRef.current = time;
-    const deltaTime = (time - startTimeRef.current) / 1000;
-    startTimeRef.current = time;
+    if (!lastTimeRef.current) lastTimeRef.current = time;
+    const dt = Math.min((time - lastTimeRef.current) / 1000, 0.05);
+    lastTimeRef.current = time;
 
-    updatePhysics(Math.min(deltaTime, 0.1));
-    
-    const ctx = canvasRef.current.getContext('2d');
-    draw(ctx);
-    
+    const p = physicsRef.current;
+    const surface = SURFACES[surfaceTypeRef.current] || SURFACES['Wood on Wood'];
+    const ang = angleRef.current;
+    const rad = (ang * Math.PI) / 180;
+
+    if (!p.isSliding) {
+      // Check if sliding starts
+      if (Math.tan(rad) > surface.us) {
+        p.isSliding = true;
+        p.criticalAngle = ang;
+        p.v = 0;
+        p.distance = 0;
+      }
+    }
+
+    if (p.isSliding) {
+      const a = g * Math.sin(rad) - surface.uk * g * Math.cos(rad);
+      if (a > 0) {
+        p.v += a * dt;
+        p.distance += p.v * dt * 55;
+      }
+      if (p.distance > 460) {
+        // Block reached bottom — freeze
+        p.distance = 460;
+        p.v = 0;
+      }
+    }
+
+    setSimulationState({
+      isSliding: p.isSliding,
+      angleReached: p.criticalAngle,
+      distance: p.distance,
+      v: p.v,
+    });
+
+    const ctx = canvasRef.current?.getContext('2d');
+    if (ctx) draw(ctx);
+
     requestRef.current = requestAnimationFrame(animate);
   };
 
   useEffect(() => {
-    // Reset block if angle is lowered or surface changed
-    if (!stateRef.current.isSliding || angle < stateRef.current.angleReached - 2) {
-       stateRef.current.isSliding = false;
-       stateRef.current.distance = 0;
-       stateRef.current.v = 0;
-    }
-    
+    lastTimeRef.current = null;
     requestRef.current = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(requestRef.current);
-  }, [angle, surfaceType]);
+  }, []); // single loop
 
   return (
     <div className="relative w-full aspect-video bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-inner">
       <canvas ref={canvasRef} width={800} height={450} className="w-full h-full" />
-      
-      <div className="absolute top-4 left-4 flex flex-col gap-2">
-        <div className="bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
-          <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Angle Display</span>
-          <div className="text-xl font-mono font-bold text-sky-400">
-            {angle.toFixed(1)}°
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
