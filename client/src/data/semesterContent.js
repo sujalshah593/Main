@@ -144,7 +144,7 @@ export const PRACTICAL_CONTENT = {
       subject: 'Mathematics for AI and Quantum Systems – I Practical',
       meta: { credits: 2, hours: 60, type: 'Major (Practical)' },
       experiments: [
-        'Plot linear, polynomial, exponential, and logarithmic functions.',
+        { title: 'Plot linear, polynomial, exponential, and logarithmic functions.', path: '/function-plotter' },
         'Visualize graph transformations.',
         'Explore limits and continuity.',
         'Visualize AI activation functions.',

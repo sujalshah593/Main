@@ -23,7 +23,25 @@ export default function InteractiveSimulator({ selectedObject, activeTool, showH
     const objectY = info.point.y;
 
     // Extremely generous padding so any drop remotely near the tool works
-    const padding = 150;
+    const padding = 250;
+    if (
+      objectX > targetRect.left - padding && 
+      objectX < targetRect.right + padding && 
+      objectY > targetRect.top - padding && 
+      objectY < targetRect.bottom + padding
+    ) {
+      setIsPlaced(true);
+    }
+  };
+
+  const handleDrag = (e, info) => {
+    if (!targetRef.current || !containerRef.current) return;
+    
+    const targetRect = targetRef.current.getBoundingClientRect();
+    const objectX = info.point.x;
+    const objectY = info.point.y;
+
+    const padding = 250; // Increased snap distance significantly
     if (
       objectX > targetRect.left - padding && 
       objectX < targetRect.right + padding && 
@@ -95,6 +113,7 @@ export default function InteractiveSimulator({ selectedObject, activeTool, showH
         drag
         dragMomentum={false}
         onDragEnd={handleDragEnd}
+        onDrag={handleDrag}
         animate={isPlaced ? { x: 0, y: 0 } : objectPosition}
         className="absolute z-50"
       >

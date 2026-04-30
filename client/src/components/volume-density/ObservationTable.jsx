@@ -32,8 +32,13 @@ export default function ObservationTable({ selectedObject, mode }) {
 
     let isDimCorrect = false;
     if (selectedObject.type === 'regular') {
-      const expectedDimStr = selectedObject.dimensions.join('x');
-      isDimCorrect = inputDim.replace(/\s+/g, '').toLowerCase() === expectedDimStr.toLowerCase();
+      const inputDims = inputDim.toLowerCase().replace(/x|\*/g, ' ').split(/\s+/).filter(Boolean).map(s => parseFloat(s));
+      const expectedDims = [...selectedObject.dimensions].sort();
+      const sortedInputDims = [...inputDims].sort();
+      
+      if (inputDims.length === 3 && expectedDims.length === 3 && !sortedInputDims.some(isNaN)) {
+        isDimCorrect = sortedInputDims.every((val, index) => Math.abs(val - expectedDims[index]) <= 0.1);
+      }
     } else {
       const waterRise = parseFloat(inputDim);
       isDimCorrect = !isNaN(waterRise) && Math.abs(waterRise - selectedObject.volume) <= 0.5;
@@ -49,7 +54,10 @@ export default function ObservationTable({ selectedObject, mode }) {
       volume,
       density,
       isCorrect: isAllCorrect,
-      trueDensity: selectedObject.density
+      trueDensity: selectedObject.density,
+      trueMass: selectedObject.mass,
+      trueVolume: selectedObject.volume,
+      trueDim: selectedObject.type === 'regular' ? selectedObject.dimensions.join(' x ') : selectedObject.volume.toString()
     };
 
     setRecords([newRecord, ...records]);
@@ -172,9 +180,18 @@ export default function ObservationTable({ selectedObject, mode }) {
                         <CheckCircle size={14} /> Correct
                       </div>
                     ) : (
-                      <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-bold border border-red-500/20">
+                      <button 
+                        onClick={() => {
+                          setInputMass(record.trueMass.toString());
+                          setInputDim(record.trueDim);
+                          setInputVolume(record.trueVolume.toString());
+                          setInputDensity(record.trueDensity.toString());
+                        }}
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-bold border border-red-500/20 hover:bg-red-500/20 transition-colors cursor-pointer"
+                        title="Click to autofill correct answer"
+                      >
                         <XCircle size={14} /> Incorrect
-                      </div>
+                      </button>
                     )}
                   </td>
                   <td className="p-4 text-center">
