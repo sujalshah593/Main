@@ -10,7 +10,7 @@ import PendulumGraph from '../components/pendulum/PendulumGraph';
 import PendulumCalculations from '../components/pendulum/PendulumCalculations';
 import { savePendulumAttempt } from '../api/pendulumApi';
 
-export default function PendulumPage() {
+export default function PendulumPage({ mode = 'motion' }) {
   const [length, setLength] = useState(0.5); // meters
   const [isDampingEnabled, setIsDampingEnabled] = useState(false);
   const [isReactionErrorEnabled, setIsReactionErrorEnabled] = useState(false);
@@ -21,6 +21,10 @@ export default function PendulumPage() {
   // Track oscillation count from simulation component
   const [oscillationCount, setOscillationCount] = useState(0);
   const oscillationsN = 10;
+
+  const pageTitle = mode === 'gravity' 
+    ? 'Determination of g using Simple Pendulum' 
+    : 'Study of Simple Pendulum Motion';
 
   const handleRecordTime = (timeForN) => {
     // Make sure we stop the pendulum if it's playing
@@ -89,7 +93,7 @@ export default function PendulumPage() {
           <div>
             <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
               <Clock className="text-emerald-500" size={28} />
-              Simple Pendulum Motion
+              {pageTitle}
             </h1>
             <p className="text-sm text-lab-muted mt-1">
               Virtual Interactive Laboratory

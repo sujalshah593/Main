@@ -15,6 +15,7 @@ export default function PendulumTable({ trials, removeTrial, oscillationsN }) {
               <th className="px-3 py-3 font-semibold text-rose-400">Time for {oscillationsN} osc. (t) <br/><span className="lowercase text-[10px] text-slate-500">sec</span></th>
               <th className="px-3 py-3 font-semibold text-emerald-400">Time Period (T) <br/><span className="lowercase text-[10px] text-slate-500">T = t/{oscillationsN}</span></th>
               <th className="px-3 py-3 font-semibold text-amber-400">T² <br/><span className="lowercase text-[10px] text-slate-500">sec²</span></th>
+              <th className="px-3 py-3 font-semibold text-purple-400">Exp. g <br/><span className="lowercase text-[10px] text-slate-500">m/s²</span></th>
               <th className="px-3 py-3 font-semibold text-center">Action</th>
             </tr>
           </thead>
@@ -33,6 +34,9 @@ export default function PendulumTable({ trials, removeTrial, oscillationsN }) {
                   <td className="px-3 py-3 font-mono text-rose-200">{trial.timeForN.toFixed(2)}</td>
                   <td className="px-3 py-3 font-mono text-emerald-200">{trial.timePeriod.toFixed(3)}</td>
                   <td className="px-3 py-3 font-mono text-amber-200">{trial.tSquared.toFixed(3)}</td>
+                  <td className="px-3 py-3 font-mono text-purple-200">
+                    {trial.tSquared > 0 ? ((4 * Math.PI * Math.PI * trial.length) / trial.tSquared).toFixed(2) : '-'}
+                  </td>
                   <td className="px-3 py-3 text-center">
                     <button 
                       onClick={() => removeTrial(index)}

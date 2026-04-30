@@ -32,7 +32,8 @@ export default function App() {
         <Route path="/screw-gauge" element={<ScrewGaugePage />} />
         <Route path="/volume-density" element={<VolumeDensityPage />} />
         <Route path="/errors-and-sig-figs" element={<ErrorsAndSigFigPage />} />
-        <Route path="/pendulum" element={<PendulumPage />} />
+        <Route path="/pendulum" element={<PendulumPage mode="motion" />} />
+        <Route path="/pendulum-gravity" element={<PendulumPage mode="gravity" />} />
       </Route>
     </Routes>
   );

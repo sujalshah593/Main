@@ -173,7 +173,7 @@ export const PRACTICAL_CONTENT = {
         { title: 'Determine volume and density of an object.', path: '/volume-density' },
         { title: 'Study errors and significant figures.', path: '/errors-and-sig-figs' },
         { title: 'Study pendulum motion.', path: '/pendulum' },
-        'Determine acceleration due to gravity using pendulum.',
+        { title: 'Determine acceleration due to gravity using pendulum.', path: '/pendulum-gravity' },
         'Verify equations of motion using graph method.',
         "Verify Hooke's law and determine spring constant.",
         'Study conservation of mechanical energy.',
