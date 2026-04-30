@@ -50,6 +50,8 @@ const springRoutes = require('./routes/springRoutes');
 app.use('/api/spring', springRoutes);
 const energyRoutes = require('./routes/energyRoutes');
 app.use('/api/energy', energyRoutes);
+const flywheelRoutes = require('./routes/flywheelRoutes');
+app.use('/api/flywheel', flywheelRoutes);
 attachPythonLabSocket(io);
 
 async function start() {
