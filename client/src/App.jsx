@@ -13,6 +13,7 @@ import VernierCaliperPage from './pages/VernierCaliperPage.jsx';
 import ScrewGaugePage from './pages/ScrewGaugePage.jsx';
 import VolumeDensityPage from './pages/VolumeDensityPage.jsx';
 import ErrorsAndSigFigPage from './pages/ErrorsAndSigFigPage.jsx';
+import PendulumPage from './pages/PendulumPage.jsx';
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/screw-gauge" element={<ScrewGaugePage />} />
         <Route path="/volume-density" element={<VolumeDensityPage />} />
         <Route path="/errors-and-sig-figs" element={<ErrorsAndSigFigPage />} />
+        <Route path="/pendulum" element={<PendulumPage />} />
       </Route>
     </Routes>
   );

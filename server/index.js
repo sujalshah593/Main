@@ -42,6 +42,8 @@ app.use('/api/experiment', singleExperimentRoutes);
 app.use('/api/feedback', feedbackRoutes);
 const measurementRoutes = require('./routes/measurementRoutes');
 app.use('/api/measurements', measurementRoutes);
+const pendulumRoutes = require('./routes/pendulumRoutes');
+app.use('/api/pendulum', pendulumRoutes);
 attachPythonLabSocket(io);
 
 async function start() {
