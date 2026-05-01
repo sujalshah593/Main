@@ -153,9 +153,9 @@ export const PRACTICAL_CONTENT = {
         { title: 'Compute derivatives and understand slopes graphically.', path: '/derivatives-slopes' },
         { title: 'Explore partial derivatives and simple optimization.', path: '/partial-derivatives' },
         { title: 'Understand gradient descent basics.', path: '/gradient-descent' },
-        'Solve basic probability problems.',
-        'Compute mean, variance, and standard deviation.',
-        'Run simple simulations.',
+        { title: 'Solve basic probability problems.', path: '/basic-probability' },
+        { title: 'Compute mean, variance, and standard deviation.', path: '/basic-statistics' },
+        { title: 'Run simple simulations.', path: '/simple-simulations' },
         'Intro to complex numbers and data visualization.',
       ],
       outcomes: [

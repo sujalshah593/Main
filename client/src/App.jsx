@@ -29,6 +29,9 @@ import MatrixEquationsPage from './pages/MatrixEquationsPage.jsx';
 import DerivativesSlopesPage from './pages/DerivativesSlopesPage.jsx';
 import PartialDerivativesPage from './pages/PartialDerivativesPage.jsx';
 import GradientDescentPage from './pages/GradientDescentPage.jsx';
+import BasicProbabilityPage from './pages/BasicProbabilityPage.jsx';
+import BasicStatisticsPage from './pages/BasicStatisticsPage.jsx';
+import SimpleSimulationsPage from './pages/SimpleSimulationsPage.jsx';
 
 export default function App() {
   return (
@@ -64,6 +67,9 @@ export default function App() {
         <Route path="/derivatives-slopes" element={<DerivativesSlopesPage />} />
         <Route path="/partial-derivatives" element={<PartialDerivativesPage />} />
         <Route path="/gradient-descent" element={<GradientDescentPage />} />
+        <Route path="/basic-probability" element={<BasicProbabilityPage />} />
+        <Route path="/basic-statistics" element={<BasicStatisticsPage />} />
+        <Route path="/simple-simulations" element={<SimpleSimulationsPage />} />
       </Route>
     </Routes>
   );
