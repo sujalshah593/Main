@@ -23,6 +23,10 @@ import GraphTransformationsPage from './pages/GraphTransformationsPage.jsx';
 import FrictionPage from './pages/FrictionPage.jsx';
 import LimitsContinuityPage from './pages/LimitsContinuityPage.jsx';
 import InclinedFrictionPage from './pages/InclinedFrictionPage.jsx';
+import ActivationFunctionsPage from './pages/ActivationFunctionsPage.jsx';
+import VectorsMatricesPage from './pages/VectorsMatricesPage.jsx';
+import MatrixEquationsPage from './pages/MatrixEquationsPage.jsx';
+import DerivativesSlopesPage from './pages/DerivativesSlopesPage.jsx';
 
 export default function App() {
   return (
@@ -52,6 +56,10 @@ export default function App() {
         <Route path="/friction" element={<FrictionPage />} />
         <Route path="/limits-continuity" element={<LimitsContinuityPage />} />
         <Route path="/inclined-plane" element={<InclinedFrictionPage />} />
+        <Route path="/activation-functions" element={<ActivationFunctionsPage />} />
+        <Route path="/vectors-matrices" element={<VectorsMatricesPage />} />
+        <Route path="/matrix-equations" element={<MatrixEquationsPage />} />
+        <Route path="/derivatives-slopes" element={<DerivativesSlopesPage />} />
       </Route>
     </Routes>
   );
