@@ -27,6 +27,8 @@ import ActivationFunctionsPage from './pages/ActivationFunctionsPage.jsx';
 import VectorsMatricesPage from './pages/VectorsMatricesPage.jsx';
 import MatrixEquationsPage from './pages/MatrixEquationsPage.jsx';
 import DerivativesSlopesPage from './pages/DerivativesSlopesPage.jsx';
+import PartialDerivativesPage from './pages/PartialDerivativesPage.jsx';
+import GradientDescentPage from './pages/GradientDescentPage.jsx';
 
 export default function App() {
   return (
@@ -60,6 +62,8 @@ export default function App() {
         <Route path="/vectors-matrices" element={<VectorsMatricesPage />} />
         <Route path="/matrix-equations" element={<MatrixEquationsPage />} />
         <Route path="/derivatives-slopes" element={<DerivativesSlopesPage />} />
+        <Route path="/partial-derivatives" element={<PartialDerivativesPage />} />
+        <Route path="/gradient-descent" element={<GradientDescentPage />} />
       </Route>
     </Routes>
   );
