@@ -53,8 +53,8 @@ export const THEORY_CONTENT = {
       ],
       chapters: [
         { title: 'Unit I: Functions and Mathematical Foundations', details: 'Sets, functions, linear/polynomial/exponential/logarithmic functions, graph transformations, limits and continuity.', applications: 'Activation functions and growth models in AI.', notesPdf: '/pdfs/Unit1_Functions_Mathematical_Foundations.pdf' },
-        { title: 'Unit II: Linear Algebra for AI and Quantum Systems', details: 'Scalars, vectors, matrices, matrix operations, systems of equations, intro to vector spaces.', applications: 'Feature vectors, data representation, and introductory quantum states.' },
-        { title: 'Unit III: Calculus and Optimization', details: 'Derivatives, partial derivatives, gradient, optimization, maxima and minima.', applications: 'Gradient descent and optimization in learning algorithms.' },
+        { title: 'Unit II: Linear Algebra for AI and Quantum Systems', details: 'Scalars, vectors, matrices, matrix operations, systems of equations, intro to vector spaces.', applications: 'Feature vectors, data representation, and introductory quantum states.', notesPdf: '/pdfs/Unit_II_Linear_Algebra_for_AI_and_Quantum_Systems.pdf' },
+        { title: 'Unit III: Calculus and Optimization', details: 'Derivatives, partial derivatives, gradient, optimization, maxima and minima.', applications: 'Gradient descent and optimization in learning algorithms.', notesPdf: '/pdfs/Unit_III_Calculus_and_Optimization.pdf' },
         { title: 'Unit IV: Probability, Statistics, and Mathematical Tools', details: 'Probability basics, random variables, expectation, variance, distributions, complex numbers, inner products.', applications: 'Uncertainty in AI, probabilistic models, and quantum measurement intuition.', notesPdf: '/pdfs/Unit_IV_Probability_Statistics_and_Mathematical_Tools.pdf' },
       ],
       outcomes: [
@@ -85,10 +85,10 @@ export const THEORY_CONTENT = {
         'Relate physical laws to real-world situations.',
       ],
       chapters: [
-        { title: 'Unit I: Motion in One and Two Dimensions', details: 'Distance, displacement, velocity, acceleration, equations of motion, projectile motion, motion graphs.', applications: 'Vehicles, falling objects, and sports motion.' },
-        { title: 'Unit II: Laws of Motion and Forces', details: "Newton's laws, friction/tension/normal force, free body diagrams, circular motion.", applications: 'Vehicle dynamics and planetary motion.' },
-        { title: 'Unit III: Work, Energy, and Power', details: 'Work done, kinetic/potential energy, work-energy theorem, conservation of energy, power and efficiency.', applications: 'Machines, engines, and energy systems.' },
-        { title: 'Unit IV: Rotational Motion and Gravitation', details: 'Torque, angular momentum, moment of inertia, gravitation, motion of planets and satellites.', applications: 'Satellites and rotating systems.' },
+        { title: 'Unit I: Motion in One and Two Dimensions', details: 'Distance, displacement, velocity, acceleration, equations of motion, projectile motion, motion graphs.', applications: 'Vehicles, falling objects, and sports motion.', notesPdf: '/pdfs/Unit_I_Motion_in_One_and_Two_Dimensions.pdf' },
+        { title: 'Unit II: Laws of Motion and Forces', details: "Newton's laws, friction/tension/normal force, free body diagrams, circular motion.", applications: 'Vehicle dynamics and planetary motion.', notesPdf: '/pdfs/Unit_II_Laws_of_Motion_and_Forces.pdf' },
+        { title: 'Unit III: Work, Energy, and Power', details: 'Work done, kinetic/potential energy, work-energy theorem, conservation of energy, power and efficiency.', applications: 'Machines, engines, and energy systems.', notesPdf: '/pdfs/Unit_III_Work_Energy_and_Power.pdf' },
+        { title: 'Unit IV: Rotational Motion and Gravitation', details: 'Torque, angular momentum, moment of inertia, gravitation, motion of planets and satellites.', applications: 'Satellites and rotating systems.', notesPdf: '/pdfs/Unit_IV_Rotational_Motion_and_Gravitation.pdf' },
       ],
       outcomes: [
         'Understand and explain laws of motion and forces.',

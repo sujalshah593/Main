@@ -1,0 +1,461 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 4049 >>
+stream
+BT /F2 24 Tf 56.00 785.89 Td (Unit III: Calculus and Optimization) Tj ET
+BT /F1 12 Tf 56.00 757.89 Td (Derivatives, partial derivatives, gradient, optimization, maxima and minima) Tj ET
+1.20 w 56.00 739.89 m 539.28 739.89 l S
+BT /F2 15 Tf 56.00 703.89 Td (Learning Goals) Tj ET
+0.50 w 56.00 693.89 m 539.28 693.89 l S
+BT /F2 10 Tf 62.00 676.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 676.89 Td (Understand derivatives as rates of change and slopes of curves.) Tj ET
+BT /F2 10 Tf 62.00 659.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 659.89 Td (Use partial derivatives to study functions with many variables.) Tj ET
+BT /F2 10 Tf 62.00 642.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 642.89 Td (Interpret the gradient as the direction of steepest increase.) Tj ET
+BT /F2 10 Tf 62.00 625.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 625.89 Td (Apply optimization ideas to minimize loss functions and maximize useful objectives.) Tj ET
+BT /F2 10 Tf 62.00 608.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 608.89 Td (Identify local maxima, local minima, and saddle points using first and second) Tj ET
+BT /F1 10 Tf 76.00 594.89 Td (derivative ideas.) Tj ET
+BT /F2 10 Tf 62.00 577.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 577.89 Td (Connect calculus and optimization to machine learning, data fitting, and quantum) Tj ET
+BT /F1 10 Tf 76.00 563.89 Td (systems.) Tj ET
+BT /F2 15 Tf 56.00 538.89 Td (1. Why Calculus Matters) Tj ET
+0.50 w 56.00 528.89 m 539.28 528.89 l S
+BT /F1 10 Tf 56.00 511.89 Td (Calculus studies change. In artificial intelligence, learning usually means changing model) Tj ET
+BT /F1 10 Tf 56.00 497.89 Td (parameters so that predictions become better. In quantum systems, calculus appears when) Tj ET
+BT /F1 10 Tf 56.00 483.89 Td (studying continuous changes in states, dynamics, control pulses, and optimization of) Tj ET
+BT /F1 10 Tf 56.00 469.89 Td (experiments.) Tj ET
+BT /F1 10 Tf 56.00 450.89 Td (Optimization is the practical side of calculus. Instead of only asking how a function) Tj ET
+BT /F1 10 Tf 56.00 436.89 Td (changes, optimization asks how to choose inputs that make a function as small or as large as) Tj ET
+BT /F1 10 Tf 56.00 422.89 Td (possible. Training a model, fitting a curve, reducing error, and tuning a quantum circuit) Tj ET
+BT /F1 10 Tf 56.00 408.89 Td (are all optimization problems.) Tj ET
+BT /F2 15 Tf 56.00 381.89 Td (2. Functions and Rates of Change) Tj ET
+0.50 w 56.00 371.89 m 539.28 371.89 l S
+BT /F1 10 Tf 56.00 354.89 Td (A function maps inputs to outputs. For example, f\(x\) = x^2 maps x to its square. In) Tj ET
+BT /F1 10 Tf 56.00 340.89 Td (applications, a function may represent cost, distance, probability, energy, prediction) Tj ET
+BT /F1 10 Tf 56.00 326.89 Td (error, or accuracy.) Tj ET
+q 0.95 g 56.00 290.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 298.89 Td (Function notation: y = f\(x\)        Change in output: Delta y = f\(x + Delta x\) - f\(x\)) Tj ET
+BT /F1 10 Tf 56.00 273.89 Td (The average rate of change over an interval compares how much the output changes relative to) Tj ET
+BT /F1 10 Tf 56.00 259.89 Td (the input change. The derivative is the instantaneous rate of change at a point.) Tj ET
+q 0.95 g 56.00 223.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 231.89 Td (Average rate of change = [f\(x + h\) - f\(x\)] / h) Tj ET
+BT /F2 15 Tf 56.00 198.89 Td (3. Derivatives) Tj ET
+0.50 w 56.00 188.89 m 539.28 188.89 l S
+BT /F1 10 Tf 56.00 171.89 Td (The derivative of f at x measures the slope of the tangent line to the curve y = f\(x\). If) Tj ET
+BT /F1 10 Tf 56.00 157.89 Td (the derivative is positive, the function is increasing at that point. If it is negative, the) Tj ET
+BT /F1 10 Tf 56.00 143.89 Td (function is decreasing. If it is zero, the function may have a maximum, minimum, or flat) Tj ET
+BT /F1 10 Tf 56.00 129.89 Td (point.) Tj ET
+q 0.95 g 56.00 93.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 101.89 Td (f'\(x\) = limit as h -> 0 of [f\(x + h\) - f\(x\)] / h) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit III: Calculus and Optimization) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 4067 >>
+stream
+q 0.92 g 56.00 741.89 483.28 44.00 re f Q
+0.30 w 56.00 741.89 m 539.28 741.89 l S
+0.30 w 206.00 741.89 m 206.00 785.89 l S
+BT /F2 9 Tf 64.00 769.89 Td (Derivative sign) Tj ET
+BT /F2 9 Tf 214.00 769.89 Td (Meaning) Tj ET
+q 1.00 g 56.00 697.89 483.28 44.00 re f Q
+0.30 w 56.00 697.89 m 539.28 697.89 l S
+0.30 w 206.00 697.89 m 206.00 741.89 l S
+BT /F1 9 Tf 64.00 725.89 Td (f'\(x\) > 0) Tj ET
+BT /F1 9 Tf 214.00 725.89 Td (Function is increasing locally.) Tj ET
+q 0.98 g 56.00 653.89 483.28 44.00 re f Q
+0.30 w 56.00 653.89 m 539.28 653.89 l S
+0.30 w 206.00 653.89 m 206.00 697.89 l S
+BT /F1 9 Tf 64.00 681.89 Td (f'\(x\) < 0) Tj ET
+BT /F1 9 Tf 214.00 681.89 Td (Function is decreasing locally.) Tj ET
+q 1.00 g 56.00 609.89 483.28 44.00 re f Q
+0.30 w 56.00 609.89 m 539.28 609.89 l S
+0.30 w 206.00 609.89 m 206.00 653.89 l S
+BT /F1 9 Tf 64.00 637.89 Td (f'\(x\) = 0) Tj ET
+BT /F1 9 Tf 214.00 637.89 Td (Possible maximum, minimum, or saddle/flat point.) Tj ET
+BT /F2 12 Tf 56.00 593.89 Td (Common Derivative Rules) Tj ET
+q 0.95 g 56.00 559.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 567.89 Td (d/dx [c] = 0        d/dx [x^n] = n x^\(n-1\)        d/dx [c f\(x\)] = c f'\(x\)) Tj ET
+q 0.95 g 56.00 525.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 533.89 Td (d/dx [f\(x\) + g\(x\)] = f'\(x\) + g'\(x\)        d/dx [e^x] = e^x        d/dx [ln x] = 1/x) Tj ET
+BT /F2 10 Tf 62.00 508.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 508.89 Td (Power rule: reduces the power by one and multiplies by the original power.) Tj ET
+BT /F2 10 Tf 62.00 491.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 491.89 Td (Sum rule: derivative of a sum is the sum of derivatives.) Tj ET
+BT /F2 10 Tf 62.00 474.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 474.89 Td (Chain rule: used when one function is inside another function.) Tj ET
+q 0.95 g 56.00 440.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 448.89 Td (Chain rule: if y = f\(g\(x\)\), then dy/dx = f'\(g\(x\)\) g'\(x\)) Tj ET
+BT /F1 10 Tf 56.00 423.89 Td (The chain rule is essential in neural networks. Backpropagation is mainly an organized use) Tj ET
+BT /F1 10 Tf 56.00 409.89 Td (of the chain rule to compute how each parameter affects the final loss.) Tj ET
+BT /F2 15 Tf 56.00 382.89 Td (4. Second Derivatives) Tj ET
+0.50 w 56.00 372.89 m 539.28 372.89 l S
+BT /F1 10 Tf 56.00 355.89 Td (The second derivative measures how the first derivative changes. It gives information about) Tj ET
+BT /F1 10 Tf 56.00 341.89 Td (curvature. A positive second derivative means the graph bends upward. A negative second) Tj ET
+BT /F1 10 Tf 56.00 327.89 Td (derivative means the graph bends downward.) Tj ET
+q 0.95 g 56.00 291.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 299.89 Td (Second derivative: f''\(x\) = d/dx [f'\(x\)]) Tj ET
+BT /F2 10 Tf 62.00 274.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 274.89 Td (If f''\(x\) > 0, the function is locally convex or cup-shaped near x.) Tj ET
+BT /F2 10 Tf 62.00 257.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 257.89 Td (If f''\(x\) < 0, the function is locally concave or cap-shaped near x.) Tj ET
+BT /F2 10 Tf 62.00 240.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 240.89 Td (If f''\(x\) = 0, the test may be inconclusive.) Tj ET
+BT /F2 15 Tf 56.00 215.89 Td (5. Partial Derivatives) Tj ET
+0.50 w 56.00 205.89 m 539.28 205.89 l S
+BT /F1 10 Tf 56.00 188.89 Td (Many real functions depend on more than one variable. For example, a model's loss may depend) Tj ET
+BT /F1 10 Tf 56.00 174.89 Td (on thousands or millions of weights. A partial derivative measures the rate of change with) Tj ET
+BT /F1 10 Tf 56.00 160.89 Td (respect to one variable while treating the other variables as constants.) Tj ET
+q 0.95 g 56.00 124.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 132.89 Td (For f\(x, y\), partial derivative with respect to x: df/dx, treating y as constant) Tj ET
+q 0.95 g 56.00 90.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 98.89 Td (For f\(x, y\), partial derivative with respect to y: df/dy, treating x as constant) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit III: Calculus and Optimization) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 2) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 4271 >>
+stream
+BT /F1 10 Tf 56.00 785.89 Td (Example: if f\(x, y\) = x^2 + 3xy + y^2, then the partial derivative with respect to x is 2x +) Tj ET
+BT /F1 10 Tf 56.00 771.89 Td (3y, and the partial derivative with respect to y is 3x + 2y.) Tj ET
+BT /F2 10 Tf 62.00 752.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 752.89 Td (Partial derivatives help identify which variable has the strongest local effect.) Tj ET
+BT /F2 10 Tf 62.00 735.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 735.89 Td (In machine learning, each model parameter has its own partial derivative of the loss.) Tj ET
+BT /F2 10 Tf 62.00 718.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 718.89 Td (In optimization, all these partial derivatives are collected into the gradient.) Tj ET
+BT /F2 15 Tf 56.00 693.89 Td (6. Gradient) Tj ET
+0.50 w 56.00 683.89 m 539.28 683.89 l S
+BT /F1 10 Tf 56.00 666.89 Td (The gradient is a vector made of all first-order partial derivatives. For a function of many) Tj ET
+BT /F1 10 Tf 56.00 652.89 Td (variables, the gradient points in the direction of steepest increase. The negative gradient) Tj ET
+BT /F1 10 Tf 56.00 638.89 Td (points in the direction of steepest decrease.) Tj ET
+q 0.95 g 56.00 602.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 610.89 Td (grad f = [df/dx1, df/dx2, ..., df/dxn]) Tj ET
+q 0.95 g 56.00 568.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 576.89 Td (For f\(x, y\), grad f = [df/dx, df/dy]) Tj ET
+BT /F1 10 Tf 56.00 551.89 Td (If the gradient is zero, the function has a stationary point. A stationary point may be a) Tj ET
+BT /F1 10 Tf 56.00 537.89 Td (local minimum, local maximum, or saddle point.) Tj ET
+BT /F2 10 Tf 62.00 518.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 518.89 Td (Large gradient magnitude means the function changes rapidly.) Tj ET
+BT /F2 10 Tf 62.00 501.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 501.89 Td (Small gradient magnitude means the function changes slowly or is near a stationary) Tj ET
+BT /F1 10 Tf 76.00 487.89 Td (point.) Tj ET
+BT /F2 10 Tf 62.00 470.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 470.89 Td (Gradient direction is used to update parameters in optimization algorithms.) Tj ET
+BT /F2 15 Tf 56.00 445.89 Td (7. Optimization) Tj ET
+0.50 w 56.00 435.89 m 539.28 435.89 l S
+BT /F1 10 Tf 56.00 418.89 Td (Optimization means finding the best value of a function according to a goal. In) Tj ET
+BT /F1 10 Tf 56.00 404.89 Td (minimization, we try to make a function as small as possible. In maximization, we try to) Tj ET
+BT /F1 10 Tf 56.00 390.89 Td (make it as large as possible.) Tj ET
+q 0.95 g 56.00 354.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 362.89 Td (Minimization: find x that minimizes f\(x\)        Maximization: find x that maximizes f\(x\)) Tj ET
+q 0.92 g 56.00 293.89 483.28 44.00 re f Q
+0.30 w 56.00 293.89 m 539.28 293.89 l S
+0.30 w 206.00 293.89 m 206.00 337.89 l S
+BT /F2 9 Tf 64.00 321.89 Td (Term) Tj ET
+BT /F2 9 Tf 214.00 321.89 Td (Meaning) Tj ET
+q 1.00 g 56.00 249.89 483.28 44.00 re f Q
+0.30 w 56.00 249.89 m 539.28 249.89 l S
+0.30 w 206.00 249.89 m 206.00 293.89 l S
+BT /F1 9 Tf 64.00 277.89 Td (Objective function) Tj ET
+BT /F1 9 Tf 214.00 277.89 Td (The function being minimized or maximized.) Tj ET
+q 0.98 g 56.00 205.89 483.28 44.00 re f Q
+0.30 w 56.00 205.89 m 539.28 205.89 l S
+0.30 w 206.00 205.89 m 206.00 249.89 l S
+BT /F1 9 Tf 64.00 233.89 Td (Loss function) Tj ET
+BT /F1 9 Tf 214.00 233.89 Td (An error function minimized during model training.) Tj ET
+q 1.00 g 56.00 161.89 483.28 44.00 re f Q
+0.30 w 56.00 161.89 m 539.28 161.89 l S
+0.30 w 206.00 161.89 m 206.00 205.89 l S
+BT /F1 9 Tf 64.00 189.89 Td (Parameter) Tj ET
+BT /F1 9 Tf 214.00 189.89 Td (A value adjusted by the optimization method.) Tj ET
+q 0.98 g 56.00 117.89 483.28 44.00 re f Q
+0.30 w 56.00 117.89 m 539.28 117.89 l S
+0.30 w 206.00 117.89 m 206.00 161.89 l S
+BT /F1 9 Tf 64.00 145.89 Td (Constraint) Tj ET
+BT /F1 9 Tf 214.00 145.89 Td (A condition that limits allowed solutions.) Tj ET
+q 1.00 g 56.00 73.89 483.28 44.00 re f Q
+0.30 w 56.00 73.89 m 539.28 73.89 l S
+0.30 w 206.00 73.89 m 206.00 117.89 l S
+BT /F1 9 Tf 64.00 101.89 Td (Optimum) Tj ET
+BT /F1 9 Tf 214.00 101.89 Td (A best point according to the objective.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit III: Calculus and Optimization) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 3) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4450 >>
+stream
+BT /F1 10 Tf 56.00 785.89 Td (In AI, the objective is often a loss function. The model starts with imperfect parameters,) Tj ET
+BT /F1 10 Tf 56.00 771.89 Td (computes prediction error, finds gradients, and updates parameters to reduce the loss.) Tj ET
+BT /F2 15 Tf 56.00 744.89 Td (8. Gradient Descent) Tj ET
+0.50 w 56.00 734.89 m 539.28 734.89 l S
+BT /F1 10 Tf 56.00 717.89 Td (Gradient descent is a basic optimization method for minimizing a function. It starts at an) Tj ET
+BT /F1 10 Tf 56.00 703.89 Td (initial point, computes the gradient, and moves in the opposite direction of the gradient) Tj ET
+BT /F1 10 Tf 56.00 689.89 Td (because that direction gives steepest decrease.) Tj ET
+q 0.95 g 56.00 653.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 661.89 Td (Update rule: x_new = x_old - eta grad f\(x_old\)) Tj ET
+BT /F2 10 Tf 62.00 636.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 636.89 Td (eta is the learning rate, a positive scalar controlling step size.) Tj ET
+BT /F2 10 Tf 62.00 619.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 619.89 Td (If eta is too small, learning is slow.) Tj ET
+BT /F2 10 Tf 62.00 602.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 602.89 Td (If eta is too large, the method may overshoot or diverge.) Tj ET
+BT /F2 10 Tf 62.00 585.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 585.89 Td (The method repeats until the loss stops improving or the gradient becomes small.) Tj ET
+BT /F1 10 Tf 56.00 568.89 Td (In neural networks, gradient descent and its variants update weights using gradients) Tj ET
+BT /F1 10 Tf 56.00 554.89 Td (computed by backpropagation. Variants such as stochastic gradient descent, momentum,) Tj ET
+BT /F1 10 Tf 56.00 540.89 Td (RMSProp, and Adam are widely used in practical training.) Tj ET
+BT /F2 15 Tf 56.00 513.89 Td (9. Maxima and Minima) Tj ET
+0.50 w 56.00 503.89 m 539.28 503.89 l S
+BT /F1 10 Tf 56.00 486.89 Td (A maximum is a point where the function value is higher than nearby values. A minimum is a) Tj ET
+BT /F1 10 Tf 56.00 472.89 Td (point where the function value is lower than nearby values. Local extrema compare nearby) Tj ET
+BT /F1 10 Tf 56.00 458.89 Td (points, while global extrema compare all points in the domain.) Tj ET
+q 0.92 g 56.00 395.89 483.28 44.00 re f Q
+0.30 w 56.00 395.89 m 539.28 395.89 l S
+0.30 w 206.00 395.89 m 206.00 439.89 l S
+BT /F2 9 Tf 64.00 423.89 Td (Point type) Tj ET
+BT /F2 9 Tf 214.00 423.89 Td (Description) Tj ET
+q 1.00 g 56.00 351.89 483.28 44.00 re f Q
+0.30 w 56.00 351.89 m 539.28 351.89 l S
+0.30 w 206.00 351.89 m 206.00 395.89 l S
+BT /F1 9 Tf 64.00 379.89 Td (Local maximum) Tj ET
+BT /F1 9 Tf 214.00 379.89 Td (Higher than nearby points.) Tj ET
+q 0.98 g 56.00 307.89 483.28 44.00 re f Q
+0.30 w 56.00 307.89 m 539.28 307.89 l S
+0.30 w 206.00 307.89 m 206.00 351.89 l S
+BT /F1 9 Tf 64.00 335.89 Td (Local minimum) Tj ET
+BT /F1 9 Tf 214.00 335.89 Td (Lower than nearby points.) Tj ET
+q 1.00 g 56.00 263.89 483.28 44.00 re f Q
+0.30 w 56.00 263.89 m 539.28 263.89 l S
+0.30 w 206.00 263.89 m 206.00 307.89 l S
+BT /F1 9 Tf 64.00 291.89 Td (Global maximum) Tj ET
+BT /F1 9 Tf 214.00 291.89 Td (Highest point in the entire domain.) Tj ET
+q 0.98 g 56.00 219.89 483.28 44.00 re f Q
+0.30 w 56.00 219.89 m 539.28 219.89 l S
+0.30 w 206.00 219.89 m 206.00 263.89 l S
+BT /F1 9 Tf 64.00 247.89 Td (Global minimum) Tj ET
+BT /F1 9 Tf 214.00 247.89 Td (Lowest point in the entire domain.) Tj ET
+q 1.00 g 56.00 175.89 483.28 44.00 re f Q
+0.30 w 56.00 175.89 m 539.28 175.89 l S
+0.30 w 206.00 175.89 m 206.00 219.89 l S
+BT /F1 9 Tf 64.00 203.89 Td (Saddle point) Tj ET
+BT /F1 9 Tf 214.00 203.89 Td (Stationary point that is not a local maximum or local) Tj ET
+BT /F1 9 Tf 214.00 191.89 Td (minimum.) Tj ET
+BT /F2 12 Tf 56.00 159.89 Td (First Derivative Test) Tj ET
+BT /F2 10 Tf 62.00 142.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 142.89 Td (Find critical points where f'\(x\) = 0 or f'\(x\) is undefined.) Tj ET
+BT /F2 10 Tf 62.00 125.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 125.89 Td (If f'\(x\) changes from positive to negative, the point is a local maximum.) Tj ET
+BT /F2 10 Tf 62.00 108.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 108.89 Td (If f'\(x\) changes from negative to positive, the point is a local minimum.) Tj ET
+BT /F2 10 Tf 62.00 91.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 91.89 Td (If the sign does not change, the point may not be a maximum or minimum.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit III: Calculus and Optimization) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 4) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 4539 >>
+stream
+BT /F2 12 Tf 56.00 781.89 Td (Second Derivative Test) Tj ET
+q 0.95 g 56.00 747.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 755.89 Td (At critical point c: if f''\(c\) > 0, local minimum; if f''\(c\) < 0, local maximum) Tj ET
+BT /F2 10 Tf 62.00 730.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 730.89 Td (If f''\(c\) = 0, use another method because the test is inconclusive.) Tj ET
+BT /F2 10 Tf 62.00 713.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 713.89 Td (For functions of many variables, second-order behavior is studied using the Hessian) Tj ET
+BT /F1 10 Tf 76.00 699.89 Td (matrix.) Tj ET
+BT /F2 15 Tf 56.00 674.89 Td (10. Convexity and Optimization Intuition) Tj ET
+0.50 w 56.00 664.89 m 539.28 664.89 l S
+BT /F1 10 Tf 56.00 647.89 Td (A convex function is shaped so that any local minimum is also a global minimum. This makes) Tj ET
+BT /F1 10 Tf 56.00 633.89 Td (optimization easier. Many simple models in machine learning, such as linear regression with) Tj ET
+BT /F1 10 Tf 56.00 619.89 Td (squared error, lead to convex optimization problems.) Tj ET
+q 0.95 g 56.00 583.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 591.89 Td (Convex intuition: a bowl-shaped loss surface has one best bottom point) Tj ET
+BT /F2 10 Tf 62.00 566.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 566.89 Td (Convex problems are easier because there are no deceptive local minima.) Tj ET
+BT /F2 10 Tf 62.00 549.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 549.89 Td (Non-convex problems, such as deep neural network training, can have many valleys, flat) Tj ET
+BT /F1 10 Tf 76.00 535.89 Td (regions, and saddle points.) Tj ET
+BT /F2 10 Tf 62.00 518.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 518.89 Td (Even in non-convex settings, gradient methods often work well in practice with) Tj ET
+BT /F1 10 Tf 76.00 504.89 Td (suitable initialization and learning rates.) Tj ET
+BT /F2 15 Tf 56.00 479.89 Td (11. AI Connections) Tj ET
+0.50 w 56.00 469.89 m 539.28 469.89 l S
+BT /F2 10 Tf 62.00 452.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 452.89 Td (Derivatives show how changing one input or parameter changes the output.) Tj ET
+BT /F2 10 Tf 62.00 435.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 435.89 Td (Loss functions measure prediction error; optimization tries to reduce this loss.) Tj ET
+BT /F2 10 Tf 62.00 418.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 418.89 Td (Gradients tell a model how to update weights during training.) Tj ET
+BT /F2 10 Tf 62.00 401.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 401.89 Td (Backpropagation uses the chain rule to compute gradients efficiently.) Tj ET
+BT /F2 10 Tf 62.00 384.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 384.89 Td (Gradient descent is used in linear regression, logistic regression, neural networks,) Tj ET
+BT /F1 10 Tf 76.00 370.89 Td (and deep learning.) Tj ET
+BT /F2 10 Tf 62.00 353.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 353.89 Td (Maxima and minima help interpret best-fit parameters, decision boundaries, and model) Tj ET
+BT /F1 10 Tf 76.00 339.89 Td (performance.) Tj ET
+BT /F2 15 Tf 56.00 314.89 Td (12. Quantum Systems Connections) Tj ET
+0.50 w 56.00 304.89 m 539.28 304.89 l S
+BT /F1 10 Tf 56.00 287.89 Td (Calculus and optimization appear in quantum technology when parameters of quantum circuits,) Tj ET
+BT /F1 10 Tf 56.00 273.89 Td (pulses, or experiments must be tuned. In variational quantum algorithms, a quantum circuit) Tj ET
+BT /F1 10 Tf 56.00 259.89 Td (has adjustable parameters, and a classical optimizer updates those parameters to minimize an) Tj ET
+BT /F1 10 Tf 56.00 245.89 Td (energy or cost function.) Tj ET
+BT /F2 10 Tf 62.00 226.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 226.89 Td (Parameterized quantum circuits depend on variables such as rotation angles.) Tj ET
+BT /F2 10 Tf 62.00 209.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 209.89 Td (A cost function may represent energy, error, or distance from a target state.) Tj ET
+BT /F2 10 Tf 62.00 192.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 192.89 Td (Optimization searches for parameter values that produce the desired quantum behavior.) Tj ET
+BT /F2 10 Tf 62.00 175.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 175.89 Td (Gradient-based and gradient-free methods can both be used depending on hardware noise) Tj ET
+BT /F1 10 Tf 76.00 161.89 Td (and measurement limits.) Tj ET
+q 0.95 g 56.00 127.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 135.89 Td (Variational idea: choose theta to minimize C\(theta\)) Tj ET
+BT /F2 15 Tf 56.00 102.89 Td (Worked Examples) Tj ET
+0.50 w 56.00 92.89 m 539.28 92.89 l S
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit III: Calculus and Optimization) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 5) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 4533 >>
+stream
+BT /F2 12 Tf 56.00 781.89 Td (Example 1: Derivative) Tj ET
+BT /F1 10 Tf 56.00 764.89 Td (Let f\(x\) = x^2 + 3x + 2. Then f'\(x\) = 2x + 3. At x = 1, f'\(1\) = 5, so the function is) Tj ET
+BT /F1 10 Tf 56.00 750.89 Td (increasing at that point.) Tj ET
+BT /F2 12 Tf 56.00 727.89 Td (Example 2: Minimum) Tj ET
+BT /F1 10 Tf 56.00 710.89 Td (Let f\(x\) = x^2 - 4x + 7. First derivative: f'\(x\) = 2x - 4. Set f'\(x\) = 0, so x = 2. Second) Tj ET
+BT /F1 10 Tf 56.00 696.89 Td (derivative: f''\(x\) = 2, which is positive. Therefore x = 2 is a local minimum.) Tj ET
+BT /F2 12 Tf 56.00 673.89 Td (Example 3: Gradient) Tj ET
+BT /F1 10 Tf 56.00 656.89 Td (Let f\(x, y\) = x^2 + y^2. Then grad f = [2x, 2y]. At \(3, 4\), grad f = [6, 8]. The negative) Tj ET
+BT /F1 10 Tf 56.00 642.89 Td (gradient [-6, -8] points toward decreasing f.) Tj ET
+BT /F2 15 Tf 56.00 615.89 Td (Quick Revision Sheet) Tj ET
+0.50 w 56.00 605.89 m 539.28 605.89 l S
+BT /F2 10 Tf 62.00 588.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 588.89 Td (A derivative is the instantaneous rate of change of a function.) Tj ET
+BT /F2 10 Tf 62.00 571.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 571.89 Td (A positive derivative means increasing; a negative derivative means decreasing.) Tj ET
+BT /F2 10 Tf 62.00 554.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 554.89 Td (A second derivative describes curvature.) Tj ET
+BT /F2 10 Tf 62.00 537.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 537.89 Td (A partial derivative changes one variable while holding others constant.) Tj ET
+BT /F2 10 Tf 62.00 520.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 520.89 Td (The gradient is the vector of all first partial derivatives.) Tj ET
+BT /F2 10 Tf 62.00 503.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 503.89 Td (The gradient points toward steepest increase; the negative gradient points toward) Tj ET
+BT /F1 10 Tf 76.00 489.89 Td (steepest decrease.) Tj ET
+BT /F2 10 Tf 62.00 472.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 472.89 Td (Optimization finds values that minimize or maximize an objective function.) Tj ET
+BT /F2 10 Tf 62.00 455.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 455.89 Td (Gradient descent updates parameters by moving opposite the gradient.) Tj ET
+BT /F2 10 Tf 62.00 438.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 438.89 Td (Critical points occur where the derivative is zero or undefined.) Tj ET
+BT /F2 10 Tf 62.00 421.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 421.89 Td (Maxima, minima, and saddle points are different types of important points.) Tj ET
+BT /F2 10 Tf 62.00 404.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 404.89 Td (AI training is usually an optimization problem over a loss function.) Tj ET
+BT /F2 10 Tf 62.00 387.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 387.89 Td (Quantum variational algorithms optimize circuit parameters to reduce a cost function.) Tj ET
+BT /F2 15 Tf 56.00 362.89 Td (Practice Questions) Tj ET
+0.50 w 56.00 352.89 m 539.28 352.89 l S
+BT /F2 10 Tf 62.00 335.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 335.89 Td (Find the derivative of f\(x\) = 5x^3 - 2x + 7.) Tj ET
+BT /F2 10 Tf 62.00 318.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 318.89 Td (For f\(x\) = x^2 - 6x + 10, find the critical point and classify it.) Tj ET
+BT /F2 10 Tf 62.00 301.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 301.89 Td (Explain the meaning of f'\(x\) > 0 in words.) Tj ET
+BT /F2 10 Tf 62.00 284.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 284.89 Td (Find the partial derivatives of f\(x, y\) = x^2 + 4xy + y^2.) Tj ET
+BT /F2 10 Tf 62.00 267.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 267.89 Td (Compute the gradient of f\(x, y\) = 3x^2 + 2y^2 at \(1, 2\).) Tj ET
+BT /F2 10 Tf 62.00 250.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 250.89 Td (Why does gradient descent move in the negative gradient direction?) Tj ET
+BT /F2 10 Tf 62.00 233.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 233.89 Td (What happens if the learning rate is too large?) Tj ET
+BT /F2 10 Tf 62.00 216.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 216.89 Td (Differentiate between local minimum and global minimum.) Tj ET
+BT /F2 10 Tf 62.00 199.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 199.89 Td (What is a saddle point?) Tj ET
+BT /F2 10 Tf 62.00 182.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 182.89 Td (Explain how derivatives are used in training a neural network.) Tj ET
+BT /F2 10 Tf 62.00 165.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 165.89 Td (Give one example of optimization in quantum technology.) Tj ET
+BT /F2 10 Tf 62.00 148.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 148.89 Td (Why is convexity useful in optimization?) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit III: Calculus and Optimization) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 6) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R] /Count 6 >>
+endobj
+17 0 obj
+<< /Type /Catalog /Pages 16 0 R >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000000228 00000 n 
+0000004329 00000 n 
+0000004482 00000 n 
+0000008601 00000 n 
+0000008754 00000 n 
+0000013077 00000 n 
+0000013230 00000 n 
+0000017733 00000 n 
+0000017888 00000 n 
+0000022480 00000 n 
+0000022635 00000 n 
+0000027221 00000 n 
+0000027376 00000 n 
+0000027467 00000 n 
+trailer
+<< /Size 18 /Root 17 0 R >>
+startxref
+27518
+%%EOF

@@ -1,0 +1,492 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 4343 >>
+stream
+BT /F2 24 Tf 56.00 785.89 Td (Unit II: Laws of Motion and Forces) Tj ET
+BT /F1 12 Tf 56.00 757.89 Td (Newton's laws, friction, tension, normal force, free body diagrams, and circular motion) Tj ET
+1.20 w 56.00 739.89 m 539.28 739.89 l S
+BT /F2 15 Tf 56.00 703.89 Td (Learning Goals) Tj ET
+0.50 w 56.00 693.89 m 539.28 693.89 l S
+BT /F2 10 Tf 62.00 676.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 676.89 Td (Understand force as an interaction that can change the motion or shape of a body.) Tj ET
+BT /F2 10 Tf 62.00 659.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 659.89 Td (Apply Newton's three laws of motion to everyday and numerical problems.) Tj ET
+BT /F2 10 Tf 62.00 642.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 642.89 Td (Identify common forces such as weight, normal force, friction, and tension.) Tj ET
+BT /F2 10 Tf 62.00 625.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 625.89 Td (Draw and use free body diagrams to solve force problems systematically.) Tj ET
+BT /F2 10 Tf 62.00 608.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 608.89 Td (Analyze motion on horizontal surfaces, inclined planes, and connected bodies.) Tj ET
+BT /F2 10 Tf 62.00 591.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 591.89 Td (Understand centripetal acceleration and centripetal force in circular motion.) Tj ET
+BT /F2 10 Tf 62.00 574.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 574.89 Td (Avoid common misconceptions about action-reaction pairs, friction, and circular) Tj ET
+BT /F1 10 Tf 76.00 560.89 Td (motion.) Tj ET
+BT /F2 15 Tf 56.00 535.89 Td (1. Force and Motion) Tj ET
+0.50 w 56.00 525.89 m 539.28 525.89 l S
+BT /F1 10 Tf 56.00 508.89 Td (A force is a push or pull acting on a body because of its interaction with another body.) Tj ET
+BT /F1 10 Tf 56.00 494.89 Td (Force is a vector quantity, so it has both magnitude and direction. The SI unit of force is) Tj ET
+BT /F1 10 Tf 56.00 480.89 Td (the newton, written as N.) Tj ET
+q 0.95 g 56.00 444.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 452.89 Td (1 newton = 1 kg m/s^2) Tj ET
+BT /F1 10 Tf 56.00 427.89 Td (Forces do not always produce motion. A book resting on a table has forces acting on it, but) Tj ET
+BT /F1 10 Tf 56.00 413.89 Td (the forces balance, so the book remains at rest. Motion changes only when there is a nonzero) Tj ET
+BT /F1 10 Tf 56.00 399.89 Td (net force.) Tj ET
+BT /F2 10 Tf 62.00 380.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 380.89 Td (A balanced force system has zero net force and no acceleration.) Tj ET
+BT /F2 10 Tf 62.00 363.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 363.89 Td (An unbalanced force system has nonzero net force and produces acceleration.) Tj ET
+BT /F2 10 Tf 62.00 346.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 346.89 Td (The net force is the vector sum of all forces acting on the object.) Tj ET
+q 0.95 g 56.00 312.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 320.89 Td (F_net = sum of all forces) Tj ET
+BT /F2 15 Tf 56.00 287.89 Td (2. Newton's First Law) Tj ET
+0.50 w 56.00 277.89 m 539.28 277.89 l S
+BT /F1 10 Tf 56.00 260.89 Td (Newton's first law states that an object remains at rest or continues moving with uniform) Tj ET
+BT /F1 10 Tf 56.00 246.89 Td (velocity in a straight line unless acted upon by a nonzero external net force. This law is) Tj ET
+BT /F1 10 Tf 56.00 232.89 Td (also called the law of inertia.) Tj ET
+BT /F2 12 Tf 56.00 209.89 Td (Inertia) Tj ET
+BT /F1 10 Tf 56.00 192.89 Td (Inertia is the tendency of a body to resist changes in its state of motion. Mass is a) Tj ET
+BT /F1 10 Tf 56.00 178.89 Td (measure of inertia. A larger mass is harder to start, stop, or change in direction.) Tj ET
+BT /F2 10 Tf 62.00 159.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 159.89 Td (A passenger lurches forward when a bus suddenly stops because the passenger's body) Tj ET
+BT /F1 10 Tf 76.00 145.89 Td (tends to continue moving forward.) Tj ET
+BT /F2 10 Tf 62.00 128.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 128.89 Td (A coin falls into a glass when a card beneath it is flicked away quickly because the) Tj ET
+BT /F1 10 Tf 76.00 114.89 Td (coin tends to remain at rest.) Tj ET
+BT /F2 10 Tf 62.00 97.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 97.89 Td (A spacecraft in deep space can continue moving without fuel if no significant external) Tj ET
+BT /F1 10 Tf 76.00 83.89 Td (force acts on it.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Laws of Motion and Forces) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 4064 >>
+stream
+BT /F1 10 Tf 56.00 785.89 Td (The first law also introduces the idea of an inertial frame of reference. An inertial frame) Tj ET
+BT /F1 10 Tf 56.00 771.89 Td (is one in which Newton's laws hold without needing fictitious forces.) Tj ET
+BT /F2 15 Tf 56.00 744.89 Td (3. Newton's Second Law) Tj ET
+0.50 w 56.00 734.89 m 539.28 734.89 l S
+BT /F1 10 Tf 56.00 717.89 Td (Newton's second law gives the quantitative relation between force, mass, and acceleration.) Tj ET
+BT /F1 10 Tf 56.00 703.89 Td (The acceleration of an object is directly proportional to the net external force and) Tj ET
+BT /F1 10 Tf 56.00 689.89 Td (inversely proportional to its mass.) Tj ET
+q 0.95 g 56.00 653.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 661.89 Td (F_net = m a) Tj ET
+BT /F2 10 Tf 62.00 636.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 636.89 Td (Acceleration is in the direction of the net force.) Tj ET
+BT /F2 10 Tf 62.00 619.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 619.89 Td (If the same force acts on a larger mass, the acceleration is smaller.) Tj ET
+BT /F2 10 Tf 62.00 602.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 602.89 Td (If the net force is doubled while mass is constant, acceleration is doubled.) Tj ET
+BT /F2 10 Tf 62.00 585.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 585.89 Td (If F_net = 0, then a = 0; the object is either at rest or moving with constant) Tj ET
+BT /F1 10 Tf 76.00 571.89 Td (velocity.) Tj ET
+BT /F2 12 Tf 56.00 550.89 Td (Component Form) Tj ET
+BT /F1 10 Tf 56.00 533.89 Td (In two-dimensional problems, Newton's second law is applied separately along perpendicular) Tj ET
+BT /F1 10 Tf 56.00 519.89 Td (axes. Usually the axes are chosen to make the problem simpler.) Tj ET
+q 0.95 g 56.00 483.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 491.89 Td (sum F_x = m a_x        sum F_y = m a_y) Tj ET
+BT /F1 10 Tf 56.00 466.89 Td (For an inclined plane, it is often easiest to choose one axis parallel to the plane and the) Tj ET
+BT /F1 10 Tf 56.00 452.89 Td (other perpendicular to the plane. This reduces the number of forces that must be resolved) Tj ET
+BT /F1 10 Tf 56.00 438.89 Td (into components.) Tj ET
+BT /F2 15 Tf 56.00 411.89 Td (4. Newton's Third Law) Tj ET
+0.50 w 56.00 401.89 m 539.28 401.89 l S
+BT /F1 10 Tf 56.00 384.89 Td (Newton's third law states that for every action force, there is an equal and opposite) Tj ET
+BT /F1 10 Tf 56.00 370.89 Td (reaction force. These two forces act on different bodies, so they do not cancel each other) Tj ET
+BT /F1 10 Tf 56.00 356.89 Td (on the same free body diagram.) Tj ET
+q 0.95 g 56.00 320.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 328.89 Td (F_AB = -F_BA) Tj ET
+BT /F2 10 Tf 62.00 303.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 303.89 Td (If a hand pushes a wall, the wall pushes the hand back with equal magnitude and) Tj ET
+BT /F1 10 Tf 76.00 289.89 Td (opposite direction.) Tj ET
+BT /F2 10 Tf 62.00 272.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 272.89 Td (Earth pulls a falling object downward; the object pulls Earth upward with equal) Tj ET
+BT /F1 10 Tf 76.00 258.89 Td (gravitational force.) Tj ET
+BT /F2 10 Tf 62.00 241.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 241.89 Td (A rocket pushes gases backward; the gases push the rocket forward.) Tj ET
+BT /F2 12 Tf 56.00 220.89 Td (Important Point) Tj ET
+BT /F1 10 Tf 56.00 203.89 Td (Action-reaction forces never act on the same object. This is why they do not cancel when) Tj ET
+BT /F1 10 Tf 56.00 189.89 Td (analyzing the motion of one body. Only forces acting on the chosen body are included in that) Tj ET
+BT /F1 10 Tf 56.00 175.89 Td (body's free body diagram.) Tj ET
+BT /F2 15 Tf 56.00 148.89 Td (5. Common Types of Forces) Tj ET
+0.50 w 56.00 138.89 m 539.28 138.89 l S
+BT /F2 12 Tf 56.00 117.89 Td (Weight) Tj ET
+BT /F1 10 Tf 56.00 100.89 Td (Weight is the gravitational force exerted by Earth or another planet on a body. Near Earth's) Tj ET
+BT /F1 10 Tf 56.00 86.89 Td (surface, weight acts vertically downward and has magnitude mg.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Laws of Motion and Forces) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 2) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 4746 >>
+stream
+q 0.95 g 56.00 768.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 776.89 Td (W = mg        g approximately 9.8 m/s^2) Tj ET
+BT /F2 10 Tf 62.00 751.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 751.89 Td (Mass is the amount of matter and is measured in kilograms.) Tj ET
+BT /F2 10 Tf 62.00 734.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 734.89 Td (Weight is a force and is measured in newtons.) Tj ET
+BT /F2 10 Tf 62.00 717.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 717.89 Td (Mass remains the same from place to place, but weight changes if g changes.) Tj ET
+BT /F2 12 Tf 56.00 696.89 Td (Normal Force) Tj ET
+BT /F1 10 Tf 56.00 679.89 Td (The normal force is the contact force exerted by a surface perpendicular to that surface. It) Tj ET
+BT /F1 10 Tf 56.00 665.89 Td (prevents objects from passing through each other. Normal force is not always equal to) Tj ET
+BT /F1 10 Tf 56.00 651.89 Td (weight.) Tj ET
+BT /F2 10 Tf 62.00 632.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 632.89 Td (On a horizontal surface with no vertical acceleration, N = mg.) Tj ET
+BT /F2 10 Tf 62.00 615.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 615.89 Td (On an inclined plane, N = mg cos\(theta\) if no other perpendicular forces act.) Tj ET
+BT /F2 10 Tf 62.00 598.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 598.89 Td (In an elevator accelerating upward, the normal force is greater than mg.) Tj ET
+BT /F2 10 Tf 62.00 581.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 581.89 Td (In an elevator accelerating downward, the normal force is less than mg.) Tj ET
+BT /F2 12 Tf 56.00 560.89 Td (Tension) Tj ET
+BT /F1 10 Tf 56.00 543.89 Td (Tension is the pulling force transmitted through a string, rope, or cable. In ideal) Tj ET
+BT /F1 10 Tf 56.00 529.89 Td (problems, the string is massless and inextensible, and the pulley is frictionless. Under) Tj ET
+BT /F1 10 Tf 56.00 515.89 Td (these assumptions, tension is the same throughout one continuous string.) Tj ET
+BT /F2 10 Tf 62.00 496.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 496.89 Td (Tension always pulls; it does not push.) Tj ET
+BT /F2 10 Tf 62.00 479.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 479.89 Td (Tension acts along the direction of the string.) Tj ET
+BT /F2 10 Tf 62.00 462.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 462.89 Td (Connected-body problems often use the same acceleration for bodies joined by a taut) Tj ET
+BT /F1 10 Tf 76.00 448.89 Td (string.) Tj ET
+BT /F2 12 Tf 56.00 427.89 Td (Friction) Tj ET
+BT /F1 10 Tf 56.00 410.89 Td (Friction is a contact force that opposes relative motion or the tendency of relative motion) Tj ET
+BT /F1 10 Tf 56.00 396.89 Td (between surfaces. It acts parallel to the surface of contact.) Tj ET
+q 0.95 g 56.00 360.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 368.89 Td (Static friction: f_s <= mu_s N        Kinetic friction: f_k = mu_k N) Tj ET
+BT /F2 10 Tf 62.00 343.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 343.89 Td (Static friction acts when surfaces are not sliding relative to each other.) Tj ET
+BT /F2 10 Tf 62.00 326.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 326.89 Td (Kinetic friction acts when surfaces are sliding.) Tj ET
+BT /F2 10 Tf 62.00 309.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 309.89 Td (Static friction adjusts up to a maximum value; it is not always equal to mu_s N.) Tj ET
+BT /F2 10 Tf 62.00 292.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 292.89 Td (Usually mu_s is greater than mu_k, so starting motion is harder than maintaining) Tj ET
+BT /F1 10 Tf 76.00 278.89 Td (sliding motion.) Tj ET
+BT /F2 10 Tf 62.00 261.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 261.89 Td (Friction opposes relative motion or impending relative motion, not necessarily the) Tj ET
+BT /F1 10 Tf 76.00 247.89 Td (object's velocity relative to the ground.) Tj ET
+BT /F2 15 Tf 56.00 222.89 Td (6. Free Body Diagrams) Tj ET
+0.50 w 56.00 212.89 m 539.28 212.89 l S
+BT /F1 10 Tf 56.00 195.89 Td (A free body diagram is a diagram showing all external forces acting on a selected object. It) Tj ET
+BT /F1 10 Tf 56.00 181.89 Td (is one of the most important tools for solving mechanics problems.) Tj ET
+BT /F2 12 Tf 56.00 158.89 Td (Steps for Drawing a Free Body Diagram) Tj ET
+BT /F2 10 Tf 62.00 141.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 141.89 Td (Choose the object or system to analyze.) Tj ET
+BT /F2 10 Tf 62.00 124.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 124.89 Td (Represent the object as a point or simple shape.) Tj ET
+BT /F2 10 Tf 62.00 107.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 107.89 Td (Draw only external forces acting on that object.) Tj ET
+BT /F2 10 Tf 62.00 90.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 90.89 Td (Label every force clearly: weight, normal force, tension, friction, applied force, and) Tj ET
+BT /F1 10 Tf 76.00 76.89 Td (so on.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Laws of Motion and Forces) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 3) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4363 >>
+stream
+BT /F2 10 Tf 62.00 785.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 785.89 Td (Choose convenient coordinate axes.) Tj ET
+BT /F2 10 Tf 62.00 768.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 768.89 Td (Resolve angled forces into components when needed.) Tj ET
+BT /F2 10 Tf 62.00 751.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 751.89 Td (Apply sum F_x = ma_x and sum F_y = ma_y.) Tj ET
+BT /F2 12 Tf 56.00 730.89 Td (Forces Usually Included) Tj ET
+BT /F2 10 Tf 62.00 713.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 713.89 Td (Weight acts downward through the center of mass.) Tj ET
+BT /F2 10 Tf 62.00 696.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 696.89 Td (Normal force acts perpendicular to the contact surface.) Tj ET
+BT /F2 10 Tf 62.00 679.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 679.89 Td (Friction acts parallel to the surface and opposes sliding or tendency of sliding.) Tj ET
+BT /F2 10 Tf 62.00 662.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 662.89 Td (Tension acts along a string and pulls away from the object.) Tj ET
+BT /F2 10 Tf 62.00 645.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 645.89 Td (Applied force acts in the direction in which the push or pull is applied.) Tj ET
+BT /F2 12 Tf 56.00 624.89 Td (Forces Not Included) Tj ET
+BT /F2 10 Tf 62.00 607.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 607.89 Td (Do not include forces exerted by the object on other bodies.) Tj ET
+BT /F2 10 Tf 62.00 590.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 590.89 Td (Do not include action-reaction force pairs on the same diagram unless both act on the) Tj ET
+BT /F1 10 Tf 76.00 576.89 Td (chosen body, which they usually do not.) Tj ET
+BT /F2 10 Tf 62.00 559.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 559.89 Td (Do not invent a force in the direction of motion. Motion can continue without a) Tj ET
+BT /F1 10 Tf 76.00 545.89 Td (forward force if acceleration is zero.) Tj ET
+BT /F2 15 Tf 56.00 520.89 Td (7. Solving Force Problems) Tj ET
+0.50 w 56.00 510.89 m 539.28 510.89 l S
+BT /F1 10 Tf 56.00 493.89 Td (Most force problems follow a common pattern: draw the free body diagram, choose axes, write) Tj ET
+BT /F1 10 Tf 56.00 479.89 Td (Newton's second law in each direction, substitute known values, and solve unknowns.) Tj ET
+BT /F2 12 Tf 56.00 456.89 Td (Horizontal Surface) Tj ET
+BT /F1 10 Tf 56.00 439.89 Td (For a block on a horizontal surface pulled by a horizontal force, the vertical forces often) Tj ET
+BT /F1 10 Tf 56.00 425.89 Td (balance if there is no vertical acceleration. The horizontal equation determines) Tj ET
+BT /F1 10 Tf 56.00 411.89 Td (acceleration.) Tj ET
+q 0.95 g 56.00 375.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 383.89 Td (Vertical: N - mg = 0        Horizontal: F - f = ma) Tj ET
+BT /F2 12 Tf 56.00 354.89 Td (Inclined Plane) Tj ET
+BT /F1 10 Tf 56.00 337.89 Td (On an inclined plane, weight is resolved into two components. The component parallel to the) Tj ET
+BT /F1 10 Tf 56.00 323.89 Td (plane is mg sin\(theta\), and the component perpendicular to the plane is mg cos\(theta\).) Tj ET
+q 0.95 g 56.00 287.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 295.89 Td (Parallel component: mg sin\(theta\)        Perpendicular component: mg cos\(theta\)) Tj ET
+q 0.95 g 56.00 253.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 261.89 Td (Normal force on simple incline: N = mg cos\(theta\)) Tj ET
+BT /F2 10 Tf 62.00 236.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 236.89 Td (If the plane is frictionless, acceleration down the plane is g sin\(theta\).) Tj ET
+BT /F2 10 Tf 62.00 219.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 219.89 Td (If friction is present, friction acts opposite the motion or tendency of motion.) Tj ET
+BT /F2 12 Tf 56.00 198.89 Td (Connected Bodies) Tj ET
+BT /F1 10 Tf 56.00 181.89 Td (For bodies connected by a light string, each body gets its own free body diagram. If the) Tj ET
+BT /F1 10 Tf 56.00 167.89 Td (string remains taut, connected bodies often share the same acceleration magnitude.) Tj ET
+BT /F2 10 Tf 62.00 148.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 148.89 Td (Write separate equations for each mass.) Tj ET
+BT /F2 10 Tf 62.00 131.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 131.89 Td (Use the same tension for a single ideal string.) Tj ET
+BT /F2 10 Tf 62.00 114.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 114.89 Td (Use signs consistently according to the chosen motion direction.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Laws of Motion and Forces) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 4) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 3891 >>
+stream
+BT /F2 15 Tf 56.00 777.89 Td (8. Circular Motion) Tj ET
+0.50 w 56.00 767.89 m 539.28 767.89 l S
+BT /F1 10 Tf 56.00 750.89 Td (Circular motion occurs when an object moves along a circular path. Even if speed is) Tj ET
+BT /F1 10 Tf 56.00 736.89 Td (constant, velocity changes continuously because direction changes. Therefore, an object in) Tj ET
+BT /F1 10 Tf 56.00 722.89 Td (circular motion has acceleration.) Tj ET
+BT /F2 12 Tf 56.00 699.89 Td (Uniform Circular Motion) Tj ET
+BT /F1 10 Tf 56.00 682.89 Td (Uniform circular motion means the object moves in a circle with constant speed. The) Tj ET
+BT /F1 10 Tf 56.00 668.89 Td (acceleration is directed toward the center of the circle and is called centripetal) Tj ET
+BT /F1 10 Tf 56.00 654.89 Td (acceleration.) Tj ET
+q 0.95 g 56.00 618.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 626.89 Td (Centripetal acceleration: a_c = v^2 / r) Tj ET
+q 0.95 g 56.00 584.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 592.89 Td (Centripetal force: F_c = m v^2 / r) Tj ET
+BT /F2 10 Tf 62.00 567.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 567.89 Td (Centripetal means center-seeking.) Tj ET
+BT /F2 10 Tf 62.00 550.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 550.89 Td (Centripetal force is not a new separate force; it is the net inward force required for) Tj ET
+BT /F1 10 Tf 76.00 536.89 Td (circular motion.) Tj ET
+BT /F2 10 Tf 62.00 519.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 519.89 Td (The inward force may be provided by tension, friction, gravity, normal force, or a) Tj ET
+BT /F1 10 Tf 76.00 505.89 Td (combination of forces.) Tj ET
+BT /F2 12 Tf 56.00 484.89 Td (Period and Frequency) Tj ET
+BT /F1 10 Tf 56.00 467.89 Td (The period is the time taken for one complete revolution. Frequency is the number of) Tj ET
+BT /F1 10 Tf 56.00 453.89 Td (revolutions per second.) Tj ET
+q 0.95 g 56.00 417.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 425.89 Td (v = 2 pi r / T        f = 1 / T        v = 2 pi r f) Tj ET
+BT /F2 12 Tf 56.00 396.89 Td (Examples of Centripetal Force) Tj ET
+BT /F2 10 Tf 62.00 379.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 379.89 Td (A stone tied to a string: tension provides centripetal force.) Tj ET
+BT /F2 10 Tf 62.00 362.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 362.89 Td (A car turning on a flat road: friction provides centripetal force.) Tj ET
+BT /F2 10 Tf 62.00 345.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 345.89 Td (A satellite orbiting Earth: gravity provides centripetal force.) Tj ET
+BT /F2 10 Tf 62.00 328.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 328.89 Td (A roller coaster at the bottom of a loop: normal force and weight combine to produce) Tj ET
+BT /F1 10 Tf 76.00 314.89 Td (net inward force.) Tj ET
+BT /F2 15 Tf 56.00 289.89 Td (9. Non-Uniform Circular Motion) Tj ET
+0.50 w 56.00 279.89 m 539.28 279.89 l S
+BT /F1 10 Tf 56.00 262.89 Td (In non-uniform circular motion, speed changes as the object moves. The acceleration has two) Tj ET
+BT /F1 10 Tf 56.00 248.89 Td (components: centripetal acceleration toward the center and tangential acceleration along the) Tj ET
+BT /F1 10 Tf 56.00 234.89 Td (tangent.) Tj ET
+q 0.95 g 56.00 198.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 206.89 Td (Radial acceleration: a_r = v^2 / r        Tangential acceleration: a_t = dv/dt) Tj ET
+BT /F2 10 Tf 62.00 181.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 181.89 Td (Radial acceleration changes the direction of velocity.) Tj ET
+BT /F2 10 Tf 62.00 164.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 164.89 Td (Tangential acceleration changes the speed.) Tj ET
+BT /F2 10 Tf 62.00 147.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 147.89 Td (The total acceleration is the vector combination of radial and tangential) Tj ET
+BT /F1 10 Tf 76.00 133.89 Td (acceleration.) Tj ET
+BT /F2 15 Tf 56.00 108.89 Td (10. Worked Examples) Tj ET
+0.50 w 56.00 98.89 m 539.28 98.89 l S
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Laws of Motion and Forces) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 5) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 4581 >>
+stream
+BT /F2 12 Tf 56.00 781.89 Td (Example 1: Net Force) Tj ET
+BT /F1 10 Tf 56.00 764.89 Td (A 5 kg box is pulled with a horizontal force of 20 N on a frictionless floor. Using F_net =) Tj ET
+BT /F1 10 Tf 56.00 750.89 Td (ma, acceleration a = 20/5 = 4 m/s^2.) Tj ET
+BT /F2 12 Tf 56.00 727.89 Td (Example 2: Friction) Tj ET
+BT /F1 10 Tf 56.00 710.89 Td (A 10 kg block slides on a surface with mu_k = 0.2. The normal force is N = mg = 10 x 9.8 =) Tj ET
+BT /F1 10 Tf 56.00 696.89 Td (98 N. Kinetic friction is f_k = mu_k N = 0.2 x 98 = 19.6 N.) Tj ET
+BT /F2 12 Tf 56.00 673.89 Td (Example 3: Inclined Plane) Tj ET
+BT /F1 10 Tf 56.00 656.89 Td (For a block on a frictionless incline of angle theta, the component of weight down the plane) Tj ET
+BT /F1 10 Tf 56.00 642.89 Td (is mg sin\(theta\). Newton's second law gives mg sin\(theta\) = ma, so a = g sin\(theta\).) Tj ET
+BT /F2 12 Tf 56.00 619.89 Td (Example 4: Circular Motion) Tj ET
+BT /F1 10 Tf 56.00 602.89 Td (A 2 kg object moves in a circle of radius 1 m with speed 3 m/s. Centripetal force F_c =) Tj ET
+BT /F1 10 Tf 56.00 588.89 Td (mv^2/r = 2 x 9 / 1 = 18 N toward the center.) Tj ET
+BT /F2 15 Tf 56.00 561.89 Td (11. Common Misconceptions) Tj ET
+0.50 w 56.00 551.89 m 539.28 551.89 l S
+BT /F2 10 Tf 62.00 534.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 534.89 Td (A moving object does not need a force in the direction of motion to keep moving at) Tj ET
+BT /F1 10 Tf 76.00 520.89 Td (constant velocity.) Tj ET
+BT /F2 10 Tf 62.00 503.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 503.89 Td (Action and reaction forces do not cancel because they act on different bodies.) Tj ET
+BT /F2 10 Tf 62.00 486.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 486.89 Td (Normal force is not always equal to weight.) Tj ET
+BT /F2 10 Tf 62.00 469.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 469.89 Td (Static friction is not always equal to mu_s N; it adjusts up to its maximum value.) Tj ET
+BT /F2 10 Tf 62.00 452.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 452.89 Td (Centripetal force is not an extra mysterious force; it is the net inward force.) Tj ET
+BT /F2 10 Tf 62.00 435.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 435.89 Td (In uniform circular motion, speed is constant but velocity is not constant because) Tj ET
+BT /F1 10 Tf 76.00 421.89 Td (direction changes.) Tj ET
+BT /F2 10 Tf 62.00 404.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 404.89 Td (At the top of a vertical circle, both weight and possibly tension/normal force may) Tj ET
+BT /F1 10 Tf 76.00 390.89 Td (point toward the center.) Tj ET
+BT /F2 15 Tf 56.00 365.89 Td (Quick Revision Sheet) Tj ET
+0.50 w 56.00 355.89 m 539.28 355.89 l S
+BT /F2 10 Tf 62.00 338.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 338.89 Td (Force is a vector measured in newtons.) Tj ET
+BT /F2 10 Tf 62.00 321.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 321.89 Td (Newton's first law describes inertia.) Tj ET
+BT /F2 10 Tf 62.00 304.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 304.89 Td (Newton's second law is F_net = ma.) Tj ET
+BT /F2 10 Tf 62.00 287.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 287.89 Td (Newton's third law says action and reaction are equal, opposite, and act on different) Tj ET
+BT /F1 10 Tf 76.00 273.89 Td (bodies.) Tj ET
+BT /F2 10 Tf 62.00 256.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 256.89 Td (Weight is mg and acts downward.) Tj ET
+BT /F2 10 Tf 62.00 239.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 239.89 Td (Normal force is perpendicular to the surface.) Tj ET
+BT /F2 10 Tf 62.00 222.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 222.89 Td (Tension acts along a string and always pulls.) Tj ET
+BT /F2 10 Tf 62.00 205.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 205.89 Td (Friction acts parallel to the surface and opposes relative motion or tendency of) Tj ET
+BT /F1 10 Tf 76.00 191.89 Td (motion.) Tj ET
+BT /F2 10 Tf 62.00 174.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 174.89 Td (Static friction satisfies f_s <= mu_s N; kinetic friction is f_k = mu_k N.) Tj ET
+BT /F2 10 Tf 62.00 157.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 157.89 Td (A free body diagram contains only external forces on the selected object.) Tj ET
+BT /F2 10 Tf 62.00 140.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 140.89 Td (On an incline, weight components are mg sin\(theta\) and mg cos\(theta\).) Tj ET
+BT /F2 10 Tf 62.00 123.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 123.89 Td (Uniform circular motion has centripetal acceleration v^2/r toward the center.) Tj ET
+BT /F2 10 Tf 62.00 106.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 106.89 Td (Centripetal force is the net inward force required for circular motion.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Laws of Motion and Forces) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 6) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 2493 >>
+stream
+BT /F2 15 Tf 56.00 777.89 Td (Practice Questions) Tj ET
+0.50 w 56.00 767.89 m 539.28 767.89 l S
+BT /F2 10 Tf 62.00 750.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 750.89 Td (State Newton's three laws of motion with one example for each.) Tj ET
+BT /F2 10 Tf 62.00 733.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 733.89 Td (Why does a passenger move forward when a bus suddenly stops?) Tj ET
+BT /F2 10 Tf 62.00 716.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 716.89 Td (A 4 kg object experiences a net force of 12 N. Find its acceleration.) Tj ET
+BT /F2 10 Tf 62.00 699.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 699.89 Td (Differentiate between mass and weight.) Tj ET
+BT /F2 10 Tf 62.00 682.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 682.89 Td (Explain why normal force is not always equal to mg.) Tj ET
+BT /F2 10 Tf 62.00 665.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 665.89 Td (A 20 kg box rests on a horizontal floor. Find its weight and normal force.) Tj ET
+BT /F2 10 Tf 62.00 648.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 648.89 Td (A block has N = 50 N and mu_k = 0.3. Find kinetic friction.) Tj ET
+BT /F2 10 Tf 62.00 631.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 631.89 Td (What is the maximum static friction if mu_s = 0.5 and N = 80 N?) Tj ET
+BT /F2 10 Tf 62.00 614.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 614.89 Td (Draw the free body diagram of a block pulled by a string on a rough horizontal) Tj ET
+BT /F1 10 Tf 76.00 600.89 Td (surface.) Tj ET
+BT /F2 10 Tf 62.00 583.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 583.89 Td (Resolve the weight of a block on an incline into parallel and perpendicular) Tj ET
+BT /F1 10 Tf 76.00 569.89 Td (components.) Tj ET
+BT /F2 10 Tf 62.00 552.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 552.89 Td (Why do action-reaction pairs not cancel each other?) Tj ET
+BT /F2 10 Tf 62.00 535.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 535.89 Td (A 2 kg body moves in a circle of radius 0.5 m with speed 4 m/s. Find centripetal) Tj ET
+BT /F1 10 Tf 76.00 521.89 Td (force.) Tj ET
+BT /F2 10 Tf 62.00 504.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 504.89 Td (What provides centripetal force for a car turning on a flat road?) Tj ET
+BT /F2 10 Tf 62.00 487.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 487.89 Td (Explain why uniform circular motion is accelerated motion.) Tj ET
+BT /F2 10 Tf 62.00 470.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 470.89 Td (Differentiate between radial acceleration and tangential acceleration.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Laws of Motion and Forces) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 7) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R] /Count 7 >>
+endobj
+19 0 obj
+<< /Type /Catalog /Pages 18 0 R >>
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000000228 00000 n 
+0000004623 00000 n 
+0000004776 00000 n 
+0000008892 00000 n 
+0000009045 00000 n 
+0000013843 00000 n 
+0000013996 00000 n 
+0000018412 00000 n 
+0000018567 00000 n 
+0000022511 00000 n 
+0000022666 00000 n 
+0000027300 00000 n 
+0000027455 00000 n 
+0000030001 00000 n 
+0000030156 00000 n 
+0000030254 00000 n 
+trailer
+<< /Size 20 /Root 19 0 R >>
+startxref
+30305
+%%EOF

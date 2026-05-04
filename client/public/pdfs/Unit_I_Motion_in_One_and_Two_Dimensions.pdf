@@ -1,0 +1,452 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 4362 >>
+stream
+BT /F2 24 Tf 56.00 785.89 Td (Unit I: Motion in One and Two Dimensions) Tj ET
+BT /F1 12 Tf 56.00 757.89 Td (Distance, displacement, velocity, acceleration, equations of motion, projectile motion, and motion graphs) Tj ET
+1.20 w 56.00 739.89 m 539.28 739.89 l S
+BT /F2 15 Tf 56.00 703.89 Td (Learning Goals) Tj ET
+0.50 w 56.00 693.89 m 539.28 693.89 l S
+BT /F2 10 Tf 62.00 676.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 676.89 Td (Distinguish between distance and displacement.) Tj ET
+BT /F2 10 Tf 62.00 659.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 659.89 Td (Understand speed, velocity, and acceleration as descriptions of motion.) Tj ET
+BT /F2 10 Tf 62.00 642.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 642.89 Td (Apply equations of motion for uniformly accelerated motion.) Tj ET
+BT /F2 10 Tf 62.00 625.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 625.89 Td (Analyze motion in one dimension using signs, graphs, and formulas.) Tj ET
+BT /F2 10 Tf 62.00 608.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 608.89 Td (Resolve two-dimensional motion into horizontal and vertical components.) Tj ET
+BT /F2 10 Tf 62.00 591.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 591.89 Td (Study projectile motion using independent x and y directions.) Tj ET
+BT /F2 10 Tf 62.00 574.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 574.89 Td (Interpret displacement-time, velocity-time, and acceleration-time graphs.) Tj ET
+BT /F2 15 Tf 56.00 549.89 Td (1. Introduction to Motion) Tj ET
+0.50 w 56.00 539.89 m 539.28 539.89 l S
+BT /F1 10 Tf 56.00 522.89 Td (Mechanics is the branch of physics that studies motion and the causes of motion. Kinematics) Tj ET
+BT /F1 10 Tf 56.00 508.89 Td (describes motion without discussing forces. In this unit, we describe how position changes) Tj ET
+BT /F1 10 Tf 56.00 494.89 Td (with time using distance, displacement, velocity, and acceleration.) Tj ET
+BT /F1 10 Tf 56.00 475.89 Td (Motion can occur in one dimension, such as a car moving along a straight road, or in two) Tj ET
+BT /F1 10 Tf 56.00 461.89 Td (dimensions, such as a ball thrown through the air. The same basic ideas apply, but two-) Tj ET
+BT /F1 10 Tf 56.00 447.89 Td (dimensional motion is handled by breaking the motion into perpendicular components.) Tj ET
+BT /F2 15 Tf 56.00 420.89 Td (2. Distance and Displacement) Tj ET
+0.50 w 56.00 410.89 m 539.28 410.89 l S
+BT /F1 10 Tf 56.00 393.89 Td (Distance is the total path length travelled by an object. It is a scalar quantity, so it has) Tj ET
+BT /F1 10 Tf 56.00 379.89 Td (magnitude only and no direction. Distance is always zero or positive.) Tj ET
+BT /F1 10 Tf 56.00 360.89 Td (Displacement is the change in position from the initial point to the final point. It is a) Tj ET
+BT /F1 10 Tf 56.00 346.89 Td (vector quantity, so it has both magnitude and direction. Displacement can be positive,) Tj ET
+BT /F1 10 Tf 56.00 332.89 Td (negative, or zero depending on the chosen coordinate direction.) Tj ET
+q 0.95 g 56.00 296.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 304.89 Td (Distance = total path length        Displacement = final position - initial position) Tj ET
+q 0.95 g 56.00 262.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 270.89 Td (Delta x = x_f - x_i) Tj ET
+q 0.92 g 56.00 201.89 483.28 44.00 re f Q
+0.30 w 56.00 201.89 m 539.28 201.89 l S
+0.30 w 206.00 201.89 m 206.00 245.89 l S
+BT /F2 9 Tf 64.00 229.89 Td (Quantity) Tj ET
+BT /F2 9 Tf 214.00 229.89 Td (Meaning) Tj ET
+q 1.00 g 56.00 157.89 483.28 44.00 re f Q
+0.30 w 56.00 157.89 m 539.28 157.89 l S
+0.30 w 206.00 157.89 m 206.00 201.89 l S
+BT /F1 9 Tf 64.00 185.89 Td (Distance) Tj ET
+BT /F1 9 Tf 214.00 185.89 Td (Total length of path covered; scalar.) Tj ET
+q 0.98 g 56.00 113.89 483.28 44.00 re f Q
+0.30 w 56.00 113.89 m 539.28 113.89 l S
+0.30 w 206.00 113.89 m 206.00 157.89 l S
+BT /F1 9 Tf 64.00 141.89 Td (Displacement) Tj ET
+BT /F1 9 Tf 214.00 141.89 Td (Shortest directed change from initial to final position;) Tj ET
+BT /F1 9 Tf 214.00 129.89 Td (vector.) Tj ET
+q 1.00 g 56.00 69.89 483.28 44.00 re f Q
+0.30 w 56.00 69.89 m 539.28 69.89 l S
+0.30 w 206.00 69.89 m 206.00 113.89 l S
+BT /F1 9 Tf 64.00 97.89 Td (Example) Tj ET
+BT /F1 9 Tf 214.00 97.89 Td (Walking 3 m east and 3 m west gives distance 6 m but) Tj ET
+BT /F1 9 Tf 214.00 85.89 Td (displacement 0 m.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit I: Motion in One and Two Dimensions) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 4128 >>
+stream
+BT /F2 10 Tf 62.00 785.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 785.89 Td (Distance depends on the actual path taken.) Tj ET
+BT /F2 10 Tf 62.00 768.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 768.89 Td (Displacement depends only on initial and final positions.) Tj ET
+BT /F2 10 Tf 62.00 751.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 751.89 Td (For straight-line motion in one direction, distance and displacement magnitudes may be) Tj ET
+BT /F1 10 Tf 76.00 737.89 Td (equal.) Tj ET
+BT /F2 15 Tf 56.00 712.89 Td (3. Speed and Velocity) Tj ET
+0.50 w 56.00 702.89 m 539.28 702.89 l S
+BT /F1 10 Tf 56.00 685.89 Td (Speed tells how fast an object moves. It is a scalar. Velocity tells how fast position) Tj ET
+BT /F1 10 Tf 56.00 671.89 Td (changes in a specified direction. It is a vector. Two objects can have the same speed but) Tj ET
+BT /F1 10 Tf 56.00 657.89 Td (different velocities if they move in different directions.) Tj ET
+q 0.95 g 56.00 621.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 629.89 Td (Average speed = total distance / total time) Tj ET
+q 0.95 g 56.00 587.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 595.89 Td (Average velocity = displacement / time interval = Delta x / Delta t) Tj ET
+BT /F1 10 Tf 56.00 570.89 Td (Instantaneous velocity is the velocity at a particular moment. In calculus language, it is) Tj ET
+BT /F1 10 Tf 56.00 556.89 Td (the derivative of position with respect to time. In graph language, it is the slope of the) Tj ET
+BT /F1 10 Tf 56.00 542.89 Td (displacement-time graph at that instant.) Tj ET
+q 0.95 g 56.00 506.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 514.89 Td (Instantaneous velocity: v = dx/dt) Tj ET
+BT /F2 10 Tf 62.00 489.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 489.89 Td (If velocity is positive, the object moves in the positive direction.) Tj ET
+BT /F2 10 Tf 62.00 472.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 472.89 Td (If velocity is negative, the object moves in the negative direction.) Tj ET
+BT /F2 10 Tf 62.00 455.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 455.89 Td (If velocity is zero, the object is momentarily at rest.) Tj ET
+BT /F2 15 Tf 56.00 430.89 Td (4. Acceleration) Tj ET
+0.50 w 56.00 420.89 m 539.28 420.89 l S
+BT /F1 10 Tf 56.00 403.89 Td (Acceleration is the rate of change of velocity with time. It is a vector quantity. An object) Tj ET
+BT /F1 10 Tf 56.00 389.89 Td (accelerates when its speed changes, its direction changes, or both.) Tj ET
+q 0.95 g 56.00 353.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 361.89 Td (Average acceleration = change in velocity / time interval = Delta v / Delta t) Tj ET
+q 0.95 g 56.00 319.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 327.89 Td (Instantaneous acceleration: a = dv/dt = d^2x/dt^2) Tj ET
+BT /F2 10 Tf 62.00 302.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 302.89 Td (Positive acceleration means acceleration points in the positive direction.) Tj ET
+BT /F2 10 Tf 62.00 285.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 285.89 Td (Negative acceleration means acceleration points in the negative direction.) Tj ET
+BT /F2 10 Tf 62.00 268.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 268.89 Td (Acceleration opposite to velocity reduces speed.) Tj ET
+BT /F2 10 Tf 62.00 251.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 251.89 Td (Acceleration in the same direction as velocity increases speed.) Tj ET
+BT /F1 10 Tf 56.00 234.89 Td (In freely falling motion near the Earth's surface, acceleration due to gravity is) Tj ET
+BT /F1 10 Tf 56.00 220.89 Td (approximately 9.8 m/s^2 downward. If upward is chosen as positive, then a = -g = -9.8 m/s^2.) Tj ET
+BT /F2 15 Tf 56.00 193.89 Td (5. Equations of Motion) Tj ET
+0.50 w 56.00 183.89 m 539.28 183.89 l S
+BT /F1 10 Tf 56.00 166.89 Td (For motion with constant acceleration in a straight line, a set of standard equations) Tj ET
+BT /F1 10 Tf 56.00 152.89 Td (connects displacement, velocity, acceleration, and time. These equations are also called) Tj ET
+BT /F1 10 Tf 56.00 138.89 Td (kinematic equations.) Tj ET
+q 0.95 g 56.00 102.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 110.89 Td (v = u + at) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit I: Motion in One and Two Dimensions) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 2) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 3743 >>
+stream
+q 0.95 g 56.00 768.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 776.89 Td (s = ut + \(1/2\)at^2) Tj ET
+q 0.95 g 56.00 734.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 742.89 Td (v^2 = u^2 + 2as) Tj ET
+q 0.95 g 56.00 700.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 708.89 Td (s = [\(u + v\)/2] t) Tj ET
+q 0.92 g 56.00 639.89 483.28 44.00 re f Q
+0.30 w 56.00 639.89 m 539.28 639.89 l S
+0.30 w 206.00 639.89 m 206.00 683.89 l S
+BT /F2 9 Tf 64.00 667.89 Td (Symbol) Tj ET
+BT /F2 9 Tf 214.00 667.89 Td (Meaning) Tj ET
+q 1.00 g 56.00 595.89 483.28 44.00 re f Q
+0.30 w 56.00 595.89 m 539.28 595.89 l S
+0.30 w 206.00 595.89 m 206.00 639.89 l S
+BT /F1 9 Tf 64.00 623.89 Td (u) Tj ET
+BT /F1 9 Tf 214.00 623.89 Td (Initial velocity.) Tj ET
+q 0.98 g 56.00 551.89 483.28 44.00 re f Q
+0.30 w 56.00 551.89 m 539.28 551.89 l S
+0.30 w 206.00 551.89 m 206.00 595.89 l S
+BT /F1 9 Tf 64.00 579.89 Td (v) Tj ET
+BT /F1 9 Tf 214.00 579.89 Td (Final velocity.) Tj ET
+q 1.00 g 56.00 507.89 483.28 44.00 re f Q
+0.30 w 56.00 507.89 m 539.28 507.89 l S
+0.30 w 206.00 507.89 m 206.00 551.89 l S
+BT /F1 9 Tf 64.00 535.89 Td (a) Tj ET
+BT /F1 9 Tf 214.00 535.89 Td (Constant acceleration.) Tj ET
+q 0.98 g 56.00 463.89 483.28 44.00 re f Q
+0.30 w 56.00 463.89 m 539.28 463.89 l S
+0.30 w 206.00 463.89 m 206.00 507.89 l S
+BT /F1 9 Tf 64.00 491.89 Td (t) Tj ET
+BT /F1 9 Tf 214.00 491.89 Td (Time interval.) Tj ET
+q 1.00 g 56.00 419.89 483.28 44.00 re f Q
+0.30 w 56.00 419.89 m 539.28 419.89 l S
+0.30 w 206.00 419.89 m 206.00 463.89 l S
+BT /F1 9 Tf 64.00 447.89 Td (s) Tj ET
+BT /F1 9 Tf 214.00 447.89 Td (Displacement during the time interval.) Tj ET
+BT /F2 10 Tf 62.00 407.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 407.89 Td (Use these equations only when acceleration is constant.) Tj ET
+BT /F2 10 Tf 62.00 390.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 390.89 Td (Choose a positive direction before substituting values.) Tj ET
+BT /F2 10 Tf 62.00 373.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 373.89 Td (Use signs carefully for velocity, displacement, and acceleration.) Tj ET
+BT /F2 10 Tf 62.00 356.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 356.89 Td (For vertical motion, gravity acts downward, so its sign depends on the chosen axis.) Tj ET
+BT /F2 15 Tf 56.00 331.89 Td (6. Motion in One Dimension) Tj ET
+0.50 w 56.00 321.89 m 539.28 321.89 l S
+BT /F1 10 Tf 56.00 304.89 Td (One-dimensional motion occurs along a straight line. Examples include an elevator moving up) Tj ET
+BT /F1 10 Tf 56.00 290.89 Td (and down, a train on a straight track, or a stone dropped from rest. The direction of motion) Tj ET
+BT /F1 10 Tf 56.00 276.89 Td (can be represented using positive and negative signs.) Tj ET
+BT /F2 12 Tf 56.00 253.89 Td (Uniform Motion) Tj ET
+BT /F1 10 Tf 56.00 236.89 Td (Uniform motion means velocity is constant. The acceleration is zero, and equal displacements) Tj ET
+BT /F1 10 Tf 56.00 222.89 Td (are covered in equal time intervals.) Tj ET
+q 0.95 g 56.00 186.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 194.89 Td (For uniform motion: x = x0 + vt) Tj ET
+BT /F2 12 Tf 56.00 165.89 Td (Uniformly Accelerated Motion) Tj ET
+BT /F1 10 Tf 56.00 148.89 Td (Uniformly accelerated motion means acceleration is constant. Velocity changes by equal) Tj ET
+BT /F1 10 Tf 56.00 134.89 Td (amounts in equal time intervals. The equations of motion are used for this case.) Tj ET
+BT /F2 10 Tf 62.00 115.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 115.89 Td (A car speeding up uniformly has constant positive acceleration.) Tj ET
+BT /F2 10 Tf 62.00 98.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 98.89 Td (A ball thrown upward has constant downward acceleration due to gravity.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit I: Motion in One and Two Dimensions) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 3) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4100 >>
+stream
+BT /F2 10 Tf 62.00 785.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 785.89 Td (At the highest point of vertical motion, velocity is zero but acceleration is still) Tj ET
+BT /F1 10 Tf 76.00 771.89 Td (downward.) Tj ET
+BT /F2 15 Tf 56.00 746.89 Td (7. Motion in Two Dimensions) Tj ET
+0.50 w 56.00 736.89 m 539.28 736.89 l S
+BT /F1 10 Tf 56.00 719.89 Td (Two-dimensional motion occurs in a plane. Position, velocity, and acceleration are) Tj ET
+BT /F1 10 Tf 56.00 705.89 Td (represented using components along two perpendicular axes, usually x and y. A vector can be) Tj ET
+BT /F1 10 Tf 56.00 691.89 Td (resolved into horizontal and vertical components.) Tj ET
+q 0.95 g 56.00 655.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 663.89 Td (Position vector: r = x i + y j        Velocity: v = vx i + vy j        Acceleration: a = ax i + ay j) Tj ET
+q 0.95 g 56.00 621.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 629.89 Td (Magnitude: |v| = sqrt\(vx^2 + vy^2\)        Direction: tan\(theta\) = vy / vx) Tj ET
+BT /F1 10 Tf 56.00 604.89 Td (The key idea is independence of perpendicular components. Horizontal motion and vertical) Tj ET
+BT /F1 10 Tf 56.00 590.89 Td (motion can be analyzed separately, then combined to describe the full motion.) Tj ET
+BT /F2 10 Tf 62.00 571.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 571.89 Td (Horizontal and vertical components are perpendicular.) Tj ET
+BT /F2 10 Tf 62.00 554.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 554.89 Td (A change in one component does not automatically mean the other component changes.) Tj ET
+BT /F2 10 Tf 62.00 537.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 537.89 Td (Two-dimensional problems are often solved by writing separate x-direction and) Tj ET
+BT /F1 10 Tf 76.00 523.89 Td (y-direction equations.) Tj ET
+BT /F2 15 Tf 56.00 498.89 Td (8. Projectile Motion) Tj ET
+0.50 w 56.00 488.89 m 539.28 488.89 l S
+BT /F1 10 Tf 56.00 471.89 Td (Projectile motion is the motion of an object thrown or projected into the air under the) Tj ET
+BT /F1 10 Tf 56.00 457.89 Td (influence of gravity alone, neglecting air resistance. The path of a projectile is a) Tj ET
+BT /F1 10 Tf 56.00 443.89 Td (parabola.) Tj ET
+BT /F1 10 Tf 56.00 424.89 Td (Projectile motion is analyzed by resolving initial velocity into horizontal and vertical) Tj ET
+BT /F1 10 Tf 56.00 410.89 Td (components. The horizontal component remains constant if air resistance is ignored. The) Tj ET
+BT /F1 10 Tf 56.00 396.89 Td (vertical component changes because gravity acts downward.) Tj ET
+q 0.95 g 56.00 360.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 368.89 Td (u_x = u cos\(theta\)        u_y = u sin\(theta\)) Tj ET
+q 0.95 g 56.00 326.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 334.89 Td (Horizontal: x = u_x t        Vertical: y = u_y t - \(1/2\)gt^2) Tj ET
+q 0.95 g 56.00 292.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 300.89 Td (v_y = u_y - gt        v_x = u_x) Tj ET
+BT /F2 12 Tf 56.00 271.89 Td (Important Results for Same Launch and Landing Level) Tj ET
+q 0.95 g 56.00 237.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 245.89 Td (Time of flight: T = 2u sin\(theta\) / g) Tj ET
+q 0.95 g 56.00 203.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 211.89 Td (Maximum height: H = u^2 sin^2\(theta\) / \(2g\)) Tj ET
+q 0.95 g 56.00 169.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 177.89 Td (Range: R = u^2 sin\(2theta\) / g) Tj ET
+BT /F2 10 Tf 62.00 152.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 152.89 Td (Maximum range occurs at theta = 45 degrees when launch and landing heights are equal.) Tj ET
+BT /F2 10 Tf 62.00 135.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 135.89 Td (Angles theta and 90 degrees - theta give the same range for the same speed.) Tj ET
+BT /F2 10 Tf 62.00 118.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 118.89 Td (At the highest point, vertical velocity is zero but horizontal velocity remains) Tj ET
+BT /F1 10 Tf 76.00 104.89 Td (unchanged.) Tj ET
+BT /F2 10 Tf 62.00 87.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 87.89 Td (Acceleration is always g downward throughout the flight.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit I: Motion in One and Two Dimensions) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 4) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 3873 >>
+stream
+BT /F2 15 Tf 56.00 777.89 Td (9. Motion Graphs) Tj ET
+0.50 w 56.00 767.89 m 539.28 767.89 l S
+BT /F1 10 Tf 56.00 750.89 Td (Graphs provide a visual way to understand motion. The three most important graphs are) Tj ET
+BT /F1 10 Tf 56.00 736.89 Td (displacement-time, velocity-time, and acceleration-time graphs.) Tj ET
+BT /F2 12 Tf 56.00 713.89 Td (Displacement-Time Graph) Tj ET
+BT /F2 10 Tf 62.00 696.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 696.89 Td (The slope of a displacement-time graph gives velocity.) Tj ET
+BT /F2 10 Tf 62.00 679.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 679.89 Td (A straight line means constant velocity.) Tj ET
+BT /F2 10 Tf 62.00 662.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 662.89 Td (A horizontal line means the object is at rest.) Tj ET
+BT /F2 10 Tf 62.00 645.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 645.89 Td (A curved graph means velocity is changing.) Tj ET
+q 0.95 g 56.00 611.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 619.89 Td (Slope of x-t graph = Delta x / Delta t = velocity) Tj ET
+BT /F2 12 Tf 56.00 590.89 Td (Velocity-Time Graph) Tj ET
+BT /F2 10 Tf 62.00 573.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 573.89 Td (The slope of a velocity-time graph gives acceleration.) Tj ET
+BT /F2 10 Tf 62.00 556.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 556.89 Td (The area under a velocity-time graph gives displacement.) Tj ET
+BT /F2 10 Tf 62.00 539.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 539.89 Td (A horizontal line means constant velocity and zero acceleration.) Tj ET
+BT /F2 10 Tf 62.00 522.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 522.89 Td (A straight sloping line means constant acceleration.) Tj ET
+q 0.95 g 56.00 488.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 496.89 Td (Slope of v-t graph = Delta v / Delta t = acceleration) Tj ET
+q 0.95 g 56.00 454.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 462.89 Td (Area under v-t graph = displacement) Tj ET
+BT /F2 12 Tf 56.00 433.89 Td (Acceleration-Time Graph) Tj ET
+BT /F2 10 Tf 62.00 416.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 416.89 Td (The area under an acceleration-time graph gives change in velocity.) Tj ET
+BT /F2 10 Tf 62.00 399.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 399.89 Td (A horizontal acceleration-time graph means constant acceleration.) Tj ET
+BT /F2 10 Tf 62.00 382.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 382.89 Td (If acceleration is zero, velocity remains constant.) Tj ET
+q 0.95 g 56.00 348.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 356.89 Td (Area under a-t graph = change in velocity) Tj ET
+BT /F2 15 Tf 56.00 323.89 Td (10. Worked Examples) Tj ET
+0.50 w 56.00 313.89 m 539.28 313.89 l S
+BT /F2 12 Tf 56.00 292.89 Td (Example 1: Distance and Displacement) Tj ET
+BT /F1 10 Tf 56.00 275.89 Td (A student walks 5 m east and then 3 m west. Distance = 5 + 3 = 8 m. Displacement = 5 - 3 = 2) Tj ET
+BT /F1 10 Tf 56.00 261.89 Td (m east.) Tj ET
+BT /F2 12 Tf 56.00 238.89 Td (Example 2: Uniform Acceleration) Tj ET
+BT /F1 10 Tf 56.00 221.89 Td (A car starts from rest and accelerates at 2 m/s^2 for 5 s. Using v = u + at, v = 0 + 2\(5\) =) Tj ET
+BT /F1 10 Tf 56.00 207.89 Td (10 m/s. Using s = ut + \(1/2\)at^2, s = 0 + \(1/2\)\(2\)\(25\) = 25 m.) Tj ET
+BT /F2 12 Tf 56.00 184.89 Td (Example 3: Projectile Components) Tj ET
+BT /F1 10 Tf 56.00 167.89 Td (A ball is thrown with speed u at angle theta. Its horizontal component is u cos\(theta\), and) Tj ET
+BT /F1 10 Tf 56.00 153.89 Td (its vertical component is u sin\(theta\). The horizontal part controls range, while the) Tj ET
+BT /F1 10 Tf 56.00 139.89 Td (vertical part controls time of flight and maximum height.) Tj ET
+BT /F2 15 Tf 56.00 112.89 Td (11. Common Mistakes) Tj ET
+0.50 w 56.00 102.89 m 539.28 102.89 l S
+BT /F2 10 Tf 62.00 85.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 85.89 Td (Confusing distance with displacement.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit I: Motion in One and Two Dimensions) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 5) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 4790 >>
+stream
+BT /F2 10 Tf 62.00 785.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 785.89 Td (Treating speed and velocity as the same quantity.) Tj ET
+BT /F2 10 Tf 62.00 768.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 768.89 Td (Forgetting that acceleration can exist even when velocity is momentarily zero.) Tj ET
+BT /F2 10 Tf 62.00 751.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 751.89 Td (Using equations of motion when acceleration is not constant.) Tj ET
+BT /F2 10 Tf 62.00 734.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 734.89 Td (Ignoring signs when solving one-dimensional motion problems.) Tj ET
+BT /F2 10 Tf 62.00 717.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 717.89 Td (Assuming horizontal acceleration exists in projectile motion without air resistance.) Tj ET
+BT /F2 10 Tf 62.00 700.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 700.89 Td (Forgetting that the area under a velocity-time graph gives displacement, not distance) Tj ET
+BT /F1 10 Tf 76.00 686.89 Td (in all cases.) Tj ET
+BT /F2 15 Tf 56.00 661.89 Td (Quick Revision Sheet) Tj ET
+0.50 w 56.00 651.89 m 539.28 651.89 l S
+BT /F2 10 Tf 62.00 634.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 634.89 Td (Distance is total path length; displacement is directed change in position.) Tj ET
+BT /F2 10 Tf 62.00 617.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 617.89 Td (Speed is scalar; velocity is vector.) Tj ET
+BT /F2 10 Tf 62.00 600.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 600.89 Td (Acceleration is the rate of change of velocity.) Tj ET
+BT /F2 10 Tf 62.00 583.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 583.89 Td (Equations of motion apply only for constant acceleration.) Tj ET
+BT /F2 10 Tf 62.00 566.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 566.89 Td (In vertical motion near Earth, acceleration due to gravity is downward.) Tj ET
+BT /F2 10 Tf 62.00 549.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 549.89 Td (Two-dimensional motion is solved by resolving vectors into x and y components.) Tj ET
+BT /F2 10 Tf 62.00 532.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 532.89 Td (Projectile motion has constant horizontal velocity and constant downward acceleration.) Tj ET
+BT /F2 10 Tf 62.00 515.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 515.89 Td (The path of a projectile is parabolic when air resistance is ignored.) Tj ET
+BT /F2 10 Tf 62.00 498.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 498.89 Td (Slope of displacement-time graph gives velocity.) Tj ET
+BT /F2 10 Tf 62.00 481.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 481.89 Td (Slope of velocity-time graph gives acceleration.) Tj ET
+BT /F2 10 Tf 62.00 464.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 464.89 Td (Area under velocity-time graph gives displacement.) Tj ET
+BT /F2 10 Tf 62.00 447.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 447.89 Td (Area under acceleration-time graph gives change in velocity.) Tj ET
+BT /F2 15 Tf 56.00 422.89 Td (Practice Questions) Tj ET
+0.50 w 56.00 412.89 m 539.28 412.89 l S
+BT /F2 10 Tf 62.00 395.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 395.89 Td (Define distance and displacement with one example where they are different.) Tj ET
+BT /F2 10 Tf 62.00 378.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 378.89 Td (A body moves from x = 2 m to x = 9 m. Find its displacement.) Tj ET
+BT /F2 10 Tf 62.00 361.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 361.89 Td (A car travels 120 m in 10 s. Find its average speed.) Tj ET
+BT /F2 10 Tf 62.00 344.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 344.89 Td (A body changes velocity from 5 m/s to 25 m/s in 4 s. Find acceleration.) Tj ET
+BT /F2 10 Tf 62.00 327.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 327.89 Td (A body starts from rest with acceleration 3 m/s^2 for 6 s. Find final velocity and) Tj ET
+BT /F1 10 Tf 76.00 313.89 Td (displacement.) Tj ET
+BT /F2 10 Tf 62.00 296.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 296.89 Td (A stone is thrown vertically upward. What are velocity and acceleration at the highest) Tj ET
+BT /F1 10 Tf 76.00 282.89 Td (point?) Tj ET
+BT /F2 10 Tf 62.00 265.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 265.89 Td (Resolve a velocity of 20 m/s at 30 degrees into horizontal and vertical components.) Tj ET
+BT /F2 10 Tf 62.00 248.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 248.89 Td (State the formulas for time of flight, maximum height, and range of a projectile.) Tj ET
+BT /F2 10 Tf 62.00 231.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 231.89 Td (Why is horizontal velocity constant in ideal projectile motion?) Tj ET
+BT /F2 10 Tf 62.00 214.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 214.89 Td (What does the slope of a displacement-time graph represent?) Tj ET
+BT /F2 10 Tf 62.00 197.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 197.89 Td (What does the area under a velocity-time graph represent?) Tj ET
+BT /F2 10 Tf 62.00 180.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 180.89 Td (Draw and explain the velocity-time graph for uniformly accelerated motion.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit I: Motion in One and Two Dimensions) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 6) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R] /Count 6 >>
+endobj
+17 0 obj
+<< /Type /Catalog /Pages 16 0 R >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000000228 00000 n 
+0000004642 00000 n 
+0000004795 00000 n 
+0000008975 00000 n 
+0000009128 00000 n 
+0000012923 00000 n 
+0000013076 00000 n 
+0000017229 00000 n 
+0000017384 00000 n 
+0000021310 00000 n 
+0000021465 00000 n 
+0000026308 00000 n 
+0000026463 00000 n 
+0000026554 00000 n 
+trailer
+<< /Size 18 /Root 17 0 R >>
+startxref
+26605
+%%EOF

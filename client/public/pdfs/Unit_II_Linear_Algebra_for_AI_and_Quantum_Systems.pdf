@@ -1,0 +1,488 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 4347 >>
+stream
+BT /F2 24 Tf 56.00 785.89 Td (Unit II: Linear Algebra for AI and Quantum Systems) Tj ET
+BT /F1 12 Tf 56.00 757.89 Td (Scalars, vectors, matrices, matrix operations, systems of equations, and intro to vector spaces) Tj ET
+1.20 w 56.00 739.89 m 539.28 739.89 l S
+BT /F2 15 Tf 56.00 703.89 Td (Learning Goals) Tj ET
+0.50 w 56.00 693.89 m 539.28 693.89 l S
+BT /F2 10 Tf 62.00 676.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 676.89 Td (Understand scalars, vectors, and matrices as basic objects for representing data and) Tj ET
+BT /F1 10 Tf 76.00 662.89 Td (quantum states.) Tj ET
+BT /F2 10 Tf 62.00 645.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 645.89 Td (Perform common matrix operations used in machine learning, data science, and quantum) Tj ET
+BT /F1 10 Tf 76.00 631.89 Td (computing.) Tj ET
+BT /F2 10 Tf 62.00 614.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 614.89 Td (Solve and interpret systems of linear equations.) Tj ET
+BT /F2 10 Tf 62.00 597.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 597.89 Td (Develop an introductory understanding of vector spaces, subspaces, span, basis, and) Tj ET
+BT /F1 10 Tf 76.00 583.89 Td (dimension.) Tj ET
+BT /F2 10 Tf 62.00 566.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 566.89 Td (Connect linear algebra ideas to feature vectors, transformations, neural networks, and) Tj ET
+BT /F1 10 Tf 76.00 552.89 Td (qubits.) Tj ET
+BT /F2 15 Tf 56.00 527.89 Td (1. Why Linear Algebra Matters) Tj ET
+0.50 w 56.00 517.89 m 539.28 517.89 l S
+BT /F1 10 Tf 56.00 500.89 Td (Linear algebra is the language of structured numerical information. In artificial) Tj ET
+BT /F1 10 Tf 56.00 486.89 Td (intelligence, an image, word, user, document, or sensor reading is often represented as a) Tj ET
+BT /F1 10 Tf 56.00 472.89 Td (vector of numbers. In quantum systems, the state of a qubit or a larger quantum register is) Tj ET
+BT /F1 10 Tf 56.00 458.89 Td (also represented using vectors, usually with complex-valued entries called amplitudes.) Tj ET
+BT /F1 10 Tf 56.00 439.89 Td (Matrices describe transformations. They can rotate vectors, project data into lower) Tj ET
+BT /F1 10 Tf 56.00 425.89 Td (dimensions, mix features in a neural network layer, or evolve a quantum state through a) Tj ET
+BT /F1 10 Tf 56.00 411.89 Td (gate. Because both AI and quantum theory depend on transformations of vectors, linear) Tj ET
+BT /F1 10 Tf 56.00 397.89 Td (algebra becomes a shared mathematical foundation.) Tj ET
+BT /F2 15 Tf 56.00 370.89 Td (2. Scalars) Tj ET
+0.50 w 56.00 360.89 m 539.28 360.89 l S
+BT /F1 10 Tf 56.00 343.89 Td (A scalar is a single number. It has magnitude but no direction. Scalars may be real numbers) Tj ET
+BT /F1 10 Tf 56.00 329.89 Td (such as 3, -2.5, and 0.01, or complex numbers such as 2 + 3i. Scalars are used to scale) Tj ET
+BT /F1 10 Tf 56.00 315.89 Td (vectors and matrices, meaning they stretch, shrink, or reverse them.) Tj ET
+q 0.95 g 56.00 279.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 287.89 Td (Scalar multiplication: if c is a scalar and v = [v1, v2, ..., vn], then c v = [c v1, c v2, ..., c vn]) Tj ET
+BT /F2 10 Tf 62.00 262.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 262.89 Td (In AI, a learning rate such as 0.01 is a scalar that controls the size of an update) Tj ET
+BT /F1 10 Tf 76.00 248.89 Td (step.) Tj ET
+BT /F2 10 Tf 62.00 231.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 231.89 Td (In quantum computing, probability amplitudes may be complex scalars attached to basis) Tj ET
+BT /F1 10 Tf 76.00 217.89 Td (states.) Tj ET
+BT /F2 10 Tf 62.00 200.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 200.89 Td (Multiplying by 0 collapses a vector to the zero vector; multiplying by -1 reverses its) Tj ET
+BT /F1 10 Tf 76.00 186.89 Td (direction.) Tj ET
+BT /F2 15 Tf 56.00 161.89 Td (3. Vectors) Tj ET
+0.50 w 56.00 151.89 m 539.28 151.89 l S
+BT /F1 10 Tf 56.00 134.89 Td (A vector is an ordered list of numbers. Geometrically, a vector can represent a directed) Tj ET
+BT /F1 10 Tf 56.00 120.89 Td (arrow in space. Computationally, it can represent a record of features. For example, a) Tj ET
+BT /F1 10 Tf 56.00 106.89 Td (student may be represented by marks in several subjects, an image by pixel intensities, and) Tj ET
+BT /F1 10 Tf 56.00 92.89 Td (a word by an embedding vector learned from text.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Linear Algebra for AI and Quantum Systems) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 3503 >>
+stream
+q 0.95 g 56.00 768.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 776.89 Td (v = [v1, v2, ..., vn]        length/dimension = n) Tj ET
+BT /F2 12 Tf 56.00 747.89 Td (Vector Operations) Tj ET
+BT /F2 10 Tf 62.00 730.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 730.89 Td (Addition: vectors of the same dimension are added component by component.) Tj ET
+BT /F2 10 Tf 62.00 713.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 713.89 Td (Subtraction: subtract corresponding components to compare displacement or difference.) Tj ET
+BT /F2 10 Tf 62.00 696.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 696.89 Td (Scalar multiplication: multiply every component by the same scalar.) Tj ET
+BT /F2 10 Tf 62.00 679.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 679.89 Td (Magnitude or norm: measures the length of a vector.) Tj ET
+BT /F2 10 Tf 62.00 662.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 662.89 Td (Dot product: measures alignment or similarity between two vectors.) Tj ET
+q 0.95 g 56.00 628.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 636.89 Td (u + v = [u1 + v1, ..., un + vn]        u . v = u1 v1 + u2 v2 + ... + un vn) Tj ET
+q 0.95 g 56.00 594.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 602.89 Td (||v|| = sqrt\(v1^2 + v2^2 + ... + vn^2\)        cos\(theta\) = \(u . v\) / \(||u|| ||v||\)) Tj ET
+BT /F1 10 Tf 56.00 577.89 Td (The dot product is especially important in AI. If two feature vectors point in similar) Tj ET
+BT /F1 10 Tf 56.00 563.89 Td (directions, their dot product is large. Search engines, recommender systems, and embedding) Tj ET
+BT /F1 10 Tf 56.00 549.89 Td (models often use dot products or cosine similarity to compare meaning or preference.) Tj ET
+BT /F2 12 Tf 56.00 526.89 Td (Feature Vectors) Tj ET
+BT /F1 10 Tf 56.00 509.89 Td (A feature vector is a numerical representation of an object. A house may be represented as) Tj ET
+BT /F1 10 Tf 56.00 495.89 Td ([area, bedrooms, age, distance_to_city]. A patient record may be represented as [heart_rate,) Tj ET
+BT /F1 10 Tf 56.00 481.89 Td (blood_pressure, glucose_level]. Once data is converted into vectors, algorithms can compare,) Tj ET
+BT /F1 10 Tf 56.00 467.89 Td (classify, cluster, and predict using mathematical operations.) Tj ET
+BT /F2 10 Tf 62.00 448.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 448.89 Td (Good features preserve useful information and remove unnecessary noise.) Tj ET
+BT /F2 10 Tf 62.00 431.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 431.89 Td (Feature scaling is often needed because one large-valued feature can dominate distance) Tj ET
+BT /F1 10 Tf 76.00 417.89 Td (or dot product calculations.) Tj ET
+BT /F2 10 Tf 62.00 400.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 400.89 Td (High-dimensional vectors can represent complex objects such as images, speech, and) Tj ET
+BT /F1 10 Tf 76.00 386.89 Td (natural language.) Tj ET
+BT /F2 15 Tf 56.00 361.89 Td (4. Matrices) Tj ET
+0.50 w 56.00 351.89 m 539.28 351.89 l S
+BT /F1 10 Tf 56.00 334.89 Td (A matrix is a rectangular array of numbers arranged in rows and columns. A matrix with m) Tj ET
+BT /F1 10 Tf 56.00 320.89 Td (rows and n columns is called an m by n matrix. Matrices can store datasets, coefficients of) Tj ET
+BT /F1 10 Tf 56.00 306.89 Td (equations, images, graph connections, and linear transformations.) Tj ET
+q 0.95 g 56.00 270.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 278.89 Td (A = [a_ij]        A has m rows and n columns        shape\(A\) = m x n) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Linear Algebra for AI and Quantum Systems) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 2) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 3906 >>
+stream
+q 0.92 g 56.00 741.89 483.28 44.00 re f Q
+0.30 w 56.00 741.89 m 539.28 741.89 l S
+0.30 w 206.00 741.89 m 206.00 785.89 l S
+BT /F2 9 Tf 64.00 769.89 Td (Matrix type) Tj ET
+BT /F2 9 Tf 214.00 769.89 Td (Meaning) Tj ET
+q 1.00 g 56.00 697.89 483.28 44.00 re f Q
+0.30 w 56.00 697.89 m 539.28 697.89 l S
+0.30 w 206.00 697.89 m 206.00 741.89 l S
+BT /F1 9 Tf 64.00 725.89 Td (Row matrix) Tj ET
+BT /F1 9 Tf 214.00 725.89 Td (A matrix with one row.) Tj ET
+q 0.98 g 56.00 653.89 483.28 44.00 re f Q
+0.30 w 56.00 653.89 m 539.28 653.89 l S
+0.30 w 206.00 653.89 m 206.00 697.89 l S
+BT /F1 9 Tf 64.00 681.89 Td (Column matrix) Tj ET
+BT /F1 9 Tf 214.00 681.89 Td (A matrix with one column; often treated as a vector.) Tj ET
+q 1.00 g 56.00 609.89 483.28 44.00 re f Q
+0.30 w 56.00 609.89 m 539.28 609.89 l S
+0.30 w 206.00 609.89 m 206.00 653.89 l S
+BT /F1 9 Tf 64.00 637.89 Td (Square matrix) Tj ET
+BT /F1 9 Tf 214.00 637.89 Td (Same number of rows and columns.) Tj ET
+q 0.98 g 56.00 565.89 483.28 44.00 re f Q
+0.30 w 56.00 565.89 m 539.28 565.89 l S
+0.30 w 206.00 565.89 m 206.00 609.89 l S
+BT /F1 9 Tf 64.00 593.89 Td (Zero matrix) Tj ET
+BT /F1 9 Tf 214.00 593.89 Td (All entries are zero.) Tj ET
+q 1.00 g 56.00 521.89 483.28 44.00 re f Q
+0.30 w 56.00 521.89 m 539.28 521.89 l S
+0.30 w 206.00 521.89 m 206.00 565.89 l S
+BT /F1 9 Tf 64.00 549.89 Td (Identity matrix) Tj ET
+BT /F1 9 Tf 214.00 549.89 Td (Square matrix with 1 on the diagonal and 0 elsewhere.) Tj ET
+BT /F1 10 Tf 56.00 509.89 Td (The identity matrix acts like the number 1 for matrix multiplication. If dimensions match,) Tj ET
+BT /F1 10 Tf 56.00 495.89 Td (multiplying by the identity leaves a vector or matrix unchanged.) Tj ET
+q 0.95 g 56.00 459.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 467.89 Td (I v = v        A I = A        I A = A) Tj ET
+BT /F2 15 Tf 56.00 434.89 Td (5. Matrix Operations) Tj ET
+0.50 w 56.00 424.89 m 539.28 424.89 l S
+BT /F2 12 Tf 56.00 403.89 Td (Addition and Scalar Multiplication) Tj ET
+BT /F1 10 Tf 56.00 386.89 Td (Two matrices can be added only when they have the same shape. Addition is component-wise.) Tj ET
+BT /F1 10 Tf 56.00 372.89 Td (Scalar multiplication multiplies every entry by the scalar.) Tj ET
+q 0.95 g 56.00 336.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 344.89 Td (\(A + B\)_ij = A_ij + B_ij        \(cA\)_ij = c A_ij) Tj ET
+BT /F2 12 Tf 56.00 315.89 Td (Matrix-Vector Multiplication) Tj ET
+BT /F1 10 Tf 56.00 298.89 Td (Matrix-vector multiplication transforms a vector into another vector. Each output component) Tj ET
+BT /F1 10 Tf 56.00 284.89 Td (is a dot product between one row of the matrix and the input vector.) Tj ET
+q 0.95 g 56.00 248.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 256.89 Td (If A is m x n and x is n x 1, then Ax is m x 1) Tj ET
+BT /F2 10 Tf 62.00 231.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 231.89 Td (In AI, a linear model computes y = w . x + b, where x is the feature vector and w is) Tj ET
+BT /F1 10 Tf 76.00 217.89 Td (the weight vector.) Tj ET
+BT /F2 10 Tf 62.00 200.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 200.89 Td (A neural network layer often computes y = W x + b before applying a nonlinear) Tj ET
+BT /F1 10 Tf 76.00 186.89 Td (activation.) Tj ET
+BT /F2 10 Tf 62.00 169.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 169.89 Td (In quantum computing, a gate is represented by a matrix that acts on a quantum state) Tj ET
+BT /F1 10 Tf 76.00 155.89 Td (vector.) Tj ET
+BT /F2 12 Tf 56.00 134.89 Td (Matrix-Matrix Multiplication) Tj ET
+BT /F1 10 Tf 56.00 117.89 Td (Matrix multiplication combines transformations. If A is m by n and B is n by p, then AB is m) Tj ET
+BT /F1 10 Tf 56.00 103.89 Td (by p. The entry in row i and column j of AB is the dot product of row i of A with column j) Tj ET
+BT /F1 10 Tf 56.00 89.89 Td (of B.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Linear Algebra for AI and Quantum Systems) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 3) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4251 >>
+stream
+q 0.95 g 56.00 768.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 776.89 Td (\(AB\)_ij = sum over k of A_ik B_kj) Tj ET
+BT /F2 10 Tf 62.00 751.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 751.89 Td (Matrix multiplication is generally not commutative: AB is usually not equal to BA.) Tj ET
+BT /F2 10 Tf 62.00 734.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 734.89 Td (The order matters because applying transformation A then B is not always the same as) Tj ET
+BT /F1 10 Tf 76.00 720.89 Td (applying B then A.) Tj ET
+BT /F2 10 Tf 62.00 703.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 703.89 Td (Deep learning uses repeated matrix multiplications to move information through layers.) Tj ET
+BT /F2 12 Tf 56.00 682.89 Td (Transpose) Tj ET
+BT /F1 10 Tf 56.00 665.89 Td (The transpose of a matrix swaps rows and columns. If A is m by n, then A^T is n by m.) Tj ET
+BT /F1 10 Tf 56.00 651.89 Td (Transpose operations are common in least squares, gradients, covariance matrices, and inner) Tj ET
+BT /F1 10 Tf 56.00 637.89 Td (products.) Tj ET
+q 0.95 g 56.00 601.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 609.89 Td (\(A^T\)_ij = A_ji        \(AB\)^T = B^T A^T) Tj ET
+BT /F2 15 Tf 56.00 576.89 Td (6. Systems of Linear Equations) Tj ET
+0.50 w 56.00 566.89 m 539.28 566.89 l S
+BT /F1 10 Tf 56.00 549.89 Td (A system of linear equations is a collection of equations where each variable appears only) Tj ET
+BT /F1 10 Tf 56.00 535.89 Td (to the first power. Such systems can be written compactly using matrices.) Tj ET
+q 0.95 g 56.00 499.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 507.89 Td (a11 x1 + a12 x2 = b1        a21 x1 + a22 x2 = b2        Matrix form: A x = b) Tj ET
+BT /F1 10 Tf 56.00 482.89 Td (Solving Ax = b means finding the vector x that satisfies all equations at once. There may be) Tj ET
+BT /F1 10 Tf 56.00 468.89 Td (exactly one solution, no solution, or infinitely many solutions.) Tj ET
+q 0.92 g 56.00 405.89 483.28 44.00 re f Q
+0.30 w 56.00 405.89 m 539.28 405.89 l S
+0.30 w 206.00 405.89 m 206.00 449.89 l S
+BT /F2 9 Tf 64.00 433.89 Td (Case) Tj ET
+BT /F2 9 Tf 214.00 433.89 Td (Interpretation) Tj ET
+q 1.00 g 56.00 361.89 483.28 44.00 re f Q
+0.30 w 56.00 361.89 m 539.28 361.89 l S
+0.30 w 206.00 361.89 m 206.00 405.89 l S
+BT /F1 9 Tf 64.00 389.89 Td (Unique solution) Tj ET
+BT /F1 9 Tf 214.00 389.89 Td (Equations meet at one point; matrix has enough independent) Tj ET
+BT /F1 9 Tf 214.00 377.89 Td (information.) Tj ET
+q 0.98 g 56.00 317.89 483.28 44.00 re f Q
+0.30 w 56.00 317.89 m 539.28 317.89 l S
+0.30 w 206.00 317.89 m 206.00 361.89 l S
+BT /F1 9 Tf 64.00 345.89 Td (No solution) Tj ET
+BT /F1 9 Tf 214.00 345.89 Td (Equations are inconsistent; for example, parallel lines) Tj ET
+BT /F1 9 Tf 214.00 333.89 Td (with different intercepts.) Tj ET
+q 1.00 g 56.00 273.89 483.28 44.00 re f Q
+0.30 w 56.00 273.89 m 539.28 273.89 l S
+0.30 w 206.00 273.89 m 206.00 317.89 l S
+BT /F1 9 Tf 64.00 301.89 Td (Infinitely many) Tj ET
+BT /F1 9 Tf 214.00 301.89 Td (Equations are dependent; one equation repeats information) Tj ET
+BT /F1 9 Tf 214.00 289.89 Td (from another.) Tj ET
+BT /F2 12 Tf 56.00 257.89 Td (Gaussian Elimination) Tj ET
+BT /F1 10 Tf 56.00 240.89 Td (Gaussian elimination solves a system by using row operations to simplify the augmented) Tj ET
+BT /F1 10 Tf 56.00 226.89 Td (matrix. The aim is to form an upper triangular or row-echelon matrix, then solve variables) Tj ET
+BT /F1 10 Tf 56.00 212.89 Td (by back substitution.) Tj ET
+BT /F2 10 Tf 62.00 193.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 193.89 Td (Swap two rows when needed.) Tj ET
+BT /F2 10 Tf 62.00 176.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 176.89 Td (Multiply a row by a nonzero scalar.) Tj ET
+BT /F2 10 Tf 62.00 159.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 159.89 Td (Add a multiple of one row to another row.) Tj ET
+BT /F1 10 Tf 56.00 142.89 Td (These operations preserve the solution set. In AI and data science, linear systems appear in) Tj ET
+BT /F1 10 Tf 56.00 128.89 Td (regression, optimization, graph algorithms, and numerical simulation.) Tj ET
+BT /F2 15 Tf 56.00 101.89 Td (7. Determinant and Inverse) Tj ET
+0.50 w 56.00 91.89 m 539.28 91.89 l S
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Linear Algebra for AI and Quantum Systems) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 4) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 4695 >>
+stream
+BT /F1 10 Tf 56.00 785.89 Td (For a square matrix, the determinant is a scalar that gives information about scaling,) Tj ET
+BT /F1 10 Tf 56.00 771.89 Td (orientation, and invertibility. If det\(A\) = 0, the matrix is singular and has no inverse. If) Tj ET
+BT /F1 10 Tf 56.00 757.89 Td (det\(A\) is nonzero, A has an inverse.) Tj ET
+q 0.95 g 56.00 721.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 729.89 Td (For A = [[a, b], [c, d]], det\(A\) = ad - bc) Tj ET
+BT /F1 10 Tf 56.00 704.89 Td (The inverse of a matrix reverses the transformation. If A has inverse A^-1, then A^-1 A = I) Tj ET
+BT /F1 10 Tf 56.00 690.89 Td (and A A^-1 = I. In theory, x = A^-1 b solves Ax = b. In practice, numerical algorithms often) Tj ET
+BT /F1 10 Tf 56.00 676.89 Td (solve systems directly rather than explicitly computing the inverse.) Tj ET
+q 0.95 g 56.00 640.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 648.89 Td (Ax = b        if A^-1 exists, x = A^-1 b) Tj ET
+BT /F2 15 Tf 56.00 615.89 Td (8. Intro to Vector Spaces) Tj ET
+0.50 w 56.00 605.89 m 539.28 605.89 l S
+BT /F1 10 Tf 56.00 588.89 Td (A vector space is a set of vectors where vector addition and scalar multiplication are) Tj ET
+BT /F1 10 Tf 56.00 574.89 Td (defined and behave consistently. The usual two-dimensional plane, three-dimensional space,) Tj ET
+BT /F1 10 Tf 56.00 560.89 Td (and n-dimensional real coordinate spaces are examples of vector spaces.) Tj ET
+BT /F2 12 Tf 56.00 537.89 Td (Core Ideas) Tj ET
+BT /F2 10 Tf 62.00 520.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 520.89 Td (Closure: adding vectors or multiplying by scalars keeps the result inside the space.) Tj ET
+BT /F2 10 Tf 62.00 503.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 503.89 Td (Zero vector: every vector space contains a vector that acts like zero under addition.) Tj ET
+BT /F2 10 Tf 62.00 486.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 486.89 Td (Additive inverse: for every vector v, there is a vector -v such that v + \(-v\) = 0.) Tj ET
+BT /F2 10 Tf 62.00 469.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 469.89 Td (Linear combination: an expression such as c1 v1 + c2 v2 + ... + ck vk.) Tj ET
+BT /F2 10 Tf 62.00 452.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 452.89 Td (Span: all vectors that can be produced as linear combinations of a given set.) Tj ET
+BT /F2 10 Tf 62.00 435.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 435.89 Td (Basis: a minimal set of vectors that spans the space without redundancy.) Tj ET
+BT /F2 10 Tf 62.00 418.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 418.89 Td (Dimension: the number of vectors in a basis.) Tj ET
+q 0.95 g 56.00 384.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 392.89 Td (span\(v1, v2, ..., vk\) = all c1 v1 + c2 v2 + ... + ck vk) Tj ET
+BT /F2 12 Tf 56.00 363.89 Td (Linear Independence) Tj ET
+BT /F1 10 Tf 56.00 346.89 Td (Vectors are linearly independent if none of them can be built from the others. If one vector) Tj ET
+BT /F1 10 Tf 56.00 332.89 Td (is a combination of the rest, it is redundant. A basis must be linearly independent and must) Tj ET
+BT /F1 10 Tf 56.00 318.89 Td (span the space.) Tj ET
+BT /F2 10 Tf 62.00 299.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 299.89 Td (In R2, two non-parallel vectors form a basis.) Tj ET
+BT /F2 10 Tf 62.00 282.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 282.89 Td (In R3, three vectors not lying in the same plane can form a basis.) Tj ET
+BT /F2 10 Tf 62.00 265.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 265.89 Td (In data analysis, dependent features may repeat information and make learning less) Tj ET
+BT /F1 10 Tf 76.00 251.89 Td (stable.) Tj ET
+BT /F2 15 Tf 56.00 226.89 Td (9. AI Connections) Tj ET
+0.50 w 56.00 216.89 m 539.28 216.89 l S
+BT /F2 10 Tf 62.00 199.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 199.89 Td (Feature vectors represent raw objects numerically so algorithms can process them.) Tj ET
+BT /F2 10 Tf 62.00 182.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 182.89 Td (Matrices store datasets: rows often represent examples and columns often represent) Tj ET
+BT /F1 10 Tf 76.00 168.89 Td (features.) Tj ET
+BT /F2 10 Tf 62.00 151.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 151.89 Td (Linear regression uses vectors and matrices to fit a line, plane, or higher-) Tj ET
+BT /F1 10 Tf 76.00 137.89 Td (dimensional hyperplane.) Tj ET
+BT /F2 10 Tf 62.00 120.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 120.89 Td (Neural networks use matrix multiplication to combine inputs with learned weights.) Tj ET
+BT /F2 10 Tf 62.00 103.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 103.89 Td (Dimensionality reduction methods such as PCA use linear algebra to find important) Tj ET
+BT /F1 10 Tf 76.00 89.89 Td (directions in data.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Linear Algebra for AI and Quantum Systems) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 5) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 4456 >>
+stream
+BT /F2 10 Tf 62.00 785.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 785.89 Td (Similarity search compares vectors using dot products, distances, or cosine) Tj ET
+BT /F1 10 Tf 76.00 771.89 Td (similarity.) Tj ET
+BT /F2 15 Tf 56.00 746.89 Td (10. Quantum Systems Connections) Tj ET
+0.50 w 56.00 736.89 m 539.28 736.89 l S
+BT /F1 10 Tf 56.00 719.89 Td (In quantum computing, a state is represented as a vector in a complex vector space. A single) Tj ET
+BT /F1 10 Tf 56.00 705.89 Td (qubit has two basis states, written as |0> and |1>. A general qubit state is a linear) Tj ET
+BT /F1 10 Tf 56.00 691.89 Td (combination of these basis states.) Tj ET
+q 0.95 g 56.00 655.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 663.89 Td (|psi> = alpha |0> + beta |1>        where |alpha|^2 + |beta|^2 = 1) Tj ET
+BT /F1 10 Tf 56.00 638.89 Td (The numbers alpha and beta are probability amplitudes. Their squared magnitudes give) Tj ET
+BT /F1 10 Tf 56.00 624.89 Td (measurement probabilities. Quantum gates are matrices that transform state vectors while) Tj ET
+BT /F1 10 Tf 56.00 610.89 Td (preserving total probability.) Tj ET
+q 0.92 g 56.00 547.89 483.28 44.00 re f Q
+0.30 w 56.00 547.89 m 539.28 547.89 l S
+0.30 w 206.00 547.89 m 206.00 591.89 l S
+BT /F2 9 Tf 64.00 575.89 Td (Classical/AI idea) Tj ET
+BT /F2 9 Tf 214.00 575.89 Td (Quantum analogy) Tj ET
+q 1.00 g 56.00 503.89 483.28 44.00 re f Q
+0.30 w 56.00 503.89 m 539.28 503.89 l S
+0.30 w 206.00 503.89 m 206.00 547.89 l S
+BT /F1 9 Tf 64.00 531.89 Td (Vector) Tj ET
+BT /F1 9 Tf 214.00 531.89 Td (Quantum state vector.) Tj ET
+q 0.98 g 56.00 459.89 483.28 44.00 re f Q
+0.30 w 56.00 459.89 m 539.28 459.89 l S
+0.30 w 206.00 459.89 m 206.00 503.89 l S
+BT /F1 9 Tf 64.00 487.89 Td (Basis vectors) Tj ET
+BT /F1 9 Tf 214.00 487.89 Td (Computational basis states such as |0> and |1>.) Tj ET
+q 1.00 g 56.00 415.89 483.28 44.00 re f Q
+0.30 w 56.00 415.89 m 539.28 415.89 l S
+0.30 w 206.00 415.89 m 206.00 459.89 l S
+BT /F1 9 Tf 64.00 443.89 Td (Matrix operation) Tj ET
+BT /F1 9 Tf 214.00 443.89 Td (Quantum gate acting on a state.) Tj ET
+q 0.98 g 56.00 371.89 483.28 44.00 re f Q
+0.30 w 56.00 371.89 m 539.28 371.89 l S
+0.30 w 206.00 371.89 m 206.00 415.89 l S
+BT /F1 9 Tf 64.00 399.89 Td (Norm) Tj ET
+BT /F1 9 Tf 214.00 399.89 Td (State normalization condition.) Tj ET
+q 1.00 g 56.00 327.89 483.28 44.00 re f Q
+0.30 w 56.00 327.89 m 539.28 327.89 l S
+0.30 w 206.00 327.89 m 206.00 371.89 l S
+BT /F1 9 Tf 64.00 355.89 Td (Inner product) Tj ET
+BT /F1 9 Tf 214.00 355.89 Td (Overlap between quantum states.) Tj ET
+BT /F2 10 Tf 62.00 315.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 315.89 Td (The Pauli-X gate acts like a NOT operation by swapping |0> and |1>.) Tj ET
+BT /F2 10 Tf 62.00 298.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 298.89 Td (The Hadamard gate creates superposition from a basis state.) Tj ET
+BT /F2 10 Tf 62.00 281.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 281.89 Td (Multi-qubit systems use larger vector spaces whose dimension grows exponentially with) Tj ET
+BT /F1 10 Tf 76.00 267.89 Td (the number of qubits.) Tj ET
+BT /F2 15 Tf 56.00 242.89 Td (Quick Revision Sheet) Tj ET
+0.50 w 56.00 232.89 m 539.28 232.89 l S
+BT /F2 10 Tf 62.00 215.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 215.89 Td (A scalar is a single number; a vector is an ordered list of numbers; a matrix is a) Tj ET
+BT /F1 10 Tf 76.00 201.89 Td (rectangular array.) Tj ET
+BT /F2 10 Tf 62.00 184.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 184.89 Td (Vector addition and scalar multiplication happen component by component.) Tj ET
+BT /F2 10 Tf 62.00 167.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 167.89 Td (The dot product measures alignment and appears in similarity, projections, and linear) Tj ET
+BT /F1 10 Tf 76.00 153.89 Td (models.) Tj ET
+BT /F2 10 Tf 62.00 136.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 136.89 Td (A matrix can represent a dataset, a transformation, or a system of equations.) Tj ET
+BT /F2 10 Tf 62.00 119.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 119.89 Td (Matrix multiplication combines dot products and the order of multiplication matters.) Tj ET
+BT /F2 10 Tf 62.00 102.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 102.89 Td (A system of equations can be written as Ax = b.) Tj ET
+BT /F2 10 Tf 62.00 85.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 85.89 Td (Gaussian elimination uses row operations to simplify and solve linear systems.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Linear Algebra for AI and Quantum Systems) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 6) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 2336 >>
+stream
+BT /F2 10 Tf 62.00 785.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 785.89 Td (A nonzero determinant means a square matrix is invertible.) Tj ET
+BT /F2 10 Tf 62.00 768.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 768.89 Td (A vector space is closed under vector addition and scalar multiplication.) Tj ET
+BT /F2 10 Tf 62.00 751.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 751.89 Td (A basis is an independent spanning set; dimension is the number of basis vectors.) Tj ET
+BT /F2 10 Tf 62.00 734.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 734.89 Td (AI uses vectors for data representation; quantum computing uses vectors for states and) Tj ET
+BT /F1 10 Tf 76.00 720.89 Td (matrices for gates.) Tj ET
+BT /F2 15 Tf 56.00 695.89 Td (Practice Questions) Tj ET
+0.50 w 56.00 685.89 m 539.28 685.89 l S
+BT /F2 10 Tf 62.00 668.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 668.89 Td (Represent a house using four numerical features and write it as a feature vector.) Tj ET
+BT /F2 10 Tf 62.00 651.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 651.89 Td (Given u = [1, 2] and v = [3, 4], compute u + v, 2u, and u . v.) Tj ET
+BT /F2 10 Tf 62.00 634.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 634.89 Td (Explain why two matrices can only be added when they have the same shape.) Tj ET
+BT /F2 10 Tf 62.00 617.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 617.89 Td (If A is 3 x 2 and x is 2 x 1, what is the shape of Ax?) Tj ET
+BT /F2 10 Tf 62.00 600.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 600.89 Td (Why is matrix multiplication generally not commutative?) Tj ET
+BT /F2 10 Tf 62.00 583.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 583.89 Td (Write a two-equation linear system in matrix form Ax = b.) Tj ET
+BT /F2 10 Tf 62.00 566.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 566.89 Td (What are the possible solution cases for a system of linear equations?) Tj ET
+BT /F2 10 Tf 62.00 549.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 549.89 Td (Find det\(A\) for A = [[2, 1], [5, 3]]. Is A invertible?) Tj ET
+BT /F2 10 Tf 62.00 532.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 532.89 Td (Explain span, basis, and dimension using R2 as an example.) Tj ET
+BT /F2 10 Tf 62.00 515.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 515.89 Td (Why must a qubit state alpha|0> + beta|1> satisfy |alpha|^2 + |beta|^2 = 1?) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit II: Linear Algebra for AI and Quantum Systems) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 7) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R] /Count 7 >>
+endobj
+19 0 obj
+<< /Type /Catalog /Pages 18 0 R >>
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000000228 00000 n 
+0000004627 00000 n 
+0000004780 00000 n 
+0000008335 00000 n 
+0000008488 00000 n 
+0000012446 00000 n 
+0000012599 00000 n 
+0000016903 00000 n 
+0000017058 00000 n 
+0000021806 00000 n 
+0000021961 00000 n 
+0000026470 00000 n 
+0000026625 00000 n 
+0000029014 00000 n 
+0000029169 00000 n 
+0000029267 00000 n 
+trailer
+<< /Size 20 /Root 19 0 R >>
+startxref
+29318
+%%EOF

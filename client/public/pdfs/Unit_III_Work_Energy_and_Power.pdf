@@ -1,0 +1,487 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 4041 >>
+stream
+BT /F2 24 Tf 56.00 785.89 Td (Unit III: Work, Energy, and Power) Tj ET
+BT /F1 12 Tf 56.00 757.89 Td (Work done, kinetic and potential energy, work-energy theorem, conservation of energy, power, and efficiency) Tj ET
+1.20 w 56.00 739.89 m 539.28 739.89 l S
+BT /F2 15 Tf 56.00 703.89 Td (Learning Goals) Tj ET
+0.50 w 56.00 693.89 m 539.28 693.89 l S
+BT /F2 10 Tf 62.00 676.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 676.89 Td (Understand work as energy transferred by a force causing displacement.) Tj ET
+BT /F2 10 Tf 62.00 659.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 659.89 Td (Calculate work done by constant forces using force, displacement, and angle.) Tj ET
+BT /F2 10 Tf 62.00 642.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 642.89 Td (Distinguish between kinetic energy and potential energy.) Tj ET
+BT /F2 10 Tf 62.00 625.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 625.89 Td (Apply the work-energy theorem to solve motion problems.) Tj ET
+BT /F2 10 Tf 62.00 608.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 608.89 Td (Use conservation of mechanical energy in suitable situations.) Tj ET
+BT /F2 10 Tf 62.00 591.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 591.89 Td (Understand power as the rate of doing work or transferring energy.) Tj ET
+BT /F2 10 Tf 62.00 574.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 574.89 Td (Calculate efficiency and interpret energy losses in real systems.) Tj ET
+BT /F2 15 Tf 56.00 549.89 Td (1. Introduction) Tj ET
+0.50 w 56.00 539.89 m 539.28 539.89 l S
+BT /F1 10 Tf 56.00 522.89 Td (The concepts of work, energy, and power provide a powerful way to analyze physical systems.) Tj ET
+BT /F1 10 Tf 56.00 508.89 Td (Instead of directly using forces and acceleration at every instant, energy methods often) Tj ET
+BT /F1 10 Tf 56.00 494.89 Td (allow us to relate initial and final states more simply.) Tj ET
+BT /F1 10 Tf 56.00 475.89 Td (Energy is the capacity to do work. Work is one way energy is transferred. Power tells how) Tj ET
+BT /F1 10 Tf 56.00 461.89 Td (quickly work is done or how quickly energy is transferred.) Tj ET
+q 0.95 g 56.00 425.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 433.89 Td (Work transfers energy        Power measures rate of energy transfer) Tj ET
+BT /F2 15 Tf 56.00 400.89 Td (2. Work Done by a Force) Tj ET
+0.50 w 56.00 390.89 m 539.28 390.89 l S
+BT /F1 10 Tf 56.00 373.89 Td (Work is done when a force causes displacement. If there is no displacement, no mechanical) Tj ET
+BT /F1 10 Tf 56.00 359.89 Td (work is done by that force, even if the force is large.) Tj ET
+q 0.95 g 56.00 323.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 331.89 Td (W = F s cos\(theta\)) Tj ET
+q 0.92 g 56.00 262.89 483.28 44.00 re f Q
+0.30 w 56.00 262.89 m 539.28 262.89 l S
+0.30 w 206.00 262.89 m 206.00 306.89 l S
+BT /F2 9 Tf 64.00 290.89 Td (Symbol) Tj ET
+BT /F2 9 Tf 214.00 290.89 Td (Meaning) Tj ET
+q 1.00 g 56.00 218.89 483.28 44.00 re f Q
+0.30 w 56.00 218.89 m 539.28 218.89 l S
+0.30 w 206.00 218.89 m 206.00 262.89 l S
+BT /F1 9 Tf 64.00 246.89 Td (W) Tj ET
+BT /F1 9 Tf 214.00 246.89 Td (Work done, measured in joules \(J\).) Tj ET
+q 0.98 g 56.00 174.89 483.28 44.00 re f Q
+0.30 w 56.00 174.89 m 539.28 174.89 l S
+0.30 w 206.00 174.89 m 206.00 218.89 l S
+BT /F1 9 Tf 64.00 202.89 Td (F) Tj ET
+BT /F1 9 Tf 214.00 202.89 Td (Magnitude of force, measured in newtons \(N\).) Tj ET
+q 1.00 g 56.00 130.89 483.28 44.00 re f Q
+0.30 w 56.00 130.89 m 539.28 130.89 l S
+0.30 w 206.00 130.89 m 206.00 174.89 l S
+BT /F1 9 Tf 64.00 158.89 Td (s) Tj ET
+BT /F1 9 Tf 214.00 158.89 Td (Magnitude of displacement, measured in metres \(m\).) Tj ET
+q 0.98 g 56.00 86.89 483.28 44.00 re f Q
+0.30 w 56.00 86.89 m 539.28 86.89 l S
+0.30 w 206.00 86.89 m 206.00 130.89 l S
+BT /F1 9 Tf 64.00 114.89 Td (theta) Tj ET
+BT /F1 9 Tf 214.00 114.89 Td (Angle between force and displacement.) Tj ET
+BT /F2 10 Tf 62.00 74.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 74.89 Td (Work is maximum when force and displacement are in the same direction.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit III: Work, Energy, and Power) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 3861 >>
+stream
+BT /F2 10 Tf 62.00 785.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 785.89 Td (Work is zero when force is perpendicular to displacement.) Tj ET
+BT /F2 10 Tf 62.00 768.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 768.89 Td (Work is negative when force has a component opposite to displacement.) Tj ET
+q 0.95 g 56.00 734.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 742.89 Td (1 joule = 1 newton metre = 1 N m) Tj ET
+BT /F2 12 Tf 56.00 713.89 Td (Positive, Negative, and Zero Work) Tj ET
+q 0.92 g 56.00 652.89 483.28 44.00 re f Q
+0.30 w 56.00 652.89 m 539.28 652.89 l S
+0.30 w 206.00 652.89 m 206.00 696.89 l S
+BT /F2 9 Tf 64.00 680.89 Td (Type of work) Tj ET
+BT /F2 9 Tf 214.00 680.89 Td (Example) Tj ET
+q 1.00 g 56.00 608.89 483.28 44.00 re f Q
+0.30 w 56.00 608.89 m 539.28 608.89 l S
+0.30 w 206.00 608.89 m 206.00 652.89 l S
+BT /F1 9 Tf 64.00 636.89 Td (Positive work) Tj ET
+BT /F1 9 Tf 214.00 636.89 Td (A force pushes a box in the direction of motion.) Tj ET
+q 0.98 g 56.00 564.89 483.28 44.00 re f Q
+0.30 w 56.00 564.89 m 539.28 564.89 l S
+0.30 w 206.00 564.89 m 206.00 608.89 l S
+BT /F1 9 Tf 64.00 592.89 Td (Negative work) Tj ET
+BT /F1 9 Tf 214.00 592.89 Td (Friction acts opposite to sliding motion.) Tj ET
+q 1.00 g 56.00 520.89 483.28 44.00 re f Q
+0.30 w 56.00 520.89 m 539.28 520.89 l S
+0.30 w 206.00 520.89 m 206.00 564.89 l S
+BT /F1 9 Tf 64.00 548.89 Td (Zero work) Tj ET
+BT /F1 9 Tf 214.00 548.89 Td (Centripetal force in uniform circular motion is) Tj ET
+BT /F1 9 Tf 214.00 536.89 Td (perpendicular to displacement.) Tj ET
+BT /F1 10 Tf 56.00 508.89 Td (A person holding a heavy bag at rest may feel tired, but in the physics sense no mechanical) Tj ET
+BT /F1 10 Tf 56.00 494.89 Td (work is done on the bag if it has no displacement.) Tj ET
+BT /F2 15 Tf 56.00 467.89 Td (3. Work Done by Variable Force) Tj ET
+0.50 w 56.00 457.89 m 539.28 457.89 l S
+BT /F1 10 Tf 56.00 440.89 Td (When force changes with position, work is found by adding very small amounts of work over) Tj ET
+BT /F1 10 Tf 56.00 426.89 Td (the displacement. Graphically, work is the area under the force-displacement graph.) Tj ET
+q 0.95 g 56.00 390.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 398.89 Td (For variable force: W = area under F-s graph) Tj ET
+q 0.95 g 56.00 356.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 364.89 Td (Calculus form: W = integral F ds) Tj ET
+BT /F2 10 Tf 62.00 339.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 339.89 Td (For a constant force, the F-s graph is a rectangle, so W = Fs.) Tj ET
+BT /F2 10 Tf 62.00 322.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 322.89 Td (For a spring force, force changes with extension, so work depends on the area under) Tj ET
+BT /F1 10 Tf 76.00 308.89 Td (the graph.) Tj ET
+BT /F2 15 Tf 56.00 283.89 Td (4. Kinetic Energy) Tj ET
+0.50 w 56.00 273.89 m 539.28 273.89 l S
+BT /F1 10 Tf 56.00 256.89 Td (Kinetic energy is the energy possessed by a body due to its motion. A faster object has more) Tj ET
+BT /F1 10 Tf 56.00 242.89 Td (kinetic energy. A heavier object moving at the same speed also has more kinetic energy.) Tj ET
+q 0.95 g 56.00 206.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 214.89 Td (Kinetic energy: K = \(1/2\) m v^2) Tj ET
+BT /F2 10 Tf 62.00 189.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 189.89 Td (Kinetic energy is a scalar quantity.) Tj ET
+BT /F2 10 Tf 62.00 172.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 172.89 Td (Kinetic energy is always zero or positive.) Tj ET
+BT /F2 10 Tf 62.00 155.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 155.89 Td (Doubling speed makes kinetic energy four times larger.) Tj ET
+BT /F2 10 Tf 62.00 138.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 138.89 Td (The SI unit of kinetic energy is the joule.) Tj ET
+BT /F2 15 Tf 56.00 113.89 Td (5. Potential Energy) Tj ET
+0.50 w 56.00 103.89 m 539.28 103.89 l S
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit III: Work, Energy, and Power) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 2) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 4234 >>
+stream
+BT /F1 10 Tf 56.00 785.89 Td (Potential energy is stored energy due to position, configuration, or condition. The most) Tj ET
+BT /F1 10 Tf 56.00 771.89 Td (common forms in elementary mechanics are gravitational potential energy and elastic) Tj ET
+BT /F1 10 Tf 56.00 757.89 Td (potential energy.) Tj ET
+BT /F2 12 Tf 56.00 734.89 Td (Gravitational Potential Energy) Tj ET
+BT /F1 10 Tf 56.00 717.89 Td (Near the Earth's surface, gravitational potential energy depends on mass, gravitational) Tj ET
+BT /F1 10 Tf 56.00 703.89 Td (acceleration, and height relative to a chosen reference level.) Tj ET
+q 0.95 g 56.00 667.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 675.89 Td (Gravitational potential energy: U = mgh) Tj ET
+BT /F2 10 Tf 62.00 650.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 650.89 Td (The reference level for h can be chosen conveniently.) Tj ET
+BT /F2 10 Tf 62.00 633.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 633.89 Td (Only changes in potential energy usually matter in physics problems.) Tj ET
+BT /F2 10 Tf 62.00 616.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 616.89 Td (Raising an object increases its gravitational potential energy.) Tj ET
+BT /F2 12 Tf 56.00 595.89 Td (Elastic Potential Energy) Tj ET
+BT /F1 10 Tf 56.00 578.89 Td (Elastic potential energy is stored in a stretched or compressed spring. For an ideal spring) Tj ET
+BT /F1 10 Tf 56.00 564.89 Td (obeying Hooke's law, the stored energy depends on the spring constant and extension.) Tj ET
+q 0.95 g 56.00 528.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 536.89 Td (Spring force: F = kx        Elastic potential energy: U = \(1/2\)kx^2) Tj ET
+BT /F2 10 Tf 62.00 511.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 511.89 Td (k is the spring constant, measured in N/m.) Tj ET
+BT /F2 10 Tf 62.00 494.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 494.89 Td (x is the extension or compression from natural length.) Tj ET
+BT /F2 10 Tf 62.00 477.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 477.89 Td (A stiffer spring has larger k and stores more energy for the same extension.) Tj ET
+BT /F2 15 Tf 56.00 452.89 Td (6. Work-Energy Theorem) Tj ET
+0.50 w 56.00 442.89 m 539.28 442.89 l S
+BT /F1 10 Tf 56.00 425.89 Td (The work-energy theorem states that the net work done on a body is equal to the change in) Tj ET
+BT /F1 10 Tf 56.00 411.89 Td (its kinetic energy. It connects force-based analysis with energy-based analysis.) Tj ET
+q 0.95 g 56.00 375.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 383.89 Td (W_net = Delta K = K_f - K_i) Tj ET
+q 0.95 g 56.00 341.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 349.89 Td (W_net = \(1/2\)m v_f^2 - \(1/2\)m v_i^2) Tj ET
+BT /F1 10 Tf 56.00 324.89 Td (If net work is positive, kinetic energy increases and the object speeds up. If net work is) Tj ET
+BT /F1 10 Tf 56.00 310.89 Td (negative, kinetic energy decreases and the object slows down. If net work is zero, kinetic) Tj ET
+BT /F1 10 Tf 56.00 296.89 Td (energy remains constant.) Tj ET
+BT /F2 10 Tf 62.00 277.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 277.89 Td (The theorem applies to the net work done by all forces.) Tj ET
+BT /F2 10 Tf 62.00 260.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 260.89 Td (It can be used even when acceleration is not constant, as long as work can be) Tj ET
+BT /F1 10 Tf 76.00 246.89 Td (determined.) Tj ET
+BT /F2 10 Tf 62.00 229.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 229.89 Td (It is especially useful when forces vary with position.) Tj ET
+BT /F2 15 Tf 56.00 204.89 Td (7. Conservative and Non-Conservative Forces) Tj ET
+0.50 w 56.00 194.89 m 539.28 194.89 l S
+BT /F1 10 Tf 56.00 177.89 Td (A conservative force is a force for which work done depends only on initial and final) Tj ET
+BT /F1 10 Tf 56.00 163.89 Td (positions, not on the path taken. Gravitational force and ideal spring force are common) Tj ET
+BT /F1 10 Tf 56.00 149.89 Td (conservative forces.) Tj ET
+BT /F1 10 Tf 56.00 130.89 Td (A non-conservative force is a force for which work depends on the path. Friction and air) Tj ET
+BT /F1 10 Tf 56.00 116.89 Td (resistance are common non-conservative forces because they dissipate mechanical energy into) Tj ET
+BT /F1 10 Tf 56.00 102.89 Td (heat and sound.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit III: Work, Energy, and Power) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 3) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 3632 >>
+stream
+q 0.92 g 56.00 741.89 483.28 44.00 re f Q
+0.30 w 56.00 741.89 m 539.28 741.89 l S
+0.30 w 206.00 741.89 m 206.00 785.89 l S
+BT /F2 9 Tf 64.00 769.89 Td (Force type) Tj ET
+BT /F2 9 Tf 214.00 769.89 Td (Examples and features) Tj ET
+q 1.00 g 56.00 697.89 483.28 44.00 re f Q
+0.30 w 56.00 697.89 m 539.28 697.89 l S
+0.30 w 206.00 697.89 m 206.00 741.89 l S
+BT /F1 9 Tf 64.00 725.89 Td (Conservative) Tj ET
+BT /F1 9 Tf 214.00 725.89 Td (Gravity, ideal spring force; path independent; potential) Tj ET
+BT /F1 9 Tf 214.00 713.89 Td (energy can be defined.) Tj ET
+q 0.98 g 56.00 653.89 483.28 44.00 re f Q
+0.30 w 56.00 653.89 m 539.28 653.89 l S
+0.30 w 206.00 653.89 m 206.00 697.89 l S
+BT /F1 9 Tf 64.00 681.89 Td (Non-conservative) Tj ET
+BT /F1 9 Tf 214.00 681.89 Td (Friction, air resistance; path dependent; mechanical) Tj ET
+BT /F1 9 Tf 214.00 669.89 Td (energy is dissipated.) Tj ET
+BT /F2 15 Tf 56.00 633.89 Td (8. Conservation of Energy) Tj ET
+0.50 w 56.00 623.89 m 539.28 623.89 l S
+BT /F1 10 Tf 56.00 606.89 Td (Energy cannot be created or destroyed, but it can change form. In mechanics, when only) Tj ET
+BT /F1 10 Tf 56.00 592.89 Td (conservative forces do work, total mechanical energy remains constant.) Tj ET
+q 0.95 g 56.00 556.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 564.89 Td (Mechanical energy: E = K + U) Tj ET
+q 0.95 g 56.00 522.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 530.89 Td (If only conservative forces act: K_i + U_i = K_f + U_f) Tj ET
+BT /F1 10 Tf 56.00 505.89 Td (For example, when a ball falls freely, gravitational potential energy decreases while) Tj ET
+BT /F1 10 Tf 56.00 491.89 Td (kinetic energy increases. Neglecting air resistance, the total mechanical energy stays) Tj ET
+BT /F1 10 Tf 56.00 477.89 Td (constant.) Tj ET
+BT /F2 10 Tf 62.00 458.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 458.89 Td (At the top of a fall, potential energy is high and kinetic energy may be low.) Tj ET
+BT /F2 10 Tf 62.00 441.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 441.89 Td (During the fall, potential energy converts into kinetic energy.) Tj ET
+BT /F2 10 Tf 62.00 424.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 424.89 Td (Just before impact, kinetic energy is maximum and potential energy is lower.) Tj ET
+BT /F2 12 Tf 56.00 403.89 Td (When Mechanical Energy Is Not Conserved) Tj ET
+BT /F1 10 Tf 56.00 386.89 Td (If friction or air resistance acts, mechanical energy decreases, but total energy is still) Tj ET
+BT /F1 10 Tf 56.00 372.89 Td (conserved because some mechanical energy becomes thermal energy, sound, or internal energy.) Tj ET
+q 0.95 g 56.00 336.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 344.89 Td (K_i + U_i + W_nonconservative = K_f + U_f) Tj ET
+BT /F2 10 Tf 62.00 319.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 319.89 Td (Friction usually does negative work on a sliding object.) Tj ET
+BT /F2 10 Tf 62.00 302.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 302.89 Td (Energy lost from mechanical form appears in other forms.) Tj ET
+BT /F2 15 Tf 56.00 277.89 Td (9. Power) Tj ET
+0.50 w 56.00 267.89 m 539.28 267.89 l S
+BT /F1 10 Tf 56.00 250.89 Td (Power is the rate at which work is done or energy is transferred. Two machines may do the) Tj ET
+BT /F1 10 Tf 56.00 236.89 Td (same amount of work, but the one that does it faster has greater power.) Tj ET
+q 0.95 g 56.00 200.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 208.89 Td (Average power: P = W / t) Tj ET
+q 0.95 g 56.00 166.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 174.89 Td (Power in terms of force and velocity: P = F v cos\(theta\)) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit III: Work, Energy, and Power) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 4) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 3586 >>
+stream
+q 0.92 g 56.00 741.89 483.28 44.00 re f Q
+0.30 w 56.00 741.89 m 539.28 741.89 l S
+0.30 w 206.00 741.89 m 206.00 785.89 l S
+BT /F2 9 Tf 64.00 769.89 Td (Quantity) Tj ET
+BT /F2 9 Tf 214.00 769.89 Td (Unit) Tj ET
+q 1.00 g 56.00 697.89 483.28 44.00 re f Q
+0.30 w 56.00 697.89 m 539.28 697.89 l S
+0.30 w 206.00 697.89 m 206.00 741.89 l S
+BT /F1 9 Tf 64.00 725.89 Td (Power) Tj ET
+BT /F1 9 Tf 214.00 725.89 Td (watt \(W\).) Tj ET
+q 0.98 g 56.00 653.89 483.28 44.00 re f Q
+0.30 w 56.00 653.89 m 539.28 653.89 l S
+0.30 w 206.00 653.89 m 206.00 697.89 l S
+BT /F1 9 Tf 64.00 681.89 Td (Work or energy) Tj ET
+BT /F1 9 Tf 214.00 681.89 Td (joule \(J\).) Tj ET
+q 1.00 g 56.00 609.89 483.28 44.00 re f Q
+0.30 w 56.00 609.89 m 539.28 609.89 l S
+0.30 w 206.00 609.89 m 206.00 653.89 l S
+BT /F1 9 Tf 64.00 637.89 Td (Time) Tj ET
+BT /F1 9 Tf 214.00 637.89 Td (second \(s\).) Tj ET
+q 0.98 g 56.00 565.89 483.28 44.00 re f Q
+0.30 w 56.00 565.89 m 539.28 565.89 l S
+0.30 w 206.00 565.89 m 206.00 609.89 l S
+BT /F1 9 Tf 64.00 593.89 Td (1 watt) Tj ET
+BT /F1 9 Tf 214.00 593.89 Td (1 joule per second.) Tj ET
+BT /F2 10 Tf 62.00 553.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 553.89 Td (Power is a scalar quantity.) Tj ET
+BT /F2 10 Tf 62.00 536.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 536.89 Td (A kilowatt is 1000 watts.) Tj ET
+BT /F2 10 Tf 62.00 519.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 519.89 Td (The commercial unit of electrical energy is the kilowatt-hour.) Tj ET
+q 0.95 g 56.00 485.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 493.89 Td (1 kWh = 3.6 x 10^6 J) Tj ET
+BT /F2 15 Tf 56.00 460.89 Td (10. Efficiency) Tj ET
+0.50 w 56.00 450.89 m 539.28 450.89 l S
+BT /F1 10 Tf 56.00 433.89 Td (Efficiency measures how much useful output energy or power is obtained from the input energy) Tj ET
+BT /F1 10 Tf 56.00 419.89 Td (or power. Real machines are never perfectly efficient because some energy is lost, often as) Tj ET
+BT /F1 10 Tf 56.00 405.89 Td (heat, sound, vibration, or deformation.) Tj ET
+q 0.95 g 56.00 369.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 377.89 Td (Efficiency = useful output energy / input energy) Tj ET
+q 0.95 g 56.00 335.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 343.89 Td (Percentage efficiency = \(useful output / input\) x 100%) Tj ET
+BT /F2 10 Tf 62.00 318.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 318.89 Td (Efficiency is usually less than 100 percent in real devices.) Tj ET
+BT /F2 10 Tf 62.00 301.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 301.89 Td (Reducing friction and heat loss can improve efficiency.) Tj ET
+BT /F2 10 Tf 62.00 284.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 284.89 Td (A more efficient machine wastes less input energy.) Tj ET
+BT /F1 10 Tf 56.00 267.89 Td (For example, if a motor receives 500 J of electrical energy and gives 350 J of useful) Tj ET
+BT /F1 10 Tf 56.00 253.89 Td (mechanical energy, its efficiency is 350/500 x 100% = 70%.) Tj ET
+BT /F2 15 Tf 56.00 226.89 Td (11. Worked Examples) Tj ET
+0.50 w 56.00 216.89 m 539.28 216.89 l S
+BT /F2 12 Tf 56.00 195.89 Td (Example 1: Work Done) Tj ET
+BT /F1 10 Tf 56.00 178.89 Td (A force of 20 N moves a box 5 m in the direction of the force. Work done W = Fs cos\(0\) = 20) Tj ET
+BT /F1 10 Tf 56.00 164.89 Td (x 5 = 100 J.) Tj ET
+BT /F2 12 Tf 56.00 141.89 Td (Example 2: Kinetic Energy) Tj ET
+BT /F1 10 Tf 56.00 124.89 Td (A 2 kg object moves with speed 3 m/s. Kinetic energy K = \(1/2\)mv^2 = \(1/2\)\(2\)\(3^2\) = 9 J.) Tj ET
+BT /F2 12 Tf 56.00 101.89 Td (Example 3: Potential Energy) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit III: Work, Energy, and Power) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 5) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 4725 >>
+stream
+BT /F1 10 Tf 56.00 785.89 Td (A 5 kg object is lifted to a height of 4 m. Taking g = 9.8 m/s^2, gravitational potential) Tj ET
+BT /F1 10 Tf 56.00 771.89 Td (energy U = mgh = 5 x 9.8 x 4 = 196 J.) Tj ET
+BT /F2 12 Tf 56.00 748.89 Td (Example 4: Work-Energy Theorem) Tj ET
+BT /F1 10 Tf 56.00 731.89 Td (A body of mass 4 kg speeds up from 2 m/s to 6 m/s. Net work = change in kinetic energy =) Tj ET
+BT /F1 10 Tf 56.00 717.89 Td (\(1/2\)\(4\)\(36\) - \(1/2\)\(4\)\(4\) = 72 - 8 = 64 J.) Tj ET
+BT /F2 12 Tf 56.00 694.89 Td (Example 5: Power) Tj ET
+BT /F1 10 Tf 56.00 677.89 Td (If 600 J of work is done in 10 s, average power P = W/t = 600/10 = 60 W.) Tj ET
+BT /F2 15 Tf 56.00 650.89 Td (12. Common Mistakes) Tj ET
+0.50 w 56.00 640.89 m 539.28 640.89 l S
+BT /F2 10 Tf 62.00 623.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 623.89 Td (Forgetting the angle in W = Fs cos\(theta\).) Tj ET
+BT /F2 10 Tf 62.00 606.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 606.89 Td (Assuming work is done whenever force is applied, even when displacement is zero.) Tj ET
+BT /F2 10 Tf 62.00 589.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 589.89 Td (Confusing mass with weight.) Tj ET
+BT /F2 10 Tf 62.00 572.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 572.89 Td (Using conservation of mechanical energy when friction or air resistance is significant) Tj ET
+BT /F1 10 Tf 76.00 558.89 Td (without accounting for energy loss.) Tj ET
+BT /F2 10 Tf 62.00 541.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 541.89 Td (Thinking potential energy has an absolute value independent of reference level.) Tj ET
+BT /F2 10 Tf 62.00 524.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 524.89 Td (Forgetting that kinetic energy depends on v squared, not v.) Tj ET
+BT /F2 10 Tf 62.00 507.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 507.89 Td (Confusing power with energy; power is energy transferred per unit time.) Tj ET
+BT /F2 10 Tf 62.00 490.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 490.89 Td (Writing efficiency greater than 100 percent for a real machine.) Tj ET
+BT /F2 15 Tf 56.00 465.89 Td (Quick Revision Sheet) Tj ET
+0.50 w 56.00 455.89 m 539.28 455.89 l S
+BT /F2 10 Tf 62.00 438.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 438.89 Td (Work is done when force produces displacement.) Tj ET
+BT /F2 10 Tf 62.00 421.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 421.89 Td (W = Fs cos\(theta\) for a constant force.) Tj ET
+BT /F2 10 Tf 62.00 404.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 404.89 Td (Work is positive, negative, or zero depending on the angle between force and) Tj ET
+BT /F1 10 Tf 76.00 390.89 Td (displacement.) Tj ET
+BT /F2 10 Tf 62.00 373.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 373.89 Td (Kinetic energy is K = \(1/2\)mv^2.) Tj ET
+BT /F2 10 Tf 62.00 356.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 356.89 Td (Gravitational potential energy near Earth is U = mgh.) Tj ET
+BT /F2 10 Tf 62.00 339.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 339.89 Td (Elastic potential energy is U = \(1/2\)kx^2.) Tj ET
+BT /F2 10 Tf 62.00 322.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 322.89 Td (Net work equals change in kinetic energy.) Tj ET
+BT /F2 10 Tf 62.00 305.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 305.89 Td (Mechanical energy is K + U.) Tj ET
+BT /F2 10 Tf 62.00 288.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 288.89 Td (Mechanical energy is conserved when only conservative forces do work.) Tj ET
+BT /F2 10 Tf 62.00 271.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 271.89 Td (Friction and air resistance are non-conservative forces.) Tj ET
+BT /F2 10 Tf 62.00 254.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 254.89 Td (Power is the rate of doing work: P = W/t.) Tj ET
+BT /F2 10 Tf 62.00 237.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 237.89 Td (Efficiency compares useful output with total input.) Tj ET
+BT /F2 15 Tf 56.00 212.89 Td (Practice Questions) Tj ET
+0.50 w 56.00 202.89 m 539.28 202.89 l S
+BT /F2 10 Tf 62.00 185.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 185.89 Td (Define work done by a force. State its SI unit.) Tj ET
+BT /F2 10 Tf 62.00 168.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 168.89 Td (A force of 50 N moves an object 3 m in the direction of force. Find work done.) Tj ET
+BT /F2 10 Tf 62.00 151.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 151.89 Td (A force acts perpendicular to displacement. What is the work done?) Tj ET
+BT /F2 10 Tf 62.00 134.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 134.89 Td (Calculate the kinetic energy of a 10 kg body moving at 4 m/s.) Tj ET
+BT /F2 10 Tf 62.00 117.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 117.89 Td (Find the gravitational potential energy of a 2 kg body at height 5 m. Take g = 9.8) Tj ET
+BT /F1 10 Tf 76.00 103.89 Td (m/s^2.) Tj ET
+BT /F2 10 Tf 62.00 86.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 86.89 Td (State and explain the work-energy theorem.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit III: Work, Energy, and Power) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 6) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 1354 >>
+stream
+BT /F2 10 Tf 62.00 785.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 785.89 Td (A 3 kg object speeds up from 2 m/s to 8 m/s. Find the net work done.) Tj ET
+BT /F2 10 Tf 62.00 768.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 768.89 Td (What is meant by a conservative force? Give two examples.) Tj ET
+BT /F2 10 Tf 62.00 751.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 751.89 Td (Why is friction called a non-conservative force?) Tj ET
+BT /F2 10 Tf 62.00 734.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 734.89 Td (State the principle of conservation of mechanical energy.) Tj ET
+BT /F2 10 Tf 62.00 717.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 717.89 Td (A machine does 1200 J of work in 20 s. Find its power.) Tj ET
+BT /F2 10 Tf 62.00 700.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 700.89 Td (Convert 1 kWh into joules.) Tj ET
+BT /F2 10 Tf 62.00 683.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 683.89 Td (A motor has input energy 1000 J and useful output energy 750 J. Find efficiency.) Tj ET
+BT /F2 10 Tf 62.00 666.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 666.89 Td (Why can no real machine be 100 percent efficient?) Tj ET
+BT /F2 10 Tf 62.00 649.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 649.89 Td (Explain the energy transformation when a ball falls freely from a height.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit III: Work, Energy, and Power) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 7) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R] /Count 7 >>
+endobj
+19 0 obj
+<< /Type /Catalog /Pages 18 0 R >>
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000000228 00000 n 
+0000004321 00000 n 
+0000004474 00000 n 
+0000008387 00000 n 
+0000008540 00000 n 
+0000012826 00000 n 
+0000012979 00000 n 
+0000016664 00000 n 
+0000016819 00000 n 
+0000020458 00000 n 
+0000020613 00000 n 
+0000025391 00000 n 
+0000025546 00000 n 
+0000026953 00000 n 
+0000027108 00000 n 
+0000027206 00000 n 
+trailer
+<< /Size 20 /Root 19 0 R >>
+startxref
+27257
+%%EOF

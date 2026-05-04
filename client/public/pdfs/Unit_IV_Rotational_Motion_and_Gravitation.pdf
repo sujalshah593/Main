@@ -1,0 +1,628 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 3094 >>
+stream
+BT /F2 24 Tf 56.00 785.89 Td (Unit IV: Rotational Motion and Gravitation) Tj ET
+BT /F1 12 Tf 56.00 757.89 Td (Torque, angular momentum, moment of inertia, gravitation, and motion of planets and satellites) Tj ET
+1.20 w 56.00 739.89 m 539.28 739.89 l S
+BT /F2 15 Tf 56.00 703.89 Td (Learning Goals) Tj ET
+0.50 w 56.00 693.89 m 539.28 693.89 l S
+BT /F2 10 Tf 62.00 676.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 676.89 Td (Understand angular displacement, angular velocity, and angular acceleration.) Tj ET
+BT /F2 10 Tf 62.00 659.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 659.89 Td (Relate linear motion quantities to rotational motion quantities.) Tj ET
+BT /F2 10 Tf 62.00 642.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 642.89 Td (Define torque and use it to describe rotational effect of force.) Tj ET
+BT /F2 10 Tf 62.00 625.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 625.89 Td (Understand moment of inertia as rotational inertia.) Tj ET
+BT /F2 10 Tf 62.00 608.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 608.89 Td (Apply angular momentum and its conservation.) Tj ET
+BT /F2 10 Tf 62.00 591.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 591.89 Td (Use Newton's law of gravitation to calculate gravitational force.) Tj ET
+BT /F2 10 Tf 62.00 574.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 574.89 Td (Understand gravitational field, gravitational potential energy, and orbital motion.) Tj ET
+BT /F2 10 Tf 62.00 557.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 557.89 Td (Analyze basic motion of planets and satellites using gravitational force as) Tj ET
+BT /F1 10 Tf 76.00 543.89 Td (centripetal force.) Tj ET
+BT /F2 15 Tf 56.00 518.89 Td (1. Introduction) Tj ET
+0.50 w 56.00 508.89 m 539.28 508.89 l S
+BT /F1 10 Tf 56.00 491.89 Td (Rotational motion is the motion of a body about an axis. A wheel, fan, spinning top, door,) Tj ET
+BT /F1 10 Tf 56.00 477.89 Td (pulley, planet, and satellite all involve rotational ideas. Gravitation explains the) Tj ET
+BT /F1 10 Tf 56.00 463.89 Td (attractive force between masses and is responsible for falling bodies, planetary motion,) Tj ET
+BT /F1 10 Tf 56.00 449.89 Td (tides, and satellite orbits.) Tj ET
+BT /F1 10 Tf 56.00 430.89 Td (This unit connects two major ideas: how objects rotate and how gravity controls large-scale) Tj ET
+BT /F1 10 Tf 56.00 416.89 Td (motion. Planetary and satellite motion can be understood by combining circular motion with) Tj ET
+BT /F1 10 Tf 56.00 402.89 Td (Newton's law of gravitation.) Tj ET
+BT /F2 15 Tf 56.00 375.89 Td (2. Angular Quantities) Tj ET
+0.50 w 56.00 365.89 m 539.28 365.89 l S
+BT /F1 10 Tf 56.00 348.89 Td (For rotational motion, we describe position using angular displacement instead of linear) Tj ET
+BT /F1 10 Tf 56.00 334.89 Td (displacement. Angular displacement is the angle through which a body rotates. It is usually) Tj ET
+BT /F1 10 Tf 56.00 320.89 Td (measured in radians.) Tj ET
+q 0.95 g 56.00 284.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 292.89 Td (theta = s / r        1 revolution = 2 pi radians) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Rotational Motion and Gravitation) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 3982 >>
+stream
+q 0.92 g 56.00 741.89 483.28 44.00 re f Q
+0.30 w 56.00 741.89 m 539.28 741.89 l S
+0.30 w 206.00 741.89 m 206.00 785.89 l S
+BT /F2 9 Tf 64.00 769.89 Td (Linear quantity) Tj ET
+BT /F2 9 Tf 214.00 769.89 Td (Rotational quantity) Tj ET
+q 1.00 g 56.00 697.89 483.28 44.00 re f Q
+0.30 w 56.00 697.89 m 539.28 697.89 l S
+0.30 w 206.00 697.89 m 206.00 741.89 l S
+BT /F1 9 Tf 64.00 725.89 Td (Displacement s) Tj ET
+BT /F1 9 Tf 214.00 725.89 Td (Angular displacement theta.) Tj ET
+q 0.98 g 56.00 653.89 483.28 44.00 re f Q
+0.30 w 56.00 653.89 m 539.28 653.89 l S
+0.30 w 206.00 653.89 m 206.00 697.89 l S
+BT /F1 9 Tf 64.00 681.89 Td (Velocity v) Tj ET
+BT /F1 9 Tf 214.00 681.89 Td (Angular velocity omega.) Tj ET
+q 1.00 g 56.00 609.89 483.28 44.00 re f Q
+0.30 w 56.00 609.89 m 539.28 609.89 l S
+0.30 w 206.00 609.89 m 206.00 653.89 l S
+BT /F1 9 Tf 64.00 637.89 Td (Acceleration a) Tj ET
+BT /F1 9 Tf 214.00 637.89 Td (Angular acceleration alpha.) Tj ET
+q 0.98 g 56.00 565.89 483.28 44.00 re f Q
+0.30 w 56.00 565.89 m 539.28 565.89 l S
+0.30 w 206.00 565.89 m 206.00 609.89 l S
+BT /F1 9 Tf 64.00 593.89 Td (Mass m) Tj ET
+BT /F1 9 Tf 214.00 593.89 Td (Moment of inertia I.) Tj ET
+q 1.00 g 56.00 521.89 483.28 44.00 re f Q
+0.30 w 56.00 521.89 m 539.28 521.89 l S
+0.30 w 206.00 521.89 m 206.00 565.89 l S
+BT /F1 9 Tf 64.00 549.89 Td (Force F) Tj ET
+BT /F1 9 Tf 214.00 549.89 Td (Torque tau.) Tj ET
+q 0.98 g 56.00 477.89 483.28 44.00 re f Q
+0.30 w 56.00 477.89 m 539.28 477.89 l S
+0.30 w 206.00 477.89 m 206.00 521.89 l S
+BT /F1 9 Tf 64.00 505.89 Td (Momentum p) Tj ET
+BT /F1 9 Tf 214.00 505.89 Td (Angular momentum L.) Tj ET
+BT /F2 12 Tf 56.00 461.89 Td (Angular Velocity and Angular Acceleration) Tj ET
+BT /F1 10 Tf 56.00 444.89 Td (Angular velocity is the rate of change of angular displacement. Angular acceleration is the) Tj ET
+BT /F1 10 Tf 56.00 430.89 Td (rate of change of angular velocity.) Tj ET
+q 0.95 g 56.00 394.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 402.89 Td (omega = Delta theta / Delta t        alpha = Delta omega / Delta t) Tj ET
+BT /F2 10 Tf 62.00 377.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 377.89 Td (Angular velocity is measured in rad/s.) Tj ET
+BT /F2 10 Tf 62.00 360.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 360.89 Td (Angular acceleration is measured in rad/s^2.) Tj ET
+BT /F2 10 Tf 62.00 343.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 343.89 Td (If angular velocity is constant, angular acceleration is zero.) Tj ET
+BT /F2 15 Tf 56.00 318.89 Td (3. Relation Between Linear and Angular Motion) Tj ET
+0.50 w 56.00 308.89 m 539.28 308.89 l S
+BT /F1 10 Tf 56.00 291.89 Td (A point on a rotating body also has linear motion along a circular path. The farther the) Tj ET
+BT /F1 10 Tf 56.00 277.89 Td (point is from the axis, the greater its linear speed for the same angular speed.) Tj ET
+q 0.95 g 56.00 241.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 249.89 Td (s = r theta        v = r omega        a_t = r alpha) Tj ET
+q 0.95 g 56.00 207.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 215.89 Td (Centripetal acceleration: a_c = v^2/r = r omega^2) Tj ET
+BT /F2 10 Tf 62.00 190.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 190.89 Td (All points on a rigid rotating body have the same angular velocity.) Tj ET
+BT /F2 10 Tf 62.00 173.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 173.89 Td (Points farther from the axis have larger linear speed.) Tj ET
+BT /F2 10 Tf 62.00 156.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 156.89 Td (Tangential acceleration changes speed; centripetal acceleration changes direction.) Tj ET
+BT /F2 15 Tf 56.00 131.89 Td (4. Rotational Equations of Motion) Tj ET
+0.50 w 56.00 121.89 m 539.28 121.89 l S
+BT /F1 10 Tf 56.00 104.89 Td (When angular acceleration is constant, rotational motion equations resemble the equations of) Tj ET
+BT /F1 10 Tf 56.00 90.89 Td (straight-line motion with linear quantities replaced by angular quantities.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Rotational Motion and Gravitation) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 2) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 3722 >>
+stream
+q 0.95 g 56.00 768.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 776.89 Td (omega = omega_0 + alpha t) Tj ET
+q 0.95 g 56.00 734.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 742.89 Td (theta = omega_0 t + \(1/2\) alpha t^2) Tj ET
+q 0.95 g 56.00 700.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 708.89 Td (omega^2 = omega_0^2 + 2 alpha theta) Tj ET
+q 0.92 g 56.00 639.89 483.28 44.00 re f Q
+0.30 w 56.00 639.89 m 539.28 639.89 l S
+0.30 w 206.00 639.89 m 206.00 683.89 l S
+BT /F2 9 Tf 64.00 667.89 Td (Linear equation) Tj ET
+BT /F2 9 Tf 214.00 667.89 Td (Rotational equation) Tj ET
+q 1.00 g 56.00 595.89 483.28 44.00 re f Q
+0.30 w 56.00 595.89 m 539.28 595.89 l S
+0.30 w 206.00 595.89 m 206.00 639.89 l S
+BT /F1 9 Tf 64.00 623.89 Td (v = u + at) Tj ET
+BT /F1 9 Tf 214.00 623.89 Td (omega = omega_0 + alpha t) Tj ET
+q 0.98 g 56.00 551.89 483.28 44.00 re f Q
+0.30 w 56.00 551.89 m 539.28 551.89 l S
+0.30 w 206.00 551.89 m 206.00 595.89 l S
+BT /F1 9 Tf 64.00 579.89 Td (s = ut + \(1/2\)at^2) Tj ET
+BT /F1 9 Tf 214.00 579.89 Td (theta = omega_0 t + \(1/2\)alpha t^2) Tj ET
+q 1.00 g 56.00 507.89 483.28 44.00 re f Q
+0.30 w 56.00 507.89 m 539.28 507.89 l S
+0.30 w 206.00 507.89 m 206.00 551.89 l S
+BT /F1 9 Tf 64.00 535.89 Td (v^2 = u^2 + 2as) Tj ET
+BT /F1 9 Tf 214.00 535.89 Td (omega^2 = omega_0^2 + 2 alpha theta) Tj ET
+BT /F2 15 Tf 56.00 487.89 Td (5. Torque) Tj ET
+0.50 w 56.00 477.89 m 539.28 477.89 l S
+BT /F1 10 Tf 56.00 460.89 Td (Torque is the turning effect of a force. A force can produce rotation more effectively when) Tj ET
+BT /F1 10 Tf 56.00 446.89 Td (it is applied farther from the axis or at a better angle. Opening a door is easier when) Tj ET
+BT /F1 10 Tf 56.00 432.89 Td (force is applied at the handle rather than near the hinge.) Tj ET
+q 0.95 g 56.00 396.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 404.89 Td (Torque: tau = r F sin\(theta\)) Tj ET
+q 0.92 g 56.00 335.89 483.28 44.00 re f Q
+0.30 w 56.00 335.89 m 539.28 335.89 l S
+0.30 w 206.00 335.89 m 206.00 379.89 l S
+BT /F2 9 Tf 64.00 363.89 Td (Symbol) Tj ET
+BT /F2 9 Tf 214.00 363.89 Td (Meaning) Tj ET
+q 1.00 g 56.00 291.89 483.28 44.00 re f Q
+0.30 w 56.00 291.89 m 539.28 291.89 l S
+0.30 w 206.00 291.89 m 206.00 335.89 l S
+BT /F1 9 Tf 64.00 319.89 Td (tau) Tj ET
+BT /F1 9 Tf 214.00 319.89 Td (Torque, measured in newton metre \(N m\).) Tj ET
+q 0.98 g 56.00 247.89 483.28 44.00 re f Q
+0.30 w 56.00 247.89 m 539.28 247.89 l S
+0.30 w 206.00 247.89 m 206.00 291.89 l S
+BT /F1 9 Tf 64.00 275.89 Td (r) Tj ET
+BT /F1 9 Tf 214.00 275.89 Td (Perpendicular distance or lever arm from axis to line of) Tj ET
+BT /F1 9 Tf 214.00 263.89 Td (action of force.) Tj ET
+q 1.00 g 56.00 203.89 483.28 44.00 re f Q
+0.30 w 56.00 203.89 m 539.28 203.89 l S
+0.30 w 206.00 203.89 m 206.00 247.89 l S
+BT /F1 9 Tf 64.00 231.89 Td (F) Tj ET
+BT /F1 9 Tf 214.00 231.89 Td (Applied force.) Tj ET
+q 0.98 g 56.00 159.89 483.28 44.00 re f Q
+0.30 w 56.00 159.89 m 539.28 159.89 l S
+0.30 w 206.00 159.89 m 206.00 203.89 l S
+BT /F1 9 Tf 64.00 187.89 Td (theta) Tj ET
+BT /F1 9 Tf 214.00 187.89 Td (Angle between r and F.) Tj ET
+BT /F2 10 Tf 62.00 147.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 147.89 Td (Torque is maximum when force is perpendicular to the lever arm.) Tj ET
+BT /F2 10 Tf 62.00 130.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 130.89 Td (Torque is zero when the line of action of force passes through the axis.) Tj ET
+BT /F2 10 Tf 62.00 113.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 113.89 Td (Clockwise and anticlockwise torques are usually assigned opposite signs.) Tj ET
+BT /F2 12 Tf 56.00 92.89 Td (Rotational Form of Newton's Second Law) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Rotational Motion and Gravitation) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 3) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4054 >>
+stream
+BT /F1 10 Tf 56.00 785.89 Td (For rotation about a fixed axis, net torque is equal to moment of inertia times angular) Tj ET
+BT /F1 10 Tf 56.00 771.89 Td (acceleration.) Tj ET
+q 0.95 g 56.00 735.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 743.89 Td (tau_net = I alpha) Tj ET
+BT /F2 10 Tf 62.00 718.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 718.89 Td (Greater torque produces greater angular acceleration for the same moment of inertia.) Tj ET
+BT /F2 10 Tf 62.00 701.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 701.89 Td (Greater moment of inertia makes rotational acceleration harder for the same torque.) Tj ET
+BT /F2 15 Tf 56.00 676.89 Td (6. Moment of Inertia) Tj ET
+0.50 w 56.00 666.89 m 539.28 666.89 l S
+BT /F1 10 Tf 56.00 649.89 Td (Moment of inertia is the rotational analogue of mass. It measures how difficult it is to) Tj ET
+BT /F1 10 Tf 56.00 635.89 Td (change an object's rotational motion. It depends not only on mass but also on how the mass) Tj ET
+BT /F1 10 Tf 56.00 621.89 Td (is distributed relative to the axis of rotation.) Tj ET
+q 0.95 g 56.00 585.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 593.89 Td (For point masses: I = sum m_i r_i^2) Tj ET
+q 0.92 g 56.00 524.89 483.28 44.00 re f Q
+0.30 w 56.00 524.89 m 539.28 524.89 l S
+0.30 w 206.00 524.89 m 206.00 568.89 l S
+BT /F2 9 Tf 64.00 552.89 Td (Object) Tj ET
+BT /F2 9 Tf 214.00 552.89 Td (Moment of inertia about common axis) Tj ET
+q 1.00 g 56.00 480.89 483.28 44.00 re f Q
+0.30 w 56.00 480.89 m 539.28 480.89 l S
+0.30 w 206.00 480.89 m 206.00 524.89 l S
+BT /F1 9 Tf 64.00 508.89 Td (Point mass at distance r) Tj ET
+BT /F1 9 Tf 214.00 508.89 Td (I = mr^2) Tj ET
+q 0.98 g 56.00 436.89 483.28 44.00 re f Q
+0.30 w 56.00 436.89 m 539.28 436.89 l S
+0.30 w 206.00 436.89 m 206.00 480.89 l S
+BT /F1 9 Tf 64.00 464.89 Td (Thin ring about central axis) Tj ET
+BT /F1 9 Tf 214.00 464.89 Td (I = MR^2) Tj ET
+q 1.00 g 56.00 392.89 483.28 44.00 re f Q
+0.30 w 56.00 392.89 m 539.28 392.89 l S
+0.30 w 206.00 392.89 m 206.00 436.89 l S
+BT /F1 9 Tf 64.00 420.89 Td (Solid disc about central axis) Tj ET
+BT /F1 9 Tf 214.00 420.89 Td (I = \(1/2\)MR^2) Tj ET
+q 0.98 g 56.00 348.89 483.28 44.00 re f Q
+0.30 w 56.00 348.89 m 539.28 348.89 l S
+0.30 w 206.00 348.89 m 206.00 392.89 l S
+BT /F1 9 Tf 64.00 376.89 Td (Solid sphere about diameter) Tj ET
+BT /F1 9 Tf 214.00 376.89 Td (I = \(2/5\)MR^2) Tj ET
+q 1.00 g 56.00 304.89 483.28 44.00 re f Q
+0.30 w 56.00 304.89 m 539.28 304.89 l S
+0.30 w 206.00 304.89 m 206.00 348.89 l S
+BT /F1 9 Tf 64.00 332.89 Td (Thin rod about center) Tj ET
+BT /F1 9 Tf 214.00 332.89 Td (I = \(1/12\)ML^2) Tj ET
+BT /F2 10 Tf 62.00 292.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 292.89 Td (Mass farther from the axis contributes more strongly because of the r^2 factor.) Tj ET
+BT /F2 10 Tf 62.00 275.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 275.89 Td (A ring has greater moment of inertia than a solid disc of the same mass and radius.) Tj ET
+BT /F2 10 Tf 62.00 258.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 258.89 Td (Figure skaters spin faster when they pull their arms inward because moment of inertia) Tj ET
+BT /F1 10 Tf 76.00 244.89 Td (decreases.) Tj ET
+BT /F2 15 Tf 56.00 219.89 Td (7. Rotational Kinetic Energy) Tj ET
+0.50 w 56.00 209.89 m 539.28 209.89 l S
+BT /F1 10 Tf 56.00 192.89 Td (A rotating body has kinetic energy due to rotation. The formula resembles translational) Tj ET
+BT /F1 10 Tf 56.00 178.89 Td (kinetic energy, with mass replaced by moment of inertia and linear speed replaced by angular) Tj ET
+BT /F1 10 Tf 56.00 164.89 Td (speed.) Tj ET
+q 0.95 g 56.00 128.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 136.89 Td (Rotational kinetic energy: K_rot = \(1/2\) I omega^2) Tj ET
+q 0.95 g 56.00 94.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 102.89 Td (Total kinetic energy for rolling: K = \(1/2\)Mv^2 + \(1/2\)I omega^2) Tj ET
+BT /F2 10 Tf 62.00 77.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 77.89 Td (Pure rotation has rotational kinetic energy.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Rotational Motion and Gravitation) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 4) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 3857 >>
+stream
+BT /F2 10 Tf 62.00 785.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 785.89 Td (Rolling motion has both translational and rotational kinetic energy.) Tj ET
+BT /F2 10 Tf 62.00 768.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 768.89 Td (For rolling without slipping, v = R omega.) Tj ET
+BT /F2 15 Tf 56.00 743.89 Td (8. Angular Momentum) Tj ET
+0.50 w 56.00 733.89 m 539.28 733.89 l S
+BT /F1 10 Tf 56.00 716.89 Td (Angular momentum describes the rotational motion of a body. For a particle, it depends on) Tj ET
+BT /F1 10 Tf 56.00 702.89 Td (position and linear momentum. For a rigid body rotating about a fixed axis, it depends on) Tj ET
+BT /F1 10 Tf 56.00 688.89 Td (moment of inertia and angular velocity.) Tj ET
+q 0.95 g 56.00 652.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 660.89 Td (For rigid body: L = I omega) Tj ET
+q 0.95 g 56.00 618.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 626.89 Td (For particle: L = r x p) Tj ET
+BT /F2 10 Tf 62.00 601.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 601.89 Td (Angular momentum is a vector quantity.) Tj ET
+BT /F2 10 Tf 62.00 584.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 584.89 Td (The direction of angular momentum is given by the right-hand rule.) Tj ET
+BT /F2 10 Tf 62.00 567.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 567.89 Td (Torque changes angular momentum.) Tj ET
+q 0.95 g 56.00 533.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 541.89 Td (tau_net = dL/dt) Tj ET
+BT /F2 12 Tf 56.00 512.89 Td (Conservation of Angular Momentum) Tj ET
+BT /F1 10 Tf 56.00 495.89 Td (If net external torque on a system is zero, total angular momentum remains constant. This) Tj ET
+BT /F1 10 Tf 56.00 481.89 Td (principle explains many natural and technological phenomena.) Tj ET
+q 0.95 g 56.00 445.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 453.89 Td (If tau_net = 0, then L = constant) Tj ET
+BT /F2 10 Tf 62.00 428.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 428.89 Td (A spinning skater rotates faster when pulling arms inward.) Tj ET
+BT /F2 10 Tf 62.00 411.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 411.89 Td (Planets move faster when closer to the Sun and slower when farther away.) Tj ET
+BT /F2 10 Tf 62.00 394.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 394.89 Td (Rotating satellites and gyroscopes use angular momentum for stability.) Tj ET
+BT /F2 15 Tf 56.00 369.89 Td (9. Equilibrium of Rigid Bodies) Tj ET
+0.50 w 56.00 359.89 m 539.28 359.89 l S
+BT /F1 10 Tf 56.00 342.89 Td (For a rigid body to be in complete equilibrium, both translational and rotational conditions) Tj ET
+BT /F1 10 Tf 56.00 328.89 Td (must be satisfied. The net force must be zero and the net torque must be zero.) Tj ET
+q 0.95 g 56.00 292.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 300.89 Td (Translational equilibrium: sum F = 0        Rotational equilibrium: sum tau = 0) Tj ET
+BT /F2 10 Tf 62.00 275.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 275.89 Td (A balanced seesaw has clockwise torque equal to anticlockwise torque.) Tj ET
+BT /F2 10 Tf 62.00 258.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 258.89 Td (A ladder leaning against a wall is analyzed using force and torque balance.) Tj ET
+BT /F2 10 Tf 62.00 241.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 241.89 Td (The choice of axis for torque calculation can simplify the problem.) Tj ET
+BT /F2 15 Tf 56.00 216.89 Td (10. Newton's Law of Gravitation) Tj ET
+0.50 w 56.00 206.89 m 539.28 206.89 l S
+BT /F1 10 Tf 56.00 189.89 Td (Newton's universal law of gravitation states that every mass attracts every other mass with) Tj ET
+BT /F1 10 Tf 56.00 175.89 Td (a force proportional to the product of their masses and inversely proportional to the square) Tj ET
+BT /F1 10 Tf 56.00 161.89 Td (of the distance between their centers.) Tj ET
+q 0.95 g 56.00 125.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 133.89 Td (F = G m1 m2 / r^2) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Rotational Motion and Gravitation) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 5) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 3866 >>
+stream
+q 0.92 g 56.00 741.89 483.28 44.00 re f Q
+0.30 w 56.00 741.89 m 539.28 741.89 l S
+0.30 w 206.00 741.89 m 206.00 785.89 l S
+BT /F2 9 Tf 64.00 769.89 Td (Symbol) Tj ET
+BT /F2 9 Tf 214.00 769.89 Td (Meaning) Tj ET
+q 1.00 g 56.00 697.89 483.28 44.00 re f Q
+0.30 w 56.00 697.89 m 539.28 697.89 l S
+0.30 w 206.00 697.89 m 206.00 741.89 l S
+BT /F1 9 Tf 64.00 725.89 Td (F) Tj ET
+BT /F1 9 Tf 214.00 725.89 Td (Gravitational force.) Tj ET
+q 0.98 g 56.00 653.89 483.28 44.00 re f Q
+0.30 w 56.00 653.89 m 539.28 653.89 l S
+0.30 w 206.00 653.89 m 206.00 697.89 l S
+BT /F1 9 Tf 64.00 681.89 Td (G) Tj ET
+BT /F1 9 Tf 214.00 681.89 Td (Universal gravitational constant.) Tj ET
+q 1.00 g 56.00 609.89 483.28 44.00 re f Q
+0.30 w 56.00 609.89 m 539.28 609.89 l S
+0.30 w 206.00 609.89 m 206.00 653.89 l S
+BT /F1 9 Tf 64.00 637.89 Td (m1, m2) Tj ET
+BT /F1 9 Tf 214.00 637.89 Td (Masses of the two bodies.) Tj ET
+q 0.98 g 56.00 565.89 483.28 44.00 re f Q
+0.30 w 56.00 565.89 m 539.28 565.89 l S
+0.30 w 206.00 565.89 m 206.00 609.89 l S
+BT /F1 9 Tf 64.00 593.89 Td (r) Tj ET
+BT /F1 9 Tf 214.00 593.89 Td (Distance between centers of the bodies.) Tj ET
+BT /F2 10 Tf 62.00 553.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 553.89 Td (Gravity is always attractive.) Tj ET
+BT /F2 10 Tf 62.00 536.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 536.89 Td (The force acts along the line joining the centers of the two masses.) Tj ET
+BT /F2 10 Tf 62.00 519.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 519.89 Td (If distance doubles, gravitational force becomes one-fourth.) Tj ET
+BT /F2 10 Tf 62.00 502.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 502.89 Td (The forces on the two bodies are equal in magnitude and opposite in direction.) Tj ET
+BT /F2 15 Tf 56.00 477.89 Td (11. Gravitational Field and Acceleration Due to Gravity) Tj ET
+0.50 w 56.00 467.89 m 539.28 467.89 l S
+BT /F1 10 Tf 56.00 450.89 Td (The gravitational field at a point is the gravitational force per unit mass experienced by a) Tj ET
+BT /F1 10 Tf 56.00 436.89 Td (small test mass placed at that point.) Tj ET
+q 0.95 g 56.00 400.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 408.89 Td (g = F/m = GM/r^2) Tj ET
+BT /F1 10 Tf 56.00 383.89 Td (Near Earth's surface, g is approximately 9.8 m/s^2. At height h above Earth's surface, the) Tj ET
+BT /F1 10 Tf 56.00 369.89 Td (distance from Earth's center is R + h, so g decreases with altitude.) Tj ET
+q 0.95 g 56.00 333.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 341.89 Td (g_h = GM / \(R + h\)^2) Tj ET
+BT /F2 10 Tf 62.00 316.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 316.89 Td (g is larger near massive bodies.) Tj ET
+BT /F2 10 Tf 62.00 299.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 299.89 Td (g decreases as distance from the center of the planet increases.) Tj ET
+BT /F2 10 Tf 62.00 282.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 282.89 Td (Weight is the gravitational force on a body: W = mg.) Tj ET
+BT /F2 15 Tf 56.00 257.89 Td (12. Gravitational Potential Energy) Tj ET
+0.50 w 56.00 247.89 m 539.28 247.89 l S
+BT /F1 10 Tf 56.00 230.89 Td (For two masses separated by distance r, gravitational potential energy is negative if zero) Tj ET
+BT /F1 10 Tf 56.00 216.89 Td (is chosen at infinite separation. The negative sign shows that gravity is attractive and) Tj ET
+BT /F1 10 Tf 56.00 202.89 Td (energy must be supplied to separate the masses to infinity.) Tj ET
+q 0.95 g 56.00 166.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 174.89 Td (U = -G M m / r) Tj ET
+BT /F1 10 Tf 56.00 149.89 Td (Near Earth's surface, when height changes are small compared with Earth's radius, the) Tj ET
+BT /F1 10 Tf 56.00 135.89 Td (simpler formula U = mgh is a good approximation.) Tj ET
+q 0.95 g 56.00 99.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 107.89 Td (Near Earth's surface: Delta U = mg Delta h) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Rotational Motion and Gravitation) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 6) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 3837 >>
+stream
+BT /F2 15 Tf 56.00 777.89 Td (13. Motion of Planets and Satellites) Tj ET
+0.50 w 56.00 767.89 m 539.28 767.89 l S
+BT /F1 10 Tf 56.00 750.89 Td (A satellite remains in orbit because gravity provides the centripetal force needed for) Tj ET
+BT /F1 10 Tf 56.00 736.89 Td (circular or nearly circular motion. The satellite is continuously falling toward Earth while) Tj ET
+BT /F1 10 Tf 56.00 722.89 Td (also moving forward fast enough to keep missing Earth.) Tj ET
+q 0.95 g 56.00 686.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 694.89 Td (Gravitational force = centripetal force) Tj ET
+q 0.95 g 56.00 652.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 660.89 Td (GMm/r^2 = mv^2/r) Tj ET
+q 0.95 g 56.00 618.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 626.89 Td (Orbital speed: v = sqrt\(GM/r\)) Tj ET
+BT /F2 10 Tf 62.00 601.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 601.89 Td (Orbital speed does not depend on the mass of the satellite.) Tj ET
+BT /F2 10 Tf 62.00 584.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 584.89 Td (A satellite closer to Earth needs greater orbital speed.) Tj ET
+BT /F2 10 Tf 62.00 567.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 567.89 Td (A higher orbit has lower speed but longer period.) Tj ET
+BT /F2 12 Tf 56.00 546.89 Td (Time Period of a Circular Orbit) Tj ET
+q 0.95 g 56.00 512.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 520.89 Td (T = 2 pi r / v        T^2 = 4 pi^2 r^3 / GM) Tj ET
+BT /F1 10 Tf 56.00 495.89 Td (This relation shows that the square of the orbital period is proportional to the cube of) Tj ET
+BT /F1 10 Tf 56.00 481.89 Td (orbital radius. It is connected to Kepler's third law of planetary motion.) Tj ET
+BT /F2 15 Tf 56.00 454.89 Td (14. Kepler's Laws) Tj ET
+0.50 w 56.00 444.89 m 539.28 444.89 l S
+BT /F1 10 Tf 56.00 427.89 Td (Kepler's laws describe planetary motion around the Sun. Newton's law of gravitation later) Tj ET
+BT /F1 10 Tf 56.00 413.89 Td (explained why these laws work.) Tj ET
+BT /F2 10 Tf 62.00 394.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 394.89 Td (First law: Planets move in elliptical orbits with the Sun at one focus.) Tj ET
+BT /F2 10 Tf 62.00 377.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 377.89 Td (Second law: A line joining a planet and the Sun sweeps out equal areas in equal times.) Tj ET
+BT /F2 10 Tf 62.00 360.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 360.89 Td (Third law: The square of the orbital period is proportional to the cube of the semi-) Tj ET
+BT /F1 10 Tf 76.00 346.89 Td (major axis.) Tj ET
+q 0.95 g 56.00 312.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 320.89 Td (Kepler's third law: T^2 proportional to r^3 for circular orbit approximation) Tj ET
+BT /F1 10 Tf 56.00 295.89 Td (Kepler's second law is a consequence of conservation of angular momentum. When a planet is) Tj ET
+BT /F1 10 Tf 56.00 281.89 Td (closer to the Sun, it moves faster; when farther away, it moves slower.) Tj ET
+BT /F2 15 Tf 56.00 254.89 Td (15. Worked Examples) Tj ET
+0.50 w 56.00 244.89 m 539.28 244.89 l S
+BT /F2 12 Tf 56.00 223.89 Td (Example 1: Torque) Tj ET
+BT /F1 10 Tf 56.00 206.89 Td (A force of 20 N is applied perpendicular to a door at a distance 0.5 m from the hinge.) Tj ET
+BT /F1 10 Tf 56.00 192.89 Td (Torque tau = rF sin\(90 degrees\) = 0.5 x 20 = 10 N m.) Tj ET
+BT /F2 12 Tf 56.00 169.89 Td (Example 2: Moment of Inertia) Tj ET
+BT /F1 10 Tf 56.00 152.89 Td (A point mass of 2 kg is located 3 m from the axis. Moment of inertia I = mr^2 = 2 x 3^2 = 18) Tj ET
+BT /F1 10 Tf 56.00 138.89 Td (kg m^2.) Tj ET
+BT /F2 12 Tf 56.00 115.89 Td (Example 3: Angular Momentum) Tj ET
+BT /F1 10 Tf 56.00 98.89 Td (A wheel has moment of inertia 4 kg m^2 and angular speed 5 rad/s. Angular momentum L = I) Tj ET
+BT /F1 10 Tf 56.00 84.89 Td (omega = 4 x 5 = 20 kg m^2/s.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Rotational Motion and Gravitation) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 7) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 4928 >>
+stream
+BT /F2 12 Tf 56.00 781.89 Td (Example 4: Gravitational Force) Tj ET
+BT /F1 10 Tf 56.00 764.89 Td (For two masses m1 and m2 separated by distance r, gravitational force is F = Gm1m2/r^2. If r) Tj ET
+BT /F1 10 Tf 56.00 750.89 Td (becomes twice as large, the new force becomes one-fourth of the original force.) Tj ET
+BT /F2 12 Tf 56.00 727.89 Td (Example 5: Orbital Speed) Tj ET
+BT /F1 10 Tf 56.00 710.89 Td (For a satellite in circular orbit of radius r around Earth of mass M, set gravity equal to) Tj ET
+BT /F1 10 Tf 56.00 696.89 Td (centripetal force: GMm/r^2 = mv^2/r. Solving gives v = sqrt\(GM/r\).) Tj ET
+BT /F2 15 Tf 56.00 669.89 Td (16. Common Mistakes) Tj ET
+0.50 w 56.00 659.89 m 539.28 659.89 l S
+BT /F2 10 Tf 62.00 642.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 642.89 Td (Confusing angular velocity with linear velocity.) Tj ET
+BT /F2 10 Tf 62.00 625.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 625.89 Td (Forgetting that radians are dimensionless but important in formulas.) Tj ET
+BT /F2 10 Tf 62.00 608.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 608.89 Td (Calculating torque using full distance instead of perpendicular lever arm.) Tj ET
+BT /F2 10 Tf 62.00 591.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 591.89 Td (Thinking moment of inertia depends only on mass; it also depends on mass distribution.) Tj ET
+BT /F2 10 Tf 62.00 574.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 574.89 Td (Assuming angular momentum is always conserved even when external torque acts.) Tj ET
+BT /F2 10 Tf 62.00 557.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 557.89 Td (Calling centripetal force a new type of force instead of the net inward force.) Tj ET
+BT /F2 10 Tf 62.00 540.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 540.89 Td (Using U = mgh for very large height changes where the inverse-square nature of gravity) Tj ET
+BT /F1 10 Tf 76.00 526.89 Td (matters.) Tj ET
+BT /F2 10 Tf 62.00 509.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 509.89 Td (Forgetting that satellite orbital speed is determined by orbital radius and central) Tj ET
+BT /F1 10 Tf 76.00 495.89 Td (mass, not satellite mass.) Tj ET
+BT /F2 15 Tf 56.00 470.89 Td (Quick Revision Sheet) Tj ET
+0.50 w 56.00 460.89 m 539.28 460.89 l S
+BT /F2 10 Tf 62.00 443.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 443.89 Td (Angular displacement is measured in radians.) Tj ET
+BT /F2 10 Tf 62.00 426.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 426.89 Td (s = r theta, v = r omega, and a_t = r alpha.) Tj ET
+BT /F2 10 Tf 62.00 409.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 409.89 Td (Torque is tau = rF sin\(theta\).) Tj ET
+BT /F2 10 Tf 62.00 392.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 392.89 Td (Net torque produces angular acceleration: tau_net = I alpha.) Tj ET
+BT /F2 10 Tf 62.00 375.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 375.89 Td (Moment of inertia measures resistance to rotational acceleration.) Tj ET
+BT /F2 10 Tf 62.00 358.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 358.89 Td (Rotational kinetic energy is \(1/2\)I omega^2.) Tj ET
+BT /F2 10 Tf 62.00 341.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 341.89 Td (Angular momentum for a rigid body is L = I omega.) Tj ET
+BT /F2 10 Tf 62.00 324.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 324.89 Td (Angular momentum is conserved when net external torque is zero.) Tj ET
+BT /F2 10 Tf 62.00 307.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 307.89 Td (Newton's law of gravitation is F = Gm1m2/r^2.) Tj ET
+BT /F2 10 Tf 62.00 290.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 290.89 Td (Gravitational field is g = GM/r^2.) Tj ET
+BT /F2 10 Tf 62.00 273.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 273.89 Td (Gravitational potential energy is U = -GMm/r.) Tj ET
+BT /F2 10 Tf 62.00 256.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 256.89 Td (For circular orbit, gravity provides centripetal force.) Tj ET
+BT /F2 10 Tf 62.00 239.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 239.89 Td (Orbital speed is v = sqrt\(GM/r\).) Tj ET
+BT /F2 10 Tf 62.00 222.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 222.89 Td (Kepler's second law follows from conservation of angular momentum.) Tj ET
+BT /F2 15 Tf 56.00 197.89 Td (Practice Questions) Tj ET
+0.50 w 56.00 187.89 m 539.28 187.89 l S
+BT /F2 10 Tf 62.00 170.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 170.89 Td (Define angular displacement, angular velocity, and angular acceleration.) Tj ET
+BT /F2 10 Tf 62.00 153.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 153.89 Td (Convert one complete revolution into radians.) Tj ET
+BT /F2 10 Tf 62.00 136.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 136.89 Td (A wheel of radius 0.4 m rotates with angular speed 10 rad/s. Find linear speed at the) Tj ET
+BT /F1 10 Tf 76.00 122.89 Td (rim.) Tj ET
+BT /F2 10 Tf 62.00 105.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 105.89 Td (A force of 30 N acts perpendicular to a lever arm of 0.2 m. Find torque.) Tj ET
+BT /F2 10 Tf 62.00 88.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 88.89 Td (Why is it easier to open a door by pushing at the handle rather than near the hinge?) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Rotational Motion and Gravitation) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 8) Tj ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 18 0 R >>
+endobj
+20 0 obj
+<< /Length 1675 >>
+stream
+BT /F2 10 Tf 62.00 785.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 785.89 Td (Define moment of inertia. Why does mass distribution matter?) Tj ET
+BT /F2 10 Tf 62.00 768.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 768.89 Td (Find the moment of inertia of a 3 kg point mass at a distance 2 m from the axis.) Tj ET
+BT /F2 10 Tf 62.00 751.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 751.89 Td (State the law of conservation of angular momentum with an example.) Tj ET
+BT /F2 10 Tf 62.00 734.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 734.89 Td (What are the two conditions for equilibrium of a rigid body?) Tj ET
+BT /F2 10 Tf 62.00 717.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 717.89 Td (State Newton's universal law of gravitation.) Tj ET
+BT /F2 10 Tf 62.00 700.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 700.89 Td (If the distance between two masses is tripled, how does gravitational force change?) Tj ET
+BT /F2 10 Tf 62.00 683.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 683.89 Td (Define gravitational field intensity.) Tj ET
+BT /F2 10 Tf 62.00 666.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 666.89 Td (Why is gravitational potential energy negative when zero is taken at infinity?) Tj ET
+BT /F2 10 Tf 62.00 649.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 649.89 Td (Derive the expression v = sqrt\(GM/r\) for orbital speed.) Tj ET
+BT /F2 10 Tf 62.00 632.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 632.89 Td (State Kepler's three laws of planetary motion.) Tj ET
+BT /F2 10 Tf 62.00 615.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 615.89 Td (Why does a planet move faster when it is closer to the Sun?) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Rotational Motion and Gravitation) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 9) Tj ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 20 0 R >>
+endobj
+22 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R] /Count 9 >>
+endobj
+23 0 obj
+<< /Type /Catalog /Pages 22 0 R >>
+endobj
+xref
+0 24
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000000228 00000 n 
+0000003374 00000 n 
+0000003527 00000 n 
+0000007561 00000 n 
+0000007714 00000 n 
+0000011488 00000 n 
+0000011641 00000 n 
+0000015748 00000 n 
+0000015903 00000 n 
+0000019813 00000 n 
+0000019968 00000 n 
+0000023887 00000 n 
+0000024042 00000 n 
+0000027932 00000 n 
+0000028087 00000 n 
+0000033068 00000 n 
+0000033223 00000 n 
+0000034951 00000 n 
+0000035106 00000 n 
+0000035218 00000 n 
+trailer
+<< /Size 24 /Root 23 0 R >>
+startxref
+35269
+%%EOF
