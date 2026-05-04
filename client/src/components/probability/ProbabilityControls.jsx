@@ -111,21 +111,29 @@ export default function ProbabilityControls({
         <div className="space-y-2">
           <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider block flex justify-between">
             <span>Number of Trials</span>
-            <span className="text-amber-400 font-mono">{config.trials}</span>
+            <input 
+              type="number"
+              min="1"
+              max="10000"
+              value={config.trials}
+              onChange={(e) => setConfig({ ...config, trials: Math.min(10000, Math.max(1, parseInt(e.target.value) || 1)) })}
+              disabled={isRunning}
+              className="w-16 bg-white/5 border border-white/10 rounded px-1 text-center text-amber-400 font-mono text-xs focus:outline-none focus:border-amber-500/50"
+            />
           </label>
           <input
             type="range"
             min="1"
             max="1000"
-            step="1"
-            value={config.trials}
+            step={config.trials > 100 ? 10 : 1}
+            value={config.trials > 1000 ? 1000 : config.trials}
             onChange={(e) => setConfig({ ...config, trials: parseInt(e.target.value) })}
             disabled={isRunning}
             className="w-full accent-amber-500 h-2 bg-white/10 rounded-lg appearance-none cursor-pointer disabled:opacity-50 mt-3"
           />
           <div className="flex justify-between text-xs text-gray-500 font-mono mt-1">
             <span>1</span>
-            <span>1000</span>
+            <span>1000+</span>
           </div>
         </div>
 

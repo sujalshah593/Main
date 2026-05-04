@@ -137,9 +137,13 @@ export default function BasicProbabilityPage() {
 
     // Fast Mode if trials > 50
     if (targetRuns > 50) {
+      let lastVal = '';
       for (let i = 0; i < targetRuns; i++) {
         const val = generateOutcome(config.type);
-        const key = config.type === 'cards' || config.type === 'rng' || config.type === 'dice' ? 
+        lastVal = val;
+        
+        // Use actual values for small sample spaces, group only for huge ones (RNG, Cards)
+        const key = (config.type === 'cards' || config.type === 'rng') ? 
           (checkFavorable(config.type, config.condition, val) ? 'Favorable' : 'Unfavorable') : val;
         
         currentOutcomes[key] = (currentOutcomes[key] || 0) + 1;
@@ -149,7 +153,7 @@ export default function BasicProbabilityPage() {
       setOutcomes(currentOutcomes);
       setTotalRun(currentRun);
       setFavorableCount(currentFavorable);
-      setLatestOutcome('Fast Simulation Completed');
+      setLatestOutcome(lastVal);
       setIsSimulating(false);
       return;
     }
@@ -164,8 +168,8 @@ export default function BasicProbabilityPage() {
 
       const val = generateOutcome(config.type);
       
-      // For charting we might group categories if there are too many unique values
-      const chartKey = config.type === 'cards' || config.type === 'rng' || config.type === 'dice' ? 
+      // Use actual values for small sample spaces
+      const chartKey = (config.type === 'cards' || config.type === 'rng') ? 
         (checkFavorable(config.type, config.condition, val) ? 'Favorable' : 'Unfavorable') : val;
 
       setOutcomes(prev => ({ ...prev, [chartKey]: (prev[chartKey] || 0) + 1 }));
@@ -177,7 +181,7 @@ export default function BasicProbabilityPage() {
       }
 
       runsDone++;
-    }, 200); // 200ms per trial
+    }, targetRuns > 20 ? 50 : 200); // Speed up if more trials are requested
 
     simRef.current = interval;
   };
