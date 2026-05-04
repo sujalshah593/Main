@@ -35,7 +35,7 @@ const FEATURES = [
 
 export default function HomePage() {
   return (
-    <div className="space-y-16 pb-12">
+    <div className="space-y-16 pb-12 w-full max-w-full overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative pt-8 lg:pt-16">
         <div className="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 bg-lab-accent3/10 blur-[120px] rounded-full pointer-events-none" />
@@ -53,7 +53,7 @@ export default function HomePage() {
             </div>
             
             <h1 className="font-display text-5xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">
-              Master the <span className="bg-clip-text text-transparent bg-gradient-to-r from-lab-accent3 via-white to-lab-accent">Quantum</span> Frontier
+              Master the <span className="text-lab-accent3">Quantum</span> World
             </h1>
             
             <p className="text-lg text-lab-muted max-w-2xl mx-auto lg:mx-0 leading-relaxed">
@@ -62,7 +62,7 @@ export default function HomePage() {
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
               <Link 
-                to="/labs" 
+                to="/semester/sem-1" 
                 className="px-8 py-4 bg-lab-accent3 hover:bg-lab-accent3/90 text-black font-bold rounded-2xl transition-all shadow-xl shadow-lab-accent3/20 flex items-center gap-2 group"
               >
                 Explore Labs
@@ -80,10 +80,10 @@ export default function HomePage() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="flex-1 relative"
+            className="flex-1 relative w-full"
           >
             <div className="glass-panel p-8 rounded-[40px] relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-lab-accent3/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-br from-lab-accent3/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
@@ -91,12 +91,12 @@ export default function HomePage() {
                     <Beaker size={40} className="text-lab-accent3" />
                   </div>
                   <div className="h-48 bg-lab-accent3/5 rounded-3xl border border-lab-accent3/10 flex items-center justify-center p-6 text-center">
-                    <p className="text-xs font-medium text-lab-accent3">Interactive 3D Simulations</p>
+                    <p className="text-xs font-medium text-lab-accent3 uppercase tracking-tighter">Interactive Simulations</p>
                   </div>
                 </div>
                 <div className="space-y-4 pt-8">
                   <div className="h-48 bg-white/5 rounded-3xl border border-white/10 flex items-center justify-center p-6 text-center">
-                    <p className="text-xs font-medium text-lab-muted">AI-Driven Lab Assistant</p>
+                    <p className="text-xs font-medium text-lab-muted uppercase tracking-tighter">AI Lab Assistant</p>
                   </div>
                   <div className="h-32 bg-lab-accent/10 rounded-3xl border border-lab-accent/20 flex items-center justify-center">
                     <Cpu size={40} className="text-lab-accent" />
@@ -137,7 +137,7 @@ export default function HomePage() {
           </div>
           <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-bold text-lab-muted">
             <Layers size={14} />
-            Academic Year 2024-25
+            Academic Year 2026-27
           </div>
         </div>
 
@@ -145,8 +145,8 @@ export default function HomePage() {
           {SEMESTERS.map((semester, i) => (
             <motion.div
               key={semester.id}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
               <Link
@@ -197,9 +197,8 @@ export default function HomePage() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="rounded-[40px] bg-gradient-to-br from-lab-accent3/20 via-indigo-500/10 to-transparent p-12 text-center border border-lab-accent3/20 relative overflow-hidden group"
+        className="rounded-[40px] bg-white/5 p-12 text-center border border-white/10 relative overflow-hidden group"
       >
-        <div className="absolute inset-0 bg-grid-white/5 pointer-events-none" />
         <div className="relative z-10 space-y-6">
           <h2 className="text-3xl font-display font-extrabold text-white">Ready to start your first experiment?</h2>
           <p className="text-lab-muted max-w-xl mx-auto">
@@ -207,7 +206,7 @@ export default function HomePage() {
           </p>
           <div className="flex justify-center pt-4">
             <Link 
-              to="/labs" 
+              to="/semester/sem-1" 
               className="px-10 py-4 bg-white text-black font-bold rounded-2xl hover:scale-105 transition-all shadow-xl shadow-white/10 flex items-center gap-3"
             >
               <Beaker size={20} />
