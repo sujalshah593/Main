@@ -1,0 +1,322 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 4405 >>
+stream
+BT /F2 24 Tf 56.00 785.89 Td (Unit IV: Probability, Statistics, and Mathematical Tools) Tj ET
+BT /F1 12 Tf 56.00 757.89 Td (Study notes for AI, probabilistic reasoning, and quantum measurement intuition) Tj ET
+1.20 w 56.00 739.89 m 539.28 739.89 l S
+BT /F2 15 Tf 56.00 703.89 Td (Learning Goals) Tj ET
+0.50 w 56.00 693.89 m 539.28 693.89 l S
+BT /F2 10 Tf 62.00 676.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 676.89 Td (Understand probability as a language for uncertainty.) Tj ET
+BT /F2 10 Tf 62.00 659.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 659.89 Td (Describe random variables and compute expectation in simple cases.) Tj ET
+BT /F2 10 Tf 62.00 642.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 642.89 Td (Use mean, variance, and standard deviation to summarize data and uncertainty.) Tj ET
+BT /F2 10 Tf 62.00 625.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 625.89 Td (Recognize common probability distributions conceptually.) Tj ET
+BT /F2 10 Tf 62.00 608.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 608.89 Td (Connect complex numbers and inner products to vectors, signals, and quantum states.) Tj ET
+BT /F2 15 Tf 56.00 583.89 Td (1. Basics of Probability) Tj ET
+0.50 w 56.00 573.89 m 539.28 573.89 l S
+BT /F1 10 Tf 56.00 556.89 Td (Probability measures how likely an event is. A probability is always between 0 and 1, where) Tj ET
+BT /F1 10 Tf 56.00 542.89 Td (0 means impossible and 1 means certain. In AI, probability helps a system act sensibly when) Tj ET
+BT /F1 10 Tf 56.00 528.89 Td (information is incomplete, noisy, or changing.) Tj ET
+q 0.95 g 56.00 492.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 500.89 Td (0 <= P\(A\) <= 1        P\(sample space\) = 1        P\(not A\) = 1 - P\(A\)) Tj ET
+BT /F2 12 Tf 56.00 471.89 Td (Key terms) Tj ET
+BT /F2 10 Tf 62.00 454.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 454.89 Td (Experiment: a process with uncertain outcome, such as tossing a coin or observing) Tj ET
+BT /F1 10 Tf 76.00 440.89 Td (sensor data.) Tj ET
+BT /F2 10 Tf 62.00 423.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 423.89 Td (Sample space: the set of all possible outcomes.) Tj ET
+BT /F2 10 Tf 62.00 406.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 406.89 Td (Event: a subset of the sample space, such as rolling an even number.) Tj ET
+BT /F2 10 Tf 62.00 389.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 389.89 Td (Independent events: events where knowing one occurred does not change the probability) Tj ET
+BT /F1 10 Tf 76.00 375.89 Td (of the other.) Tj ET
+BT /F2 10 Tf 62.00 358.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 358.89 Td (Conditional probability: the probability of A when B is known to be true.) Tj ET
+q 0.95 g 56.00 324.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 332.89 Td (P\(A | B\) = P\(A and B\) / P\(B\), when P\(B\) > 0) Tj ET
+BT /F1 10 Tf 56.00 307.89 Td (Example: If a classifier says an email is spam, conditional probability helps estimate the) Tj ET
+BT /F1 10 Tf 56.00 293.89 Td (chance that the email truly is spam given the classifier's evidence.) Tj ET
+BT /F2 15 Tf 56.00 266.89 Td (2. Random Variables and Expectation) Tj ET
+0.50 w 56.00 256.89 m 539.28 256.89 l S
+BT /F1 10 Tf 56.00 239.89 Td (A random variable assigns a numerical value to each outcome of a random experiment. It can) Tj ET
+BT /F1 10 Tf 56.00 225.89 Td (be discrete, such as the number of heads in three coin tosses, or continuous, such as) Tj ET
+BT /F1 10 Tf 56.00 211.89 Td (temperature or waiting time.) Tj ET
+q 0.95 g 56.00 175.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 183.89 Td (Expectation: E[X] = sum x * P\(X = x\)        Continuous idea: E[X] = integral x f\(x\) dx) Tj ET
+BT /F1 10 Tf 56.00 158.89 Td (Expectation is the long-run average value of a random variable. It is not always the value) Tj ET
+BT /F1 10 Tf 56.00 144.89 Td (you will actually observe; it is the balance point of the distribution.) Tj ET
+BT /F2 10 Tf 62.00 125.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 125.89 Td (If a game pays 10 points with probability 0.3 and 0 points with probability 0.7, then) Tj ET
+BT /F1 10 Tf 76.00 111.89 Td (E[X] = 10\(0.3\) + 0\(0.7\) = 3 points.) Tj ET
+BT /F2 10 Tf 62.00 94.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 94.89 Td (In AI, expected value is used to compare actions under uncertainty, such as choosing) Tj ET
+BT /F1 10 Tf 76.00 80.89 Td (the route with the lowest expected travel time.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Probability, Statistics, and Mathematical Tools) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 2654 >>
+stream
+BT /F2 15 Tf 56.00 777.89 Td (3. Mean, Variance, and Standard Deviation) Tj ET
+0.50 w 56.00 767.89 m 539.28 767.89 l S
+BT /F1 10 Tf 56.00 750.89 Td (The mean describes the center of data or a distribution. Variance describes how spread out) Tj ET
+BT /F1 10 Tf 56.00 736.89 Td (the values are. Standard deviation is the square root of variance, so it uses the same units) Tj ET
+BT /F1 10 Tf 56.00 722.89 Td (as the original data.) Tj ET
+q 0.95 g 56.00 686.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 694.89 Td (Mean: mu = E[X]        Variance: Var\(X\) = E[\(X - mu\)^2]        Standard deviation: sigma = sqrt\(Var\(X\)\)) Tj ET
+q 0.92 g 56.00 625.89 483.28 44.00 re f Q
+0.30 w 56.00 625.89 m 539.28 625.89 l S
+0.30 w 206.00 625.89 m 206.00 669.89 l S
+BT /F2 9 Tf 64.00 653.89 Td (Measure) Tj ET
+BT /F2 9 Tf 214.00 653.89 Td (Meaning) Tj ET
+q 1.00 g 56.00 581.89 483.28 44.00 re f Q
+0.30 w 56.00 581.89 m 539.28 581.89 l S
+0.30 w 206.00 581.89 m 206.00 625.89 l S
+BT /F1 9 Tf 64.00 609.89 Td (Mean) Tj ET
+BT /F1 9 Tf 214.00 609.89 Td (Typical or average value.) Tj ET
+q 0.98 g 56.00 537.89 483.28 44.00 re f Q
+0.30 w 56.00 537.89 m 539.28 537.89 l S
+0.30 w 206.00 537.89 m 206.00 581.89 l S
+BT /F1 9 Tf 64.00 565.89 Td (Variance) Tj ET
+BT /F1 9 Tf 214.00 565.89 Td (Average squared distance from the mean; larger means more) Tj ET
+BT /F1 9 Tf 214.00 553.89 Td (spread.) Tj ET
+q 1.00 g 56.00 493.89 483.28 44.00 re f Q
+0.30 w 56.00 493.89 m 539.28 493.89 l S
+0.30 w 206.00 493.89 m 206.00 537.89 l S
+BT /F1 9 Tf 64.00 521.89 Td (Standard deviation) Tj ET
+BT /F1 9 Tf 214.00 521.89 Td (Typical distance from the mean, measured in original) Tj ET
+BT /F1 9 Tf 214.00 509.89 Td (units.) Tj ET
+BT /F1 10 Tf 56.00 481.89 Td (Low variance means predictions are tightly clustered. High variance means there is more) Tj ET
+BT /F1 10 Tf 56.00 467.89 Td (uncertainty or instability. In machine learning, variance also describes how much a model's) Tj ET
+BT /F1 10 Tf 56.00 453.89 Td (predictions change when trained on different data.) Tj ET
+BT /F2 15 Tf 56.00 426.89 Td (4. Common Probability Distributions) Tj ET
+0.50 w 56.00 416.89 m 539.28 416.89 l S
+BT /F1 10 Tf 56.00 399.89 Td (A probability distribution describes how probability is assigned across possible values. You) Tj ET
+BT /F1 10 Tf 56.00 385.89 Td (do not always need the full formula first; the most important starting point is knowing what) Tj ET
+BT /F1 10 Tf 56.00 371.89 Td (kind of situation each distribution models.) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Probability, Statistics, and Mathematical Tools) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 2) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 4390 >>
+stream
+q 0.92 g 56.00 741.89 483.28 44.00 re f Q
+0.30 w 56.00 741.89 m 539.28 741.89 l S
+0.30 w 206.00 741.89 m 206.00 785.89 l S
+BT /F2 9 Tf 64.00 769.89 Td (Distribution) Tj ET
+BT /F2 9 Tf 214.00 769.89 Td (Conceptual use) Tj ET
+q 1.00 g 56.00 697.89 483.28 44.00 re f Q
+0.30 w 56.00 697.89 m 539.28 697.89 l S
+0.30 w 206.00 697.89 m 206.00 741.89 l S
+BT /F1 9 Tf 64.00 725.89 Td (Bernoulli) Tj ET
+BT /F1 9 Tf 214.00 725.89 Td (One yes/no outcome, such as success/failure or true/false.) Tj ET
+q 0.98 g 56.00 653.89 483.28 44.00 re f Q
+0.30 w 56.00 653.89 m 539.28 653.89 l S
+0.30 w 206.00 653.89 m 206.00 697.89 l S
+BT /F1 9 Tf 64.00 681.89 Td (Binomial) Tj ET
+BT /F1 9 Tf 214.00 681.89 Td (Number of successes in a fixed number of independent) Tj ET
+BT /F1 9 Tf 214.00 669.89 Td (trials.) Tj ET
+q 1.00 g 56.00 609.89 483.28 44.00 re f Q
+0.30 w 56.00 609.89 m 539.28 609.89 l S
+0.30 w 206.00 609.89 m 206.00 653.89 l S
+BT /F1 9 Tf 64.00 637.89 Td (Uniform) Tj ET
+BT /F1 9 Tf 214.00 637.89 Td (All outcomes in a range are equally likely.) Tj ET
+q 0.98 g 56.00 565.89 483.28 44.00 re f Q
+0.30 w 56.00 565.89 m 539.28 565.89 l S
+0.30 w 206.00 565.89 m 206.00 609.89 l S
+BT /F1 9 Tf 64.00 593.89 Td (Normal) Tj ET
+BT /F1 9 Tf 214.00 593.89 Td (Bell-shaped variation around a mean; common for) Tj ET
+BT /F1 9 Tf 214.00 581.89 Td (measurement noise.) Tj ET
+q 1.00 g 56.00 521.89 483.28 44.00 re f Q
+0.30 w 56.00 521.89 m 539.28 521.89 l S
+0.30 w 206.00 521.89 m 206.00 565.89 l S
+BT /F1 9 Tf 64.00 549.89 Td (Poisson) Tj ET
+BT /F1 9 Tf 214.00 549.89 Td (Counts of events in a fixed interval, such as arrivals or) Tj ET
+BT /F1 9 Tf 214.00 537.89 Td (defects.) Tj ET
+q 0.98 g 56.00 477.89 483.28 44.00 re f Q
+0.30 w 56.00 477.89 m 539.28 477.89 l S
+0.30 w 206.00 477.89 m 206.00 521.89 l S
+BT /F1 9 Tf 64.00 505.89 Td (Exponential) Tj ET
+BT /F1 9 Tf 214.00 505.89 Td (Waiting time until the next event in a Poisson-like) Tj ET
+BT /F1 9 Tf 214.00 493.89 Td (process.) Tj ET
+BT /F1 10 Tf 56.00 465.89 Td (Choosing a distribution is a modeling decision. For example, image sensor noise may be) Tj ET
+BT /F1 10 Tf 56.00 451.89 Td (approximated with a normal distribution, while the number of requests arriving at a server) Tj ET
+BT /F1 10 Tf 56.00 437.89 Td (in one minute may be modeled with a Poisson distribution.) Tj ET
+BT /F2 15 Tf 56.00 410.89 Td (5. Complex Numbers) Tj ET
+0.50 w 56.00 400.89 m 539.28 400.89 l S
+BT /F1 10 Tf 56.00 383.89 Td (A complex number has a real part and an imaginary part. It is written as a + bi, where i is) Tj ET
+BT /F1 10 Tf 56.00 369.89 Td (defined by i^2 = -1. Complex numbers are useful for representing rotations, waves, signals,) Tj ET
+BT /F1 10 Tf 56.00 355.89 Td (and quantum amplitudes.) Tj ET
+q 0.95 g 56.00 319.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 327.89 Td (z = a + bi        Re\(z\) = a        Im\(z\) = b        |z| = sqrt\(a^2 + b^2\)) Tj ET
+BT /F2 10 Tf 62.00 302.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 302.89 Td (Addition: add real parts and imaginary parts separately.) Tj ET
+BT /F2 10 Tf 62.00 285.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 285.89 Td (Multiplication: distribute terms and use i^2 = -1.) Tj ET
+BT /F2 10 Tf 62.00 268.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 268.89 Td (Magnitude: distance from the origin in the complex plane.) Tj ET
+BT /F2 10 Tf 62.00 251.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 251.89 Td (Complex conjugate: if z = a + bi, then conjugate\(z\) = a - bi.) Tj ET
+BT /F1 10 Tf 56.00 234.89 Td (In quantum theory, complex numbers can encode probability amplitudes. The observable) Tj ET
+BT /F1 10 Tf 56.00 220.89 Td (probability is related to the squared magnitude of an amplitude, not the amplitude alone.) Tj ET
+BT /F2 15 Tf 56.00 193.89 Td (6. Inner Products) Tj ET
+0.50 w 56.00 183.89 m 539.28 183.89 l S
+BT /F1 10 Tf 56.00 166.89 Td (An inner product is a way to multiply two vectors and get a scalar. It measures alignment or) Tj ET
+BT /F1 10 Tf 56.00 152.89 Td (similarity. In ordinary real vectors, it is the dot product. In complex vector spaces, the) Tj ET
+BT /F1 10 Tf 56.00 138.89 Td (conjugate of one vector is used.) Tj ET
+q 0.95 g 56.00 102.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 110.89 Td (Real vectors: <x, y> = x1*y1 + x2*y2 + ... + xn*yn) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Probability, Statistics, and Mathematical Tools) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 3) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4764 >>
+stream
+q 0.95 g 56.00 768.89 483.28 24.00 re f Q
+BT /F3 10 Tf 68.00 776.89 Td (Complex vectors: <x, y> = conjugate\(x1\)*y1 + ... + conjugate\(xn\)*yn) Tj ET
+BT /F2 10 Tf 62.00 751.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 751.89 Td (If the inner product is large and positive, the vectors point in similar directions.) Tj ET
+BT /F2 10 Tf 62.00 734.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 734.89 Td (If the inner product is zero, the vectors are orthogonal, meaning they carry no shared) Tj ET
+BT /F1 10 Tf 76.00 720.89 Td (direction under this measure.) Tj ET
+BT /F2 10 Tf 62.00 703.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 703.89 Td (In machine learning, inner products appear in similarity search, neural networks,) Tj ET
+BT /F1 10 Tf 76.00 689.89 Td (kernels, and embeddings.) Tj ET
+BT /F2 10 Tf 62.00 672.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 672.89 Td (In quantum mechanics, inner products help calculate measurement probabilities between) Tj ET
+BT /F1 10 Tf 76.00 658.89 Td (states.) Tj ET
+BT /F2 15 Tf 56.00 633.89 Td (Applications) Tj ET
+0.50 w 56.00 623.89 m 539.28 623.89 l S
+BT /F2 12 Tf 56.00 602.89 Td (Uncertainty in AI) Tj ET
+BT /F1 10 Tf 56.00 585.89 Td (AI systems often act without complete certainty. A speech recognizer may be unsure between) Tj ET
+BT /F1 10 Tf 56.00 571.89 Td (two words, a medical model may estimate disease risk, and a robot may receive noisy sensor) Tj ET
+BT /F1 10 Tf 56.00 557.89 Td (readings. Probability gives these systems a disciplined way to represent uncertainty instead) Tj ET
+BT /F1 10 Tf 56.00 543.89 Td (of pretending every decision is certain.) Tj ET
+BT /F2 12 Tf 56.00 520.89 Td (Probabilistic Models) Tj ET
+BT /F1 10 Tf 56.00 503.89 Td (Probabilistic models describe relationships between variables using probability. Examples) Tj ET
+BT /F1 10 Tf 56.00 489.89 Td (include Naive Bayes classifiers, Bayesian networks, hidden Markov models, and probabilistic) Tj ET
+BT /F1 10 Tf 56.00 475.89 Td (graphical models. They are useful when evidence is incomplete and the system must update) Tj ET
+BT /F1 10 Tf 56.00 461.89 Td (beliefs as new information arrives.) Tj ET
+BT /F2 12 Tf 56.00 438.89 Td (Quantum Measurement Intuition) Tj ET
+BT /F1 10 Tf 56.00 421.89 Td (Quantum states can be represented using vectors with complex-number amplitudes. Measurement) Tj ET
+BT /F1 10 Tf 56.00 407.89 Td (does not simply reveal a pre-written classical value; it gives outcomes according to) Tj ET
+BT /F1 10 Tf 56.00 393.89 Td (probabilities. A simplified intuition is: amplitudes describe the state, inner products) Tj ET
+BT /F1 10 Tf 56.00 379.89 Td (compare possible states, and squared magnitudes give measurement probabilities.) Tj ET
+BT /F2 15 Tf 56.00 352.89 Td (Quick Revision Sheet) Tj ET
+0.50 w 56.00 342.89 m 539.28 342.89 l S
+BT /F2 10 Tf 62.00 325.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 325.89 Td (Probability is a number from 0 to 1 that measures uncertainty.) Tj ET
+BT /F2 10 Tf 62.00 308.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 308.89 Td (Conditional probability updates likelihood when evidence is known.) Tj ET
+BT /F2 10 Tf 62.00 291.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 291.89 Td (A random variable turns uncertain outcomes into numbers.) Tj ET
+BT /F2 10 Tf 62.00 274.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 274.89 Td (Expectation is the long-run average or balance point.) Tj ET
+BT /F2 10 Tf 62.00 257.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 257.89 Td (Variance and standard deviation measure spread.) Tj ET
+BT /F2 10 Tf 62.00 240.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 240.89 Td (Distributions are reusable patterns for uncertainty.) Tj ET
+BT /F2 10 Tf 62.00 223.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 223.89 Td (Complex numbers represent two-dimensional quantities and are essential for waves and) Tj ET
+BT /F1 10 Tf 76.00 209.89 Td (quantum amplitudes.) Tj ET
+BT /F2 10 Tf 62.00 192.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 192.89 Td (Inner products measure similarity, projection, and quantum measurement overlap.) Tj ET
+BT /F2 15 Tf 56.00 167.89 Td (Practice Questions) Tj ET
+0.50 w 56.00 157.89 m 539.28 157.89 l S
+BT /F2 10 Tf 62.00 140.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 140.89 Td (A coin is tossed three times. What is the sample space? Define a random variable for) Tj ET
+BT /F1 10 Tf 76.00 126.89 Td (the number of heads.) Tj ET
+BT /F2 10 Tf 62.00 109.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 109.89 Td (A model predicts rain with probability 0.7. What does this mean in practical decision-) Tj ET
+BT /F1 10 Tf 76.00 95.89 Td (making?) Tj ET
+BT /F2 10 Tf 62.00 78.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 78.89 Td (Why can two datasets have the same mean but different standard deviations?) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Probability, Statistics, and Mathematical Tools) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 4) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 906 >>
+stream
+BT /F2 10 Tf 62.00 785.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 785.89 Td (Choose a suitable distribution for counting website visits per minute. Explain your) Tj ET
+BT /F1 10 Tf 76.00 771.89 Td (choice.) Tj ET
+BT /F2 10 Tf 62.00 754.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 754.89 Td (Compute the magnitude of z = 3 + 4i.) Tj ET
+BT /F2 10 Tf 62.00 737.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 737.89 Td (What does it mean for two vectors to have inner product zero?) Tj ET
+BT /F2 10 Tf 62.00 720.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 720.89 Td (How does probability help an AI system work with noisy data?) Tj ET
+BT /F2 10 Tf 62.00 703.89 Td (-) Tj ET
+BT /F1 10 Tf 76.00 703.89 Td (Why are complex numbers useful in quantum measurement intuition?) Tj ET
+0.40 w 56.00 42.00 m 539.28 42.00 l S
+BT /F1 8 Tf 56.00 27.00 Td (Unit IV: Probability, Statistics, and Mathematical Tools) Tj ET
+BT /F1 8 Tf 505.28 27.00 Td (Page 5) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 5 >>
+endobj
+15 0 obj
+<< /Type /Catalog /Pages 14 0 R >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000000228 00000 n 
+0000004685 00000 n 
+0000004838 00000 n 
+0000007544 00000 n 
+0000007697 00000 n 
+0000012139 00000 n 
+0000012292 00000 n 
+0000017109 00000 n 
+0000017264 00000 n 
+0000018222 00000 n 
+0000018377 00000 n 
+0000018461 00000 n 
+trailer
+<< /Size 16 /Root 15 0 R >>
+startxref
+18512
+%%EOF
