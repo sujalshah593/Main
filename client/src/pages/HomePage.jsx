@@ -1,19 +1,19 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Beaker, 
-  BookOpen, 
-  Cpu, 
-  Globe, 
-  Layers, 
-  Zap, 
-  ChevronRight, 
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  Beaker,
+  BookOpen,
+  Cpu,
+  Globe,
+  Layers,
+  Zap,
+  ChevronRight,
   ArrowRight,
   Activity,
   Shield,
   Star
-} from 'lucide-react';
-import { SEMESTERS } from '../data/semesterContent.js';
+} from "lucide-react";
+import { SEMESTERS } from "../data/semesterContent.js";
 
 const FEATURES = [
   {

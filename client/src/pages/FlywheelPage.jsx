@@ -370,8 +370,8 @@ export default function FlywheelPage() {
             <div className="text-[12px] text-slate-400 space-y-3 leading-relaxed">
               <p>The flywheel stores rotational kinetic energy. The work done by the falling mass is converted into rotational energy of the flywheel and the linear kinetic energy of the mass.</p>
               <p className="p-2 bg-slate-900 rounded font-mono text-sky-400 text-center">τ = Iα</p>
-              Mechanics Laboratory • Rotational Dynamics
-            </p>
+              <p>Mechanics Laboratory • Rotational Dynamics</p>
+            </div>
           </div>
         </div>
 
