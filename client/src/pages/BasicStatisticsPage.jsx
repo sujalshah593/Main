@@ -8,6 +8,7 @@ import StatisticsControls from '../components/statistics/StatisticsControls.jsx'
 import StatisticsVisualizer from '../components/statistics/StatisticsVisualizer.jsx';
 import StatisticsCalculator from '../components/statistics/StatisticsCalculator.jsx';
 import StatisticsObservationTable from '../components/statistics/StatisticsObservationTable.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function BasicStatisticsPage() {
   const [datasetA, setDatasetA] = useState([10, 20, 30, 40, 50]);
@@ -146,6 +147,10 @@ export default function BasicStatisticsPage() {
           </div>
           
         </motion.div>
+
+        <PracticalFeedback 
+          experimentTitle="Basic Statistics" 
+        />
       </div>
     </section>
   );

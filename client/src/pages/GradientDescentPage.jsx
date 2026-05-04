@@ -7,6 +7,7 @@ import LearningPanel from '../components/gradient-descent/LearningPanel.jsx';
 import SimulatorControls from '../components/gradient-descent/SimulatorControls.jsx';
 import VisualizationPanel from '../components/gradient-descent/VisualizationPanel.jsx';
 import AnalysisPanel from '../components/gradient-descent/AnalysisPanel.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 const functionsDict = {
   quadratic_1d: {
@@ -259,6 +260,10 @@ export default function GradientDescentPage() {
           </div>
           
         </motion.div>
+
+        <PracticalFeedback 
+          experimentTitle="Gradient Descent Basics" 
+        />
       </div>
     </section>
   );

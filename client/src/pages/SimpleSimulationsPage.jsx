@@ -8,6 +8,7 @@ import SimulationControls from '../components/simulations/SimulationControls.jsx
 import SimulationVisualizer from '../components/simulations/SimulationVisualizer.jsx';
 import SimulationAnalytics from '../components/simulations/SimulationAnalytics.jsx';
 import SimulationObservationTable from '../components/simulations/SimulationObservationTable.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function SimpleSimulationsPage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -354,6 +355,10 @@ export default function SimpleSimulationsPage() {
           </div>
           
         </motion.div>
+
+        <PracticalFeedback 
+          experimentTitle="Simulations Lab" 
+        />
       </div>
     </section>
   );

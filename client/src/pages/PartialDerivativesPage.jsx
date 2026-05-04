@@ -7,6 +7,7 @@ import LearningPanel from '../components/partial-derivatives/LearningPanel.jsx';
 import LabControls from '../components/partial-derivatives/LabControls.jsx';
 import VisualizationPanel from '../components/partial-derivatives/VisualizationPanel.jsx';
 import AnalysisPanel from '../components/partial-derivatives/AnalysisPanel.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 // Predefined mathematical functions and their analytical derivatives
 const functionsDict = {
@@ -187,6 +188,10 @@ export default function PartialDerivativesPage() {
           />
           
         </motion.div>
+
+        <PracticalFeedback 
+          experimentTitle="Partial Derivatives" 
+        />
       </div>
     </section>
   );

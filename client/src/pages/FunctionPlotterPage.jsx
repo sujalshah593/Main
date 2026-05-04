@@ -7,6 +7,7 @@ import LearningPanel from '../components/function-plotter/LearningPanel.jsx';
 import SimulatorControls from '../components/function-plotter/SimulatorControls.jsx';
 import InteractiveSimulator from '../components/function-plotter/InteractiveSimulator.jsx';
 import ObservationTable from '../components/function-plotter/ObservationTable.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function FunctionPlotterPage() {
   const [activeFunction, setActiveFunction] = useState('linear'); // linear, quadratic, exponential, logarithmic, sigmoid, relu
@@ -125,7 +126,11 @@ export default function FunctionPlotterPage() {
             mode={mode}
             challengeFunction={challengeFunction}
           />
-          
+
+          <PracticalFeedback 
+            experimentId="663673f40000000000000005" 
+            experimentTitle="Function Plotter" 
+          />
         </motion.div>
       </div>
     </section>

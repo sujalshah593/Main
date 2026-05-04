@@ -8,6 +8,7 @@ import MotionTable from '../components/motion/MotionTable';
 import MotionGraphs from '../components/motion/MotionGraphs';
 import MotionCalculations from '../components/motion/MotionCalculations';
 import { saveMotionAttempt } from '../api/motionApi';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function MotionEquationsPage() {
   const [initialVelocity, setInitialVelocity] = useState(0); // m/s
@@ -176,6 +177,9 @@ export default function MotionEquationsPage() {
           </div>
         </div>
 
+        <PracticalFeedback 
+          experimentTitle="Equations of Motion" 
+        />
       </div>
     </section>
   );

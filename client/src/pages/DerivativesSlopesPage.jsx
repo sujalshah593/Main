@@ -7,6 +7,7 @@ import DerivativesLearningPanel from '../components/derivatives-slopes/Derivativ
 import DerivativesControls from '../components/derivatives-slopes/DerivativesControls.jsx';
 import DerivativesSimulator from '../components/derivatives-slopes/DerivativesSimulator.jsx';
 import DerivativesObservationTable from '../components/derivatives-slopes/DerivativesObservationTable.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function DerivativesSlopesPage() {
   const [funcType, setFuncType] = useState('quadratic');
@@ -122,6 +123,10 @@ export default function DerivativesSlopesPage() {
           <DerivativesObservationTable observations={observations} setObservations={setObservations} />
           
         </motion.div>
+
+        <PracticalFeedback 
+          experimentTitle="Derivatives & Slopes" 
+        />
       </div>
     </section>
   );

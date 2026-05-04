@@ -10,6 +10,7 @@ import FlywheelCalculations from '../components/flywheel/FlywheelCalculations';
 import FlywheelQuiz from '../components/flywheel/FlywheelQuiz';
 import Stopwatch from '../components/pendulum/Stopwatch';
 import { saveFlywheelAttempt } from '../api/flywheelApi';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 import { Play, Square, Timer, Target } from 'lucide-react';
 
 export default function FlywheelPage() {
@@ -374,6 +375,9 @@ export default function FlywheelPage() {
           </div>
         </div>
 
+        <PracticalFeedback 
+          experimentTitle="Moment of Inertia (Flywheel)" 
+        />
       </div>
     </section>
   );

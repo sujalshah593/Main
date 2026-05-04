@@ -7,6 +7,7 @@ import VernierCaliper from '../components/vernier/VernierCaliper.jsx';
 import CaliperControls from '../components/vernier/CaliperControls.jsx';
 import LearningPanel from '../components/vernier/LearningPanel.jsx';
 import ObservationTable from '../components/vernier/ObservationTable.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 const INITIAL_OBJECTS = [
   { id: 'coin', name: 'Coin', type: 'outer', value: 24.5 },
@@ -155,6 +156,12 @@ export default function VernierCaliperPage() {
             selectedObject={selectedObject}
             zeroError={zeroError}
             mode={mode}
+          />
+
+          {/* Feedback Section */}
+          <PracticalFeedback 
+            experimentId="663673f40000000000000001" 
+            experimentTitle="Vernier Caliper" 
           />
         </motion.div>
       </div>

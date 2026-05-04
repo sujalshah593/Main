@@ -7,6 +7,7 @@ import { resolvePublicAssetUrl } from '../utils/assetUrl.js';
 import RichHtml from '../components/RichHtml.jsx';
 import SelfEvaluation from '../components/SelfEvaluation.jsx';
 import FeedbackForm from '../components/FeedbackForm.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 import SimulatorWorkbench from '../components/simulator/SimulatorWorkbench.jsx';
 
 const TABS = [
@@ -145,7 +146,7 @@ export default function ExperimentDetailPage() {
                 {tab === 'self'        && <SelfEvaluation questions={experiment.selfEvaluation} />}
                 {tab === 'assignments' && <RichHtml html={experiment.assignment} />}
                 {tab === 'references'  && <RichHtml html={experiment.references} />}
-                {tab === 'feedback'    && <FeedbackForm experimentId={experiment._id} />}
+                {tab === 'feedback'    && <PracticalFeedback experimentId={experiment._id} experimentTitle={experiment.title} />}
               </motion.div>
             </AnimatePresence>
           </motion.section>

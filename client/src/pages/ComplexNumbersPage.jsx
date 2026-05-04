@@ -8,6 +8,7 @@ import ComplexControls from '../components/complex-numbers/ComplexControls.jsx';
 import ComplexSimulator from '../components/complex-numbers/ComplexSimulator.jsx';
 import ComplexObservationTable from '../components/complex-numbers/ComplexObservationTable.jsx';
 import ComplexQuiz from '../components/complex-numbers/ComplexQuiz.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function ComplexNumbersPage() {
   const [z1, setZ1] = useState({ real: 3, imag: 4 });
@@ -128,6 +129,10 @@ export default function ComplexNumbersPage() {
           />
           
         </motion.div>
+
+        <PracticalFeedback 
+          experimentTitle="Complex Numbers" 
+        />
       </div>
     </section>
   );

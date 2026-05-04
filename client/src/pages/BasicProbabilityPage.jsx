@@ -7,6 +7,7 @@ import ProbabilityLearningPanel from '../components/probability/ProbabilityLearn
 import ProbabilityControls from '../components/probability/ProbabilityControls.jsx';
 import ProbabilitySimulator from '../components/probability/ProbabilitySimulator.jsx';
 import ProbabilityObservationTable from '../components/probability/ProbabilityObservationTable.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function BasicProbabilityPage() {
   const [config, setConfig] = useState({
@@ -303,6 +304,10 @@ export default function BasicProbabilityPage() {
             setObservations={setObservations} 
           />
           
+          <PracticalFeedback 
+            experimentId="663673f40000000000000002" 
+            experimentTitle="Basic Probability" 
+          />
         </motion.div>
       </div>
     </section>

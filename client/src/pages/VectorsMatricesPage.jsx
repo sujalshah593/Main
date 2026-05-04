@@ -7,6 +7,7 @@ import VectorsLearningPanel from '../components/vectors-matrices/VectorsLearning
 import VectorsControls from '../components/vectors-matrices/VectorsControls.jsx';
 import VectorsSimulator from '../components/vectors-matrices/VectorsSimulator.jsx';
 import VectorsObservationTable from '../components/vectors-matrices/VectorsObservationTable.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function VectorsMatricesPage() {
   const [activeMode, setActiveMode] = useState('vector'); // 'vector' or 'matrix'
@@ -131,6 +132,10 @@ export default function VectorsMatricesPage() {
           />
           
         </motion.div>
+
+        <PracticalFeedback 
+          experimentTitle="Vectors & Matrices" 
+        />
       </div>
     </section>
   );

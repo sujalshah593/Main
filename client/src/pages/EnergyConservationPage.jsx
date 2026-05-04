@@ -9,6 +9,7 @@ import EnergyGraphs from '../components/energy/EnergyGraphs';
 import EnergyCalculations from '../components/energy/EnergyCalculations';
 import EnergyQuiz from '../components/energy/EnergyQuiz';
 import { saveEnergyAttempt } from '../api/energyApi';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function EnergyConservationPage() {
   const [initialHeight, setInitialHeight] = useState(4); // m
@@ -171,6 +172,9 @@ export default function EnergyConservationPage() {
           </div>
         </div>
 
+        <PracticalFeedback 
+          experimentTitle="Energy Conservation" 
+        />
       </div>
     </section>
   );

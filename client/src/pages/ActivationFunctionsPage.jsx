@@ -7,6 +7,7 @@ import ActivationLearningPanel from '../components/activation-functions/Activati
 import ActivationControls from '../components/activation-functions/ActivationControls.jsx';
 import ActivationSimulator from '../components/activation-functions/ActivationSimulator.jsx';
 import ActivationObservationTable from '../components/activation-functions/ActivationObservationTable.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function ActivationFunctionsPage() {
   const [activeFunction, setActiveFunction] = useState('sigmoid'); // sigmoid, relu, tanh, leaky_relu, softmax, elu, linear
@@ -124,6 +125,10 @@ export default function ActivationFunctionsPage() {
           />
           
         </motion.div>
+
+        <PracticalFeedback 
+          experimentTitle="AI Activation Functions" 
+        />
       </div>
     </section>
   );

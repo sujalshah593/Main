@@ -9,6 +9,7 @@ import FrictionGraph from '../components/friction/FrictionGraph';
 import FrictionCalculations from '../components/friction/FrictionCalculations';
 import FrictionQuiz from '../components/friction/FrictionQuiz';
 import { saveFrictionAttempt } from '../api/frictionApi';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function FrictionPage() {
   const [mass, setMass] = useState(2.0); // kg
@@ -190,6 +191,9 @@ export default function FrictionPage() {
           </div>
         </div>
 
+        <PracticalFeedback 
+          experimentTitle="Laws of Friction" 
+        />
       </div>
     </section>
   );

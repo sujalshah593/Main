@@ -7,6 +7,7 @@ import LearningPanel from '../components/volume-density/LearningPanel.jsx';
 import SimulatorControls from '../components/volume-density/SimulatorControls.jsx';
 import InteractiveSimulator from '../components/volume-density/InteractiveSimulator.jsx';
 import ObservationTable from '../components/volume-density/ObservationTable.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 const INITIAL_OBJECTS = [
   { id: 'cube', name: 'Wooden Block', type: 'regular', dimensions: [4.0, 4.0, 4.0], mass: 44.8, volume: 64.0, density: 0.7 },
@@ -119,7 +120,11 @@ export default function VolumeDensityPage() {
             selectedObject={selectedObject}
             mode={mode}
           />
-          
+
+          <PracticalFeedback 
+            experimentId="663673f40000000000000004" 
+            experimentTitle="Volume and Density" 
+          />
         </motion.div>
       </div>
     </section>

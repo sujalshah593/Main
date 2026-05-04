@@ -9,6 +9,7 @@ import CalculationEngine from '../components/errors-sigfigs/CalculationEngine';
 import ObservationTable from '../components/errors-sigfigs/ObservationTable';
 import SigFigModule from '../components/errors-sigfigs/SigFigModule';
 import { saveMeasurementAttempt } from '../api/measurementsApi';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 const INSTRUMENTS = [
   { id: 'ruler', name: 'Ruler', trueValue: 15.2, leastCount: 0.1 },
@@ -217,6 +218,9 @@ export default function ErrorsAndSigFigPage() {
           </div>
         </div>
 
+        <PracticalFeedback 
+          experimentTitle="Errors & Significant Figures" 
+        />
       </div>
     </section>
   );

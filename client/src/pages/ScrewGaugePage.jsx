@@ -7,6 +7,7 @@ import ScrewGauge from '../components/screw-gauge/ScrewGauge.jsx';
 import ScrewGaugeControls from '../components/screw-gauge/ScrewGaugeControls.jsx';
 import ScrewGaugeLearningPanel from '../components/screw-gauge/ScrewGaugeLearningPanel.jsx';
 import ScrewGaugeObservationTable from '../components/screw-gauge/ScrewGaugeObservationTable.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 const INITIAL_OBJECTS = [
   { id: 'copper_wire', name: 'Copper Wire', value: 2.14 },
@@ -158,6 +159,11 @@ export default function ScrewGaugePage() {
              selectedObject={selectedObject}
              zeroError={zeroError}
              mode={mode}
+          />
+
+          <PracticalFeedback 
+            experimentId="663673f40000000000000003" 
+            experimentTitle="Screw Gauge" 
           />
         </motion.div>
       </div>

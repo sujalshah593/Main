@@ -7,6 +7,7 @@ import LearningPanel from '../components/limits-continuity/LearningPanel.jsx';
 import SimulatorControls from '../components/limits-continuity/SimulatorControls.jsx';
 import InteractiveSimulator from '../components/limits-continuity/InteractiveSimulator.jsx';
 import ObservationTable from '../components/limits-continuity/ObservationTable.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function LimitsContinuityPage() {
   const [activeFunction, setActiveFunction] = useState('continuous'); // continuous, removable, jump, infinite
@@ -132,6 +133,10 @@ export default function LimitsContinuityPage() {
           </div>
           
         </motion.div>
+
+        <PracticalFeedback 
+          experimentTitle="Limits & Continuity" 
+        />
       </div>
     </section>
   );

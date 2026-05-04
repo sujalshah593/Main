@@ -7,6 +7,7 @@ import MatrixEqLearningPanel from '../components/matrix-equations/MatrixEqLearni
 import MatrixEqControls from '../components/matrix-equations/MatrixEqControls.jsx';
 import MatrixEqSimulator from '../components/matrix-equations/MatrixEqSimulator.jsx';
 import MatrixEqObservationTable from '../components/matrix-equations/MatrixEqObservationTable.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function MatrixEquationsPage() {
   const [activeMode, setActiveMode] = useState('matrix_ops'); // 'matrix_ops' or 'equation_solver'
@@ -140,6 +141,10 @@ export default function MatrixEquationsPage() {
           />
           
         </motion.div>
+
+        <PracticalFeedback 
+          experimentTitle="Matrix Equations" 
+        />
       </div>
     </section>
   );

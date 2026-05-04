@@ -9,6 +9,7 @@ import InclinedFrictionGraph from '../components/friction-inclined/InclinedFrict
 import InclinedFrictionCalculations from '../components/friction-inclined/InclinedFrictionCalculations';
 import InclinedFrictionQuiz from '../components/friction-inclined/InclinedFrictionQuiz';
 import { saveInclinedFrictionAttempt } from '../api/inclinedFrictionApi';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function InclinedFrictionPage() {
   const [angle, setAngle] = useState(0); // degrees
@@ -176,6 +177,9 @@ export default function InclinedFrictionPage() {
           </div>
         </div>
 
+        <PracticalFeedback 
+          experimentTitle="Inclined Plane Friction" 
+        />
       </div>
     </section>
   );

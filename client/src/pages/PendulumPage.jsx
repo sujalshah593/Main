@@ -9,6 +9,7 @@ import PendulumTable from '../components/pendulum/PendulumTable';
 import PendulumGraph from '../components/pendulum/PendulumGraph';
 import PendulumCalculations from '../components/pendulum/PendulumCalculations';
 import { savePendulumAttempt } from '../api/pendulumApi';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function PendulumPage({ mode = 'motion' }) {
   const [length, setLength] = useState(0.5); // meters
@@ -185,6 +186,9 @@ export default function PendulumPage({ mode = 'motion' }) {
           <PendulumCalculations trials={trials} oscillationsN={oscillationsN} />
         </div>
 
+        <PracticalFeedback 
+          experimentTitle="Simple Pendulum" 
+        />
       </div>
     </section>
   );

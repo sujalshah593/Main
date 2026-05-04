@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FlaskConical, Target, Award, CodeSquare, FileText } from 'lucide-react';
 import { PRACTICAL_CONTENT } from '../data/semesterContent.js';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function PracticalPage() {
   const { semesterId } = useParams();
@@ -20,6 +21,7 @@ export default function PracticalPage() {
   }
 
   return (
+    <>
     <section className="grid gap-6 lg:grid-cols-[340px,1fr]">
       <motion.aside 
         initial={{ opacity: 0, x: -20 }}
@@ -148,5 +150,10 @@ export default function PracticalPage() {
         </AnimatePresence>
       </motion.div>
     </section>
+
+    <PracticalFeedback 
+      experimentTitle={`${semesterId.toUpperCase()} Laboratory Portal`} 
+    />
+  </>
   );
 }

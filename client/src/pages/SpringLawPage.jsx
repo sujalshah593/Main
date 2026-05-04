@@ -9,6 +9,7 @@ import SpringGraphs from '../components/spring/SpringGraphs';
 import SpringCalculations from '../components/spring/SpringCalculations';
 import SpringQuiz from '../components/spring/SpringQuiz';
 import { saveSpringAttempt } from '../api/springApi';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function SpringLawPage() {
   const [mass, setMass] = useState(0); // kg
@@ -166,6 +167,9 @@ export default function SpringLawPage() {
           </div>
         </div>
 
+        <PracticalFeedback 
+          experimentTitle="Hooke's Law" 
+        />
       </div>
     </section>
   );

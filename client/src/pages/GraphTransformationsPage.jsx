@@ -7,6 +7,7 @@ import LearningPanel from '../components/graph-transformations/LearningPanel.jsx
 import SimulatorControls from '../components/graph-transformations/SimulatorControls.jsx';
 import InteractiveSimulator from '../components/graph-transformations/InteractiveSimulator.jsx';
 import ObservationTable from '../components/graph-transformations/ObservationTable.jsx';
+import PracticalFeedback from '../components/shared/PracticalFeedback.jsx';
 
 export default function GraphTransformationsPage() {
   const [activeFunction, setActiveFunction] = useState('quadratic'); // linear, quadratic, cubic, absolute, exponential, logarithmic
@@ -129,6 +130,10 @@ export default function GraphTransformationsPage() {
           />
           
         </motion.div>
+
+        <PracticalFeedback 
+          experimentTitle="Graph Transformations" 
+        />
       </div>
     </section>
   );
