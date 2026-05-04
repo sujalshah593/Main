@@ -124,11 +124,10 @@ export default function ActivationFunctionsPage() {
             setObservations={setObservations}
           />
           
+          <PracticalFeedback 
+            experimentTitle="Neural Network Activation Functions" 
+          />
         </motion.div>
-
-        <PracticalFeedback 
-          experimentTitle="AI Activation Functions" 
-        />
       </div>
     </section>
   );

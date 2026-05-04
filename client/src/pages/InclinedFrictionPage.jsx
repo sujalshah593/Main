@@ -177,9 +177,11 @@ export default function InclinedFrictionPage() {
           </div>
         </div>
 
-        <PracticalFeedback 
-          experimentTitle="Inclined Plane Friction" 
-        />
+        <div className="lg:col-span-12">
+          <PracticalFeedback 
+            experimentTitle="Inclined Plane Friction" 
+          />
+        </div>
       </div>
     </section>
   );

@@ -131,11 +131,10 @@ export default function VectorsMatricesPage() {
             setObservations={setObservations}
           />
           
+          <PracticalFeedback 
+            experimentTitle="Vector & Matrix Visualizer" 
+          />
         </motion.div>
-
-        <PracticalFeedback 
-          experimentTitle="Vectors & Matrices" 
-        />
       </div>
     </section>
   );

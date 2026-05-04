@@ -128,11 +128,10 @@ export default function ComplexNumbersPage() {
             setObservations={setObservations}
           />
           
+          <PracticalFeedback 
+            experimentTitle="Complex Numbers" 
+          />
         </motion.div>
-
-        <PracticalFeedback 
-          experimentTitle="Complex Numbers" 
-        />
       </div>
     </section>
   );

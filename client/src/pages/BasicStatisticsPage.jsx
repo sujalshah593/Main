@@ -146,11 +146,10 @@ export default function BasicStatisticsPage() {
             </div>
           </div>
           
+          <PracticalFeedback 
+            experimentTitle="Basic Statistics" 
+          />
         </motion.div>
-
-        <PracticalFeedback 
-          experimentTitle="Basic Statistics" 
-        />
       </div>
     </section>
   );

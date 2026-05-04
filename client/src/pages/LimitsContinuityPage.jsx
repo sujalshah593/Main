@@ -132,11 +132,10 @@ export default function LimitsContinuityPage() {
             />
           </div>
           
+          <PracticalFeedback 
+            experimentTitle="Limits & Continuity" 
+          />
         </motion.div>
-
-        <PracticalFeedback 
-          experimentTitle="Limits & Continuity" 
-        />
       </div>
     </section>
   );

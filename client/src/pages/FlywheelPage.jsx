@@ -370,14 +370,16 @@ export default function FlywheelPage() {
             <div className="text-[12px] text-slate-400 space-y-3 leading-relaxed">
               <p>The flywheel stores rotational kinetic energy. The work done by the falling mass is converted into rotational energy of the flywheel and the linear kinetic energy of the mass.</p>
               <p className="p-2 bg-slate-900 rounded font-mono text-sky-400 text-center">τ = Iα</p>
-              <p>Friction in the bearings causes retardation after the mass detaches, allowing us to calculate the energy lost per rotation.</p>
-            </div>
+              Mechanics Laboratory • Rotational Dynamics
+            </p>
           </div>
         </div>
 
-        <PracticalFeedback 
-          experimentTitle="Moment of Inertia (Flywheel)" 
-        />
+        <div className="lg:col-span-12">
+          <PracticalFeedback 
+            experimentTitle="Moment of Inertia (Flywheel)" 
+          />
+        </div>
       </div>
     </section>
   );

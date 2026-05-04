@@ -122,11 +122,10 @@ export default function DerivativesSlopesPage() {
 
           <DerivativesObservationTable observations={observations} setObservations={setObservations} />
           
+          <PracticalFeedback 
+            experimentTitle="Derivatives & Slopes" 
+          />
         </motion.div>
-
-        <PracticalFeedback 
-          experimentTitle="Derivatives & Slopes" 
-        />
       </div>
     </section>
   );

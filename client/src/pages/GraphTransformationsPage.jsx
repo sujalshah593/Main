@@ -129,11 +129,10 @@ export default function GraphTransformationsPage() {
             params={params}
           />
           
+          <PracticalFeedback 
+            experimentTitle="Graph Transformations" 
+          />
         </motion.div>
-
-        <PracticalFeedback 
-          experimentTitle="Graph Transformations" 
-        />
       </div>
     </section>
   );

@@ -354,11 +354,10 @@ export default function SimpleSimulationsPage() {
             </div>
           </div>
           
+          <PracticalFeedback 
+            experimentTitle="Probability Simulations" 
+          />
         </motion.div>
-
-        <PracticalFeedback 
-          experimentTitle="Simulations Lab" 
-        />
       </div>
     </section>
   );

@@ -191,9 +191,11 @@ export default function FrictionPage() {
           </div>
         </div>
 
-        <PracticalFeedback 
-          experimentTitle="Laws of Friction" 
-        />
+        <div className="lg:col-span-12">
+          <PracticalFeedback 
+            experimentTitle="Laws of Friction" 
+          />
+        </div>
       </div>
     </section>
   );

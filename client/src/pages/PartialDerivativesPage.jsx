@@ -187,11 +187,10 @@ export default function PartialDerivativesPage() {
             path={path}
           />
           
+          <PracticalFeedback 
+            experimentTitle="Partial Derivatives" 
+          />
         </motion.div>
-
-        <PracticalFeedback 
-          experimentTitle="Partial Derivatives" 
-        />
       </div>
     </section>
   );

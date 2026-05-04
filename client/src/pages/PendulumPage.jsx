@@ -186,9 +186,11 @@ export default function PendulumPage({ mode = 'motion' }) {
           <PendulumCalculations trials={trials} oscillationsN={oscillationsN} />
         </div>
 
-        <PracticalFeedback 
-          experimentTitle="Simple Pendulum" 
-        />
+        <div className="lg:col-span-12">
+          <PracticalFeedback 
+            experimentTitle="Simple Pendulum" 
+          />
+        </div>
       </div>
     </section>
   );

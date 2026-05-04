@@ -140,11 +140,10 @@ export default function MatrixEquationsPage() {
             setObservations={setObservations}
           />
           
+          <PracticalFeedback 
+            experimentTitle="Linear Matrix Equations" 
+          />
         </motion.div>
-
-        <PracticalFeedback 
-          experimentTitle="Matrix Equations" 
-        />
       </div>
     </section>
   );

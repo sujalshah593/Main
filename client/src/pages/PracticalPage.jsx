@@ -145,15 +145,14 @@ export default function PracticalPage() {
                   Open Python Editor
                 </Link>
               </div>
+              <PracticalFeedback 
+                experimentTitle={`${semesterId.toUpperCase()} Laboratory Portal`} 
+              />
             </motion.div>
           )}
         </AnimatePresence>
       </motion.div>
     </section>
-
-    <PracticalFeedback 
-      experimentTitle={`${semesterId.toUpperCase()} Laboratory Portal`} 
-    />
   </>
   );
 }

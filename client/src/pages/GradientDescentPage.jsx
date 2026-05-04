@@ -259,11 +259,10 @@ export default function GradientDescentPage() {
             />
           </div>
           
+          <PracticalFeedback 
+            experimentTitle="Gradient Descent Algorithm" 
+          />
         </motion.div>
-
-        <PracticalFeedback 
-          experimentTitle="Gradient Descent Basics" 
-        />
       </div>
     </section>
   );
