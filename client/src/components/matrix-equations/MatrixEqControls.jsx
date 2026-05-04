@@ -168,7 +168,7 @@ export default function MatrixEqControls({
   const renderMatrixGrid = (entity, isA) => {
     if (!entity || entity.length === 0) return null;
     return (
-      <div className="flex flex-col items-center p-3 bg-white/5 border border-white/10 rounded-xl">
+      <div className="flex flex-col items-center p-3 bg-black border border-white/10 rounded-xl">
         <span className="text-xs font-bold text-lab-muted mb-2">{isA ? 'Matrix A' : 'Matrix B'}</span>
         <div className="grid gap-1" style={{ gridTemplateColumns: `repeat(${entity[0].length}, minmax(0, 1fr))` }}>
           {entity.map((row, i) => row.map((val, j) => {
@@ -197,7 +197,7 @@ export default function MatrixEqControls({
   const renderEquationInputs = () => {
     const vars = ['x', 'y', 'z', 'w', 'v'];
     return (
-      <div className="flex flex-col items-center p-4 bg-white/5 border border-white/10 rounded-xl w-full">
+      <div className="flex flex-col items-center p-4 bg-black border border-white/10 rounded-xl w-full">
         <span className="text-xs font-bold text-lab-muted mb-4 uppercase tracking-widest">System of Equations</span>
         <div className="flex flex-col gap-3 w-full max-w-md">
           {entityA.map((row, i) => (
@@ -241,7 +241,7 @@ export default function MatrixEqControls({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Left Column: Configuration */}
         <div className="space-y-4">
-          <div className="flex bg-white/5 p-1 rounded-xl">
+          <div className="flex bg-black p-1 rounded-xl">
             <button
               onClick={() => { setActiveMode('matrix_ops'); setOperation('none'); }}
               className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-bold transition-all ${
@@ -285,7 +285,7 @@ export default function MatrixEqControls({
               </div>
               <div>
                  <label className="text-xs text-lab-muted font-bold uppercase block mb-1">Operation</label>
-                 <select value={operation} onChange={(e) => setOperation(e.target.value)} className="w-full bg-black/40 border border-white/10 rounded-xl p-2 text-sm text-pink-300 focus:outline-none">
+                 <select value={operation} onChange={(e) => setOperation(e.target.value)} className="w-full bg-black   rounded-xl p-2 text-sm text-pink-300 focus:outline-none">
                    {MATRIX_OPS.map(op => <option key={op.id} value={op.id}>{op.name}</option>)}
                  </select>
               </div>
