@@ -61,12 +61,22 @@ export default function Sidebar() {
               )}
             </AnimatePresence>
           </NavLink>
-          <NavLink to="/Quantum World/sem-1/theory" className={({ isActive }) => linkClass(isActive, isOpen)} title={!isOpen ? "Study Materials" : ""}>
+          <NavLink to="/semester/sem-1/theory" className={({ isActive }) => linkClass(isActive, isOpen)} title={!isOpen ? "Theory Portal" : ""}>
             <BookOpen size={20} className="shrink-0" />
             <AnimatePresence>
               {isOpen && (
                 <motion.span initial={{ opacity: 0, width: 0 }} animate={{ opacity: 1, width: 'auto' }} exit={{ opacity: 0, width: 0 }} className="overflow-hidden whitespace-nowrap">
-                  Study Materials
+                  Theory Portal
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </NavLink>
+          <NavLink to="/semester/sem-1/practical" className={({ isActive }) => linkClass(isActive, isOpen)} title={!isOpen ? "Practical Labs" : ""}>
+            <FlaskConical size={20} className="shrink-0" />
+            <AnimatePresence>
+              {isOpen && (
+                <motion.span initial={{ opacity: 0, width: 0 }} animate={{ opacity: 1, width: 'auto' }} exit={{ opacity: 0, width: 0 }} className="overflow-hidden whitespace-nowrap">
+                  Practical Labs
                 </motion.span>
               )}
             </AnimatePresence>
