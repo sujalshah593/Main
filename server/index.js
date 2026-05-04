@@ -56,6 +56,8 @@ const frictionRoutes = require('./routes/frictionRoutes');
 app.use('/api/friction', frictionRoutes);
 const inclinedFrictionRoutes = require('./routes/inclinedFrictionRoutes');
 app.use('/api/inclined-friction', inclinedFrictionRoutes);
+const complexNumberRoutes = require('./routes/complexNumberRoutes');
+app.use('/api/complex-numbers', complexNumberRoutes);
 attachPythonLabSocket(io);
 
 async function start() {

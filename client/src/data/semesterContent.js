@@ -156,7 +156,7 @@ export const PRACTICAL_CONTENT = {
         { title: 'Solve basic probability problems.', path: '/basic-probability' },
         { title: 'Compute mean, variance, and standard deviation.', path: '/basic-statistics' },
         { title: 'Run simple simulations.', path: '/simple-simulations' },
-        'Intro to complex numbers and data visualization.',
+        { title: 'Intro to complex numbers and data visualization.', path: '/complex-numbers' },
       ],
       outcomes: [
         'Use mathematical tools for computation and visualization.',

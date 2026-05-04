@@ -32,6 +32,7 @@ import GradientDescentPage from './pages/GradientDescentPage.jsx';
 import BasicProbabilityPage from './pages/BasicProbabilityPage.jsx';
 import BasicStatisticsPage from './pages/BasicStatisticsPage.jsx';
 import SimpleSimulationsPage from './pages/SimpleSimulationsPage.jsx';
+import ComplexNumbersPage from './pages/ComplexNumbersPage.jsx';
 
 export default function App() {
   return (
@@ -70,6 +71,7 @@ export default function App() {
         <Route path="/basic-probability" element={<BasicProbabilityPage />} />
         <Route path="/basic-statistics" element={<BasicStatisticsPage />} />
         <Route path="/simple-simulations" element={<SimpleSimulationsPage />} />
+        <Route path="/complex-numbers" element={<ComplexNumbersPage />} />
       </Route>
     </Routes>
   );
