@@ -18,12 +18,12 @@ export default function Sidebar() {
   return (
     <aside className={`hidden shrink-0 border-r border-lab-panelBorder bg-lab-panel/40 backdrop-blur-3xl md:flex flex-col shadow-2xl relative z-20 transition-all duration-300 ${isOpen ? 'w-72' : 'w-[88px]'}`}>
       <div className="flex h-full flex-col px-4 py-8">
-        
+
         {/* Header */}
         <div className={`flex items-start mb-10 ${isOpen ? 'justify-between px-2' : 'justify-center'} overflow-hidden`}>
           <AnimatePresence>
             {isOpen && (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, width: 0 }}
                 animate={{ opacity: 1, width: 'auto' }}
                 exit={{ opacity: 0, width: 0 }}
@@ -39,8 +39,8 @@ export default function Sidebar() {
               </motion.div>
             )}
           </AnimatePresence>
-          
-          <button 
+
+          <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-lab-muted hover:text-white transition-colors p-2 rounded-lg hover:bg-white/5 shrink-0"
             title={isOpen ? "Collapse Sidebar" : "Expand Sidebar"}
@@ -51,17 +51,17 @@ export default function Sidebar() {
 
         {/* Nav Links */}
         <nav className="flex flex-1 flex-col gap-2">
-          <NavLink to="/" className={({ isActive }) => linkClass(isActive, isOpen)} end title={!isOpen ? "Semesters" : ""}>
+          <NavLink to="/" className={({ isActive }) => linkClass(isActive, isOpen)} end title={!isOpen ? "Quantum World" : ""}>
             <LayoutDashboard size={20} className="shrink-0" />
             <AnimatePresence>
               {isOpen && (
                 <motion.span initial={{ opacity: 0, width: 0 }} animate={{ opacity: 1, width: 'auto' }} exit={{ opacity: 0, width: 0 }} className="overflow-hidden whitespace-nowrap">
-                  Semesters
+                  Quantum World
                 </motion.span>
               )}
             </AnimatePresence>
           </NavLink>
-          <NavLink to="/semester/sem-1/theory" className={({ isActive }) => linkClass(isActive, isOpen)} title={!isOpen ? "Study Materials" : ""}>
+          <NavLink to="/Quantum World/sem-1/theory" className={({ isActive }) => linkClass(isActive, isOpen)} title={!isOpen ? "Study Materials" : ""}>
             <BookOpen size={20} className="shrink-0" />
             <AnimatePresence>
               {isOpen && (
@@ -86,7 +86,7 @@ export default function Sidebar() {
         {/* Info Tip */}
         <AnimatePresence>
           {isOpen && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0, marginTop: 0, padding: 0, border: 0 }}
