@@ -61,11 +61,7 @@ export default function Sidebar() {
               )}
             </AnimatePresence>
           </NavLink>
-<<<<<<< HEAD
-          <NavLink to="/semester/sem-1/theory" className={({ isActive }) => linkClass(isActive, isOpen)} title={!isOpen ? "Study Materials" : ""}>
-=======
           <NavLink to="/semester/sem-1/theory" className={({ isActive }) => linkClass(isActive, isOpen)} title={!isOpen ? "Theory Portal" : ""}>
->>>>>>> 82fe4dcd76f6e78e13cc63ea78a408c7c4e7a073
             <BookOpen size={20} className="shrink-0" />
             <AnimatePresence>
               {isOpen && (
