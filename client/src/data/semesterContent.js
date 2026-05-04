@@ -23,7 +23,7 @@ export const THEORY_CONTENT = {
       chapters: [
         { title: 'Unit I: Introduction to Python Programming', details: 'Programming basics, Python features, installation, interpreter, variables and data types, input/output, arithmetic/relational/logical operators.', applications: 'Simple calculations, user input programs, basic scientific computations.', notesPdf: '/pdfs/Unit1_Python_Notes.pdf' },
         { title: 'Unit II: Control Statements and Basic Problem Solving', details: 'if/if-else/if-elif-else, nested conditions, for/while loops, break, continue, flowcharts, introductory algorithms.', applications: 'Even/odd checking, factorial, and simple decision-making programs.', notesPdf: '/pdfs/Unit2_Python_Notes.pdf' },
-        { title: 'Unit III: Functions, Lists, and Basic Algorithms', details: 'Functions, arguments, return values, lists and methods, and algorithms for sum/average/maximum/minimum.', applications: 'Data processing, list-based calculations, and modular programming.' },
+        { title: 'Unit III: Functions, Lists, and Basic Algorithms', details: 'Functions, arguments, return values, lists and methods, and algorithms for sum/average/maximum/minimum.', applications: 'Data processing, list-based calculations, and modular programming.', notesPdf: '/pdfs/Unit_III_Notes.pdf' },
       ],
       outcomes: [
         'Understand basic programming concepts and Python syntax.',
@@ -52,10 +52,10 @@ export const THEORY_CONTENT = {
         'Prepare students for higher-level AI and quantum courses.',
       ],
       chapters: [
-        { title: 'Unit I: Functions and Mathematical Foundations', details: 'Sets, functions, linear/polynomial/exponential/logarithmic functions, graph transformations, limits and continuity.', applications: 'Activation functions and growth models in AI.' },
+        { title: 'Unit I: Functions and Mathematical Foundations', details: 'Sets, functions, linear/polynomial/exponential/logarithmic functions, graph transformations, limits and continuity.', applications: 'Activation functions and growth models in AI.', notesPdf: '/pdfs/Unit1_Functions_Mathematical_Foundations.pdf' },
         { title: 'Unit II: Linear Algebra for AI and Quantum Systems', details: 'Scalars, vectors, matrices, matrix operations, systems of equations, intro to vector spaces.', applications: 'Feature vectors, data representation, and introductory quantum states.' },
         { title: 'Unit III: Calculus and Optimization', details: 'Derivatives, partial derivatives, gradient, optimization, maxima and minima.', applications: 'Gradient descent and optimization in learning algorithms.' },
-        { title: 'Unit IV: Probability, Statistics, and Mathematical Tools', details: 'Probability basics, random variables, expectation, variance, distributions, complex numbers, inner products.', applications: 'Uncertainty in AI, probabilistic models, and quantum measurement intuition.' },
+        { title: 'Unit IV: Probability, Statistics, and Mathematical Tools', details: 'Probability basics, random variables, expectation, variance, distributions, complex numbers, inner products.', applications: 'Uncertainty in AI, probabilistic models, and quantum measurement intuition.', notesPdf: '/pdfs/Unit_IV_Probability_Statistics_and_Mathematical_Tools.pdf' },
       ],
       outcomes: [
         'Apply fundamental mathematics to AI and Quantum Systems problems.',
@@ -109,6 +109,7 @@ export const PRACTICAL_CONTENT = {
     {
       subject: 'Python Programming – I Practical',
       meta: { credits: 1, hours: 30, type: 'Major (Practical)' },
+      defaultPdf: '/pdfs/Python_Practicals_Notes.pdf',
       objectives: [
         'Provide hands-on experience in Python programming.',
         'Develop logical thinking through practical problem-solving.',

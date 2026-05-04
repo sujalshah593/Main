@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FlaskConical, Target, Award, CodeSquare } from 'lucide-react';
+import { FlaskConical, Target, Award, CodeSquare, FileText } from 'lucide-react';
 import { PRACTICAL_CONTENT } from '../data/semesterContent.js';
 
 export default function PracticalPage() {
@@ -89,9 +89,22 @@ export default function PracticalPage() {
                 )}
 
                 <div className="rounded-2xl border border-lab-accent/10 bg-lab-accent/5 p-6 backdrop-blur-md">
-                  <h3 className="flex items-center gap-2 text-sm font-bold text-lab-accent uppercase tracking-wider mb-3">
-                    <FlaskConical size={16} /> List of Practical Experiments
-                  </h3>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="flex items-center gap-2 text-sm font-bold text-lab-accent uppercase tracking-wider">
+                      <FlaskConical size={16} /> List of Practical Experiments
+                    </h3>
+                    {selectedSubject.defaultPdf && (
+                      <a 
+                        href={selectedSubject.defaultPdf} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 rounded-xl bg-lab-accent/10 border border-lab-accent/20 px-4 py-2 text-xs font-bold text-lab-accent transition-all hover:bg-lab-accent/20 hover:shadow-[0_0_15px_rgba(45,212,191,0.2)]"
+                      >
+                        <FileText size={14} />
+                        View Lab Manual
+                      </a>
+                    )}
+                  </div>
                   <ol className="list-decimal space-y-2 pl-6 text-[14px] text-lab-muted">
                     {selectedSubject.experiments.map((item, i) => (
                       <li key={i}>
