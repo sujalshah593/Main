@@ -1,4 +1,4 @@
-const Experiment = require('../models/Experiment');
+ const Experiment = require('../models/Experiment');
 const mongoose = require('mongoose');
 
 async function getExperimentsByLab(req, res) {
