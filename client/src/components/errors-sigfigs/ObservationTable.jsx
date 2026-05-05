@@ -3,12 +3,12 @@ import { Trash2 } from 'lucide-react';
 
 export default function ObservationTable({ trials, removeTrial }) {
   return (
-    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
+    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
       <h3 className="text-lg font-bold text-slate-300 mb-4">Observation Table</h3>
       
       <div className="flex-1 overflow-auto custom-scrollbar rounded-lg border border-slate-700">
         <table className="w-full text-left text-sm text-slate-400">
-          <thead className="text-xs text-slate-300 uppercase bg-[#000080] dark:bg-slate-900 text-white/80 sticky top-0 z-10 backdrop-blur-sm">
+          <thead className="text-xs text-slate-300 uppercase bg-[#7A1540] dark:bg-slate-900 text-white/80 sticky top-0 z-10 backdrop-blur-sm">
             <tr>
               <th className="px-4 py-3 font-semibold">Trial</th>
               <th className="px-4 py-3 font-semibold">Measured Value</th>

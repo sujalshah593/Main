@@ -77,7 +77,7 @@ export default function InteractiveSimulator({ activeFunction, params, challenge
   }, [challengeFunction, params]);
 
   return (
-    <div className="w-full h-full flex items-center justify-center bg-[#000080] dark:bg-slate-900 text-white/80 rounded-xl border border-white/5 overflow-hidden relative">
+    <div className="w-full h-full flex items-center justify-center bg-[#7A1540] dark:bg-slate-900 text-white/80 rounded-xl border border-white/5 overflow-hidden relative">
       <svg 
         viewBox={`0 0 ${width} ${height}`} 
         className="w-full h-full drop-shadow-2xl"

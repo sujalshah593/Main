@@ -183,7 +183,7 @@ export default function FlywheelPage() {
         <div className="flex items-center gap-3">
           <button 
             onClick={resetExperiment}
-            className="flex items-center gap-2 px-4 py-2 bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white hover:bg-slate-700 text-white dark:text-slate-300 rounded-lg transition-colors border border-slate-700/50"
+            className="flex items-center gap-2 px-4 py-2 bg-[#7A1540] dark:bg-[#7A1540] dark:bg-slate-800 text-white hover:bg-slate-700 text-white dark:text-slate-300 rounded-lg transition-colors border border-slate-700/50"
           >
             <RefreshCw size={16} /> Reset
           </button>
@@ -202,7 +202,7 @@ export default function FlywheelPage() {
         
         {/* Left Column (Simulation & Controls) */}
         <div className="lg:col-span-4 flex flex-col gap-6">
-          <div className="bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700/50 shadow-xl text-white">
+          <div className="bg-[#7A1540] dark:bg-[#7A1540] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700/50 shadow-xl text-white">
             <FlywheelSimulation 
               mass={mass}
               radius={radius}
@@ -223,14 +223,14 @@ export default function FlywheelPage() {
                 <button 
                   onClick={handleWind}
                   disabled={isPlaying || woundTurns >= numTurns}
-                  className={`flex-1 py-3 rounded-lg font-bold transition-all border ${currentStep === 1 ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/20' : 'bg-[#000080] dark:bg-slate-900 text-white border-slate-700 text-slate-500'}`}
+                  className={`flex-1 py-3 rounded-lg font-bold transition-all border ${currentStep === 1 ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/20' : 'bg-[#7A1540] dark:bg-slate-900 text-white border-slate-700 text-slate-500'}`}
                 >
                   {woundTurns >= numTurns ? 'Fully Wound' : `Wind String (${woundTurns}/${numTurns})`}
                 </button>
                 <button 
                   onClick={() => setWoundTurns(0)}
                   disabled={isPlaying}
-                  className="px-3 py-3 bg-[#000080] dark:bg-slate-900 text-white border border-slate-700 text-slate-400 rounded-lg hover:text-white"
+                  className="px-3 py-3 bg-[#7A1540] dark:bg-slate-900 text-white border border-slate-700 text-slate-400 rounded-lg hover:text-white"
                 >
                   <RefreshCw size={18} />
                 </button>
@@ -240,7 +240,7 @@ export default function FlywheelPage() {
               <button 
                 onClick={handleAttachMass}
                 disabled={isPlaying || isMassAttached || woundTurns < numTurns}
-                className={`w-full py-3 rounded-lg font-bold transition-all border ${currentStep === 2 ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/20' : 'bg-[#000080] dark:bg-slate-900 text-white border-slate-700 text-slate-500'}`}
+                className={`w-full py-3 rounded-lg font-bold transition-all border ${currentStep === 2 ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/20' : 'bg-[#7A1540] dark:bg-slate-900 text-white border-slate-700 text-slate-500'}`}
               >
                 {isMassAttached ? 'Mass Attached' : 'Attach Mass'}
               </button>
@@ -279,14 +279,14 @@ export default function FlywheelPage() {
                 <button
                   onClick={handleCaptureT1}
                   disabled={capturedT1 || simulationState.time === 0}
-                  className={`flex items-center justify-center gap-2 py-3 rounded-lg font-bold transition-all border ${capturedT1 ? 'bg-emerald-500/10 border-emerald-500/50 text-emerald-400' : 'bg-[#000080] dark:bg-slate-900 text-white border-slate-700 text-slate-300 hover:border-slate-500'}`}
+                  className={`flex items-center justify-center gap-2 py-3 rounded-lg font-bold transition-all border ${capturedT1 ? 'bg-emerald-500/10 border-emerald-500/50 text-emerald-400' : 'bg-[#7A1540] dark:bg-slate-900 text-white border-slate-700 text-slate-300 hover:border-slate-500'}`}
                 >
                   <Target size={16} /> {capturedT1 ? `t1: ${capturedT1.toFixed(2)}s` : 'Capture t1'}
                 </button>
                 <button
                   onClick={handleCaptureT2}
                   disabled={!capturedT1 || capturedT2 || (isPlaying && simulationState.omega > 0.01)}
-                  className={`flex items-center justify-center gap-2 py-3 rounded-lg font-bold transition-all border ${capturedT2 ? 'bg-amber-500/10 border-amber-500/50 text-amber-400' : 'bg-[#000080] dark:bg-slate-900 text-white border-slate-700 text-slate-300 hover:border-slate-500'}`}
+                  className={`flex items-center justify-center gap-2 py-3 rounded-lg font-bold transition-all border ${capturedT2 ? 'bg-amber-500/10 border-amber-500/50 text-amber-400' : 'bg-[#7A1540] dark:bg-slate-900 text-white border-slate-700 text-slate-300 hover:border-slate-500'}`}
                 >
                   <Timer size={16} /> {capturedT2 ? `t2: ${capturedT2.toFixed(2)}s` : 'Capture t2'}
                 </button>
@@ -303,7 +303,7 @@ export default function FlywheelPage() {
             </div>
           </div>
 
-          <div className="bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white p-5 rounded-xl border border-slate-700/50 text-white">
+          <div className="bg-[#7A1540] dark:bg-[#7A1540] dark:bg-slate-800 text-white p-5 rounded-xl border border-slate-700/50 text-white">
             <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center gap-2">
               <Info size={14} className="text-lab-accent3" /> Experimental Procedure
             </h4>
@@ -335,7 +335,7 @@ export default function FlywheelPage() {
 
         {/* Middle Column (Table & Stopwatch) */}
         <div className="lg:col-span-5 flex flex-col gap-6">
-          <div className="bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700/50 text-white">
+          <div className="bg-[#7A1540] dark:bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700/50 text-white">
             <h3 className="text-sm font-bold text-slate-300 mb-4 uppercase tracking-wider flex items-center gap-2">
               <Timer size={16} className="text-rose-400" /> Laboratory Stopwatch
             </h3>
@@ -363,13 +363,13 @@ export default function FlywheelPage() {
           <FlywheelCalculations trials={trials} />
           <FlywheelQuiz />
           
-          <div className="bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700/50 text-white">
+          <div className="bg-[#7A1540] dark:bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700/50 text-white">
             <h4 className="flex items-center gap-2 text-sm font-bold text-white mb-4">
               <HelpCircle size={18} className="text-lab-accent" /> Theory Brief
             </h4>
             <div className="text-[12px] text-slate-400 space-y-3 leading-relaxed">
               <p>The flywheel stores rotational kinetic energy. The work done by the falling mass is converted into rotational energy of the flywheel and the linear kinetic energy of the mass.</p>
-              <p className="p-2 bg-[#000080] dark:bg-slate-900 text-white rounded font-mono text-sky-400 text-center">τ = Iα</p>
+              <p className="p-2 bg-[#7A1540] dark:bg-slate-900 text-white rounded font-mono text-sky-400 text-center">τ = Iα</p>
               <p>Mechanics Laboratory • Rotational Dynamics</p>
             </div>
           </div>

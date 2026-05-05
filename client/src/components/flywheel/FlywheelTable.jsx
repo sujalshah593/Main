@@ -3,20 +3,20 @@ import { Trash2, Table as TableIcon } from 'lucide-react';
 
 export default function FlywheelTable({ trials, removeTrial }) {
   return (
-    <div className="bg-[#000080] dark:bg-slate-800 text-white rounded-xl border border-slate-700 overflow-hidden flex flex-col h-full">
-      <div className="p-4 border-b border-slate-700 bg-[#000080] dark:bg-slate-800 text-white/50 flex items-center justify-between">
+    <div className="bg-[#7A1540] dark:bg-slate-800 text-white rounded-xl border border-slate-700 overflow-hidden flex flex-col h-full">
+      <div className="p-4 border-b border-slate-700 bg-[#7A1540] dark:bg-slate-800 text-white/50 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <TableIcon className="text-lab-accent2" size={18} />
           <h3 className="font-display font-bold text-white text-sm uppercase tracking-wider">Observation Table</h3>
         </div>
-        <span className="text-[10px] bg-[#000080] dark:bg-slate-900 text-white px-2 py-0.5 rounded text-slate-400 font-bold border border-slate-700 uppercase">
+        <span className="text-[10px] bg-[#7A1540] dark:bg-slate-900 text-white px-2 py-0.5 rounded text-slate-400 font-bold border border-slate-700 uppercase">
           {trials.length} Trials Recorded
         </span>
       </div>
 
       <div className="overflow-x-auto flex-1">
         <table className="w-full text-left border-collapse">
-          <thead className="sticky top-0 bg-[#000080] dark:bg-slate-900 text-white/80 backdrop-blur-sm z-10">
+          <thead className="sticky top-0 bg-[#7A1540] dark:bg-slate-900 text-white/80 backdrop-blur-sm z-10">
             <tr>
               <th className="p-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider border-b border-slate-700">#</th>
               <th className="p-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider border-b border-slate-700 text-center">Mass (kg)</th>

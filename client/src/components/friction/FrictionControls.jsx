@@ -17,7 +17,7 @@ export default function FrictionControls({
   return (
     <div className="flex flex-col gap-6">
       {/* Surface Selection */}
-      <div className="bg-[#000080] dark:bg-slate-800 text-white/50 p-5 rounded-xl border border-slate-700/50">
+      <div className="bg-[#7A1540] dark:bg-slate-800 text-white/50 p-5 rounded-xl border border-slate-700/50">
         <label className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
           <Layers size={14} className="text-sky-400" /> Surface Material
         </label>
@@ -26,7 +26,7 @@ export default function FrictionControls({
             <button
               key={s}
               onClick={() => setSurfaceType(s)}
-              className={`px-3 py-2.5 rounded-lg text-xs font-semibold transition-all border ${surfaceType === s ? 'bg-sky-500 border-sky-400 text-white shadow-lg shadow-sky-500/20' : 'bg-[#000080] dark:bg-slate-900 text-white border-slate-700 text-slate-400 hover:border-slate-500'}`}
+              className={`px-3 py-2.5 rounded-lg text-xs font-semibold transition-all border ${surfaceType === s ? 'bg-sky-500 border-sky-400 text-white shadow-lg shadow-sky-500/20' : 'bg-[#7A1540] dark:bg-slate-900 text-white border-slate-700 text-slate-400 hover:border-slate-500'}`}
             >
               {s}
             </button>
@@ -35,7 +35,7 @@ export default function FrictionControls({
       </div>
 
       {/* Mass Control */}
-      <div className="bg-[#000080] dark:bg-slate-800 text-white/50 p-5 rounded-xl border border-slate-700/50">
+      <div className="bg-[#7A1540] dark:bg-slate-800 text-white/50 p-5 rounded-xl border border-slate-700/50">
         <div className="flex justify-between items-center mb-4">
           <label className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest">
             <Weight size={14} className="text-amber-400" /> Mass of Block
@@ -58,7 +58,7 @@ export default function FrictionControls({
       </div>
 
       {/* Applied Force Control */}
-      <div className="bg-[#000080] dark:bg-slate-800 text-white/50 p-5 rounded-xl border border-slate-700/50">
+      <div className="bg-[#7A1540] dark:bg-slate-800 text-white/50 p-5 rounded-xl border border-slate-700/50">
         <div className="flex justify-between items-center mb-4">
           <label className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest">
             <Zap size={14} className="text-emerald-400" /> Applied Pulling Force

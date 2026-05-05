@@ -4,7 +4,7 @@ import { LineChart } from 'lucide-react';
 export default function SpringGraphs({ dataPoints, theoreticalK }) {
   if (dataPoints.length < 2) {
     return (
-      <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col items-center justify-center min-h-[300px]">
+      <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col items-center justify-center min-h-[300px]">
         <LineChart size={48} className="text-slate-600 mb-4" />
         <p className="text-slate-400">Log at least 2 data points to generate graph.</p>
       </div>
@@ -35,12 +35,12 @@ export default function SpringGraphs({ dataPoints, theoreticalK }) {
   const theoLine = `M ${getX(0)} ${getY(0)} L ${getX(theoX)} ${getY(theoF)}`;
 
   return (
-    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
+    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
       <h3 className="text-sm font-bold text-slate-300 mb-4 uppercase tracking-wider flex items-center gap-2">
         <LineChart size={16} className="text-rose-400" /> Force vs Extension
       </h3>
       
-      <div className="bg-[#000080] dark:bg-slate-900 text-white rounded-lg border border-slate-600 p-2 flex-1 flex items-center justify-center relative min-h-[250px]">
+      <div className="bg-[#7A1540] dark:bg-slate-900 text-white rounded-lg border border-slate-600 p-2 flex-1 flex items-center justify-center relative min-h-[250px]">
         <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-full max-h-[300px] overflow-visible text-slate-400 text-[8px]">
           {/* Axes */}
           <line x1={paddingX} y1={10} x2={paddingX} y2={height - paddingY} stroke="currentColor" />

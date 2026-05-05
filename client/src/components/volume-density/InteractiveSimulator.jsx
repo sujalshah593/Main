@@ -123,7 +123,7 @@ export default function InteractiveSimulator({ selectedObject, activeTool, showH
   };
 
   return (
-    <div className="w-full h-full relative min-h-[350px] flex items-center justify-center bg-[#000080] dark:bg-slate-900 text-white/50 rounded-xl border border-white/5 overflow-hidden" ref={containerRef}>
+    <div className="w-full h-full relative min-h-[350px] flex items-center justify-center bg-[#7A1540] dark:bg-slate-900 text-white/50 rounded-xl border border-white/5 overflow-hidden" ref={containerRef}>
       
       {/* Table Surface */}
       <div className="absolute bottom-0 w-full h-[100px] bg-gradient-to-b from-slate-800 to-slate-900 border-t border-slate-700"></div>

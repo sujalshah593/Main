@@ -8,7 +8,7 @@ export default function EnergyControls({
   onReset
 }) {
   return (
-    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 flex flex-col gap-6">
+    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 flex flex-col gap-6">
       <div>
         <h3 className="text-sm font-bold text-slate-300 mb-4 uppercase tracking-wider flex items-center gap-2">
           <Settings2 size={16} className="text-sky-400" /> Setup Parameters
@@ -18,7 +18,7 @@ export default function EnergyControls({
           <div className="space-y-3">
             <div className="flex justify-between items-center">
               <label className="text-xs font-semibold text-slate-400 uppercase">Initial Height (h₀)</label>
-              <span className="text-sky-400 font-mono font-bold bg-[#000080] dark:bg-slate-900 text-white px-2 py-1 rounded border border-slate-700">
+              <span className="text-sky-400 font-mono font-bold bg-[#7A1540] dark:bg-slate-900 text-white px-2 py-1 rounded border border-slate-700">
                 {initialHeight.toFixed(1)} m
               </span>
             </div>
@@ -61,7 +61,7 @@ export default function EnergyControls({
           <Zap size={16} className="text-amber-400" /> Environment Conditions
         </h3>
         
-        <label className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${isFrictionEnabled ? 'bg-amber-500/10 border-amber-500/30' : 'bg-[#000080] dark:bg-slate-900 text-white border-slate-700 hover:border-slate-500'}`}>
+        <label className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${isFrictionEnabled ? 'bg-amber-500/10 border-amber-500/30' : 'bg-[#7A1540] dark:bg-slate-900 text-white border-slate-700 hover:border-slate-500'}`}>
           <div className="relative flex items-center mt-0.5">
             <input 
               type="checkbox" 

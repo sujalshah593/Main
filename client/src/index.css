@@ -80,7 +80,7 @@
 
   /* ─── Glass Panel ─── */
   .glass-panel {
-    @apply rounded-2xl border border-lab-panelBorder bg-[#000080] text-white;
+    @apply rounded-2xl border border-lab-panelBorder bg-[#7A1540] text-white;
     box-shadow: var(--lab-shadow-md);
     transition: all 0.2s ease;
   }

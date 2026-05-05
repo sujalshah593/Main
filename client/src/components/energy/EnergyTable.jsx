@@ -3,7 +3,7 @@ import { Table2, Camera } from 'lucide-react';
 
 export default function EnergyTable({ readings, onSnapshot, isReleased }) {
   return (
-    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
+    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-bold text-slate-300 flex items-center gap-2">
           <Table2 size={20} className="text-sky-400" /> Observation Table
@@ -19,7 +19,7 @@ export default function EnergyTable({ readings, onSnapshot, isReleased }) {
       
       <div className="flex-1 overflow-auto custom-scrollbar rounded-lg border border-slate-700">
         <table className="w-full text-left text-xs text-slate-400">
-          <thead className="text-slate-300 uppercase bg-[#000080] dark:bg-slate-900 text-white/80 sticky top-0 z-10 backdrop-blur-sm">
+          <thead className="text-slate-300 uppercase bg-[#7A1540] dark:bg-slate-900 text-white/80 sticky top-0 z-10 backdrop-blur-sm">
             <tr>
               <th className="px-3 py-3 font-semibold">Point</th>
               <th className="px-3 py-3 font-semibold text-sky-400">Height (m)</th>

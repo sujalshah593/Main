@@ -161,7 +161,7 @@ export default function ComplexSimulator({ z1, z2, operation }) {
       />
       
       {/* Legend */}
-      <div className="absolute bottom-4 right-4 bg-[#000080]/80 dark:bg-black/60 backdrop-blur-md p-3 rounded-lg border border-white/10 flex flex-col gap-2 text-white">
+      <div className="absolute bottom-4 right-4 bg-[#7A1540]/80 dark:bg-black/60 backdrop-blur-md p-3 rounded-lg border border-white/10 flex flex-col gap-2 text-white">
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 rounded-full bg-indigo-500"></div>
           <span className="text-[10px] text-white font-bold">z₁ = {z1.real} + {z1.imag}i</span>

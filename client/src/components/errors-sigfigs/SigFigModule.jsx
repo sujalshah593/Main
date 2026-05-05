@@ -17,10 +17,10 @@ export default function SigFigModule() {
   };
 
   return (
-    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700">
+    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700">
       <h3 className="text-lg font-bold text-slate-300 mb-4">Significant Figures Challenge</h3>
       
-      <div className="bg-[#000080] dark:bg-slate-900 text-white p-4 rounded-lg border border-slate-700 mb-4">
+      <div className="bg-[#7A1540] dark:bg-slate-900 text-white p-4 rounded-lg border border-slate-700 mb-4">
         <p className="text-slate-300">{question}</p>
       </div>
 
@@ -30,7 +30,7 @@ export default function SigFigModule() {
           value={userAns}
           onChange={(e) => setUserAns(e.target.value)}
           placeholder="Enter your answer..."
-          className="flex-1 w-full bg-[#000080] dark:bg-slate-900 text-white border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500 transition-colors"
+          className="flex-1 w-full bg-[#7A1540] dark:bg-slate-900 text-white border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500 transition-colors"
         />
         <button 
           onClick={checkAnswer}

@@ -246,7 +246,7 @@ export default function FlywheelSimulation({
   }, [mass, radius, woundTurns, isMassAttached, isPlaying]);
 
   return (
-    <div className="relative w-full aspect-square max-h-[500px] bg-[#000080] dark:bg-slate-900 text-white rounded-xl overflow-hidden border border-slate-700 shadow-inner">
+    <div className="relative w-full aspect-square max-h-[500px] bg-[#7A1540] dark:bg-slate-900 text-white rounded-xl overflow-hidden border border-slate-700 shadow-inner">
       <canvas 
         ref={canvasRef} 
         width={500} 

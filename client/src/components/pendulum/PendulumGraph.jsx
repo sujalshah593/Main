@@ -4,7 +4,7 @@ import { LineChart } from 'lucide-react';
 export default function PendulumGraph({ trials }) {
   if (trials.length === 0) {
     return (
-      <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 flex flex-col items-center justify-center min-h-[300px]">
+      <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 flex flex-col items-center justify-center min-h-[300px]">
         <LineChart size={48} className="text-slate-600 mb-4" />
         <p className="text-slate-400">Record data to see the T² vs L graph.</p>
       </div>
@@ -41,12 +41,12 @@ export default function PendulumGraph({ trials }) {
   const lineY2 = getY(m * maxL);
 
   return (
-    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
+    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
       <h3 className="text-lg font-bold text-slate-300 mb-4 flex items-center gap-2">
         <LineChart size={20} className="text-amber-400" /> Graph: T² vs L
       </h3>
       
-      <div className="flex-1 flex items-center justify-center bg-[#000080] dark:bg-slate-900 text-white rounded-lg border border-slate-600 p-4">
+      <div className="flex-1 flex items-center justify-center bg-[#7A1540] dark:bg-slate-900 text-white rounded-lg border border-slate-600 p-4">
         <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-full max-h-[250px] overflow-visible text-slate-400 text-[10px]">
           {/* Axes */}
           <line x1={paddingX} y1={paddingY} x2={paddingX} y2={height - paddingY} stroke="currentColor" strokeWidth="1" />
@@ -93,7 +93,7 @@ export default function PendulumGraph({ trials }) {
       </div>
 
       {trials.length > 1 && (
-        <div className="mt-4 text-xs text-slate-400 bg-[#000080] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-700">
+        <div className="mt-4 text-xs text-slate-400 bg-[#7A1540] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-700">
           <p className="font-semibold text-sky-400 mb-1">Slope (m) = {m.toFixed(3)} s²/m</p>
           <p>Experimental g = 4π² / m = <span className="font-mono text-emerald-400">{((4 * Math.PI * Math.PI) / m).toFixed(2)} m/s²</span></p>
           <p className="text-[10px] mt-1 text-slate-500">(True g ≈ 9.81 m/s²)</p>

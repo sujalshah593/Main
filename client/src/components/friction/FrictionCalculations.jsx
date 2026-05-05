@@ -5,7 +5,7 @@ export default function FrictionCalculations({ trials }) {
   const lastTrial = trials[trials.length - 1];
 
   return (
-    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full">
+    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full">
       <h3 className="text-sm font-bold text-white mb-6 uppercase tracking-wider flex items-center gap-2">
         <Calculator size={16} className="text-amber-400" /> Computation Engine
       </h3>
@@ -17,7 +17,7 @@ export default function FrictionCalculations({ trials }) {
         </div>
       ) : (
         <div className="space-y-6">
-          <div className="p-4 bg-[#000080] dark:bg-slate-900 text-white/50 rounded-lg border border-slate-700">
+          <div className="p-4 bg-[#7A1540] dark:bg-slate-900 text-white/50 rounded-lg border border-slate-700">
             <h4 className="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-3">Recent Result</h4>
             <div className="flex flex-col gap-4">
               <div className="flex justify-between items-center">
@@ -43,7 +43,7 @@ export default function FrictionCalculations({ trials }) {
                 <div className="w-5 h-5 rounded bg-slate-700 flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5 text-slate-400">1</div>
                 <div className="text-[11px] text-slate-300 leading-relaxed">
                   Calculate Normal Reaction (N):
-                  <div className="mt-1 p-2 bg-[#000080] dark:bg-slate-900 text-white rounded font-mono text-amber-400">
+                  <div className="mt-1 p-2 bg-[#7A1540] dark:bg-slate-900 text-white rounded font-mono text-amber-400">
                     N = m × g = {lastTrial.mass} × 9.81 = {lastTrial.normalForce.toFixed(2)} N
                   </div>
                 </div>
@@ -53,7 +53,7 @@ export default function FrictionCalculations({ trials }) {
                 <div className="w-5 h-5 rounded bg-slate-700 flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5 text-slate-400">2</div>
                 <div className="text-[11px] text-slate-300 leading-relaxed">
                   Identify Frictional Force (F) from applied force at motion:
-                  <div className="mt-1 p-2 bg-[#000080] dark:bg-slate-900 text-white rounded font-mono text-emerald-400">
+                  <div className="mt-1 p-2 bg-[#7A1540] dark:bg-slate-900 text-white rounded font-mono text-emerald-400">
                     F = {lastTrial.frictionForce.toFixed(2)} N
                   </div>
                 </div>
@@ -63,7 +63,7 @@ export default function FrictionCalculations({ trials }) {
                 <div className="w-5 h-5 rounded bg-slate-700 flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5 text-slate-400">3</div>
                 <div className="text-[11px] text-slate-300 leading-relaxed">
                   Compute Coefficient of Friction (μ):
-                  <div className="mt-1 p-2 bg-[#000080] dark:bg-slate-900 text-white rounded font-mono text-sky-400">
+                  <div className="mt-1 p-2 bg-[#7A1540] dark:bg-slate-900 text-white rounded font-mono text-sky-400">
                     μ = F / N = {lastTrial.frictionForce.toFixed(2)} / {lastTrial.normalForce.toFixed(2)}
                   </div>
                 </div>

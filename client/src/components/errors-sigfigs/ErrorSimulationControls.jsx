@@ -7,7 +7,7 @@ export default function ErrorSimulationControls({ errors, setErrors }) {
   };
 
   return (
-    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full">
+    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full">
       <h3 className="text-lg font-bold text-slate-300 mb-6 flex items-center gap-2">
         <AlertCircle size={20} className="text-rose-400" />
         Error Simulation
@@ -20,7 +20,7 @@ export default function ErrorSimulationControls({ errors, setErrors }) {
           className={`relative p-4 rounded-xl border-2 cursor-pointer transition-all ${
             errors.systematic 
               ? 'bg-rose-500/20 border-rose-500/50 text-rose-200' 
-              : 'bg-[#000080] dark:bg-slate-900 text-white border-slate-700 text-slate-400 hover:border-slate-500'
+              : 'bg-[#7A1540] dark:bg-slate-900 text-white border-slate-700 text-slate-400 hover:border-slate-500'
           }`}
         >
           <div className="flex items-center justify-between mb-2">
@@ -41,7 +41,7 @@ export default function ErrorSimulationControls({ errors, setErrors }) {
           className={`relative p-4 rounded-xl border-2 cursor-pointer transition-all ${
             errors.random 
               ? 'bg-amber-500/20 border-amber-500/50 text-amber-200' 
-              : 'bg-[#000080] dark:bg-slate-900 text-white border-slate-700 text-slate-400 hover:border-slate-500'
+              : 'bg-[#7A1540] dark:bg-slate-900 text-white border-slate-700 text-slate-400 hover:border-slate-500'
           }`}
         >
           <div className="flex items-center justify-between mb-2">
@@ -62,7 +62,7 @@ export default function ErrorSimulationControls({ errors, setErrors }) {
           className={`relative p-4 rounded-xl border-2 cursor-pointer transition-all ${
             errors.human 
               ? 'bg-sky-500/20 border-sky-500/50 text-sky-200' 
-              : 'bg-[#000080] dark:bg-slate-900 text-white border-slate-700 text-slate-400 hover:border-slate-500'
+              : 'bg-[#7A1540] dark:bg-slate-900 text-white border-slate-700 text-slate-400 hover:border-slate-500'
           }`}
         >
           <div className="flex items-center justify-between mb-2">

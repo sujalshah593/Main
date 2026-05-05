@@ -39,7 +39,7 @@ export default function SimulatorControls({
             disabled={isPlaying}
           >
             {Object.entries(functionsDict).map(([key, fn]) => (
-              <option key={key} value={key} className="bg-[#000080] dark:bg-slate-800 text-white">{fn.name}</option>
+              <option key={key} value={key} className="bg-[#7A1540] dark:bg-slate-800 text-white">{fn.name}</option>
             ))}
           </select>
         </div>

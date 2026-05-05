@@ -88,7 +88,7 @@ export default function MotionEquationsPage() {
         <div className="flex items-center gap-2">
           <button 
             onClick={() => { clearData(); setIsPlaying(false); }}
-            className="flex items-center gap-2 px-3 py-1.5 text-sm bg-[#000080] dark:bg-slate-800 text-white hover:bg-slate-700 text-slate-300 rounded-lg transition-colors border border-slate-700"
+            className="flex items-center gap-2 px-3 py-1.5 text-sm bg-[#7A1540] dark:bg-slate-800 text-white hover:bg-slate-700 text-slate-300 rounded-lg transition-colors border border-slate-700"
           >
             <RefreshCw size={14} /> Reset
           </button>

@@ -34,7 +34,7 @@ export default function EnergyQuiz() {
   const score = questions.filter(q => answers[q.id] === q.correct).length;
 
   return (
-    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full">
+    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full">
       <h3 className="text-lg font-bold text-slate-300 flex items-center gap-2 mb-6">
         <HelpCircle size={20} className="text-amber-400" /> Concept Check
       </h3>
@@ -52,11 +52,11 @@ export default function EnergyQuiz() {
                 if (!showResults) {
                   btnClass += isSelected 
                     ? "bg-amber-500/20 border-amber-500/50 text-amber-200" 
-                    : "bg-[#000080] dark:bg-slate-900 text-white border-slate-700 hover:border-slate-500 text-slate-400";
+                    : "bg-[#7A1540] dark:bg-slate-900 text-white border-slate-700 hover:border-slate-500 text-slate-400";
                 } else {
                   if (isCorrect) btnClass += "bg-emerald-500/20 border-emerald-500/50 text-emerald-200";
                   else if (isSelected) btnClass += "bg-rose-500/20 border-rose-500/50 text-rose-200";
-                  else btnClass += "bg-[#000080] dark:bg-slate-900 text-white border-slate-700 opacity-50 text-slate-500";
+                  else btnClass += "bg-[#7A1540] dark:bg-slate-900 text-white border-slate-700 opacity-50 text-slate-500";
                 }
 
                 return (
@@ -87,7 +87,7 @@ export default function EnergyQuiz() {
           Submit Quiz
         </button>
       ) : (
-        <div className="mt-8 p-4 bg-[#000080] dark:bg-slate-900 text-white rounded-lg border border-slate-700 text-center">
+        <div className="mt-8 p-4 bg-[#7A1540] dark:bg-slate-900 text-white rounded-lg border border-slate-700 text-center">
           <p className="text-slate-400 text-sm mb-1">Your Score</p>
           <p className="text-2xl font-bold text-white">{score} / {questions.length}</p>
           <button 

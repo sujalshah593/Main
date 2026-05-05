@@ -6,7 +6,7 @@ export default function EnergyCalculations({ metrics, isFrictionEnabled }) {
   const total = pe + ke;
 
   return (
-    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col gap-6">
+    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col gap-6">
       <h3 className="text-sm font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
         <Calculator size={16} className="text-purple-400" /> Calculation Engine
       </h3>
@@ -14,12 +14,12 @@ export default function EnergyCalculations({ metrics, isFrictionEnabled }) {
       <div className="space-y-4">
         {/* Instantaneous Values */}
         <div className="grid grid-cols-2 gap-3">
-          <div className="bg-[#000080] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-700">
+          <div className="bg-[#7A1540] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-700">
             <div className="text-[10px] text-slate-500 uppercase font-bold mb-1">Potential (U)</div>
             <div className="text-sm font-mono text-rose-400 font-bold">{pe.toFixed(2)} J</div>
             <div className="text-[9px] text-slate-600 font-mono mt-1">m·g·h</div>
           </div>
-          <div className="bg-[#000080] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-700">
+          <div className="bg-[#7A1540] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-700">
             <div className="text-[10px] text-slate-500 uppercase font-bold mb-1">Kinetic (K)</div>
             <div className="text-sm font-mono text-emerald-400 font-bold">{ke.toFixed(2)} J</div>
             <div className="text-[9px] text-slate-600 font-mono mt-1">½·m·v²</div>
@@ -27,7 +27,7 @@ export default function EnergyCalculations({ metrics, isFrictionEnabled }) {
         </div>
 
         {/* Total Energy Analysis */}
-        <div className="bg-[#000080] dark:bg-slate-900 text-white p-4 rounded-lg border border-slate-700">
+        <div className="bg-[#7A1540] dark:bg-slate-900 text-white p-4 rounded-lg border border-slate-700">
            <div className="flex items-center justify-between mb-3">
               <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total Mechanical Energy</span>
               <div className="px-2 py-0.5 rounded-full text-[9px] font-bold bg-white/10 text-white uppercase tracking-tighter">

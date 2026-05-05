@@ -91,7 +91,7 @@ export default function InclinedFrictionPage() {
         <div className="flex items-center gap-3">
           <button 
             onClick={resetExperiment}
-            className="flex items-center gap-2 px-4 py-2 bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white hover:bg-slate-700 text-white dark:text-slate-300 rounded-lg transition-colors border border-slate-700/50"
+            className="flex items-center gap-2 px-4 py-2 bg-[#7A1540] dark:bg-[#7A1540] dark:bg-slate-800 text-white hover:bg-slate-700 text-white dark:text-slate-300 rounded-lg transition-colors border border-slate-700/50"
           >
             <RefreshCw size={16} /> Reset
           </button>
@@ -110,7 +110,7 @@ export default function InclinedFrictionPage() {
         
         {/* Left Column (Simulation & Controls) */}
         <div className="lg:col-span-4 flex flex-col gap-6">
-          <div className="bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700/50 shadow-xl text-white">
+          <div className="bg-[#7A1540] dark:bg-[#7A1540] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700/50 shadow-xl text-white">
             <InclinedFrictionSimulation 
               angle={angle}
               surfaceType={surfaceType}
@@ -118,7 +118,7 @@ export default function InclinedFrictionPage() {
             />
             
             <div className="mt-4 flex flex-col gap-3">
-              <div className="grid grid-cols-2 gap-4 bg-[#000080] dark:bg-slate-900 text-white/50 p-4 rounded-xl border border-slate-700/50">
+              <div className="grid grid-cols-2 gap-4 bg-[#7A1540] dark:bg-slate-900 text-white/50 p-4 rounded-xl border border-slate-700/50">
                 <div className="text-center border-r border-slate-700/50">
                   <div className="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Status</div>
                   <div className={`text-sm font-bold ${simulationState.isSliding ? 'text-emerald-400' : 'text-amber-400'}`}>
@@ -165,14 +165,14 @@ export default function InclinedFrictionPage() {
           <InclinedFrictionCalculations trials={trials} />
           <InclinedFrictionQuiz />
           
-          <div className="bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700/50 text-white">
+          <div className="bg-[#7A1540] dark:bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700/50 text-white">
             <h4 className="flex items-center gap-2 text-sm font-bold text-white mb-4">
               <HelpCircle size={18} className="text-lab-accent" /> Angle of Repose Theory
             </h4>
             <div className="text-[12px] text-slate-400 space-y-3 leading-relaxed">
               <p>The <b>Angle of Repose</b> is the steepest angle at which a block can remain stationary on an inclined plane without sliding.</p>
               <p>At this specific angle, the downward force component along the plane ($mg \sin \theta$) is exactly balanced by the limiting frictional force ($\mu_s mg \cos \theta$).</p>
-              <p className="p-2 bg-[#000080] dark:bg-slate-900 text-white rounded font-mono text-sky-400 text-center">μ = tan(θ)</p>
+              <p className="p-2 bg-[#7A1540] dark:bg-slate-900 text-white rounded font-mono text-sky-400 text-center">μ = tan(θ)</p>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ function formatConnectionLabel(connection) {
 function Palette({ palette, onDragStart }) {
   if (!palette?.length) return null;
   return (
-    <div className="w-full shrink-0 space-y-2 rounded-xl border border-slate-800 bg-[#000080] dark:bg-slate-900 text-white/50 p-3 lg:w-56">
+    <div className="w-full shrink-0 space-y-2 rounded-xl border border-slate-800 bg-[#7A1540] dark:bg-slate-900 text-white/50 p-3 lg:w-56">
       <div className="text-xs font-semibold uppercase tracking-wide text-slate-400">Components</div>
       <p className="text-[11px] text-slate-500">Drag onto the canvas, then connect handles to build the circuit.</p>
       <div className="space-y-2">
@@ -134,7 +134,7 @@ function FlowCanvas({ simulatorConfig, tall }) {
           >
             <Background gap={18} size={1} color="#1e293b" />
             <MiniMap
-              className="!rounded-lg !border !border-slate-700 !bg-[#000080] dark:bg-slate-900 text-white"
+              className="!rounded-lg !border !border-slate-700 !bg-[#7A1540] dark:bg-slate-900 text-white"
               nodeColor={() => '#334155'}
               maskColor="rgba(15,23,42,0.65)"
             />
@@ -161,7 +161,7 @@ function FlowCanvas({ simulatorConfig, tall }) {
             <button
               type="button"
               onClick={clearBoard}
-              className="rounded-lg border border-slate-600 bg-[#000080] dark:bg-slate-900 text-white px-3 py-1.5 text-xs font-semibold text-slate-100 hover:bg-[#000080] dark:bg-slate-800 text-white"
+              className="rounded-lg border border-slate-600 bg-[#7A1540] dark:bg-slate-900 text-white px-3 py-1.5 text-xs font-semibold text-slate-100 hover:bg-[#7A1540] dark:bg-slate-800 text-white"
             >
               Clear
             </button>

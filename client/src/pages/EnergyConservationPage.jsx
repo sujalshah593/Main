@@ -84,13 +84,13 @@ export default function EnergyConservationPage() {
         <div className="flex items-center gap-2">
           <button 
             onClick={() => setShowTheory(!showTheory)}
-            className={`flex items-center gap-2 px-3 py-1.5 text-sm rounded-lg transition-colors border ${showTheory ? 'bg-amber-500/20 border-amber-500/50 text-amber-400' : 'bg-[#000080] dark:bg-slate-800 text-white border-slate-700 text-slate-300 hover:bg-slate-700'}`}
+            className={`flex items-center gap-2 px-3 py-1.5 text-sm rounded-lg transition-colors border ${showTheory ? 'bg-amber-500/20 border-amber-500/50 text-amber-400' : 'bg-[#7A1540] dark:bg-slate-800 text-white border-slate-700 text-slate-300 hover:bg-slate-700'}`}
           >
             <BookOpen size={14} /> Theory
           </button>
           <button 
             onClick={resetExperiment}
-            className="flex items-center gap-2 px-3 py-1.5 text-sm bg-[#000080] dark:bg-slate-800 text-white hover:bg-slate-700 text-slate-300 rounded-lg transition-colors border border-slate-700"
+            className="flex items-center gap-2 px-3 py-1.5 text-sm bg-[#7A1540] dark:bg-slate-800 text-white hover:bg-slate-700 text-slate-300 rounded-lg transition-colors border border-slate-700"
           >
             <RefreshCw size={14} /> Reset
           </button>
@@ -105,14 +105,14 @@ export default function EnergyConservationPage() {
       </div>
 
       {showTheory && (
-        <div className="mb-6 bg-[#000080] dark:bg-slate-800 text-white/50 border border-amber-500/20 p-6 rounded-2xl backdrop-blur-sm animate-in fade-in slide-in-from-top-4 duration-300">
+        <div className="mb-6 bg-[#7A1540] dark:bg-slate-800 text-white/50 border border-amber-500/20 p-6 rounded-2xl backdrop-blur-sm animate-in fade-in slide-in-from-top-4 duration-300">
            <h2 className="text-amber-400 font-bold mb-3 flex items-center gap-2">
              <BookOpen size={18} /> Theory: Energy Conservation
            </h2>
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-300 leading-relaxed">
               <div>
                  <p className="mb-3">The Law of Conservation of Energy states that in an isolated system, the total mechanical energy remains constant over time.</p>
-                 <div className="bg-[#000080] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-700 font-mono text-center mb-3">
+                 <div className="bg-[#7A1540] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-700 font-mono text-center mb-3">
                     E_total = K + U = ½mv² + mgh
                  </div>
                  <p>As the ball rolls down, <strong>Potential Energy (U)</strong> is converted into <strong>Kinetic Energy (K)</strong>. At any point, their sum remains constant if friction is ignored.</p>

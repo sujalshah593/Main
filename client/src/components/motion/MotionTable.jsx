@@ -3,7 +3,7 @@ import { Table, Trash2 } from 'lucide-react';
 
 export default function MotionTable({ dataPoints, clearData }) {
   return (
-    <div className="bg-[#000080] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700 h-full flex flex-col">
+    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700 h-full flex flex-col">
       <div className="flex justify-between items-center mb-3">
         <h3 className="text-sm font-bold text-slate-300 flex items-center gap-2 uppercase tracking-tight">
           <Table size={16} className="text-sky-400" /> Logged Data
@@ -19,7 +19,7 @@ export default function MotionTable({ dataPoints, clearData }) {
       
       <div className="flex-1 overflow-auto custom-scrollbar rounded-lg border border-slate-700 max-h-[300px]">
         <table className="w-full text-left text-xs text-slate-400">
-          <thead className="text-[10px] text-slate-400 uppercase bg-[#000080] dark:bg-slate-900 text-white/80 sticky top-0 z-10 backdrop-blur-sm">
+          <thead className="text-[10px] text-slate-400 uppercase bg-[#7A1540] dark:bg-slate-900 text-white/80 sticky top-0 z-10 backdrop-blur-sm">
             <tr>
               <th className="px-3 py-2 font-semibold border-b border-slate-700">Time (s)</th>
               <th className="px-3 py-2 font-semibold border-b border-slate-700 text-rose-400/80">Vel (m/s)</th>

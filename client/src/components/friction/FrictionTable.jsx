@@ -3,8 +3,8 @@ import { Trash2, ClipboardList } from 'lucide-react';
 
 export default function FrictionTable({ trials, removeTrial }) {
   return (
-    <div className="bg-[#000080] dark:bg-slate-800 text-white rounded-xl border border-slate-700 overflow-hidden flex flex-col h-full">
-      <div className="p-4 border-b border-slate-700 flex justify-between items-center bg-[#000080] dark:bg-slate-800 text-white/50">
+    <div className="bg-[#7A1540] dark:bg-slate-800 text-white rounded-xl border border-slate-700 overflow-hidden flex flex-col h-full">
+      <div className="p-4 border-b border-slate-700 flex justify-between items-center bg-[#7A1540] dark:bg-slate-800 text-white/50">
         <h3 className="text-sm font-bold text-white flex items-center gap-2 uppercase tracking-wider">
           <ClipboardList size={16} className="text-sky-400" /> Observation Table
         </h3>
@@ -15,7 +15,7 @@ export default function FrictionTable({ trials, removeTrial }) {
 
       <div className="overflow-auto flex-1 custom-scrollbar">
         <table className="w-full text-left border-collapse">
-          <thead className="sticky top-0 bg-[#000080] dark:bg-slate-900 text-white/90 backdrop-blur-sm z-10">
+          <thead className="sticky top-0 bg-[#7A1540] dark:bg-slate-900 text-white/90 backdrop-blur-sm z-10">
             <tr className="text-[10px] text-slate-500 uppercase font-bold tracking-widest border-b border-slate-800">
               <th className="p-4">#</th>
               <th className="p-4">Surface</th>
