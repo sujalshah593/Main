@@ -56,7 +56,7 @@ export default function Sidebar() {
 
         {/* Nav Links */}
         <nav className="flex flex-1 flex-col gap-2">
-          <NavLink to="/" className={({ isActive }) => linkClass(isActive, isOpen)} end title={!isOpen ? "Semesters" : ""}>
+          <NavLink to="/dashboard" className={({ isActive }) => linkClass(isActive, isOpen)} end title={!isOpen ? "Semesters" : ""}>
             <LayoutDashboard size={20} className="shrink-0" />
             <AnimatePresence>
               {isOpen && (

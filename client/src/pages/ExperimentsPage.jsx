@@ -13,7 +13,7 @@ export default function ExperimentsPage() {
   return (
     <section className="space-y-8 max-w-4xl">
       <nav className="flex items-center gap-2 text-[13px] text-lab-muted font-medium mb-2">
-        <Link to="/" className="text-lab-accent3 hover:text-white transition-colors">Home</Link>
+        <Link to="/dashboard" className="text-lab-accent3 hover:text-white transition-colors">Home</Link>
         <span className="text-white/20">/</span>
         <Link to="/labs" className="text-lab-accent3 hover:text-white transition-colors">Labs</Link>
         <span className="text-white/20">/</span>

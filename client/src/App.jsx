@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout.jsx';
+import LandingPage from './pages/LandingPage.jsx';
 import HomePage from './pages/HomePage.jsx';
 import LabsPage from './pages/LabsPage.jsx';
 import SemesterHubPage from './pages/SemesterHubPage.jsx';
@@ -37,8 +38,9 @@ import ComplexNumbersPage from './pages/ComplexNumbersPage.jsx';
 export default function App() {
   return (
     <Routes>
+      <Route path="/" element={<LandingPage />} />
       <Route element={<MainLayout />}>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/dashboard" element={<HomePage />} />
         <Route path="/semester/:semesterId" element={<SemesterHubPage />} />
         <Route path="/semester/:semesterId/theory" element={<TheoryPage />} />
         <Route path="/semester/:semesterId/practical" element={<PracticalPage />} />

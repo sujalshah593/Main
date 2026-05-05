@@ -18,7 +18,7 @@ export default function MobileNav() {
           <div className="font-display text-base font-bold tracking-tight text-lab-text">Virtual Lab</div>
         </div>
         <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
-          <NavLink to="/" className={pill} end>
+          <NavLink to="/dashboard" className={pill} end>
             Semesters
           </NavLink>
           <NavLink to="/semester/sem-1/theory" className={pill}>
