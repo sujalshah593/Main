@@ -18,9 +18,9 @@ export default {
         'lab-panelBorder': 'rgb(var(--lab-panel-border) / <alpha-value>)',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Syne', 'sans-serif'],
-        body: ['DM Sans', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['Outfit', 'sans-serif'],
+        body: ['"Plus Jakarta Sans"', 'sans-serif'],
       },
       animation: {
         'blob': 'blob 15s infinite alternate',

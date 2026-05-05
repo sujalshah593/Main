@@ -172,6 +172,15 @@ export default function PythonEditorPage() {
       const socketClient = socketRef.current;
       if (!socketClient || !isRunningRef.current) return;
 
+      if (data === '\u0003') {
+        // Ctrl+C
+        socketClient.emit('python:stop');
+        setIsRunning(false);
+        term.writeln('^C');
+        currentInputRef.current = '';
+        return;
+      }
+
       if (data === '\r') {
         socketClient.emit('python:stdin', { data: `${currentInputRef.current}\n` });
         term.write('\r\n');
@@ -228,8 +237,8 @@ export default function PythonEditorPage() {
             <h1 className="font-display text-xl font-bold text-black dark:text-white truncate">Python Workbench</h1>
              <div className="flex items-center gap-2 mt-1 text-xs font-mono text-lab-muted">
                 <span className="relative flex h-2 w-2">
-                  <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${status === 'Connected' ? 'bg-emerald-500' : 'bg-amber-500'} opacity-75`}></span>
-                  <span className={`relative inline-flex rounded-full h-2 w-2 ${status === 'Connected' ? 'bg-emerald-500' : 'bg-amber-500'}`}></span>
+                  <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${(status !== 'Disconnected' && status !== 'Connecting...') ? 'bg-emerald-500' : 'bg-amber-500'} opacity-75`}></span>
+                  <span className={`relative inline-flex rounded-full h-2 w-2 ${(status !== 'Disconnected' && status !== 'Connecting...') ? 'bg-emerald-500' : 'bg-amber-500'}`}></span>
                 </span>
                 {status}
              </div>
@@ -240,14 +249,17 @@ export default function PythonEditorPage() {
            <button
              type="button"
              onClick={runCode}
-             disabled={isRunning || status !== 'Connected'}
+             disabled={isRunning || status === 'Disconnected' || status === 'Connecting...'}
              className="flex items-center justify-center gap-2 flex-1 sm:flex-none px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_0_15px_rgba(16,185,129,0.15)]"
            >
              <Play size={14} fill="currentColor" /> {isRunning ? 'Running...' : 'Run'}
            </button>
            <button
              type="button"
-             onClick={stopCode}
+             onClick={() => {
+                socketRef.current?.emit('python:stop');
+                setIsRunning(false);
+             }}
              disabled={!isRunning}
              className="flex items-center justify-center gap-2 flex-1 sm:flex-none px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-rose-500/10 text-rose-400 border border-rose-500/20 hover:bg-rose-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_0_15px_rgba(244,63,94,0.15)]"
            >
@@ -256,8 +268,13 @@ export default function PythonEditorPage() {
            <button
              type="button"
              onClick={() => {
+                if (isRunning) {
+                  socketRef.current?.emit('python:stop');
+                  setIsRunning(false);
+                }
                 setCode(STARTER_CODE);
                 localStorage.setItem(CODE_STORAGE_KEY, STARTER_CODE);
+                terminalRef.current?.clear();
                 terminalRef.current?.writeln('\r\n[Editor reset to starter code]');
              }}
              className="hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-white/5 text-lab-muted border border-white/10 hover:bg-white/10 hover:text-white transition-all"

@@ -3,22 +3,16 @@ const os = require('os');
 const path = require('path');
 const { spawn } = require('child_process');
 
-const EXEC_TIMEOUT_MS = 10_000;
 const PYTHON_BIN = process.env.PYTHON_BIN || 'python';
 
 function attachPythonLabSocket(io) {
   io.on('connection', (socket) => {
     let child = null;
-    let timeoutId = null;
     let tempFilePath = '';
 
     const emitStatus = (message) => socket.emit('python:status', { message });
 
     const cleanup = async () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-        timeoutId = null;
-      }
       if (tempFilePath) {
         try {
           await fs.unlink(tempFilePath);
@@ -67,12 +61,6 @@ function attachPythonLabSocket(io) {
           shell: false,
           windowsHide: true,
         });
-
-        timeoutId = setTimeout(async () => {
-          if (!child) return;
-          socket.emit('python:error', { message: `Execution timed out after ${EXEC_TIMEOUT_MS / 1000}s.` });
-          await stopProcess('Stopped (timeout)');
-        }, EXEC_TIMEOUT_MS);
 
         socket.emit('python:started', { pid: child.pid });
         emitStatus('Running');
