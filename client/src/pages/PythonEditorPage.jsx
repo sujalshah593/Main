@@ -218,14 +218,14 @@ export default function PythonEditorPage() {
       <motion.header 
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="rounded-2xl bg-slate-900 border border-slate-700 p-6 flex flex-col sm:flex-row items-center justify-between gap-6 shrink-0 shadow-2xl"
+        className="rounded-2xl bg-[#000080] dark:bg-slate-900 text-white border border-slate-700 p-6 flex flex-col sm:flex-row items-center justify-between gap-6 shrink-0 shadow-2xl"
       >
         <div className="flex items-center gap-3 w-full sm:w-auto">
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-500/10 text-sky-400 border border-sky-500/20 flex-shrink-0">
             <CodeSquare size={24} />
           </div>
           <div className="flex flex-col min-w-0">
-            <h1 className="font-display text-xl font-bold text-white truncate">Python Workbench</h1>
+            <h1 className="font-display text-xl font-bold text-black dark:text-white truncate">Python Workbench</h1>
              <div className="flex items-center gap-2 mt-1 text-xs font-mono text-lab-muted">
                 <span className="relative flex h-2 w-2">
                   <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${status === 'Connected' ? 'bg-emerald-500' : 'bg-amber-500'} opacity-75`}></span>
@@ -273,7 +273,7 @@ export default function PythonEditorPage() {
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex-1 flex flex-col rounded-2xl bg-slate-900 border border-slate-700 overflow-hidden relative z-10 shadow-2xl"
+          className="flex-1 flex flex-col rounded-2xl bg-[#000080] dark:bg-slate-900 text-white border border-slate-700 overflow-hidden relative z-10 shadow-2xl"
         >
           <div className="flex items-center justify-between px-4 py-3 bg-[#080e1a]/80 border-b border-white/5">
             <div className="flex items-center gap-4 text-[11px] font-mono font-bold uppercase tracking-widest text-[#e0eaf6]/50">
@@ -311,7 +311,7 @@ export default function PythonEditorPage() {
         <motion.div 
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="h-1/3 lg:h-full lg:w-[450px] xl:w-[500px] flex-shrink-0 flex flex-col rounded-2xl bg-slate-900 border border-slate-700 overflow-hidden shadow-2xl"
+          className="h-1/3 lg:h-full lg:w-[450px] xl:w-[500px] flex-shrink-0 flex flex-col rounded-2xl bg-[#000080] dark:bg-slate-900 text-white border border-slate-700 overflow-hidden shadow-2xl"
         >
           <div className="flex items-center justify-between px-4 py-3 bg-white/[0.02] border-b border-white/5">
             <h2 className="text-[11px] font-bold uppercase tracking-wider text-lab-accent3 flex items-center gap-2">

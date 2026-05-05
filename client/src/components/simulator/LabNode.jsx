@@ -7,7 +7,7 @@ const styles = {
 };
 
 const h =
-  '!h-3 !w-3 !border-2 !border-slate-700 bg-slate-900 hover:!bg-slate-800 focus:!ring-2 focus:!ring-sky-500';
+  '!h-3 !w-3 !border-2 !border-slate-700 bg-[#000080] dark:bg-slate-900 text-white hover:!bg-[#000080] dark:bg-slate-800 text-white focus:!ring-2 focus:!ring-sky-500';
 
 /**
  * Handle ids align with Mongo `simulatorConfig.correctConnections`.

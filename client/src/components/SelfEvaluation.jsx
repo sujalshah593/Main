@@ -19,7 +19,7 @@ export default function SelfEvaluation({ questions = [] }) {
   return (
     <div className="space-y-6">
       {questions.map((q, idx) => (
-        <fieldset key={idx} className="rounded-xl border border-slate-800 bg-slate-900/40 p-4">
+        <fieldset key={idx} className="rounded-xl border border-slate-800 bg-[#000080] dark:bg-slate-900 text-white/40 p-4">
           <legend className="px-1 text-sm font-semibold text-slate-100">{`Question ${idx + 1}`}</legend>
           <p className="mb-3 text-sm text-slate-300">{q.question}</p>
           <div className="space-y-2">

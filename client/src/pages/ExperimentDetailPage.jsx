@@ -68,7 +68,7 @@ export default function ExperimentDetailPage() {
             <div className="absolute right-0 top-0 -mr-20 -mt-20 h-64 w-64 rounded-full bg-lab-accent3/10 blur-[80px]" />
             <div className="relative z-10 flex flex-col md:flex-row md:items-start justify-between gap-6">
               <div>
-                <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">{experiment.title}</h1>
+                <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-black dark:text-white tracking-tight">{experiment.title}</h1>
                 {labName && <p className="mt-2 text-[15px] text-lab-muted">{labName}</p>}
               </div>
 

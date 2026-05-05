@@ -119,7 +119,7 @@ export default function SpringSimulation({ mass, springConstant, isNoiseEnabled 
   }, [mass, springConstant, isNoiseEnabled]);
 
   return (
-    <div className="bg-slate-800 p-4 rounded-xl border border-slate-700 flex flex-col items-center">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700 flex flex-col items-center">
       <h3 className="text-sm font-bold text-slate-300 mb-4 uppercase tracking-wider w-full text-left">Spring Setup</h3>
       <div className="bg-[#0f172a] rounded-lg border border-slate-600 shadow-inner p-2">
         <canvas 

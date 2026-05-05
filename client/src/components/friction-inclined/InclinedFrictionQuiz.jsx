@@ -64,7 +64,7 @@ export default function InclinedFrictionQuiz() {
   };
 
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700">
       <h3 className="text-sm font-bold text-white mb-6 uppercase tracking-wider flex items-center gap-2">
         <HelpCircle size={18} className="text-rose-400" /> Concept Check
       </h3>
@@ -98,8 +98,8 @@ export default function InclinedFrictionQuiz() {
                       ? 'bg-emerald-500/10 border-emerald-500/50 text-emerald-400'
                       : i === selectedOption
                         ? 'bg-rose-500/10 border-rose-500/50 text-rose-400'
-                        : 'bg-slate-900 border-slate-800 text-slate-500'
-                    : 'bg-slate-900 border-slate-800 text-slate-400 hover:border-slate-600 hover:text-white'
+                        : 'bg-[#000080] dark:bg-slate-900 text-white border-slate-800 text-slate-500'
+                    : 'bg-[#000080] dark:bg-slate-900 text-white border-slate-800 text-slate-400 hover:border-slate-600 hover:text-white'
                 }`}
               >
                 <div className="flex items-center justify-between">

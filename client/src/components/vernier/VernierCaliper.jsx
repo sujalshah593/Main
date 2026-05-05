@@ -105,14 +105,14 @@ export default function VernierCaliper({ jawPosition, setJawPosition, selectedOb
           </div>
           
           {/* Main Beam / Scale */}
-          <div className="absolute left-[20px] top-[40px] w-[680px] h-[60px] bg-slate-800 border-y border-slate-600 shadow-inner flex relative overflow-hidden">
+          <div className="absolute left-[20px] top-[40px] w-[680px] h-[60px] bg-[#000080] dark:bg-slate-800 text-white border-y border-slate-600 shadow-inner flex relative overflow-hidden">
              {/* Graduations container, start slightly shifted if needed */}
              <div className="absolute top-0 left-[10px] w-full h-full">
                {generateMainScale()}
              </div>
              
              {/* Depth Probe Groove */}
-             <div className="absolute top-[28px] w-full h-[4px] bg-slate-900 border-y border-slate-950"></div>
+             <div className="absolute top-[28px] w-full h-[4px] bg-[#000080] dark:bg-slate-900 text-white border-y border-slate-950"></div>
           </div>
         </div>
 
@@ -133,7 +133,7 @@ export default function VernierCaliper({ jawPosition, setJawPosition, selectedOb
           {/* Main Slider Body */}
           <div className="absolute top-[35px] left-[20px] w-[100px] h-[70px] bg-gradient-to-b from-slate-600 to-slate-700 border-2 border-slate-500 shadow-xl rounded-sm">
              {/* Vernier Window Cutout */}
-             <div className="absolute top-[5px] left-[10px] w-[50px] h-[60px] bg-slate-800/80 shadow-[inset_0_4px_8px_rgba(0,0,0,0.6)] border border-slate-900 relative">
+             <div className="absolute top-[5px] left-[10px] w-[50px] h-[60px] bg-[#000080] dark:bg-slate-800 text-white/80 shadow-[inset_0_4px_8px_rgba(0,0,0,0.6)] border border-slate-900 relative">
                 {/* Vernier Graduations (0 to 10) */}
                 <div className="absolute bottom-0 w-full h-full flex pt-1">
                    {generateVernierScale()}

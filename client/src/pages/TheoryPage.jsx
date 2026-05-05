@@ -40,7 +40,7 @@ export default function TheoryPage() {
         <div className="glass-card p-6 border-t-2 border-t-lab-primary">
           <div className="flex items-center gap-3 mb-2">
             <BookOpen size={20} className="text-lab-primary" />
-            <h1 className="font-display text-xl font-bold text-slate-900 dark:text-white">Theory - {semesterId.toUpperCase()}</h1>
+            <h1 className="font-display text-xl font-bold text-slate-900 dark:text-black dark:text-white">Theory - {semesterId.toUpperCase()}</h1>
           </div>
           <p className="text-sm text-slate-500 font-medium">Select a subject and unit below.</p>
 

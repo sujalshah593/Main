@@ -20,7 +20,7 @@ export default function InclinedFrictionGraph({ trials }) {
   const COLORS = ['#38bdf8', '#fbbf24', '#f87171', '#34d399'];
 
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 h-full flex flex-col">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
       <h3 className="text-sm font-bold text-white flex items-center gap-2 uppercase tracking-wider mb-6">
         <BarChart3 size={16} className="text-sky-400" /> Comparison of μ Across Surfaces
       </h3>

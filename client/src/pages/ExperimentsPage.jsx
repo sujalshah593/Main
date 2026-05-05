@@ -24,7 +24,7 @@ export default function ExperimentsPage() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h1 className="font-display text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">{lab?.name || 'Experiments'}</h1>
+        <h1 className="font-display text-4xl font-extrabold text-slate-900 dark:text-black dark:text-white tracking-tight">{lab?.name || 'Experiments'}</h1>
         {lab?.description && <p className="mt-3 text-[15px] leading-relaxed text-slate-600 dark:text-slate-400 max-w-2xl">{lab.description}</p>}
       </motion.header>
 

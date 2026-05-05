@@ -80,19 +80,19 @@
 
   /* ─── Glass Panel ─── */
   .glass-panel {
-    @apply rounded-2xl border border-lab-panelBorder bg-lab-panel;
+    @apply rounded-2xl border border-lab-panelBorder bg-[#000080] text-white;
     box-shadow: var(--lab-shadow-md);
     transition: all 0.2s ease;
   }
 
   .dark .glass-panel {
-    @apply border-white/5 bg-slate-900/50 backdrop-blur-2xl;
+    @apply border-white/5 bg-slate-900/50 backdrop-blur-2xl text-inherit;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   }
 
   /* ─── Glass Card ─── */
   .glass-card {
-    @apply rounded-2xl border border-lab-panelBorder bg-white transition-all duration-200;
+    @apply rounded-2xl border border-lab-panelBorder bg-white transition-all duration-200 text-slate-900;
     box-shadow: var(--lab-shadow-md);
   }
 
@@ -102,7 +102,7 @@
   }
 
   .dark .glass-card {
-    @apply border-white/5 bg-white/5 backdrop-blur-md;
+    @apply border-white/5 bg-white/5 backdrop-blur-md text-white;
     box-shadow: none;
   }
 

@@ -124,7 +124,7 @@ export default function PendulumSimulation({ length, isDampingEnabled, initialAn
   }, []);
 
   return (
-    <div className="bg-slate-800 p-4 rounded-xl border border-slate-700 flex flex-col items-center">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700 flex flex-col items-center">
       <h3 className="text-sm font-bold text-slate-300 mb-2 uppercase tracking-wider w-full text-left">Simulation Viewer</h3>
       <div className="relative bg-[#0f172a] rounded-lg border border-slate-600 shadow-inner overflow-hidden w-full max-w-[400px]">
         <canvas 

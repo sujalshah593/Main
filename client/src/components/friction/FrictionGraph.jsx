@@ -22,7 +22,7 @@ export default function FrictionGraph({ trials }) {
   };
 
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 h-full flex flex-col">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-sm font-bold text-white flex items-center gap-2 uppercase tracking-wider">
           <TrendingUp size={16} className="text-emerald-400" /> Force vs Normal Reaction

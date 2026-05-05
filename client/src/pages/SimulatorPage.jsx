@@ -30,7 +30,7 @@ export default function SimulatorPage() {
                 <Link to={`/experiment/${experiment._id}`} className="group flex items-center justify-center p-2 rounded-lg bg-white/5 hover:bg-white/10 text-lab-muted hover:text-white transition-all border border-white/5 hover:border-white/20">
                   <ArrowLeft size={16} />
                 </Link>
-                <h1 className="font-display text-2xl font-extrabold text-white tracking-tight">{experiment.title}</h1>
+                <h1 className="font-display text-2xl font-extrabold text-black dark:text-white tracking-tight">{experiment.title}</h1>
               </div>
               <div className="flex items-center gap-2 pl-[3.25rem] text-xs text-lab-muted">
                 <span className="relative flex h-2 w-2">

@@ -47,7 +47,7 @@ export default function DerivativesSlopesPage() {
             <ArrowLeft size={18} />
           </Link>
           <div>
-            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
+            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-black dark:text-white tracking-tight flex items-center gap-3">
               <LineChart className="text-amber-500" size={28} />
               Derivatives & Slopes Lab
             </h1>

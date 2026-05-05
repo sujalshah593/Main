@@ -16,7 +16,7 @@ export default function InclinedFrictionControls({
   return (
     <div className="flex flex-col gap-6">
       {/* Surface Selection */}
-      <div className="bg-slate-800/50 p-5 rounded-xl border border-slate-700/50">
+      <div className="bg-[#000080] dark:bg-slate-800 text-white/50 p-5 rounded-xl border border-slate-700/50">
         <label className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
           <Layers size={14} className="text-sky-400" /> Surface Material
         </label>
@@ -25,7 +25,7 @@ export default function InclinedFrictionControls({
             <button
               key={s}
               onClick={() => { setSurfaceType(s); resetBlock(); }}
-              className={`px-3 py-2.5 rounded-lg text-xs font-semibold transition-all border ${surfaceType === s ? 'bg-sky-500 border-sky-400 text-white shadow-lg shadow-sky-500/20' : 'bg-slate-900 border-slate-700 text-slate-400 hover:border-slate-500'}`}
+              className={`px-3 py-2.5 rounded-lg text-xs font-semibold transition-all border ${surfaceType === s ? 'bg-sky-500 border-sky-400 text-white shadow-lg shadow-sky-500/20' : 'bg-[#000080] dark:bg-slate-900 text-white border-slate-700 text-slate-400 hover:border-slate-500'}`}
             >
               {s}
             </button>
@@ -34,7 +34,7 @@ export default function InclinedFrictionControls({
       </div>
 
       {/* Angle Control */}
-      <div className="bg-slate-800/50 p-5 rounded-xl border border-slate-700/50">
+      <div className="bg-[#000080] dark:bg-slate-800 text-white/50 p-5 rounded-xl border border-slate-700/50">
         <div className="flex justify-between items-center mb-4">
           <label className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest">
             <Compass size={14} className="text-amber-400" /> Inclination Angle (θ)
@@ -58,13 +58,13 @@ export default function InclinedFrictionControls({
         <div className="mt-6 flex gap-2">
            <button 
              onClick={() => setAngle(prev => Math.max(0, prev - 0.1))}
-             className="flex-1 py-2 bg-slate-900 border border-slate-700 text-slate-300 rounded-lg text-xs font-bold hover:bg-slate-800"
+             className="flex-1 py-2 bg-[#000080] dark:bg-slate-900 text-white border border-slate-700 text-slate-300 rounded-lg text-xs font-bold hover:bg-[#000080] dark:bg-slate-800 text-white"
            >
              -0.1°
            </button>
            <button 
              onClick={() => setAngle(prev => Math.min(60, prev + 0.1))}
-             className="flex-1 py-2 bg-slate-900 border border-slate-700 text-slate-300 rounded-lg text-xs font-bold hover:bg-slate-800"
+             className="flex-1 py-2 bg-[#000080] dark:bg-slate-900 text-white border border-slate-700 text-slate-300 rounded-lg text-xs font-bold hover:bg-[#000080] dark:bg-slate-800 text-white"
            >
              +0.1°
            </button>

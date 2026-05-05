@@ -27,7 +27,7 @@ export default function MotionCalculations({ dataPoints, theoreticalU, theoretic
   const isSVerified = percentErrorS < 5.0;
 
   return (
-    <div className="bg-slate-800 p-4 rounded-xl border border-slate-700 h-full flex flex-col gap-4">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700 h-full flex flex-col gap-4">
       <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
         <Calculator size={12} className="text-purple-400" /> Equation Verification
       </h3>
@@ -35,7 +35,7 @@ export default function MotionCalculations({ dataPoints, theoreticalU, theoretic
       <div className="space-y-3">
         
         {/* First Equation Verification */}
-        <div className="bg-slate-900 p-3 rounded-lg border border-slate-700">
+        <div className="bg-[#000080] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-700">
           <div className="flex items-center justify-between mb-1.5">
             <div className="text-[10px] font-semibold text-slate-500">1. Verify v = u + at</div>
             {isAVerified ? <CheckCircle2 size={14} className="text-emerald-500" /> : <XCircle size={14} className="text-rose-500" />}
@@ -50,7 +50,7 @@ export default function MotionCalculations({ dataPoints, theoreticalU, theoretic
         </div>
 
         {/* Second Equation Verification */}
-        <div className="bg-slate-900 p-3 rounded-lg border border-slate-700">
+        <div className="bg-[#000080] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-700">
           <div className="flex items-center justify-between mb-1.5">
             <div className="text-[10px] font-semibold text-slate-500">2. Verify s = ut + ½at²</div>
             {isSVerified ? <CheckCircle2 size={14} className="text-emerald-500" /> : <XCircle size={14} className="text-rose-500" />}

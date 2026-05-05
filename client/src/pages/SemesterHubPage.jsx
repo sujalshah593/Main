@@ -29,8 +29,8 @@ export default function SemesterHubPage() {
         <div className="absolute left-0 top-0 -ml-20 -mt-20 h-64 w-64 rounded-full bg-lab-accent3/10 blur-[80px]" />
         <div className="relative z-10">
           <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-lab-accent3">{semester.id.toUpperCase()}</p>
-          <h1 className="mt-4 font-display text-4xl font-extrabold text-white">{semester.label}</h1>
-          <p className="mt-4 text-[15px] leading-relaxed text-lab-muted max-w-2xl">{semester.subtitle}</p>
+          <h1 className="mt-4 font-display text-4xl font-extrabold text-black dark:text-white">{semester.label}</h1>
+          <p className="mt-4 text-[15px] leading-relaxed text-white/80 max-w-2xl">{semester.subtitle}</p>
         </div>
       </motion.header>
 
@@ -47,8 +47,8 @@ export default function SemesterHubPage() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-lab-accent3/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-lab-accent3">Study Materials</p>
-            <h2 className="mt-3 font-display text-2xl font-bold text-white transition-colors">Theory</h2>
-            <p className="mt-3 text-[14px] leading-relaxed text-lab-muted">Open subjects and chapter-wise PDFs for this semester.</p>
+            <h2 className="mt-3 font-display text-2xl font-bold text-slate-900 dark:text-white transition-colors">Theory</h2>
+            <p className="mt-3 text-[14px] leading-relaxed text-slate-500 dark:text-slate-400">Open subjects and chapter-wise PDFs for this semester.</p>
             <div className="mt-6 flex items-center gap-2 text-sm font-bold tracking-wide text-lab-accent3/80 transition-all group-hover:gap-3 group-hover:text-lab-accent3">
               <span>Open Theory</span>
               <span>&rarr;</span>
@@ -63,8 +63,8 @@ export default function SemesterHubPage() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-lab-accent/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-lab-accent">Lab Work</p>
-            <h2 className="mt-3 font-display text-2xl font-bold text-white transition-colors">Practical</h2>
-            <p className="mt-3 text-[14px] leading-relaxed text-lab-muted">Open practical experiments and course outcomes for this semester.</p>
+            <h2 className="mt-3 font-display text-2xl font-bold text-slate-900 dark:text-white transition-colors">Practical</h2>
+            <p className="mt-3 text-[14px] leading-relaxed text-slate-500 dark:text-slate-400">Open practical experiments and course outcomes for this semester.</p>
             <div className="mt-6 flex items-center gap-2 text-sm font-bold tracking-wide text-lab-accent/80 transition-all group-hover:gap-3 group-hover:text-lab-accent">
               <span>Open Practical</span>
               <span>&rarr;</span>

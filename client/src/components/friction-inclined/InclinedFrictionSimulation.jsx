@@ -237,7 +237,7 @@ export default function InclinedFrictionSimulation({
   }, []); // single loop
 
   return (
-    <div className="relative w-full aspect-video bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-inner">
+    <div className="relative w-full aspect-video bg-[#000080] dark:bg-slate-900 text-white rounded-xl overflow-hidden border border-slate-700 shadow-inner">
       <canvas ref={canvasRef} width={800} height={450} className="w-full h-full" />
     </div>
   );

@@ -9,7 +9,7 @@ export default function FlywheelControls({
   isPlaying
 }) {
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 flex flex-col gap-6">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 flex flex-col gap-6">
       <div className="flex items-center gap-3 border-b border-slate-700 pb-4">
         <Settings className="text-lab-accent3" size={20} />
         <h3 className="font-display font-bold text-white uppercase tracking-wider text-sm">Experiment Controls</h3>
@@ -21,7 +21,7 @@ export default function FlywheelControls({
           <label className="text-xs font-bold text-slate-400 uppercase flex items-center gap-2">
             <Weight size={14} className="text-lab-accent" /> Attached Mass (kg)
           </label>
-          <span className="text-sm font-mono text-white font-bold bg-slate-900 px-2 py-0.5 rounded border border-slate-700">
+          <span className="text-sm font-mono text-white font-bold bg-[#000080] dark:bg-slate-900 text-white px-2 py-0.5 rounded border border-slate-700">
             {mass.toFixed(2)}
           </span>
         </div>
@@ -43,7 +43,7 @@ export default function FlywheelControls({
           <label className="text-xs font-bold text-slate-400 uppercase flex items-center gap-2">
             <Radius size={14} className="text-lab-accent2" /> Axle Radius (m)
           </label>
-          <span className="text-sm font-mono text-white font-bold bg-slate-900 px-2 py-0.5 rounded border border-slate-700">
+          <span className="text-sm font-mono text-white font-bold bg-[#000080] dark:bg-slate-900 text-white px-2 py-0.5 rounded border border-slate-700">
             {radius.toFixed(3)}
           </span>
         </div>
@@ -65,7 +65,7 @@ export default function FlywheelControls({
           <label className="text-xs font-bold text-slate-400 uppercase flex items-center gap-2">
             <RotateCcw size={14} className="text-amber-400" /> String Turns (N)
           </label>
-          <span className="text-sm font-mono text-white font-bold bg-slate-900 px-2 py-0.5 rounded border border-slate-700">
+          <span className="text-sm font-mono text-white font-bold bg-[#000080] dark:bg-slate-900 text-white px-2 py-0.5 rounded border border-slate-700">
             {numTurns}
           </span>
         </div>
@@ -83,7 +83,7 @@ export default function FlywheelControls({
 
       {/* Toggles */}
       <div className="flex flex-col gap-3 mt-2">
-        <label className="flex items-center justify-between p-3 rounded-lg bg-slate-900/50 border border-slate-700 cursor-pointer hover:bg-slate-900 transition-colors">
+        <label className="flex items-center justify-between p-3 rounded-lg bg-[#000080] dark:bg-slate-900 text-white/50 border border-slate-700 cursor-pointer hover:bg-[#000080] dark:bg-slate-900 text-white transition-colors">
           <span className="text-xs font-bold text-slate-300 uppercase tracking-wide">Bearing Friction</span>
           <div className="relative inline-flex items-center cursor-pointer">
             <input 

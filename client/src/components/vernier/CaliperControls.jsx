@@ -30,7 +30,7 @@ export default function CaliperControls({
             className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-lab-accent2 transition-colors"
           >
             {objects.map((obj) => (
-              <option key={obj.id} value={obj.id} className="bg-slate-900">
+              <option key={obj.id} value={obj.id} className="bg-[#000080] dark:bg-slate-900 text-white">
                 {obj.name}
               </option>
             ))}

@@ -72,7 +72,7 @@ export default function SpringLawPage() {
             <ArrowLeft size={16} />
           </Link>
           <div>
-            <h1 className="font-display text-xl lg:text-2xl font-extrabold text-white tracking-tight flex items-center gap-2">
+            <h1 className="font-display text-xl lg:text-2xl font-extrabold text-black dark:text-white tracking-tight flex items-center gap-2">
               <Anchor className="text-sky-500 rotate-180" size={24} />
               Hooke's Law Verification
             </h1>
@@ -82,13 +82,13 @@ export default function SpringLawPage() {
         <div className="flex items-center gap-2">
           <button 
             onClick={() => setShowTheory(!showTheory)}
-            className={`flex items-center gap-2 px-3 py-1.5 text-sm rounded-lg transition-colors border ${showTheory ? 'bg-sky-500/20 border-sky-500/50 text-sky-400' : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700'}`}
+            className={`flex items-center gap-2 px-3 py-1.5 text-sm rounded-lg transition-colors border ${showTheory ? 'bg-sky-500/20 border-sky-500/50 text-sky-400' : 'bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white border-slate-700/50 text-white dark:text-slate-300 hover:bg-slate-700'}`}
           >
             <BookOpen size={14} /> Theory
           </button>
           <button 
             onClick={clearData}
-            className="flex items-center gap-2 px-3 py-1.5 text-sm bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors border border-slate-700"
+            className="flex items-center gap-2 px-3 py-1.5 text-sm bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white hover:bg-slate-700 text-white dark:text-slate-300 rounded-lg transition-colors border border-slate-700/50"
           >
             <RefreshCw size={14} /> Reset
           </button>
@@ -103,14 +103,14 @@ export default function SpringLawPage() {
       </div>
 
       {showTheory && (
-        <div className="mb-6 bg-slate-800/50 border border-sky-500/20 p-6 rounded-2xl backdrop-blur-sm animate-in fade-in slide-in-from-top-4 duration-300">
+        <div className="mb-6 bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white/50 border border-sky-500/20 p-6 rounded-2xl backdrop-blur-sm animate-in fade-in slide-in-from-top-4 duration-300 text-white">
            <h2 className="text-sky-400 font-bold mb-3 flex items-center gap-2">
              <BookOpen size={18} /> Theory: Hooke's Law
            </h2>
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-300 leading-relaxed">
               <div>
                  <p className="mb-3">Hooke's Law states that the extension of an elastic object (like a spring) is directly proportional to the force applied to it, provided the limit of proportionality is not exceeded.</p>
-                 <div className="bg-slate-900 p-3 rounded-lg border border-slate-700 font-mono text-center mb-3">
+                 <div className="bg-[#000080] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-700 font-mono text-center mb-3">
                     F = k · x
                  </div>
                  <p>Where <strong>F</strong> is Force (N), <strong>k</strong> is Spring Constant (N/m), and <strong>x</strong> is Extension (m).</p>

@@ -4,7 +4,7 @@ import { Calculator, Info } from 'lucide-react';
 export default function FlywheelCalculations({ trials }) {
   if (trials.length === 0) {
     return (
-      <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 flex flex-col items-center justify-center min-h-[300px]">
+      <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 flex flex-col items-center justify-center min-h-[300px]">
         <Calculator size={48} className="text-slate-600 mb-4" />
         <p className="text-slate-400">Complete a trial to see calculations.</p>
       </div>
@@ -22,7 +22,7 @@ export default function FlywheelCalculations({ trials }) {
   const I = numerator / denominator;
 
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 flex flex-col gap-4">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 flex flex-col gap-4">
       <div className="flex items-center gap-3 border-b border-slate-700 pb-4">
         <Calculator className="text-emerald-400" size={20} />
         <h3 className="font-display font-bold text-white uppercase tracking-wider text-sm">Step-by-Step Calculations</h3>
@@ -30,7 +30,7 @@ export default function FlywheelCalculations({ trials }) {
 
       <div className="space-y-6 text-sm">
         {/* Step 1 */}
-        <div className="p-4 bg-slate-900 rounded-lg border-l-4 border-emerald-500">
+        <div className="p-4 bg-[#000080] dark:bg-slate-900 text-white rounded-lg border-l-4 border-emerald-500">
           <p className="text-slate-400 font-bold mb-2 uppercase text-[10px] tracking-widest">Step 1: Angular Velocity (ω)</p>
           <div className="font-mono text-white space-y-1">
             <p>ω = 4πn₂ / t₂</p>
@@ -40,7 +40,7 @@ export default function FlywheelCalculations({ trials }) {
         </div>
 
         {/* Step 2 */}
-        <div className="p-4 bg-slate-900 rounded-lg border-l-4 border-sky-500">
+        <div className="p-4 bg-[#000080] dark:bg-slate-900 text-white rounded-lg border-l-4 border-sky-500">
           <p className="text-slate-400 font-bold mb-2 uppercase text-[10px] tracking-widest">Step 2: Linear Velocity & Height</p>
           <div className="font-mono text-white space-y-2">
             <div>
@@ -55,7 +55,7 @@ export default function FlywheelCalculations({ trials }) {
         </div>
 
         {/* Step 3 */}
-        <div className="p-4 bg-slate-900 rounded-lg border-l-4 border-amber-500">
+        <div className="p-4 bg-[#000080] dark:bg-slate-900 text-white rounded-lg border-l-4 border-amber-500">
           <p className="text-slate-400 font-bold mb-2 uppercase text-[10px] tracking-widest">Step 3: Moment of Inertia (I)</p>
           <div className="font-mono text-white text-xs space-y-2 overflow-x-auto pb-2">
             <p>I = [m(2gh - v²)] / [ω²(1 + n₁/n₂)]</p>

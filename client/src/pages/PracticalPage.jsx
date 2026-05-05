@@ -31,7 +31,7 @@ export default function PracticalPage() {
         <div className="glass-card p-6 border-t-2 border-t-lab-primary">
           <div className="flex items-center gap-3 mb-2">
             <FlaskConical size={20} className="text-lab-primary" />
-            <h1 className="font-display text-xl font-black text-black dark:text-white tracking-tight">Practical - {semesterId.toUpperCase()}</h1>
+            <h1 className="font-display text-xl font-black text-black dark:text-black dark:text-white tracking-tight">Practical - {semesterId.toUpperCase()}</h1>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400 font-bold">Select a practical subject below.</p>
 
@@ -78,7 +78,7 @@ export default function PracticalPage() {
 
               <div className="mt-8 space-y-6">
                 {selectedSubject.objectives?.length > 0 && (
-                  <div className="rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-2xl">
+                  <div className="rounded-3xl border border-slate-700 bg-[#000080] dark:bg-[#000080] dark:bg-slate-900 text-white p-8 shadow-2xl text-white">
                     <h3 className="flex items-center gap-2 text-sm font-bold text-amber-400 uppercase tracking-wider mb-4">
                       <Target size={16} /> Course Objectives
                     </h3>
@@ -90,7 +90,7 @@ export default function PracticalPage() {
                   </div>
                 )}
 
-                <div className="rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-2xl">
+                <div className="rounded-3xl border border-slate-700 bg-[#000080] dark:bg-[#000080] dark:bg-slate-900 text-white p-8 shadow-2xl text-white">
                   <div className="flex items-center justify-between mb-6">
                     <h3 className="flex items-center gap-2 text-sm font-bold text-sky-400 uppercase tracking-wider">
                       <FlaskConical size={16} /> List of Practical Experiments
@@ -123,7 +123,7 @@ export default function PracticalPage() {
                 </div>
 
                 {selectedSubject.outcomes?.length > 0 && (
-                  <div className="rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-2xl">
+                  <div className="rounded-3xl border border-slate-700 bg-[#000080] dark:bg-[#000080] dark:bg-slate-900 text-white p-8 shadow-2xl text-white">
                     <h3 className="flex items-center gap-2 text-sm font-bold text-violet-400 uppercase tracking-wider mb-4">
                       <Award size={16} /> Course Outcomes
                     </h3>

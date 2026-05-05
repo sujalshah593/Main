@@ -111,7 +111,7 @@ export default function SimulatorControls({ activeFunction, setActiveFunction, p
         </div>
 
         {/* Dynamic Parameter Sliders */}
-        <div className="flex flex-col gap-4 flex-[2] min-w-[300px] bg-slate-900/50 p-4 rounded-xl border border-white/5">
+        <div className="flex flex-col gap-4 flex-[2] min-w-[300px] bg-[#000080] dark:bg-slate-900 text-white/50 p-4 rounded-xl border border-white/5">
           <div className="flex justify-between items-center mb-2">
             <span className="text-xs font-bold text-white uppercase tracking-wider">Adjust Variables</span>
             <button 

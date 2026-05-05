@@ -95,7 +95,7 @@ export default function FrictionPage() {
             <ArrowLeft size={18} />
           </Link>
           <div>
-            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
+            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-black dark:text-white tracking-tight flex items-center gap-3">
               <Activity className="text-lab-accent3" size={28} />
               Study of Friction on Surfaces
             </h1>
@@ -108,7 +108,7 @@ export default function FrictionPage() {
         <div className="flex items-center gap-3">
           <button 
             onClick={resetExperiment}
-            className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors border border-slate-700"
+            className="flex items-center gap-2 px-4 py-2 bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white hover:bg-slate-700 text-white dark:text-slate-300 rounded-lg transition-colors border border-slate-700/50"
           >
             <RefreshCw size={16} /> Reset
           </button>
@@ -127,7 +127,7 @@ export default function FrictionPage() {
         
         {/* Left Column (Simulation & Controls) */}
         <div className="lg:col-span-4 flex flex-col gap-6">
-          <div className="bg-slate-800 p-4 rounded-xl border border-slate-700 shadow-xl">
+          <div className="bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700/50 shadow-xl text-white">
             <FrictionSimulation 
               mass={mass}
               surfaceType={surfaceType}
@@ -136,7 +136,7 @@ export default function FrictionPage() {
             />
             
             <div className="mt-4 flex flex-col gap-3">
-              <div className="grid grid-cols-2 gap-4 bg-slate-900/50 p-4 rounded-xl border border-slate-700/50">
+              <div className="grid grid-cols-2 gap-4 bg-[#000080] dark:bg-slate-900 text-white/50 p-4 rounded-xl border border-slate-700/50">
                 <div className="text-center border-r border-slate-700/50">
                   <div className="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Applied Force</div>
                   <div className="text-xl font-mono font-black text-emerald-400">{appliedForce.toFixed(1)}<span className="text-xs ml-1">N</span></div>
@@ -178,14 +178,14 @@ export default function FrictionPage() {
           <FrictionCalculations trials={trials} />
           <FrictionQuiz />
           
-          <div className="bg-slate-800 p-6 rounded-xl border border-slate-700">
+          <div className="bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700/50 text-white">
             <h4 className="flex items-center gap-2 text-sm font-bold text-white mb-4">
               <HelpCircle size={18} className="text-lab-accent" /> Friction Theory
             </h4>
             <div className="text-[12px] text-slate-400 space-y-3 leading-relaxed">
               <p><b>Static Friction:</b> The force that resists the initiation of sliding motion. $F_s \le \mu_s N$.</p>
               <p><b>Kinetic Friction:</b> The force that resists the motion of a moving body. $F_k = \mu_k N$.</p>
-              <p className="p-2 bg-slate-900 rounded font-mono text-sky-400 text-center">F = μN</p>
+              <p className="p-2 bg-[#000080] dark:bg-slate-900 text-white rounded font-mono text-sky-400 text-center">F = μN</p>
               <p>The coefficient of friction ($\mu$) depends on the pair of surfaces in contact and is generally independent of contact area.</p>
             </div>
           </div>

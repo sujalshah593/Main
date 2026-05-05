@@ -3,7 +3,7 @@ import { Table, Trash2 } from 'lucide-react';
 
 export default function SpringTable({ dataPoints, clearData }) {
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 h-full flex flex-col">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-bold text-slate-300 flex items-center gap-2">
           <Table size={20} className="text-sky-400" /> Observation Table
@@ -19,7 +19,7 @@ export default function SpringTable({ dataPoints, clearData }) {
       
       <div className="flex-1 overflow-auto custom-scrollbar rounded-lg border border-slate-700">
         <table className="w-full text-left text-sm text-slate-400">
-          <thead className="text-[11px] sm:text-xs text-slate-300 uppercase bg-slate-900/80 sticky top-0 z-10 backdrop-blur-sm">
+          <thead className="text-[11px] sm:text-xs text-slate-300 uppercase bg-[#000080] dark:bg-slate-900 text-white/80 sticky top-0 z-10 backdrop-blur-sm">
             <tr>
               <th className="px-4 py-3 font-semibold text-slate-400">Trial</th>
               <th className="px-4 py-3 font-semibold text-sky-400">Mass (m) <br/><span className="lowercase text-[10px]">kg</span></th>

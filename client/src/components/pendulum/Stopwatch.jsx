@@ -58,7 +58,7 @@ export default function Stopwatch({ onRecordTime, isReactionErrorEnabled }) {
   };
 
   return (
-    <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700">
       <h3 className="text-sm font-bold text-slate-300 mb-4 uppercase tracking-wider flex items-center gap-2">
         <Timer size={16} className="text-rose-400" /> Stopwatch
       </h3>

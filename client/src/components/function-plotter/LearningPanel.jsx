@@ -81,7 +81,7 @@ export default function LearningPanel({ activeFunction }) {
       </div>
 
       <div className="flex flex-col gap-4 text-sm text-slate-300">
-        <div className="bg-slate-900/50 p-4 rounded-xl border border-white/5 flex flex-col gap-2 relative overflow-hidden">
+        <div className="bg-[#000080] dark:bg-slate-900 text-white/50 p-4 rounded-xl border border-white/5 flex flex-col gap-2 relative overflow-hidden">
           <div className="absolute top-0 right-0 p-2 opacity-10 pointer-events-none">
             <Calculator size={64} />
           </div>

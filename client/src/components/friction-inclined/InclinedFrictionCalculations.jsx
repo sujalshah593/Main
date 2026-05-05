@@ -5,7 +5,7 @@ export default function InclinedFrictionCalculations({ trials }) {
   const lastTrial = trials[trials.length - 1];
 
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 h-full">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full">
       <h3 className="text-sm font-bold text-white mb-6 uppercase tracking-wider flex items-center gap-2">
         <Calculator size={16} className="text-amber-400" /> Mathematical Derivation
       </h3>
@@ -17,7 +17,7 @@ export default function InclinedFrictionCalculations({ trials }) {
         </div>
       ) : (
         <div className="space-y-6">
-          <div className="p-4 bg-slate-900/50 rounded-lg border border-slate-700">
+          <div className="p-4 bg-[#000080] dark:bg-slate-900 text-white/50 rounded-lg border border-slate-700">
             <h4 className="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-3">Recorded State</h4>
             <div className="flex flex-col gap-4">
               <div className="flex justify-between items-center">
@@ -43,7 +43,7 @@ export default function InclinedFrictionCalculations({ trials }) {
                 <div className="w-5 h-5 rounded bg-slate-700 flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5 text-slate-400">1</div>
                 <div className="text-[11px] text-slate-300 leading-relaxed">
                   At the limiting state, sliding force = limiting friction:
-                  <div className="mt-1 p-2 bg-slate-900 rounded font-mono text-amber-400 text-center">
+                  <div className="mt-1 p-2 bg-[#000080] dark:bg-slate-900 text-white rounded font-mono text-amber-400 text-center">
                     mg sin θ = μ mg cos θ
                   </div>
                 </div>
@@ -53,7 +53,7 @@ export default function InclinedFrictionCalculations({ trials }) {
                 <div className="w-5 h-5 rounded bg-slate-700 flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5 text-slate-400">2</div>
                 <div className="text-[11px] text-slate-300 leading-relaxed">
                   Simplify the equation by canceling 'mg':
-                  <div className="mt-1 p-2 bg-slate-900 rounded font-mono text-sky-400 text-center">
+                  <div className="mt-1 p-2 bg-[#000080] dark:bg-slate-900 text-white rounded font-mono text-sky-400 text-center">
                     sin θ / cos θ = μ
                   </div>
                 </div>
@@ -63,7 +63,7 @@ export default function InclinedFrictionCalculations({ trials }) {
                 <div className="w-5 h-5 rounded bg-slate-700 flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5 text-slate-400">3</div>
                 <div className="text-[11px] text-slate-300 leading-relaxed">
                   Apply trigonometric identity:
-                  <div className="mt-1 p-2 bg-slate-900 rounded font-mono text-emerald-400 text-center">
+                  <div className="mt-1 p-2 bg-[#000080] dark:bg-slate-900 text-white rounded font-mono text-emerald-400 text-center">
                     μ = tan(θ) = tan({lastTrial.angle.toFixed(1)}°)
                   </div>
                 </div>

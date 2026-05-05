@@ -4,7 +4,7 @@ import { Activity } from 'lucide-react';
 export default function EnergyGraphs({ history }) {
   if (history.length < 5) {
     return (
-      <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 h-full flex flex-col items-center justify-center min-h-[300px]">
+      <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col items-center justify-center min-h-[300px]">
         <Activity size={48} className="text-slate-600 mb-4 animate-pulse" />
         <p className="text-slate-400 text-center text-sm">Release the ball and observe motion<br/>to generate real-time energy curves.</p>
       </div>
@@ -27,12 +27,12 @@ export default function EnergyGraphs({ history }) {
   const tePath = recentHistory.map((p, i) => `${i === 0 ? 'M' : 'L'} ${getX(i)} ${getY(p.pe + p.ke)}`).join(' ');
 
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 h-full flex flex-col">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
       <h3 className="text-sm font-bold text-slate-300 mb-4 uppercase tracking-wider flex items-center gap-2">
         <Activity size={16} className="text-emerald-400" /> Energy Transformation Graph
       </h3>
       
-      <div className="bg-slate-900 rounded-lg border border-slate-600 p-2 flex-1 flex items-center justify-center relative">
+      <div className="bg-[#000080] dark:bg-slate-900 text-white rounded-lg border border-slate-600 p-2 flex-1 flex items-center justify-center relative">
         <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-full max-h-[300px] overflow-visible text-[10px]">
           {/* Grid Lines */}
           <line x1={padding} y1={getY(maxE/2)} x2={width-padding} y2={getY(maxE/2)} stroke="#1e293b" strokeDasharray="4 4" />
@@ -51,7 +51,7 @@ export default function EnergyGraphs({ history }) {
           <text x={padding - 10} y={20} textAnchor="end" fill="#64748b" transform={`rotate(-90 ${padding-10} 20)`} fontSize="10">Energy (Joules)</text>
         </svg>
 
-        <div className="absolute top-4 right-4 flex flex-col gap-2 bg-slate-900/80 p-3 rounded-lg border border-slate-700 backdrop-blur-sm">
+        <div className="absolute top-4 right-4 flex flex-col gap-2 bg-[#000080] dark:bg-slate-900 text-white/80 p-3 rounded-lg border border-slate-700 backdrop-blur-sm">
            <div className="flex items-center gap-2 text-[10px] font-bold text-rose-400">
               <div className="w-3 h-0.5 bg-rose-500"></div> Potential (U)
            </div>

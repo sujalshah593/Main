@@ -48,7 +48,7 @@ export default function MatrixEquationsPage() {
             <ArrowLeft size={18} />
           </Link>
           <div>
-            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
+            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-black dark:text-white tracking-tight flex items-center gap-3">
               <Sigma className="text-pink-500" size={28} />
               Matrix & Equations Lab
             </h1>

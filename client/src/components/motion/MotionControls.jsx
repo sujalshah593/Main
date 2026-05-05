@@ -8,7 +8,7 @@ export default function MotionControls({
   isPlaying 
 }) {
   return (
-    <div className="bg-slate-800 p-4 rounded-xl border border-slate-700 flex flex-col gap-4">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700 flex flex-col gap-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <h3 className="text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-wider flex items-center gap-2">
@@ -16,7 +16,7 @@ export default function MotionControls({
           </h3>
           
           <div className="space-y-3">
-            <div className="bg-slate-900 p-3 rounded-lg border border-slate-600">
+            <div className="bg-[#000080] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-600">
               <div className="flex justify-between items-center mb-1">
                 <label className="text-[11px] text-slate-400 font-semibold">Initial Vel (u)</label>
                 <span className="text-[10px] font-mono text-sky-400 bg-black/40 px-1.5 py-0.5 rounded">{initialVelocity} m/s</span>
@@ -33,7 +33,7 @@ export default function MotionControls({
               />
             </div>
 
-            <div className="bg-slate-900 p-3 rounded-lg border border-slate-600">
+            <div className="bg-[#000080] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-600">
               <div className="flex justify-between items-center mb-1">
                 <label className="text-[11px] text-slate-400 font-semibold">Accel (a)</label>
                 <span className="text-[10px] font-mono text-emerald-400 bg-black/40 px-1.5 py-0.5 rounded">{acceleration} m/s²</span>
@@ -57,7 +57,7 @@ export default function MotionControls({
             <Zap size={12} className="text-amber-400" /> Errors
           </h3>
           
-          <label className={`flex items-start gap-2 p-2 rounded-lg border cursor-pointer transition-colors h-full ${isNoiseEnabled ? 'bg-amber-500/5 border-amber-500/20' : 'bg-slate-900 border-slate-700 hover:border-slate-500'}`}>
+          <label className={`flex items-start gap-2 p-2 rounded-lg border cursor-pointer transition-colors h-full ${isNoiseEnabled ? 'bg-amber-500/5 border-amber-500/20' : 'bg-[#000080] dark:bg-slate-900 text-white border-slate-700 hover:border-slate-500'}`}>
             <div className="relative flex items-center mt-0.5 scale-75">
               <input 
                 type="checkbox" 

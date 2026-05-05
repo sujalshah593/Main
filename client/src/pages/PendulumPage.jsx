@@ -92,7 +92,7 @@ export default function PendulumPage({ mode = 'motion' }) {
             <ArrowLeft size={18} />
           </Link>
           <div>
-            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
+            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-black dark:text-white tracking-tight flex items-center gap-3">
               <Clock className="text-emerald-500" size={28} />
               {pageTitle}
             </h1>
@@ -105,7 +105,7 @@ export default function PendulumPage({ mode = 'motion' }) {
         <div className="flex items-center gap-3">
           <button 
             onClick={resetExperiment}
-            className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors border border-slate-700"
+            className="flex items-center gap-2 px-4 py-2 bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white hover:bg-slate-700 text-white dark:text-slate-300 rounded-lg transition-colors border border-slate-700/50"
           >
             <RefreshCw size={16} /> Reset
           </button>
@@ -124,7 +124,7 @@ export default function PendulumPage({ mode = 'motion' }) {
         
         {/* Left Column (Simulation & Controls) */}
         <div className="lg:col-span-4 flex flex-col gap-6">
-          <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
+          <div className="bg-[#000080] dark:bg-[#000080] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700/50 text-white">
             <PendulumSimulation 
               length={length}
               isDampingEnabled={isDampingEnabled}

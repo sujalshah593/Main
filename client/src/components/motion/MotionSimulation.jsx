@@ -141,7 +141,7 @@ export default function MotionSimulation({
   }, [initialVelocity, acceleration]);
 
   return (
-    <div className="bg-slate-800 p-3 rounded-xl border border-slate-700 flex flex-col items-center">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-3 rounded-xl border border-slate-700 flex flex-col items-center">
       <h3 className="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-wider w-full text-left">Linear Motion Track</h3>
       <div className="w-full overflow-x-auto custom-scrollbar">
         <div className="relative bg-[#0f172a] rounded-lg border border-slate-600 shadow-inner min-w-[800px]">

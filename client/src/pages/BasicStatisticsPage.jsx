@@ -56,7 +56,7 @@ export default function BasicStatisticsPage() {
             <ArrowLeft size={18} />
           </Link>
           <div>
-            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
+            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-black dark:text-white tracking-tight flex items-center gap-3">
               <Binary className="text-sky-500" size={28} />
               Basic Statistics Lab
             </h1>

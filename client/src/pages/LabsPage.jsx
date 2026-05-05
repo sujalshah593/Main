@@ -20,7 +20,7 @@ export default function LabsPage() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h1 className="font-display text-4xl font-extrabold text-white tracking-tight">Interactive Labs</h1>
+        <h1 className="font-display text-4xl font-extrabold text-black dark:text-white tracking-tight">Interactive Labs</h1>
         <p className="mt-4 text-[16px] leading-relaxed text-lab-muted max-w-2xl">
           Our experiments are now organized by semester for a better learning experience. 
           Please visit the <Link to="/semester/sem-1/practical" className="text-lab-accent3 hover:underline">Practical Labs</Link> portal to explore interactive simulations.

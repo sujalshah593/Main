@@ -39,7 +39,7 @@ export default function LimitsContinuityPage() {
             <ArrowLeft size={18} />
           </Link>
           <div>
-            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
+            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-black dark:text-white tracking-tight flex items-center gap-3">
               <GitMerge className="text-lab-accent2" size={28} />
               Limits & Continuity
             </h1>

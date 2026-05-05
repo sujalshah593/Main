@@ -38,7 +38,7 @@ export default function VernierCaliperPage() {
             <ArrowLeft size={18} />
           </Link>
           <div>
-            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
+            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-black dark:text-white tracking-tight flex items-center gap-3">
               <Beaker className="text-lab-accent" size={28} />
               Vernier Caliper Practical
             </h1>

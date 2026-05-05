@@ -9,13 +9,13 @@ export default function PendulumCalculations({ trials, oscillationsN }) {
   const latestTrial = trials[trials.length - 1];
 
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 h-full flex flex-col">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
       <h3 className="text-sm font-bold text-slate-300 mb-4 uppercase tracking-wider flex items-center gap-2">
         <Calculator size={16} className="text-emerald-400" /> Latest Trial Calculations
       </h3>
       
       <div className="space-y-4">
-        <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+        <div className="bg-[#000080] dark:bg-slate-900 text-white p-4 rounded-lg border border-slate-700">
           <div className="text-xs font-semibold text-slate-400 mb-1">Time Period (T)</div>
           <div className="text-sm text-slate-300 font-mono">
             T = t / n <br/>
@@ -24,7 +24,7 @@ export default function PendulumCalculations({ trials, oscillationsN }) {
           </div>
         </div>
 
-        <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+        <div className="bg-[#000080] dark:bg-slate-900 text-white p-4 rounded-lg border border-slate-700">
           <div className="text-xs font-semibold text-slate-400 mb-1">Square of Time Period (T²)</div>
           <div className="text-sm text-slate-300 font-mono">
             T² = ({latestTrial.timePeriod.toFixed(3)})² <br/>
@@ -32,7 +32,7 @@ export default function PendulumCalculations({ trials, oscillationsN }) {
           </div>
         </div>
 
-        <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+        <div className="bg-[#000080] dark:bg-slate-900 text-white p-4 rounded-lg border border-slate-700">
           <div className="text-xs font-semibold text-slate-400 mb-1">Experimental Gravity (g)</div>
           <div className="text-sm text-slate-300 font-mono">
             g = 4π²L / T² <br/>

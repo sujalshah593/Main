@@ -114,7 +114,7 @@ export default function ErrorsAndSigFigPage() {
             <ArrowLeft size={18} />
           </Link>
           <div>
-            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
+            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-black dark:text-white tracking-tight flex items-center gap-3">
               <Beaker className="text-rose-500" size={28} />
               Errors & Significant Figures
             </h1>
@@ -131,7 +131,7 @@ export default function ErrorsAndSigFigPage() {
               setInstrumentId(e.target.value);
               setTrials([]);
             }}
-            className="bg-slate-800 border border-slate-700 text-white text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block p-2.5"
+            className="bg-[#000080] dark:bg-slate-800 text-white border border-slate-700 text-white text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block p-2.5"
           >
             {INSTRUMENTS.map(i => (
               <option key={i.id} value={i.id}>{i.name}</option>
@@ -139,7 +139,7 @@ export default function ErrorsAndSigFigPage() {
           </select>
           <button 
             onClick={resetExperiment}
-            className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors border border-slate-700"
+            className="flex items-center gap-2 px-4 py-2 bg-[#000080] dark:bg-slate-800 text-white hover:bg-slate-700 text-slate-300 rounded-lg transition-colors border border-slate-700"
           >
             <RefreshCw size={16} /> Reset
           </button>
@@ -188,7 +188,7 @@ export default function ErrorsAndSigFigPage() {
           <SigFigModule />
           
           {/* Simple Chart / Visualization placeholder */}
-          <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 flex-1">
+          <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 flex-1">
             <h3 className="text-lg font-bold text-slate-300 mb-4">Trial Distribution</h3>
             {trials.length > 0 ? (
               <div className="h-48 flex items-end gap-2 border-b border-l border-slate-600 pb-2 pl-2">

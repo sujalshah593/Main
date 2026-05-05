@@ -10,7 +10,7 @@ const linkClass = (isActive, isOpen) =>
     isOpen ? 'px-4 py-3 gap-3 text-[14px]' : 'p-3 justify-center text-[14px]',
     isActive
       ? 'bg-amber-100 text-amber-700 shadow-sm'
-      : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100',
+      : 'text-black hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100',
   ].join(' ');
 
 export default function Sidebar() {

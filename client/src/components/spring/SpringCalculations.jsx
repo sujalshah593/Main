@@ -12,15 +12,15 @@ export default function SpringCalculations({ dataPoints, theoreticalK }) {
   const isVerified = percentError < 10; // Within 10%
 
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 h-full flex flex-col gap-6">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col gap-6">
       <h3 className="text-sm font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
         <Calculator size={16} className="text-purple-400" /> Calculation Engine
       </h3>
       
       <div className="space-y-4">
-        <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+        <div className="bg-[#000080] dark:bg-slate-900 text-white p-4 rounded-lg border border-slate-700">
           <div className="text-[10px] text-slate-500 uppercase font-bold mb-2">Governing Equation</div>
-          <div className="text-xl font-mono text-white text-center py-2 bg-slate-800 rounded">
+          <div className="text-xl font-mono text-white text-center py-2 bg-[#000080] dark:bg-slate-800 text-white rounded">
             F = k · x
           </div>
           <div className="text-[10px] text-slate-400 mt-2 text-center">
@@ -28,7 +28,7 @@ export default function SpringCalculations({ dataPoints, theoreticalK }) {
           </div>
         </div>
 
-        <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+        <div className="bg-[#000080] dark:bg-slate-900 text-white p-4 rounded-lg border border-slate-700">
            <div className="flex items-center justify-between mb-3">
               <span className="text-xs font-semibold text-slate-400">Experimental k (Average)</span>
               {isVerified ? <CheckCircle2 size={16} className="text-emerald-500" /> : <XCircle size={16} className="text-rose-500" />}

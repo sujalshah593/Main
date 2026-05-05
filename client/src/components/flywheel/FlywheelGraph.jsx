@@ -4,7 +4,7 @@ import { LineChart } from 'lucide-react';
 export default function FlywheelGraph({ trials }) {
   if (trials.length === 0) {
     return (
-      <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 flex flex-col items-center justify-center min-h-[300px]">
+      <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 flex flex-col items-center justify-center min-h-[300px]">
         <LineChart size={48} className="text-slate-600 mb-4" />
         <p className="text-slate-400">Record trials to see the ω vs t graph.</p>
       </div>
@@ -30,12 +30,12 @@ export default function FlywheelGraph({ trials }) {
   const p3 = { x: getX(trial.t1 + trial.t2), y: getY(0) };
 
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 h-full flex flex-col">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
       <h3 className="text-lg font-bold text-slate-300 mb-4 flex items-center gap-2">
         <LineChart size={20} className="text-lab-accent3" /> Angular Velocity vs Time
       </h3>
       
-      <div className="flex-1 flex items-center justify-center bg-slate-900 rounded-lg border border-slate-600 p-4">
+      <div className="flex-1 flex items-center justify-center bg-[#000080] dark:bg-slate-900 text-white rounded-lg border border-slate-600 p-4">
         <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-full max-h-[250px] overflow-visible text-slate-400 text-[10px]">
           {/* Axes */}
           <line x1={paddingX} y1={paddingY} x2={paddingX} y2={height - paddingY} stroke="currentColor" strokeWidth="1" />
@@ -67,11 +67,11 @@ export default function FlywheelGraph({ trials }) {
       </div>
 
       <div className="mt-4 space-y-2">
-        <div className="flex justify-between text-xs p-2 bg-slate-900 rounded border border-slate-700">
+        <div className="flex justify-between text-xs p-2 bg-[#000080] dark:bg-slate-900 text-white rounded border border-slate-700">
           <span className="text-slate-400 font-semibold uppercase tracking-wider">Max Velocity</span>
           <span className="text-emerald-400 font-mono">{trial.omega.toFixed(2)} rad/s</span>
         </div>
-        <div className="flex justify-between text-xs p-2 bg-slate-900 rounded border border-slate-700">
+        <div className="flex justify-between text-xs p-2 bg-[#000080] dark:bg-slate-900 text-white rounded border border-slate-700">
           <span className="text-slate-400 font-semibold uppercase tracking-wider">Avg. Acceleration</span>
           <span className="text-amber-400 font-mono">{(trial.omega / trial.t1).toFixed(2)} rad/s²</span>
         </div>

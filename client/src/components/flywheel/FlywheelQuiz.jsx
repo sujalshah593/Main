@@ -65,7 +65,7 @@ export default function FlywheelQuiz() {
 
   if (isFinished) {
     return (
-      <div className="bg-slate-800 p-8 rounded-xl border border-slate-700 text-center">
+      <div className="bg-[#000080] dark:bg-slate-800 text-white p-8 rounded-xl border border-slate-700 text-center">
         <CheckCircle2 size={48} className="mx-auto text-emerald-500 mb-4" />
         <h3 className="text-xl font-bold text-white mb-2">Quiz Completed!</h3>
         <p className="text-slate-400 mb-6">Your score: <span className="text-white font-bold">{score} / {QUESTIONS.length}</span></p>
@@ -88,7 +88,7 @@ export default function FlywheelQuiz() {
   const q = QUESTIONS[currentIdx];
 
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700">
+    <div className="bg-[#000080] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700">
       <div className="flex items-center gap-3 mb-6">
         <HelpCircle className="text-lab-accent3" size={20} />
         <h3 className="font-display font-bold text-white uppercase tracking-wider text-sm">Concept Check</h3>
@@ -101,11 +101,11 @@ export default function FlywheelQuiz() {
         {q.options.map((opt, idx) => {
           let styles = "w-full text-left p-4 rounded-lg border text-sm transition-all ";
           if (!showFeedback) {
-            styles += "bg-slate-900/50 border-slate-700 text-slate-300 hover:border-slate-500 hover:bg-slate-900";
+            styles += "bg-[#000080] dark:bg-slate-900 text-white/50 border-slate-700 text-slate-300 hover:border-slate-500 hover:bg-[#000080] dark:bg-slate-900 text-white";
           } else {
             if (idx === q.correct) styles += "bg-emerald-500/10 border-emerald-500 text-emerald-400";
             else if (idx === selected) styles += "bg-red-500/10 border-red-500 text-red-400";
-            else styles += "bg-slate-900/50 border-slate-700 text-slate-500 opacity-50";
+            else styles += "bg-[#000080] dark:bg-slate-900 text-white/50 border-slate-700 text-slate-500 opacity-50";
           }
 
           return (

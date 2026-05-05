@@ -47,7 +47,7 @@ export default function VectorsMatricesPage() {
             <ArrowLeft size={18} />
           </Link>
           <div>
-            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
+            <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-black dark:text-white tracking-tight flex items-center gap-3">
               <Grid3X3 className="text-emerald-400" size={28} />
               Vectors & Matrices
             </h1>

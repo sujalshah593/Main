@@ -57,7 +57,7 @@ export default function PracticalFeedback({ experimentId, experimentTitle }) {
       <motion.div 
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="rounded-3xl border border-emerald-500/30 bg-slate-900 p-8 text-center shadow-2xl"
+        className="rounded-3xl border border-emerald-500/30 bg-[#000080] dark:bg-slate-900 text-white p-8 text-center shadow-2xl"
       >
         <div className="flex justify-center mb-4">
           <div className="p-3 rounded-full bg-emerald-500/20 text-emerald-400">
@@ -77,7 +77,7 @@ export default function PracticalFeedback({ experimentId, experimentTitle }) {
   }
 
   return (
-    <section className="mt-12 rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-2xl">
+    <section className="mt-12 rounded-3xl border border-slate-700 bg-[#000080] dark:bg-slate-900 text-white p-8 shadow-2xl">
       <div className="flex items-center gap-3 mb-6">
         <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-500">
           <MessageSquareText size={22} />
@@ -124,7 +124,7 @@ export default function PracticalFeedback({ experimentId, experimentTitle }) {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="What did you like? What could be improved?"
-            className="w-full h-32 bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition-colors resize-none placeholder:text-slate-600"
+            className="w-full h-32 bg-[#000080] dark:bg-slate-800 text-white border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition-colors resize-none placeholder:text-slate-600"
           />
         </div>
 
