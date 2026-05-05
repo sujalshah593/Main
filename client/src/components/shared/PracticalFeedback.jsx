@@ -57,7 +57,7 @@ export default function PracticalFeedback({ experimentId, experimentTitle }) {
       <motion.div 
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="glass-panel p-8 text-center border-emerald-500/30 bg-emerald-500/5"
+        className="rounded-3xl border border-emerald-500/30 bg-slate-900 p-8 text-center shadow-2xl"
       >
         <div className="flex justify-center mb-4">
           <div className="p-3 rounded-full bg-emerald-500/20 text-emerald-400">
@@ -77,14 +77,14 @@ export default function PracticalFeedback({ experimentId, experimentTitle }) {
   }
 
   return (
-    <section className="mt-12 glass-panel p-8 border-white/5 bg-white/[0.02]">
+    <section className="mt-12 rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-2xl">
       <div className="flex items-center gap-3 mb-6">
         <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-500">
           <MessageSquareText size={22} />
         </div>
         <div>
           <h2 className="text-xl font-bold text-white">Experiment Feedback</h2>
-          <p className="text-sm text-lab-muted">Help us improve the virtual lab experience.</p>
+          <p className="text-sm text-slate-400 font-medium">Help us improve the virtual lab experience.</p>
         </div>
       </div>
 
@@ -108,7 +108,7 @@ export default function PracticalFeedback({ experimentId, experimentTitle }) {
                   className={`${
                     star <= (hoveredRating || rating)
                       ? 'fill-amber-500 text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.4)]'
-                      : 'text-gray-600'
+                      : 'text-slate-700'
                   }`}
                 />
               </button>
@@ -124,7 +124,7 @@ export default function PracticalFeedback({ experimentId, experimentTitle }) {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="What did you like? What could be improved?"
-            className="w-full h-32 bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition-colors resize-none placeholder:text-gray-600"
+            className="w-full h-32 bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition-colors resize-none placeholder:text-slate-600"
           />
         </div>
 

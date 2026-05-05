@@ -28,27 +28,27 @@ export default function PracticalPage() {
         animate={{ opacity: 1, x: 0 }}
         className="flex flex-col gap-6"
       >
-        <div className="glass-card p-6 border-t-2 border-t-lab-accent/50">
+        <div className="glass-card p-6 border-t-2 border-t-lab-primary">
           <div className="flex items-center gap-3 mb-2">
-            <FlaskConical size={20} className="text-lab-accent" />
-            <h1 className="font-display text-xl font-bold text-white">Practical - {semesterId.toUpperCase()}</h1>
+            <FlaskConical size={20} className="text-lab-primary" />
+            <h1 className="font-display text-xl font-black text-black dark:text-white tracking-tight">Practical - {semesterId.toUpperCase()}</h1>
           </div>
-          <p className="text-sm text-lab-muted">Select a practical subject.</p>
+          <p className="text-sm text-slate-600 dark:text-slate-400 font-bold">Select a practical subject below.</p>
 
           <div className="mt-6 flex flex-col gap-3">
-            <div className="text-xs font-bold uppercase tracking-wider text-lab-muted mb-1">Subjects</div>
+            <div className="text-[11px] font-black uppercase tracking-widest text-slate-700 dark:text-slate-500 mb-1">Subjects</div>
             {subjects.map((subject, index) => (
               <button
                 type="button"
                 key={subject.subject}
                 onClick={() => setSubjectIndex(index)}
-                className={`w-full rounded-xl border px-4 py-3 text-left transition-all ${
+                className={`w-full rounded-xl border px-4 py-3 text-left transition-all duration-200 ${
                   subjectIndex === index
-                    ? 'border-lab-accent/40 bg-lab-accent/10 text-white shadow-[0_4px_20px_rgba(45,212,191,0.1)]'
-                    : 'border-white/5 bg-white/5 text-lab-muted hover:border-white/20 hover:text-white'
+                    ? 'border-lab-primary/30 bg-lab-primary/10 text-lab-primary shadow-sm'
+                    : 'border-transparent bg-slate-50 text-slate-500 hover:bg-slate-100 hover:text-slate-900'
                 }`}
               >
-                <p className="text-sm font-semibold">{subject.subject}</p>
+                <p className="text-sm font-bold">{subject.subject}</p>
               </button>
             ))}
           </div>
@@ -59,7 +59,7 @@ export default function PracticalPage() {
         initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.1 }}
-        className="glass-panel p-8"
+        className="lab-page-container"
       >
         <AnimatePresence mode="wait">
           {selectedSubject && (
@@ -70,19 +70,19 @@ export default function PracticalPage() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
             >
-              <h2 className="font-display text-3xl font-bold text-white tracking-tight">{selectedSubject.subject}</h2>
-              <p className="mt-3 text-sm font-medium uppercase tracking-wider text-lab-muted">
+              <h2 className="font-display text-5xl font-black text-black dark:text-white tracking-tight">{selectedSubject.subject}</h2>
+              <p className="mt-4 text-[13px] font-black uppercase tracking-widest text-slate-700 dark:text-slate-400">
                 Credits {selectedSubject.meta?.credits} &bull; Contact Hours {selectedSubject.meta?.hours} &bull;{' '}
-                <span className="text-lab-accent2">{selectedSubject.meta?.type}</span>
+                <span className="text-amber-700 dark:text-amber-500">{selectedSubject.meta?.type}</span>
               </p>
 
               <div className="mt-8 space-y-6">
                 {selectedSubject.objectives?.length > 0 && (
-                  <div className="rounded-2xl border border-white/5 bg-[#0f172a]/40 p-6 backdrop-blur-md">
-                    <h3 className="flex items-center gap-2 text-sm font-bold text-lab-accent3 uppercase tracking-wider mb-3">
+                  <div className="rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-2xl">
+                    <h3 className="flex items-center gap-2 text-sm font-bold text-amber-400 uppercase tracking-wider mb-4">
                       <Target size={16} /> Course Objectives
                     </h3>
-                    <ul className="list-disc space-y-2 pl-6 text-[14px] text-lab-muted">
+                    <ul className="list-disc space-y-3 pl-6 text-[15px] text-slate-200 font-medium">
                       {selectedSubject.objectives.map((item) => (
                         <li key={item}>{item}</li>
                       ))}
@@ -90,9 +90,9 @@ export default function PracticalPage() {
                   </div>
                 )}
 
-                <div className="rounded-2xl border border-lab-accent/10 bg-lab-accent/5 p-6 backdrop-blur-md">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="flex items-center gap-2 text-sm font-bold text-lab-accent uppercase tracking-wider">
+                <div className="rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-2xl">
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="flex items-center gap-2 text-sm font-bold text-sky-400 uppercase tracking-wider">
                       <FlaskConical size={16} /> List of Practical Experiments
                     </h3>
                     {selectedSubject.defaultPdf && (
@@ -107,13 +107,13 @@ export default function PracticalPage() {
                       </a>
                     )}
                   </div>
-                  <ol className="list-decimal space-y-2 pl-6 text-[14px] text-lab-muted">
+                  <ol className="list-decimal space-y-3 pl-6 text-[15px] text-slate-200 font-medium">
                     {selectedSubject.experiments.map((item, i) => (
                       <li key={i}>
                         {typeof item === 'string' ? (
                           item
                         ) : (
-                          <Link to={item.path} className="text-lab-accent hover:text-lab-accent/80 hover:underline transition-all">
+                          <Link to={item.path} className="text-sky-400 hover:text-sky-300 hover:underline transition-all font-bold">
                             {item.title}
                           </Link>
                         )}
@@ -123,11 +123,11 @@ export default function PracticalPage() {
                 </div>
 
                 {selectedSubject.outcomes?.length > 0 && (
-                  <div className="rounded-2xl border border-white/5 bg-[#0f172a]/40 p-6 backdrop-blur-md">
-                    <h3 className="flex items-center gap-2 text-sm font-bold text-lab-accent2 uppercase tracking-wider mb-3">
+                  <div className="rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-2xl">
+                    <h3 className="flex items-center gap-2 text-sm font-bold text-violet-400 uppercase tracking-wider mb-4">
                       <Award size={16} /> Course Outcomes
                     </h3>
-                    <ul className="list-disc space-y-2 pl-6 text-[14px] text-lab-muted">
+                    <ul className="list-disc space-y-3 pl-6 text-[15px] text-slate-200 font-medium">
                       {selectedSubject.outcomes.map((item) => (
                         <li key={item}>{item}</li>
                       ))}
@@ -139,9 +139,9 @@ export default function PracticalPage() {
               <div className="mt-8">
                 <Link
                   to="/python-editor"
-                  className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-lab-accent3 to-lab-accent3/80 px-6 py-3 text-sm font-bold text-[#040b16] transition-transform hover:scale-105 hover:shadow-[0_0_20px_rgba(56,189,248,0.4)]"
+                  className="btn-primary inline-flex items-center gap-3 px-8 py-4"
                 >
-                  <CodeSquare size={18} />
+                  <CodeSquare size={20} />
                   Open Python Editor
                 </Link>
               </div>

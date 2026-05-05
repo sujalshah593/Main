@@ -1,18 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,jsx}'],
+  content: ['./index.html', './src/**/*.{js,jsx,css}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        lab: {
-          bg: '#040b16',
-          panel: 'rgba(15, 23, 42, 0.65)',
-          panelBorder: 'rgba(56, 189, 248, 0.15)',
-          accent: '#2dd4bf',
-          accent2: '#c4b5fd',
-          accent3: '#38bdf8',
-          muted: '#8b9bb4',
-        },
+        'lab-bg': 'rgb(var(--lab-bg) / <alpha-value>)',
+        'lab-text': 'rgb(var(--lab-text) / <alpha-value>)',
+        'lab-muted': 'rgb(var(--lab-muted) / <alpha-value>)',
+        'lab-primary': 'rgb(var(--lab-primary) / <alpha-value>)',
+        'lab-secondary': 'rgb(var(--lab-secondary) / <alpha-value>)',
+        'lab-tertiary': 'rgb(var(--lab-tertiary) / <alpha-value>)',
+        'lab-accent': 'rgb(var(--lab-secondary) / <alpha-value>)',
+        'lab-accent2': 'rgb(var(--lab-tertiary) / <alpha-value>)',
+        'lab-accent3': 'rgb(var(--lab-primary) / <alpha-value>)',
+        'lab-panel': 'rgb(var(--lab-panel) / <alpha-value>)',
+        'lab-panelBorder': 'rgb(var(--lab-panel-border) / <alpha-value>)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

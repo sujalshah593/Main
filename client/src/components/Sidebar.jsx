@@ -2,51 +2,56 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LayoutDashboard, BookOpen, TerminalSquare, FlaskConical, PanelLeftClose, PanelLeftOpen } from 'lucide-react';
+import ThemeToggle from './ThemeToggle.jsx';
 
 const linkClass = (isActive, isOpen) =>
   [
-    'group flex items-center rounded-xl font-medium transition-all duration-300',
+    'group flex items-center rounded-xl font-bold transition-all duration-200',
     isOpen ? 'px-4 py-3 gap-3 text-[14px]' : 'p-3 justify-center text-[14px]',
     isActive
-      ? 'bg-gradient-to-r from-lab-accent3/20 to-transparent text-lab-accent3 border-l-2 border-lab-accent3'
-      : 'text-lab-muted border-l-2 border-transparent hover:bg-white/5 hover:text-white',
+      ? 'bg-amber-100 text-amber-700 shadow-sm'
+      : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100',
   ].join(' ');
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <aside className={`hidden shrink-0 border-r border-lab-panelBorder bg-lab-panel/40 backdrop-blur-3xl md:flex flex-col shadow-2xl relative z-20 transition-all duration-300 ${isOpen ? 'w-72' : 'w-[88px]'}`}>
+    <aside className={`hidden shrink-0 border-r border-lab-panelBorder bg-white dark:bg-slate-900 md:flex flex-col relative z-20 transition-all duration-300 ${isOpen ? 'w-72 shadow-lg' : 'w-[88px]'}`}>
       <div className="flex h-full flex-col px-4 py-8">
 
         {/* Header */}
-        <div className={`flex items-start mb-10 ${isOpen ? 'justify-between px-2' : 'justify-center'} overflow-hidden`}>
-          <AnimatePresence>
-            {isOpen && (
-              <motion.div
-                initial={{ opacity: 0, width: 0 }}
-                animate={{ opacity: 1, width: 'auto' }}
-                exit={{ opacity: 0, width: 0 }}
-                className="flex flex-col overflow-hidden whitespace-nowrap"
-              >
-                <div className="flex items-center gap-3 mb-1">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-lab-accent3/20 text-lab-accent3 shrink-0">
-                    <FlaskConical size={18} strokeWidth={2.5} />
-                  </div>
-                  <div className="text-xl font-display font-bold text-white tracking-tight">Virtual Lab</div>
-                </div>
-                <p className="mt-1 text-xs text-lab-muted ml-11">Quantum & Physics Portal</p>
-              </motion.div>
-            )}
-          </AnimatePresence>
+        <div className={`flex items-start mb-10 ${isOpen ? 'justify-between px-2' : 'flex-col items-center gap-6'} overflow-hidden`}>
+          <div className="flex flex-col items-center">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-lab-primary to-lab-secondary text-white shadow-lg shadow-lab-primary/20 shrink-0">
+              <FlaskConical size={20} strokeWidth={2.5} />
+            </div>
+            
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="flex flex-col items-start mt-3 overflow-hidden whitespace-nowrap"
+                >
+                  <div className="text-xl font-display font-black text-slate-900 dark:text-white tracking-tight">Virtual Lab</div>
+                  <p className="text-xs font-bold text-slate-500 dark:text-slate-400">Scientific Portal</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-lab-muted hover:text-white transition-colors p-2 rounded-lg hover:bg-white/5 shrink-0"
-            title={isOpen ? "Collapse Sidebar" : "Expand Sidebar"}
-          >
-            {isOpen ? <PanelLeftClose size={20} /> : <PanelLeftOpen size={20} />}
-          </button>
+          <div className="flex gap-2 shrink-0">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-lab-muted hover:text-lab-primary transition-colors p-2 rounded-xl hover:bg-lab-primary/5 shrink-0"
+              title={isOpen ? "Collapse Sidebar" : "Expand Sidebar"}
+            >
+              {isOpen ? <PanelLeftClose size={20} /> : <PanelLeftOpen size={20} />}
+            </button>
+          </div>
         </div>
 
         {/* Nav Links */}
@@ -55,7 +60,7 @@ export default function Sidebar() {
             <LayoutDashboard size={20} className="shrink-0" />
             <AnimatePresence>
               {isOpen && (
-                <motion.span initial={{ opacity: 0, width: 0 }} animate={{ opacity: 1, width: 'auto' }} exit={{ opacity: 0, width: 0 }} className="overflow-hidden whitespace-nowrap">
+                <motion.span initial={{ opacity: 0, width: 0 }} animate={{ opacity: 1, width: 'auto' }} exit={{ opacity: 0, width: 0 }} className="overflow-hidden whitespace-nowrap font-bold">
                   Quantum World
                 </motion.span>
               )}
@@ -97,13 +102,17 @@ export default function Sidebar() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0, marginTop: 0, padding: 0, border: 0 }}
-              className="mt-8 rounded-xl bg-gradient-to-br from-lab-accent/10 to-lab-accent2/5 p-4 border border-lab-accent/10 overflow-hidden"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="mt-auto mb-6 p-4 rounded-2xl bg-gradient-to-br from-lab-primary/10 to-lab-secondary/5 border border-lab-primary/10"
             >
-              <p className="text-[12px] leading-relaxed text-lab-muted whitespace-normal min-w-[200px]">
-                <strong className="text-white">Tip:</strong> Choose your semester to unlock interactive simulators, practical manuals, and the integrated code editor.
+              <div className="flex items-center gap-2 mb-2 text-lab-primary">
+                <div className="h-1.5 w-1.5 rounded-full bg-lab-primary animate-pulse" />
+                <span className="text-[11px] font-bold uppercase tracking-wider">System Ready</span>
+              </div>
+              <p className="text-[12px] leading-relaxed text-lab-muted">
+                Explore interactive simulators and the integrated code editor.
               </p>
             </motion.div>
           )}

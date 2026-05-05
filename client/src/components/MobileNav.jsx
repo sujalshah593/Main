@@ -3,19 +3,19 @@ import { FlaskConical } from 'lucide-react';
 
 const pill = ({ isActive }) =>
   [
-    'rounded-full px-4 py-1.5 text-xs font-medium transition-all duration-300',
+    'rounded-full px-4 py-1.5 text-xs font-bold transition-all duration-200 border',
     isActive 
-      ? 'bg-lab-accent3/20 text-lab-accent3 ring-1 ring-lab-accent3/40' 
-      : 'text-lab-muted hover:bg-white/10 hover:text-white',
+      ? 'bg-sky-100 text-sky-700 border-sky-300 shadow-sm' 
+      : 'text-slate-500 border-transparent hover:bg-slate-100 hover:text-slate-900',
   ].join(' ');
 
 export default function MobileNav() {
   return (
-    <div className="sticky top-0 z-40 border-b border-lab-panelBorder bg-lab-panel/80 backdrop-blur-3xl md:hidden shadow-lg">
+    <div className="sticky top-0 z-40 border-b border-lab-panelBorder bg-lab-panel backdrop-blur-3xl md:hidden shadow-lg">
       <div className="flex flex-col gap-3 px-4 py-3">
         <div className="flex items-center gap-2">
-          <FlaskConical size={16} className="text-lab-accent3" />
-          <div className="font-display text-sm font-bold tracking-tight text-white">Virtual Lab</div>
+          <FlaskConical size={18} className="text-lab-primary" />
+          <div className="font-display text-base font-bold tracking-tight text-lab-text">Virtual Lab</div>
         </div>
         <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
           <NavLink to="/" className={pill} end>

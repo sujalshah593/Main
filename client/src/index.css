@@ -5,75 +5,397 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* ─── Light Mode: Vibrant SaaS Aesthetic ─── */
+    --lab-bg: 248 250 252;
+    /* Clean Slate 50 */
+    --lab-text: 0 0 0;
+    /* Pure Black */
+    --lab-muted: 0 0 0;
+    /* Slate 600 */
+
+    /* Accent Colors (Vibrant Amber & Violet) */
+    --lab-primary: 194 87 10;
+    /* Amber 700 */
+    --lab-secondary: 147 51 234;
+    /* Violet 600 */
+    --lab-tertiary: 224 48 112;
+    /* Rose 600 */
+
+    /* Panels & Borders */
+    --lab-panel: 255 255 255;
+    --lab-panel-border: 226 232 240;
+    /* Slate 200 */
+
+    /* Surface Layers */
+    --lab-surface-1: rgba(255, 255, 255, 1);
+    --lab-surface-2: rgba(241, 245, 249, 1);
+    --lab-surface-3: rgba(224, 242, 254, 1);
+
+    /* Shadows & Effects */
+    --lab-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --lab-shadow-md: 0 12px 30px rgba(194, 87, 10, 0.06);
+    --lab-shadow-lg: 0 20px 50px rgba(194, 87, 10, 0.12);
+    --lab-shadow-glow: 0 0 40px rgba(194, 87, 10, 0.1);
+  }
+
+  .dark {
+    /* ─── Dark Mode: Cool, Cinematic, Atmospheric ─── */
+
+    --lab-bg: 4 11 22;
+    --lab-text: 241 245 249;
+    --lab-muted: 139 155 180;
+    --lab-primary: 56 189 248;
+    --lab-secondary: 45 212 191;
+    --lab-tertiary: 196 181 253;
+    --lab-panel: 15 23 42;
+    --lab-panel-border: 56 189 248;
+
+    --lab-success: 34 197 94;
+    --lab-warning: 251 146 60;
+    --lab-danger: 248 113 113;
+    --lab-info: 96 165 250;
+
+    --lab-surface-1: rgba(15, 23, 42, 0.80);
+    --lab-surface-2: rgba(15, 23, 42, 0.50);
+    --lab-surface-3: rgba(15, 23, 42, 0.30);
+
+    --lab-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --lab-shadow-md: 0 8px 30px rgba(0, 0, 0, 0.4);
+    --lab-shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+    --lab-shadow-glow: 0 0 40px rgba(56, 189, 248, 0.15);
+  }
+
   html,
   body,
   #root {
     height: 100%;
-    @apply bg-lab-bg text-slate-100 font-body antialiased selection:bg-lab-accent3/30 selection:text-white;
+    background-color: rgb(var(--lab-bg));
+    color: rgb(var(--lab-text));
+    @apply font-body antialiased transition-colors duration-300;
   }
 }
 
 @layer utilities {
+
+  /* ─── Glass Panel ─── */
   .glass-panel {
-    @apply rounded-2xl border border-lab-panelBorder bg-lab-panel backdrop-blur-2xl shadow-2xl;
+    @apply rounded-2xl border border-lab-panelBorder bg-lab-panel;
+    box-shadow: var(--lab-shadow-md);
+    transition: all 0.2s ease;
   }
+
+  .dark .glass-panel {
+    @apply border-white/5 bg-slate-900/50 backdrop-blur-2xl;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  /* ─── Glass Card ─── */
   .glass-card {
-    @apply rounded-2xl border border-white/5 bg-white/[0.02] backdrop-blur-md transition-all hover:bg-white/[0.04] hover:border-white/10 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)];
+    @apply rounded-2xl border border-lab-panelBorder bg-white transition-all duration-200;
+    box-shadow: var(--lab-shadow-md);
   }
+
+  .glass-card:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--lab-shadow-lg);
+  }
+
+  .dark .glass-card {
+    @apply border-white/5 bg-white/5 backdrop-blur-md;
+    box-shadow: none;
+  }
+
+  .dark .glass-card:hover {
+    @apply border-white/10 bg-white/10;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  /* ─── Page Container (Vibrant SaaS) ─── */
+  .lab-page-container {
+    @apply rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl transition-all duration-300 text-black;
+  }
+
+  .dark .lab-page-container {
+    @apply border-slate-700 bg-slate-900 text-white shadow-none;
+  }
+
+  /* ─── Highlight Panel (Vibrant Gradient) ─── */
+  .highlight-panel {
+    @apply rounded-3xl transition-all duration-300;
+    border: 1px solid rgb(var(--lab-primary) / 0.1);
+    background: linear-gradient(135deg, rgba(194, 87, 10, 0.08), rgba(147, 51, 234, 0.05));
+    box-shadow: var(--lab-shadow-md);
+  }
+
+  .dark .highlight-panel {
+    @apply border-sky-500/20 bg-gradient-to-br from-sky-500/10 to-teal-500/5;
+  }
+
+  /* ─── Text Gradient: Amber → Violet ─── */
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg,
+        rgb(var(--lab-primary)),
+        rgb(var(--lab-secondary)));
   }
-  
+
+  /* Alt gradient: Violet → Rose */
+  .text-gradient-alt {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg,
+        rgb(var(--lab-secondary)),
+        rgb(var(--lab-tertiary)));
+  }
+
+  /* Full tricolor: Amber → Violet → Rose */
+  .text-gradient-tri {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg,
+        rgb(var(--lab-primary)) 0%,
+        rgb(var(--lab-secondary)) 50%,
+        rgb(var(--lab-tertiary)) 100%);
+  }
+
+  /* ─── Button Variants ─── */
+  .btn-primary {
+    background: linear-gradient(135deg,
+        rgb(var(--lab-primary)),
+        rgb(var(--lab-secondary)));
+    @apply text-white rounded-xl px-5 py-2.5 font-bold text-sm transition-all;
+    box-shadow: 0 4px 14px rgba(194, 87, 10, 0.3);
+  }
+
+  .btn-primary:hover {
+    @apply -translate-y-0.5;
+    box-shadow: 0 8px 20px rgba(194, 87, 10, 0.4);
+  }
+
+  .btn-primary:active {
+    @apply translate-y-0;
+  }
+
+  .btn-ghost {
+    @apply rounded-xl px-5 py-2.5 font-bold text-sm transition-all;
+    background: rgb(var(--lab-primary) / 0.05);
+    color: rgb(var(--lab-primary));
+    border: 1px solid rgb(var(--lab-primary) / 0.1);
+  }
+
+  .btn-ghost:hover {
+    background: rgb(var(--lab-primary) / 0.1);
+    border-color: rgb(var(--lab-primary) / 0.2);
+  }
+
+  /* ─── Badge / Tag Variants ─── */
+  .badge-primary {
+    @apply inline-flex items-center rounded-full text-[10px] font-bold uppercase tracking-wider px-3 py-1;
+    background: rgb(var(--lab-primary) / 0.1);
+    color: rgb(var(--lab-primary));
+    border: 1px solid rgb(var(--lab-primary) / 0.2);
+  }
+
+  .badge-secondary {
+    @apply inline-flex items-center rounded-full text-[10px] font-bold uppercase tracking-wider px-3 py-1;
+    background: rgb(var(--lab-secondary) / 0.1);
+    color: rgb(var(--lab-secondary));
+    border: 1px solid rgb(var(--lab-secondary) / 0.2);
+  }
+
+  .badge-tertiary {
+    @apply inline-flex items-center rounded-full text-[10px] font-bold uppercase tracking-wider px-3 py-1;
+    background: rgb(var(--lab-tertiary) / 0.1);
+    color: rgb(var(--lab-tertiary));
+    border: 1px solid rgb(var(--lab-tertiary) / 0.2);
+  }
+
+  /* ─── Input / Form ─── */
+  .input-warm {
+    @apply rounded-xl px-4 py-2.5 text-sm w-full transition-all outline-none;
+    background: rgb(var(--lab-panel) / 0.8);
+    border: 1px solid rgb(var(--lab-primary) / 0.15);
+    color: rgb(var(--lab-text));
+  }
+
+  .input-warm::placeholder {
+    color: rgb(var(--lab-muted));
+  }
+
+  .input-warm:focus {
+    background: rgb(var(--lab-panel) / 1.0);
+    border-color: rgb(var(--lab-primary) / 0.45);
+    box-shadow: 0 0 0 3px rgb(var(--lab-primary) / 0.1);
+  }
+
+  .dark .input-warm {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(56, 189, 248, 0.15);
+    color: rgb(var(--lab-text));
+  }
+
+  .dark .input-warm:focus {
+    border-color: rgba(56, 189, 248, 0.45);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.10);
+  }
+
+  /* ─── Scrollbar ─── */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
+
   ::-webkit-scrollbar-track {
     background: transparent;
   }
+
   ::-webkit-scrollbar-thumb {
-    @apply bg-slate-700/50 rounded-full hover:bg-slate-600/80;
+    background: rgba(194, 87, 10, 0.25);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(194, 87, 10, 0.40);
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.22);
   }
 }
 
-/* React Flow overrides */
+/* ─── React Flow overrides ─── */
 .react-flow__controls {
-  @apply !rounded-xl !border-slate-700/60 !bg-slate-900/80 !shadow-xl backdrop-blur-xl;
-}
-.react-flow__controls-button {
-  @apply !border-slate-700/60 !bg-transparent !fill-slate-300 hover:!bg-white/10 transition-colors;
+  @apply !rounded-xl !shadow-xl;
+  border-color: rgba(194, 87, 10, 0.15) !important;
+  background: rgba(255, 248, 240, 0.90) !important;
+  backdrop-filter: blur(16px);
 }
 
-/* Global Background Setup */
+.react-flow__controls-button {
+  border-color: rgba(194, 87, 10, 0.15) !important;
+  background: transparent !important;
+  fill: rgb(140, 88, 48) !important;
+  transition: background 0.15s;
+}
+
+.react-flow__controls-button:hover {
+  background: rgba(194, 87, 10, 0.10) !important;
+}
+
+.dark .react-flow__controls {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(15, 23, 42, 0.80) !important;
+}
+
+.dark .react-flow__controls-button {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  fill: rgb(139, 155, 180) !important;
+}
+
+.dark .react-flow__controls-button:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* ─── Global Background: Dot Grid ─── */
 .global-bg-dots {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image: radial-gradient(circle, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+  /* Light: warm amber dots */
+  background-image: radial-gradient(circle,
+      rgba(194, 87, 10, 0.07) 1px,
+      transparent 1px);
   background-size: 32px 32px;
 }
+
+.dark .global-bg-dots {
+  background-image: radial-gradient(circle,
+      rgba(56, 189, 248, 0.08) 1px,
+      transparent 1px);
+}
+
+/* ─── Global Background: Gradient Wash ─── */
+/*
+  Optional: Add this div BEHIND the dots for an extra depth layer.
+  <div class="global-bg-wash" />
+*/
+.global-bg-wash {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(ellipse 80% 60% at 20% 10%,
+      rgba(254, 235, 200, 0.55) 0%,
+      transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 90%,
+      rgba(233, 213, 255, 0.40) 0%,
+      transparent 60%);
+}
+
+.dark .global-bg-wash {
+  background: radial-gradient(ellipse 80% 60% at 20% 10%,
+      rgba(56, 189, 248, 0.05) 0%,
+      transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 90%,
+      rgba(45, 212, 191, 0.04) 0%,
+      transparent 60%);
+}
+
+/* ─── Ambient Blobs ─── */
 .global-blob {
   position: fixed;
   border-radius: 50%;
   filter: blur(120px);
   pointer-events: none;
   z-index: 0;
-  opacity: 0.15;
 }
+
+/* Blob A — Primary (Amber in light, Sky in dark) */
 .blob-a {
-  width: 450px;
-  height: 450px;
-  background: theme('colors.lab.accent');
-  top: -100px;
-  left: -150px;
+  width: 500px;
+  height: 500px;
+  top: -140px;
+  left: -180px;
+  background: rgb(var(--lab-primary));
+  opacity: 0.10;
   @apply animate-blob;
 }
+
+.dark .blob-a {
+  opacity: 0.14;
+}
+
+/* Blob B — Secondary (Violet in light, Teal in dark) */
 .blob-b {
-  width: 350px;
-  height: 350px;
-  background: theme('colors.lab.accent2');
-  bottom: -50px;
-  right: -100px;
+  width: 380px;
+  height: 380px;
+  bottom: -80px;
+  right: -120px;
+  background: rgb(var(--lab-secondary));
+  opacity: 0.09;
   @apply animate-blob-reverse;
+}
+
+.dark .blob-b {
+  opacity: 0.13;
+}
+
+/* Blob C — Tertiary accent (optional, smaller) */
+.blob-c {
+  width: 260px;
+  height: 260px;
+  top: 40%;
+  right: 15%;
+  background: rgb(var(--lab-tertiary));
+  opacity: 0.06;
+  @apply animate-blob;
+  animation-delay: 3s;
+}
+
+.dark .blob-c {
+  opacity: 0.08;
 }

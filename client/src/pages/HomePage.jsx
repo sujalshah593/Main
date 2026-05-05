@@ -17,17 +17,17 @@ import { SEMESTERS } from "../data/semesterContent.js";
 
 const FEATURES = [
   {
-    icon: <Zap className="text-amber-400" size={20} />,
+    icon: <Zap className="text-lab-tertiary" size={20} />,
     title: "Interactive Simulators",
     description: "Hands-on experience with physics and math phenomena in a virtual environment."
   },
   {
-    icon: <Activity className="text-emerald-400" size={20} />,
+    icon: <Activity className="text-lab-secondary" size={20} />,
     title: "Real-time Tracking",
     description: "Record and analyze experiment data with dynamic charts and tables."
   },
   {
-    icon: <Shield className="text-indigo-400" size={20} />,
+    icon: <Shield className="text-lab-primary" size={20} />,
     title: "Concept Validation",
     description: "Built-in quizzes and self-evaluation modules to test your understanding."
   }
@@ -42,64 +42,64 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 -ml-24 -mb-24 w-80 h-80 bg-lab-accent/10 blur-[100px] rounded-full pointer-events-none" />
 
         <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex-1 space-y-6 text-center lg:text-left"
+            className="flex-1 space-y-8 text-center lg:text-left"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lab-accent3/10 border border-lab-accent3/20 text-lab-accent3 text-[11px] font-bold uppercase tracking-widest">
+            <div className="badge-primary gap-2">
               <Star size={12} className="fill-current" />
               Next-Gen Learning
             </div>
-            
-            <h1 className="font-display text-5xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">
-              Master the <span className="text-lab-accent3">Quantum</span> World
+ 
+            <h1 className="font-display text-5xl lg:text-8xl font-extrabold text-lab-text leading-none tracking-tight">
+              Explore the <span className="text-gradient-tri">Quantum</span> World
             </h1>
-            
-            <p className="text-lg text-lab-muted max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+ 
+            <p className="text-lg text-lab-muted max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
               Experience the convergence of Artificial Intelligence and Quantum Technology through high-fidelity virtual laboratories and interactive theory modules.
             </p>
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-              <Link 
-                to="/semester/sem-1" 
-                className="px-8 py-4 bg-lab-accent3 hover:bg-lab-accent3/90 text-black font-bold rounded-2xl transition-all shadow-xl shadow-lab-accent3/20 flex items-center gap-2 group"
+              <Link
+                to="/semester/sem-1"
+                className="btn-primary flex items-center gap-3 px-8 py-4 text-base"
               >
                 Explore Labs
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <a 
-                href="#semesters" 
-                className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-2xl transition-all border border-white/10 flex items-center gap-2"
+              <a
+                href="#semesters"
+                className="btn-ghost px-8 py-4 text-base flex items-center gap-2"
               >
                 View Curriculum
               </a>
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             className="flex-1 relative w-full"
           >
-            <div className="glass-panel p-8 rounded-[40px] relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-lab-accent3/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              
+            <div className="highlight-panel p-8 rounded-[40px] relative overflow-hidden group">
+              <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+ 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="h-32 bg-white/5 rounded-3xl border border-white/10 flex items-center justify-center">
-                    <Beaker size={40} className="text-lab-accent3" />
+                  <div className="h-32 bg-lab-panel/60 rounded-3xl border border-lab-primary/10 flex items-center justify-center">
+                    <Beaker size={40} className="text-lab-primary" />
                   </div>
-                  <div className="h-48 bg-lab-accent3/5 rounded-3xl border border-lab-accent3/10 flex items-center justify-center p-6 text-center">
-                    <p className="text-xs font-medium text-lab-accent3 uppercase tracking-tighter">Interactive Simulations</p>
+                  <div className="h-48 bg-lab-panel/40 rounded-3xl border border-lab-primary/10 flex items-center justify-center p-6 text-center">
+                    <p className="text-xs font-bold text-lab-primary uppercase tracking-wider">Interactive Simulations</p>
                   </div>
                 </div>
                 <div className="space-y-4 pt-8">
-                  <div className="h-48 bg-white/5 rounded-3xl border border-white/10 flex items-center justify-center p-6 text-center">
-                    <p className="text-xs font-medium text-lab-muted uppercase tracking-tighter">AI Lab Assistant</p>
+                  <div className="h-48 bg-lab-panel/60 rounded-3xl border border-lab-secondary/10 flex items-center justify-center p-6 text-center">
+                    <p className="text-xs font-bold text-lab-secondary uppercase tracking-wider">AI Lab Assistant</p>
                   </div>
-                  <div className="h-32 bg-lab-accent/10 rounded-3xl border border-lab-accent/20 flex items-center justify-center">
-                    <Cpu size={40} className="text-lab-accent" />
+                  <div className="h-32 bg-lab-panel/40 rounded-3xl border-lab-secondary/10 flex items-center justify-center">
+                    <Cpu size={40} className="text-lab-secondary" />
                   </div>
                 </div>
               </div>
@@ -109,7 +109,7 @@ export default function HomePage() {
       </section>
 
       {/* Feature Grid */}
-      <section className="grid md:grid-cols-3 gap-6">
+      <section className="grid md:grid-cols-3 gap-8">
         {FEATURES.map((feature, i) => (
           <motion.div
             key={i}
@@ -117,25 +117,25 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="glass-panel p-8 rounded-3xl border border-white/5 hover:border-white/20 transition-all group"
+            className="glass-card p-10 group"
           >
-            <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div className="w-14 h-14 rounded-2xl bg-lab-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
               {feature.icon}
             </div>
-            <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
-            <p className="text-[14px] text-lab-muted leading-relaxed">{feature.description}</p>
+            <h3 className="text-xl font-bold text-lab-text mb-4">{feature.title}</h3>
+            <p className="text-[15px] text-lab-muted leading-relaxed font-medium">{feature.description}</p>
           </motion.div>
         ))}
       </section>
 
       {/* Semesters Section */}
-      <section id="semesters" className="space-y-8 scroll-mt-24">
+      <section id="semesters" className="space-y-10 scroll-mt-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="space-y-2">
-            <h2 className="text-3xl font-display font-bold text-white">Your Learning Journey</h2>
-            <p className="text-lab-muted">Select a semester to explore its curriculum and practicals.</p>
+            <h2 className="text-4xl font-display font-bold text-lab-text">Your Learning Journey</h2>
+            <p className="text-lab-muted font-medium">Select a semester to explore its curriculum and practicals.</p>
           </div>
-          <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-bold text-lab-muted">
+          <div className="badge-secondary gap-2 px-4 py-2">
             <Layers size={14} />
             Academic Year 2026-27
           </div>
@@ -151,23 +151,23 @@ export default function HomePage() {
             >
               <Link
                 to={`/semester/${semester.id}`}
-                className="group relative block overflow-hidden rounded-[32px] glass-panel p-1 border border-white/10 hover:border-lab-accent3/40 transition-all duration-500"
+                className="group block glass-card p-1 overflow-hidden"
               >
                 <div className="p-8 space-y-6">
                   <div className="flex items-center justify-between">
-                    <div className="px-3 py-1 rounded-full bg-lab-accent3/10 border border-lab-accent3/20 text-lab-accent3 text-[10px] font-bold uppercase tracking-widest">
+                    <div className="badge-primary">
                       {semester.id}
                     </div>
-                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white group-hover:bg-lab-accent3 group-hover:text-black transition-all">
+                    <div className="w-10 h-10 rounded-full bg-lab-primary/10 flex items-center justify-center text-lab-primary group-hover:bg-lab-primary group-hover:text-white transition-all duration-300">
                       <ChevronRight size={20} />
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2">
-                    <h3 className="text-2xl font-display font-bold text-white group-hover:text-lab-accent3 transition-colors">
+                    <h3 className="text-2xl font-display font-bold text-lab-text group-hover:text-lab-primary transition-colors">
                       {semester.label}
                     </h3>
-                    <p className="text-[15px] leading-relaxed text-lab-muted">
+                    <p className="text-[15px] leading-relaxed text-lab-muted font-medium">
                       {semester.subtitle}
                     </p>
                   </div>
@@ -181,7 +181,7 @@ export default function HomePage() {
                     <span className="text-xs font-medium text-lab-muted">Core Disciplines Included</span>
                   </div>
                 </div>
-                
+
                 {/* Decoration */}
                 <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
                   <Globe size={120} />
@@ -193,23 +193,24 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="rounded-[40px] bg-white/5 p-12 text-center border border-white/10 relative overflow-hidden group"
+        className="rounded-[40px] border border-sky-200 bg-gradient-to-br from-sky-500 to-indigo-600 p-12 text-center relative overflow-hidden group shadow-2xl"
       >
-        <div className="relative z-10 space-y-6">
-          <h2 className="text-3xl font-display font-extrabold text-white">Ready to start your first experiment?</h2>
-          <p className="text-lab-muted max-w-xl mx-auto">
+        <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+        <div className="relative z-10 space-y-8">
+          <h2 className="text-4xl font-display font-extrabold text-white">Ready to start your first experiment?</h2>
+          <p className="text-sky-50 max-w-xl mx-auto text-lg font-medium">
             Dive into our collection of interactive labs designed to make complex concepts intuitive and engaging.
           </p>
           <div className="flex justify-center pt-4">
-            <Link 
-              to="/semester/sem-1" 
-              className="px-10 py-4 bg-white text-black font-bold rounded-2xl hover:scale-105 transition-all shadow-xl shadow-white/10 flex items-center gap-3"
+            <Link
+              to="/semester/sem-1"
+              className="rounded-2xl bg-white text-sky-600 hover:bg-sky-50 px-12 py-5 text-lg font-bold flex items-center gap-4 transition-all shadow-xl hover:-translate-y-1"
             >
-              <Beaker size={20} />
+              <Beaker size={24} />
               Launch Lab Portal
             </Link>
           </div>

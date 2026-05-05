@@ -5,9 +5,11 @@ import MobileNav from '../components/MobileNav.jsx';
 export default function MainLayout() {
   return (
     <>
+      <div className="global-bg-wash" />
       <div className="global-bg-dots" />
       <div className="global-blob blob-a" />
       <div className="global-blob blob-b" />
+      <div className="global-blob blob-c" />
       
       <div className="flex min-h-screen flex-col bg-transparent md:flex-row relative z-10 w-full overflow-hidden">
         <MobileNav />

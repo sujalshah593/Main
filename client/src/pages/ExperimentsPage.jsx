@@ -24,8 +24,8 @@ export default function ExperimentsPage() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h1 className="font-display text-4xl font-extrabold text-white tracking-tight">{lab?.name || 'Experiments'}</h1>
-        {lab?.description && <p className="mt-3 text-[15px] leading-relaxed text-lab-muted max-w-2xl">{lab.description}</p>}
+        <h1 className="font-display text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">{lab?.name || 'Experiments'}</h1>
+        {lab?.description && <p className="mt-3 text-[15px] leading-relaxed text-slate-600 dark:text-slate-400 max-w-2xl">{lab.description}</p>}
       </motion.header>
 
       {(labsLoading || exLoading) && <p className="text-sm text-lab-muted">Loading experiments…</p>}
@@ -40,7 +40,7 @@ export default function ExperimentsPage() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="glass-panel overflow-hidden"
+          className="lab-page-container overflow-hidden p-0"
         >
           {experiments.length > 0 ? (
             <div className="divide-y divide-white/5">
@@ -52,14 +52,14 @@ export default function ExperimentsPage() {
                 >
                   <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-lab-accent3 to-lab-accent2 opacity-0 transition-opacity group-hover:opacity-100" />
                   <div className="flex items-center gap-5">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-lab-accent3/10 text-[13px] font-bold text-lab-accent3 border border-lab-accent3/20 shadow-[0_0_10px_rgba(56,189,248,0.1)]">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-lab-primary/10 text-[13px] font-bold text-lab-primary border border-lab-primary/20">
                       {String(i + 1).padStart(2, '0')}
                     </div>
-                    <span className="text-[15px] font-medium text-white group-hover:text-lab-accent3 transition-colors">{ex.title}</span>
+                    <span className="text-[15px] font-bold text-slate-700 dark:text-slate-200 group-hover:text-lab-primary transition-colors">{ex.title}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-lab-accent3 ml-15 sm:ml-0 opacity-70 group-hover:opacity-100 transition-opacity">
+                  <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-lab-primary ml-15 sm:ml-0 opacity-70 group-hover:opacity-100 transition-opacity">
                     <FileCode2 size={16} />
-                    <span>Open Exp</span>
+                    <span>Open Experiment</span>
                   </div>
                 </Link>
               ))}
