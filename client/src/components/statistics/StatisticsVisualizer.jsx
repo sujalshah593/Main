@@ -41,16 +41,21 @@ export default function StatisticsVisualizer({ datasetA, datasetB, isCompareMode
           </div>
         </div>
 
-        <div className="flex-1 w-full bg-black/40 rounded-xl p-6 border border-white/5 shadow-inner relative z-10">
+        <div className="flex-1 w-full bg-slate-100 dark:bg-black/40 rounded-xl p-6 border border-slate-200 dark:border-white/5 shadow-inner relative z-10 transition-colors">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={chartData} margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
               <XAxis dataKey="name" stroke="#888" tick={{ fill: '#888', fontSize: 10 }} axisLine={{ stroke: '#444' }} tickLine={false} />
               <YAxis stroke="#888" tick={{ fill: '#888', fontSize: 10 }} axisLine={false} tickLine={false} />
               <RechartsTooltip
-                cursor={{ fill: 'rgba(255,255,255,0.05)' }}
-                contentStyle={{ backgroundColor: '#0f172a', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.5)' }}
-                itemStyle={{ color: '#fff' }}
+                cursor={{ fill: 'rgba(0,0,0,0.05)' }}
+                contentStyle={{ 
+                  backgroundColor: 'var(--tooltip-bg, #0f172a)', 
+                  border: '1px solid rgba(0,0,0,0.1)', 
+                  borderRadius: '12px', 
+                  boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)' 
+                }}
+                itemStyle={{ color: 'var(--tooltip-text, #fff)' }}
               />
               
               {/* Mean Reference Lines */}

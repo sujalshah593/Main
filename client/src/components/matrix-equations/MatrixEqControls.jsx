@@ -168,7 +168,7 @@ export default function MatrixEqControls({
   const renderMatrixGrid = (entity, isA) => {
     if (!entity || entity.length === 0) return null;
     return (
-      <div className="flex flex-col items-center p-3 bg-black border border-white/10 rounded-xl">
+      <div className="flex flex-col items-center p-3 bg-slate-100 dark:bg-black border border-slate-200 dark:border-white/10 rounded-xl">
         <span className="text-xs font-bold text-lab-muted mb-2">{isA ? 'Matrix A' : 'Matrix B'}</span>
         <div className="grid gap-1" style={{ gridTemplateColumns: `repeat(${entity[0].length}, minmax(0, 1fr))` }}>
           {entity.map((row, i) => row.map((val, j) => {
@@ -178,15 +178,15 @@ export default function MatrixEqControls({
               (matrixType === 'diagonal_matrix' && i !== j)
             );
             return (
-              <input
-                key={`${i}-${j}`}
-                type="number"
-                value={isDisabled ? val : (val === 0 && !isDisabled ? '' : val)}
-                onChange={(e) => handleCellChange(isA, i, j, e.target.value)}
-                disabled={isDisabled}
-                placeholder="0"
-                className={`w-12 h-10 text-center text-sm font-mono rounded bg-black/40 border border-white/10 focus:border-pink-400 focus:outline-none ${isDisabled ? 'text-lab-muted/50 cursor-not-allowed' : 'text-pink-300'}`}
-              />
+                <input
+                  key={`${i}-${j}`}
+                  type="number"
+                  value={isDisabled ? val : (val === 0 && !isDisabled ? '' : val)}
+                  onChange={(e) => handleCellChange(isA, i, j, e.target.value)}
+                  disabled={isDisabled}
+                  placeholder="0"
+                  className={`w-12 h-10 text-center text-sm font-mono rounded bg-slate-200/50 dark:bg-black/40 border border-slate-300 dark:border-white/10 focus:border-pink-400 focus:outline-none ${isDisabled ? 'text-slate-400 dark:text-lab-muted/50 cursor-not-allowed' : 'text-pink-600 dark:text-pink-300'}`}
+                />
             );
           }))}
         </div>
@@ -197,7 +197,7 @@ export default function MatrixEqControls({
   const renderEquationInputs = () => {
     const vars = ['x', 'y', 'z', 'w', 'v'];
     return (
-      <div className="flex flex-col items-center p-4 bg-black border border-white/10 rounded-xl w-full">
+      <div className="flex flex-col items-center p-4 bg-slate-100 dark:bg-black border border-slate-200 dark:border-white/10 rounded-xl w-full">
         <span className="text-xs font-bold text-lab-muted mb-4 uppercase tracking-widest">System of Equations</span>
         <div className="flex flex-col gap-3 w-full max-w-md">
           {entityA.map((row, i) => (
@@ -210,19 +210,19 @@ export default function MatrixEqControls({
                       value={val === 0 ? '' : val}
                       onChange={(e) => handleCellChange(true, i, j, e.target.value)}
                       placeholder="0"
-                      className="w-12 h-8 text-center text-sm font-mono rounded bg-black/40 border border-white/10 focus:border-pink-400 text-pink-300"
+                      className="w-12 h-8 text-center text-sm font-mono rounded bg-slate-200/50 dark:bg-black/40 border border-slate-300 dark:border-white/10 focus:border-pink-400 text-pink-600 dark:text-pink-300"
                     />
-                    <span className="text-white font-mono ml-1 mr-2">{vars[j]}{j < row.length - 1 ? ' +' : ''}</span>
+                    <span className="text-slate-900 dark:text-white font-mono ml-1 mr-2">{vars[j]}{j < row.length - 1 ? ' +' : ''}</span>
                   </div>
                 ))}
               </div>
-              <span className="text-white font-bold mx-2">=</span>
+              <span className="text-slate-900 dark:text-white font-bold mx-2">=</span>
               <input
                 type="number"
                 value={entityB[i] && entityB[i][0] === 0 ? '' : entityB[i][0]}
                 onChange={(e) => handleCellChange(false, i, 0, e.target.value)}
                 placeholder="0"
-                className="w-14 h-8 text-center text-sm font-mono rounded bg-black/40 border border-white/10 focus:border-sky-400 text-sky-300"
+                className="w-14 h-8 text-center text-sm font-mono rounded bg-slate-200/50 dark:bg-black/40 border border-slate-300 dark:border-white/10 focus:border-sky-400 text-sky-600 dark:text-sky-300"
               />
             </div>
           ))}
@@ -233,15 +233,15 @@ export default function MatrixEqControls({
 
   return (
     <div className="glass-panel p-5 rounded-2xl border-t-2 border-t-pink-500/50 relative shadow-xl">
-      <div className="flex items-center gap-2 mb-4 text-pink-400">
+      <div className="flex items-center gap-2 mb-4 text-pink-500 dark:text-pink-400">
         <Settings2 size={20} />
-        <h2 className="font-bold text-lg text-white">Lab Controls</h2>
+        <h2 className="font-bold text-lg text-slate-900 dark:text-white">Lab Controls</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Left Column: Configuration */}
         <div className="space-y-4">
-          <div className="flex bg-black p-1 rounded-xl">
+          <div className="flex bg-slate-100 dark:bg-black p-1 rounded-xl">
             <button
               onClick={() => { setActiveMode('matrix_ops'); setOperation('none'); }}
               className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-bold transition-all ${
@@ -285,7 +285,7 @@ export default function MatrixEqControls({
               </div>
               <div>
                  <label className="text-xs text-lab-muted font-bold uppercase block mb-1">Operation</label>
-                 <select value={operation} onChange={(e) => setOperation(e.target.value)} className="w-full bg-black   rounded-xl p-2 text-sm text-pink-300 focus:outline-none">
+                 <select value={operation} onChange={(e) => setOperation(e.target.value)} className="w-full bg-slate-100 dark:bg-black rounded-xl p-2 text-sm text-pink-600 dark:text-pink-300 focus:outline-none">
                    {MATRIX_OPS.map(op => <option key={op.id} value={op.id}>{op.name}</option>)}
                  </select>
               </div>
@@ -299,7 +299,7 @@ export default function MatrixEqControls({
               </div>
               <div>
                  <label className="text-xs text-lab-muted font-bold uppercase block mb-1">Solving Method</label>
-                 <select value={solveMethod} onChange={(e) => setSolveMethod(e.target.value)} className="w-full bg-black/40 border border-white/10 rounded-xl p-2 text-sm text-pink-300 focus:outline-none">
+                 <select value={solveMethod} onChange={(e) => setSolveMethod(e.target.value)} className="w-full bg-slate-100 dark:bg-black/40 border border-slate-200 dark:border-white/10 rounded-xl p-2 text-sm text-pink-600 dark:text-pink-300 focus:outline-none">
                    {EQ_METHODS.map(m => <option key={m.id} value={m.id} disabled={(m.id === 'substitution' || m.id === 'elimination') && systemSize > 2}>{m.name}</option>)}
                  </select>
               </div>
@@ -315,7 +315,7 @@ export default function MatrixEqControls({
                 {operation === 'scalar' && (
                   <div className="flex flex-col items-center p-3 bg-white/5 border border-white/10 rounded-xl">
                     <span className="text-xs font-bold text-lab-muted mb-2">Scalar (k)</span>
-                    <input type="number" value={scalarVal} onChange={e => setScalarVal(parseFloat(e.target.value)||0)} className="w-16 h-10 text-center font-mono rounded bg-black/40 border border-white/10 focus:border-pink-400 text-pink-300" />
+                    <input type="number" value={scalarVal} onChange={e => setScalarVal(parseFloat(e.target.value)||0)} className="w-16 h-10 text-center font-mono rounded bg-slate-200/50 dark:bg-black/40 border border-slate-300 dark:border-white/10 focus:border-pink-400 text-pink-600 dark:text-pink-300" />
                   </div>
                 )}
                 {renderMatrixGrid(entityA, true)}

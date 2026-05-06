@@ -137,9 +137,9 @@ export default function EnergySimulation({
   }, [pos]);
 
   return (
-    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700">
-      <h3 className="text-sm font-bold text-slate-300 mb-4 uppercase tracking-wider">Motion Simulator</h3>
-      <div className="bg-[#0f172a] rounded-lg border border-slate-600 shadow-inner overflow-hidden">
+    <div className="bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+      <h3 className="text-sm font-bold text-slate-500 dark:text-slate-300 mb-4 uppercase tracking-wider">Motion Simulator</h3>
+      <div className="bg-white/80 dark:bg-[#0f172a] rounded-lg border border-slate-300 dark:border-slate-600 shadow-inner overflow-hidden">
         <canvas 
           ref={canvasRef} 
           width={500} 

@@ -124,9 +124,9 @@ export default function PendulumSimulation({ length, isDampingEnabled, initialAn
   }, []);
 
   return (
-    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-4 rounded-xl border border-slate-700 flex flex-col items-center">
-      <h3 className="text-sm font-bold text-slate-300 mb-2 uppercase tracking-wider w-full text-left">Simulation Viewer</h3>
-      <div className="relative bg-[#0f172a] rounded-lg border border-slate-600 shadow-inner overflow-hidden w-full max-w-[400px]">
+    <div className="bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white p-4 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col items-center">
+      <h3 className="text-sm font-bold text-slate-500 dark:text-slate-300 mb-2 uppercase tracking-wider w-full text-left">Simulation Viewer</h3>
+      <div className="relative bg-slate-200/50 dark:bg-[#0f172a] rounded-lg border border-slate-300 dark:border-slate-600 shadow-inner overflow-hidden w-full max-w-[400px]">
         <canvas 
           ref={canvasRef} 
           width={400} 
@@ -135,7 +135,7 @@ export default function PendulumSimulation({ length, isDampingEnabled, initialAn
         />
         
         {/* Real-time angle display */}
-        <div className="absolute top-4 right-4 bg-black/50 px-2 py-1 rounded text-xs font-mono text-sky-400">
+        <div className="absolute top-4 right-4 bg-white/80 dark:bg-black/50 px-2 py-1 rounded text-xs font-mono text-sky-600 dark:text-sky-400 border border-slate-200 dark:border-transparent">
           θ = {(angle * 180 / Math.PI).toFixed(1)}°
         </div>
       </div>

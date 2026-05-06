@@ -3,12 +3,12 @@ import { Trash2 } from 'lucide-react';
 
 export default function PendulumTable({ trials, removeTrial, oscillationsN }) {
   return (
-    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col">
-      <h3 className="text-lg font-bold text-slate-300 mb-4">Observation Table</h3>
+    <div className="bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white p-6 rounded-xl border border-slate-200 dark:border-slate-700 h-full flex flex-col transition-colors">
+      <h3 className="text-lg font-bold text-slate-600 dark:text-slate-300 mb-4">Observation Table</h3>
       
-      <div className="flex-1 overflow-auto custom-scrollbar rounded-lg border border-slate-700">
-        <table className="w-full text-left text-sm text-slate-400 min-w-[500px]">
-          <thead className="text-[11px] sm:text-xs text-slate-300 uppercase bg-[#7A1540] dark:bg-slate-900 text-white/80 sticky top-0 z-10 backdrop-blur-sm">
+      <div className="flex-1 overflow-auto custom-scrollbar rounded-lg border border-slate-200 dark:border-slate-700">
+        <table className="w-full text-left text-sm text-slate-600 dark:text-slate-400 min-w-[500px]">
+          <thead className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 uppercase bg-slate-100 dark:bg-slate-900 font-bold sticky top-0 z-10 backdrop-blur-sm">
             <tr>
               <th className="px-3 py-3 font-semibold">Trial</th>
               <th className="px-3 py-3 font-semibold text-sky-400">Length (L) <br/><span className="lowercase text-[10px] text-slate-500">meters</span></th>
@@ -28,13 +28,13 @@ export default function PendulumTable({ trials, removeTrial, oscillationsN }) {
               </tr>
             ) : (
               trials.map((trial, index) => (
-                <tr key={index} className="border-b border-slate-700/50 hover:bg-slate-700/30 transition-colors">
+                <tr key={index} className="border-b border-slate-200 dark:border-slate-700/50 hover:bg-slate-100 dark:hover:bg-slate-700/30 transition-colors">
                   <td className="px-3 py-3 font-mono">{index + 1}</td>
-                  <td className="px-3 py-3 font-mono text-sky-200">{trial.length.toFixed(2)}</td>
-                  <td className="px-3 py-3 font-mono text-rose-200">{trial.timeForN.toFixed(2)}</td>
-                  <td className="px-3 py-3 font-mono text-emerald-200">{trial.timePeriod.toFixed(3)}</td>
-                  <td className="px-3 py-3 font-mono text-amber-200">{trial.tSquared.toFixed(3)}</td>
-                  <td className="px-3 py-3 font-mono text-purple-200">
+                  <td className="px-3 py-3 font-mono text-sky-600 dark:text-sky-200">{trial.length.toFixed(2)}</td>
+                  <td className="px-3 py-3 font-mono text-rose-600 dark:text-rose-200">{trial.timeForN.toFixed(2)}</td>
+                  <td className="px-3 py-3 font-mono text-emerald-600 dark:text-emerald-200">{trial.timePeriod.toFixed(3)}</td>
+                  <td className="px-3 py-3 font-mono text-amber-600 dark:text-amber-200">{trial.tSquared.toFixed(3)}</td>
+                  <td className="px-3 py-3 font-mono text-purple-600 dark:text-purple-200">
                     {trial.tSquared > 0 ? ((4 * Math.PI * Math.PI * trial.length) / trial.tSquared).toFixed(2) : '-'}
                   </td>
                   <td className="px-3 py-3 text-center">

@@ -155,9 +155,9 @@ export default function ProbabilitySimulator({
           {/* Subtle background glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-amber-500/5 blur-[100px] pointer-events-none" />
           
-          <div className="absolute top-6 left-6 flex items-center gap-2 z-10 bg-black/40 px-4 py-2 rounded-full backdrop-blur-md border border-white/5">
-            <Activity size={16} className="text-amber-400" />
-            <span className="text-xs font-bold text-white tracking-wider uppercase">Live Simulation Feed</span>
+          <div className="absolute top-6 left-6 flex items-center gap-2 z-10 bg-slate-100/80 dark:bg-black/40 px-4 py-2 rounded-full backdrop-blur-md border border-slate-200 dark:border-white/5">
+            <Activity size={16} className="text-amber-600 dark:text-amber-400" />
+            <span className="text-xs font-bold text-slate-900 dark:text-white tracking-wider uppercase">Live Simulation Feed</span>
           </div>
           
           <div className="flex-1 mt-12 flex items-center justify-center relative z-10">
@@ -167,9 +167,9 @@ export default function ProbabilitySimulator({
           </div>
 
           <div className="grid grid-cols-2 gap-4 mt-8 relative z-10">
-            <div className="bg-black/40 backdrop-blur-md p-4 rounded-xl border border-white/10 flex flex-col items-center justify-center text-center shadow-inner">
-              <span className="text-xs text-gray-400 uppercase font-semibold mb-1 tracking-wider">Total Trials</span>
-              <span className="text-4xl font-mono font-bold text-white drop-shadow-md">{totalRun}</span>
+            <div className="bg-slate-100/80 dark:bg-black/40 backdrop-blur-md p-4 rounded-xl border border-slate-200 dark:border-white/10 flex flex-col items-center justify-center text-center shadow-inner">
+              <span className="text-xs text-slate-500 dark:text-gray-400 uppercase font-semibold mb-1 tracking-wider">Total Trials</span>
+              <span className="text-4xl font-mono font-bold text-slate-900 dark:text-white drop-shadow-md">{totalRun}</span>
             </div>
             <div className="bg-amber-500/10 backdrop-blur-md p-4 rounded-xl border border-amber-500/30 flex flex-col items-center justify-center text-center shadow-[inset_0_0_20px_rgba(245,158,11,0.1)]">
               <span className="text-xs text-amber-500 uppercase font-semibold mb-1 tracking-wider">Favorable Outcomes</span>
@@ -184,7 +184,7 @@ export default function ProbabilitySimulator({
            
            <div className="flex items-center gap-2 mb-6">
               <PieChartIcon size={18} className="text-fuchsia-400" />
-              <h3 className="text-sm font-bold text-white uppercase tracking-wider">
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">
                 Probability Analysis
               </h3>
             </div>
@@ -216,26 +216,26 @@ export default function ProbabilitySimulator({
                 </ResponsiveContainer>
                 {/* Center text for pie chart */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                  <span className="text-[10px] text-gray-500 uppercase font-bold">Total</span>
-                  <span className="text-lg font-mono font-bold text-white">{totalRun}</span>
+                  <span className="text-[10px] text-slate-500 dark:text-gray-500 uppercase font-bold">Total</span>
+                  <span className="text-lg font-mono font-bold text-slate-900 dark:text-white">{totalRun}</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-3 mt-auto">
-                <div className="bg-white/5 p-4 rounded-xl border border-white/10 text-center flex flex-col justify-center">
-                  <div className="text-[10px] uppercase text-gray-400 font-bold mb-2">Theoretical P(E)</div>
-                  <div className="text-2xl font-mono text-white">{(theoreticalProbability * 100).toFixed(1)}%</div>
+                <div className="bg-slate-100/80 dark:bg-white/5 p-4 rounded-xl border border-slate-200 dark:border-white/10 text-center flex flex-col justify-center">
+                  <div className="text-[10px] uppercase text-slate-500 dark:text-gray-400 font-bold mb-2">Theoretical P(E)</div>
+                  <div className="text-2xl font-mono text-slate-900 dark:text-white">{(theoreticalProbability * 100).toFixed(1)}%</div>
                 </div>
                 <div className="bg-amber-500/10 p-4 rounded-xl border border-amber-500/30 text-center flex flex-col justify-center shadow-[inset_0_0_15px_rgba(245,158,11,0.05)]">
-                  <div className="text-[10px] uppercase text-amber-500/80 font-bold mb-2">Experimental</div>
-                  <div className="text-2xl font-mono text-amber-400 drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]">{(experimentalProb * 100).toFixed(1)}%</div>
+                  <div className="text-[10px] uppercase text-amber-600 dark:text-amber-500/80 font-bold mb-2">Experimental</div>
+                  <div className="text-2xl font-mono text-amber-600 dark:text-amber-400 drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]">{(experimentalProb * 100).toFixed(1)}%</div>
                 </div>
               </div>
               
               {totalRun > 0 && (
-                <div className="text-center text-xs text-gray-400 bg-black/20 py-2 rounded-lg border border-white/5 flex items-center justify-center gap-2">
+                <div className="text-center text-xs text-slate-500 dark:text-gray-400 bg-slate-100 dark:bg-black/20 py-2 rounded-lg border border-slate-200 dark:border-white/5 flex items-center justify-center gap-2">
                   <div className={`w-2 h-2 rounded-full ${Math.abs(theoreticalProbability - experimentalProb) < 0.05 ? 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]' : 'bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.8)]'}`} />
-                  Difference: <span className="font-mono text-white">{Math.abs((theoreticalProbability - experimentalProb) * 100).toFixed(2)}%</span>
+                  Difference: <span className="font-mono text-slate-900 dark:text-white">{Math.abs((theoreticalProbability - experimentalProb) * 100).toFixed(2)}%</span>
                 </div>
               )}
 
@@ -257,16 +257,21 @@ export default function ProbabilitySimulator({
           </div>
         </div>
         
-        <div className="flex-1 w-full bg-black/40 rounded-xl p-6 border border-white/5 shadow-inner relative z-10">
+        <div className="flex-1 w-full bg-slate-100 dark:bg-black/40 rounded-xl p-6 border border-slate-200 dark:border-white/5 shadow-inner relative z-10 transition-colors">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
               <XAxis dataKey="name" stroke="#888" tick={{ fill: '#888', fontSize: 12, fontWeight: 500 }} axisLine={{ stroke: '#444' }} tickLine={false} dy={10} />
               <YAxis stroke="#888" tick={{ fill: '#888', fontSize: 12, fontWeight: 500 }} allowDecimals={false} axisLine={false} tickLine={false} dx={-10} />
               <RechartsTooltip
-                cursor={{ fill: 'rgba(255,255,255,0.05)' }}
-                contentStyle={{ backgroundColor: '#0f172a', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.5)' }}
-                itemStyle={{ color: '#fff' }}
+                cursor={{ fill: 'rgba(0,0,0,0.05)' }}
+                contentStyle={{ 
+                  backgroundColor: 'var(--tooltip-bg, #0f172a)', 
+                  border: '1px solid rgba(0,0,0,0.1)', 
+                  borderRadius: '12px', 
+                  boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)' 
+                }}
+                itemStyle={{ color: 'var(--tooltip-text, #fff)' }}
               />
               <Bar dataKey="value" radius={[6, 6, 0, 0]} maxBarSize={100} isAnimationActive={!isSimulating || totalRun < 50}>
                 {chartData.map((entry, index) => (

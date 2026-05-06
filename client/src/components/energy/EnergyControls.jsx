@@ -8,17 +8,17 @@ export default function EnergyControls({
   onReset
 }) {
   return (
-    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 flex flex-col gap-6">
+    <div className="bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white p-6 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col gap-6">
       <div>
-        <h3 className="text-sm font-bold text-slate-300 mb-4 uppercase tracking-wider flex items-center gap-2">
-          <Settings2 size={16} className="text-sky-400" /> Setup Parameters
+        <h3 className="text-sm font-bold text-slate-500 dark:text-slate-300 mb-4 uppercase tracking-wider flex items-center gap-2">
+          <Settings2 size={16} className="text-sky-600 dark:text-sky-400" /> Setup Parameters
         </h3>
         
         <div className="space-y-6">
           <div className="space-y-3">
             <div className="flex justify-between items-center">
               <label className="text-xs font-semibold text-slate-400 uppercase">Initial Height (h₀)</label>
-              <span className="text-sky-400 font-mono font-bold bg-[#7A1540] dark:bg-slate-900 text-white px-2 py-1 rounded border border-slate-700">
+              <span className="text-sky-600 dark:text-sky-400 font-mono font-bold bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded border border-slate-200 dark:border-slate-700">
                 {initialHeight.toFixed(1)} m
               </span>
             </div>
@@ -57,11 +57,11 @@ export default function EnergyControls({
       </div>
 
       <div>
-        <h3 className="text-sm font-bold text-slate-300 mb-4 uppercase tracking-wider flex items-center gap-2">
-          <Zap size={16} className="text-amber-400" /> Environment Conditions
+        <h3 className="text-sm font-bold text-slate-500 dark:text-slate-300 mb-4 uppercase tracking-wider flex items-center gap-2">
+          <Zap size={16} className="text-amber-600 dark:text-amber-400" /> Environment Conditions
         </h3>
         
-        <label className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${isFrictionEnabled ? 'bg-amber-500/10 border-amber-500/30' : 'bg-[#7A1540] dark:bg-slate-900 text-white border-slate-700 hover:border-slate-500'}`}>
+        <label className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${isFrictionEnabled ? 'bg-amber-500/10 border-amber-500/30' : 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500'}`}>
           <div className="relative flex items-center mt-0.5">
             <input 
               type="checkbox" 
@@ -72,8 +72,8 @@ export default function EnergyControls({
             <div className="w-10 h-5 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-amber-500"></div>
           </div>
           <div>
-            <div className="text-sm font-bold text-slate-200">Friction & Air Resistance</div>
-            <div className="text-xs text-slate-400 mt-0.5">Simulates energy loss over time (Real-world).</div>
+            <div className="text-sm font-bold text-slate-800 dark:text-slate-200">Friction & Air Resistance</div>
+            <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Simulates energy loss over time (Real-world).</div>
           </div>
         </label>
       </div>

@@ -246,7 +246,7 @@ export default function FlywheelSimulation({
   }, [mass, radius, woundTurns, isMassAttached, isPlaying]);
 
   return (
-    <div className="relative w-full aspect-square max-h-[500px] bg-[#7A1540] dark:bg-slate-900 text-white rounded-xl overflow-hidden border border-slate-700 shadow-inner">
+    <div className="relative w-full aspect-square max-h-[500px] bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-inner">
       <canvas 
         ref={canvasRef} 
         width={500} 
@@ -256,9 +256,9 @@ export default function FlywheelSimulation({
       
       {/* HUD overlays */}
       <div className="absolute top-4 left-4 flex flex-col gap-2">
-        <div className="bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
-          <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Status</span>
-          <div className={`text-sm font-bold ${stateRef.current.isMassAttached ? 'text-amber-400' : 'text-emerald-400'}`}>
+        <div className="bg-white/80 dark:bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-200 dark:border-white/10 shadow-sm">
+          <span className="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Status</span>
+          <div className={`text-sm font-bold ${stateRef.current.isMassAttached ? 'text-amber-600 dark:text-amber-400' : 'text-emerald-600 dark:text-emerald-400'}`}>
             {stateRef.current.isMassAttached ? 'Accelerating' : stateRef.current.isStopped ? 'Stopped' : 'Retarding'}
           </div>
         </div>

@@ -26,7 +26,7 @@ export default function ScrewGaugeLearningPanel() {
         <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-sm text-lab-muted mb-4">
           <div className="font-semibold text-white mb-2">Pitch</div>
           <p>The linear distance covered by the screw in one complete rotation is called the pitch.</p>
-          <div className="bg-black/30 p-2 rounded-lg font-mono text-xs text-sky-300 mt-2">
+          <div className="bg-slate-100 dark:bg-black/30 p-2 rounded-lg font-mono text-xs text-sky-700 dark:text-sky-300 mt-2 border border-slate-200 dark:border-transparent">
             Pitch = 1 mm (standard)
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function ScrewGaugeLearningPanel() {
         <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-sm text-lab-muted">
           <div className="font-semibold text-white mb-2">Least Count (LC)</div>
           <p className="mb-2">The smallest value that can be measured by the screw gauge.</p>
-          <div className="bg-black/30 p-3 rounded-lg font-mono text-xs text-lab-accent2 mb-2">
+          <div className="bg-slate-100 dark:bg-black/30 p-3 rounded-lg font-mono text-xs text-sky-700 dark:text-lab-accent2 mb-2 border border-slate-200 dark:border-transparent">
             LC = Pitch / Total Divisions on Circular Scale
           </div>
           <p>For a standard screw gauge: Pitch = 1mm, Total Circular Divisions = 100.<br/>

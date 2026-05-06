@@ -6,42 +6,42 @@ export default function EnergyCalculations({ metrics, isFrictionEnabled }) {
   const total = pe + ke;
 
   return (
-    <div className="bg-[#7A1540] dark:bg-slate-800 text-white p-6 rounded-xl border border-slate-700 h-full flex flex-col gap-6">
-      <h3 className="text-sm font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
-        <Calculator size={16} className="text-purple-400" /> Calculation Engine
+    <div className="bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white p-6 rounded-xl border border-slate-200 dark:border-slate-700 h-full flex flex-col gap-6">
+      <h3 className="text-sm font-bold text-slate-500 dark:text-slate-300 uppercase tracking-wider flex items-center gap-2">
+        <Calculator size={16} className="text-purple-600 dark:text-purple-400" /> Calculation Engine
       </h3>
       
       <div className="space-y-4">
         {/* Instantaneous Values */}
         <div className="grid grid-cols-2 gap-3">
-          <div className="bg-[#7A1540] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-700">
+          <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white p-3 rounded-lg border border-slate-200 dark:border-slate-700">
             <div className="text-[10px] text-slate-500 uppercase font-bold mb-1">Potential (U)</div>
-            <div className="text-sm font-mono text-rose-400 font-bold">{pe.toFixed(2)} J</div>
-            <div className="text-[9px] text-slate-600 font-mono mt-1">m·g·h</div>
+            <div className="text-sm font-mono text-rose-600 dark:text-rose-400 font-bold">{pe.toFixed(2)} J</div>
+            <div className="text-[9px] text-slate-400 dark:text-slate-600 font-mono mt-1">m·g·h</div>
           </div>
-          <div className="bg-[#7A1540] dark:bg-slate-900 text-white p-3 rounded-lg border border-slate-700">
+          <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white p-3 rounded-lg border border-slate-200 dark:border-slate-700">
             <div className="text-[10px] text-slate-500 uppercase font-bold mb-1">Kinetic (K)</div>
-            <div className="text-sm font-mono text-emerald-400 font-bold">{ke.toFixed(2)} J</div>
-            <div className="text-[9px] text-slate-600 font-mono mt-1">½·m·v²</div>
+            <div className="text-sm font-mono text-emerald-600 dark:text-emerald-400 font-bold">{ke.toFixed(2)} J</div>
+            <div className="text-[9px] text-slate-400 dark:text-slate-600 font-mono mt-1">½·m·v²</div>
           </div>
         </div>
 
         {/* Total Energy Analysis */}
-        <div className="bg-[#7A1540] dark:bg-slate-900 text-white p-4 rounded-lg border border-slate-700">
+        <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white p-4 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">
            <div className="flex items-center justify-between mb-3">
               <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total Mechanical Energy</span>
-              <div className="px-2 py-0.5 rounded-full text-[9px] font-bold bg-white/10 text-white uppercase tracking-tighter">
+              <div className="px-2 py-0.5 rounded-full text-[9px] font-bold bg-slate-100 dark:bg-white/10 text-slate-500 dark:text-white uppercase tracking-tighter">
                 E = K + U
               </div>
            </div>
            
-           <div className="text-3xl font-mono text-white font-bold text-center py-2">
-              {total.toFixed(2)} <span className="text-sm font-normal text-slate-500">Joules</span>
+           <div className="text-3xl font-mono text-slate-900 dark:text-white font-bold text-center py-2">
+              {total.toFixed(2)} <span className="text-sm font-normal text-slate-400 dark:text-slate-500">Joules</span>
            </div>
 
-           <div className="mt-4 pt-4 border-t border-slate-800">
+           <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800">
               {isFrictionEnabled ? (
-                <div className="flex items-start gap-2 text-amber-500/80 italic">
+                <div className="flex items-start gap-2 text-amber-600 dark:text-amber-500/80 italic">
                   <ShieldAlert size={14} className="mt-0.5 shrink-0" />
                   <p className="text-[10px]">Non-conservative forces (friction) are causing energy to dissipate as heat. Total energy will decrease over time.</p>
                 </div>

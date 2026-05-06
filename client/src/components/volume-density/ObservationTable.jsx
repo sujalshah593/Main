@@ -78,8 +78,8 @@ export default function ObservationTable({ selectedObject, mode }) {
   return (
     <div className="glass-panel p-6 rounded-2xl border-t-2 border-t-lab-accent3/50 shadow-lg flex flex-col gap-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <h3 className="font-display text-lg font-bold text-white flex items-center gap-2">
-          <Table className="text-lab-accent3" size={20} />
+        <h3 className="font-display text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+          <Table className="text-sky-600 dark:text-lab-accent3" size={20} />
           Observation Table
         </h3>
         {mode === 'test' && (
@@ -90,10 +90,10 @@ export default function ObservationTable({ selectedObject, mode }) {
       </div>
 
       {/* Data Entry Form */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-3 items-end bg-[#0f172a]/60 p-4 rounded-xl border border-white/5">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-3 items-end bg-slate-100 dark:bg-[#0f172a]/60 p-4 rounded-xl border border-slate-200 dark:border-white/5">
         <div className="flex flex-col gap-1">
           <label className="text-[10px] uppercase tracking-wider font-bold text-lab-muted">Object</label>
-          <div className="h-[38px] px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white/50 flex items-center">
+          <div className="h-[38px] px-3 py-2 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg text-sm text-slate-900 dark:text-white/50 flex items-center">
             {selectedObject?.name || 'None'}
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function ObservationTable({ selectedObject, mode }) {
           <label className="text-[10px] uppercase tracking-wider font-bold text-lab-muted">Mass (g)</label>
           <input 
             type="number" step="0.1" value={inputMass} onChange={e => setInputMass(e.target.value)}
-            className="px-3 py-2 bg-black/40 border border-white/10 rounded-lg text-sm text-white focus:border-lab-accent3 focus:outline-none transition-colors"
+            className="px-3 py-2 bg-white dark:bg-black/40 border border-slate-200 dark:border-white/10 rounded-lg text-sm text-slate-900 dark:text-white focus:border-sky-500 dark:focus:border-lab-accent3 focus:outline-none transition-colors"
             placeholder="e.g. 50.0"
           />
         </div>
@@ -109,7 +109,7 @@ export default function ObservationTable({ selectedObject, mode }) {
           <label className="text-[10px] uppercase tracking-wider font-bold text-lab-muted" title="For regular: LxBxH. For irregular: Water Rise">Dim/Rise</label>
           <input 
             type="text" value={inputDim} onChange={e => setInputDim(e.target.value)}
-            className="px-3 py-2 bg-black/40 border border-white/10 rounded-lg text-sm text-white focus:border-lab-accent3 focus:outline-none transition-colors"
+            className="px-3 py-2 bg-white dark:bg-black/40 border border-slate-200 dark:border-white/10 rounded-lg text-sm text-slate-900 dark:text-white focus:border-sky-500 dark:focus:border-lab-accent3 focus:outline-none transition-colors"
             placeholder={selectedObject?.type === 'regular' ? "L x B x H" : "mL"}
           />
         </div>
@@ -117,7 +117,7 @@ export default function ObservationTable({ selectedObject, mode }) {
           <label className="text-[10px] uppercase tracking-wider font-bold text-lab-muted">Vol (cm³)</label>
           <input 
             type="number" step="0.1" value={inputVolume} onChange={e => setInputVolume(e.target.value)}
-            className="px-3 py-2 bg-black/40 border border-white/10 rounded-lg text-sm text-white focus:border-lab-accent3 focus:outline-none transition-colors"
+            className="px-3 py-2 bg-white dark:bg-black/40 border border-slate-200 dark:border-white/10 rounded-lg text-sm text-slate-900 dark:text-white focus:border-sky-500 dark:focus:border-lab-accent3 focus:outline-none transition-colors"
             placeholder="e.g. 10.0"
           />
         </div>
@@ -126,12 +126,12 @@ export default function ObservationTable({ selectedObject, mode }) {
           <div className="flex gap-2">
             <input 
               type="number" step="0.01" value={inputDensity} onChange={e => setInputDensity(e.target.value)}
-              className="w-full px-3 py-2 bg-black/40 border border-white/10 rounded-lg text-sm text-white focus:border-lab-accent3 focus:outline-none transition-colors"
+              className="w-full px-3 py-2 bg-white dark:bg-black/40 border border-slate-200 dark:border-white/10 rounded-lg text-sm text-slate-900 dark:text-white focus:border-sky-500 dark:focus:border-lab-accent3 focus:outline-none transition-colors"
               placeholder="e.g. 5.0"
             />
             <button 
               onClick={handleRecord}
-              className="h-[38px] px-3 bg-lab-accent3 text-slate-900 rounded-lg font-bold hover:bg-lab-accent3/90 transition-colors flex items-center justify-center"
+              className="h-[38px] px-3 bg-sky-600 dark:bg-lab-accent3 text-white dark:text-slate-900 rounded-lg font-bold hover:bg-sky-500 dark:hover:bg-lab-accent3/90 transition-colors flex items-center justify-center"
             >
               <Plus size={18} />
             </button>
@@ -149,7 +149,7 @@ export default function ObservationTable({ selectedObject, mode }) {
       <div className="overflow-x-auto rounded-xl border border-white/5 custom-scrollbar">
         <table className="w-full text-left border-collapse min-w-[600px]">
           <thead>
-            <tr className="bg-white/5 text-xs uppercase tracking-wider text-lab-muted">
+            <tr className="bg-slate-100 dark:bg-white/5 text-xs uppercase tracking-wider text-slate-500 dark:text-lab-muted">
               <th className="p-4 font-semibold border-b border-white/5">Object</th>
               <th className="p-4 font-semibold border-b border-white/5">Mass (g)</th>
               <th className="p-4 font-semibold border-b border-white/5">Dim/Rise</th>
@@ -168,11 +168,11 @@ export default function ObservationTable({ selectedObject, mode }) {
               </tr>
             ) : (
               records.map((record) => (
-                <tr key={record.id} className="border-b border-white/5 bg-black/20 hover:bg-white/[0.02] transition-colors group">
-                  <td className="p-4 text-white font-medium">{record.objectName}</td>
-                  <td className="p-4 text-slate-300">{record.mass.toFixed(1)}</td>
-                  <td className="p-4 text-slate-300 font-mono text-xs">{record.dimensions}</td>
-                  <td className="p-4 text-slate-300">{record.volume.toFixed(1)}</td>
+                <tr key={record.id} className="border-b border-slate-100 dark:border-white/5 bg-slate-50 dark:bg-black/20 hover:bg-slate-100 dark:hover:bg-white/[0.02] transition-colors group">
+                  <td className="p-4 text-slate-900 dark:text-white font-medium">{record.objectName}</td>
+                  <td className="p-4 text-slate-600 dark:text-slate-300">{record.mass.toFixed(1)}</td>
+                  <td className="p-4 text-slate-600 dark:text-slate-300 font-mono text-xs">{record.dimensions}</td>
+                  <td className="p-4 text-slate-600 dark:text-slate-300">{record.volume.toFixed(1)}</td>
                   <td className="p-4 font-mono font-bold text-lab-accent3">{record.density.toFixed(2)}</td>
                   <td className="p-4 text-center">
                     {record.isCorrect ? (

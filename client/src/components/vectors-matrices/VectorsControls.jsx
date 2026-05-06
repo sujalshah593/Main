@@ -194,7 +194,7 @@ export default function VectorsControls({
                   onChange={(e) => handleCellChange(isA, i, j, e.target.value)}
                   disabled={isDisabled}
                   placeholder="0"
-                  className={`w-12 h-10 text-center text-sm font-mono rounded bg-black/40 border border-white/10 focus:border-emerald-400 focus:outline-none ${isDisabled ? 'text-lab-muted/50 cursor-not-allowed' : 'text-emerald-300'}`}
+                  className={`w-12 h-10 text-center text-sm font-mono rounded bg-slate-200/50 dark:bg-black/40 border border-slate-300 dark:border-white/10 focus:border-emerald-400 focus:outline-none ${isDisabled ? 'text-slate-400 dark:text-lab-muted/50 cursor-not-allowed' : 'text-emerald-600 dark:text-emerald-300'}`}
                 />
               );
             })
@@ -206,9 +206,9 @@ export default function VectorsControls({
 
   return (
     <div className="glass-panel p-5 rounded-2xl border-t-2 border-t-emerald-400/50 relative shadow-xl">
-      <div className="flex items-center gap-2 mb-4 text-emerald-400">
+      <div className="flex items-center gap-2 mb-4 text-emerald-500 dark:text-emerald-400">
         <Settings2 size={20} />
-        <h2 className="font-bold text-lg text-white">Simulator Controls</h2>
+        <h2 className="font-bold text-lg text-slate-900 dark:text-white">Simulator Controls</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -217,7 +217,7 @@ export default function VectorsControls({
         <div className="space-y-4">
           
           {/* Mode Switcher */}
-          <div className="flex bg-white/5 p-1 rounded-xl">
+          <div className="flex bg-slate-100 dark:bg-white/5 p-1 rounded-xl">
             <button
               onClick={() => { setActiveMode('vector'); setEntityType('2d_vector'); setOperation('none'); }}
               className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-bold transition-all ${
@@ -288,7 +288,7 @@ export default function VectorsControls({
              <select 
                value={operation} 
                onChange={(e) => setOperation(e.target.value)}
-               className="w-full bg-black/40 border border-white/10 rounded-xl p-2 text-sm text-emerald-300 focus:border-emerald-500 focus:outline-none"
+               className="w-full bg-slate-100 dark:bg-black/40 border border-slate-200 dark:border-white/10 rounded-xl p-2 text-sm text-emerald-600 dark:text-emerald-300 focus:border-emerald-500 focus:outline-none"
              >
                {(activeMode === 'vector' ? VECTOR_OPS : MATRIX_OPS).map(op => (
                  <option key={op.id} value={op.id}>{op.name}</option>

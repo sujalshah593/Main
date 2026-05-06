@@ -123,7 +123,7 @@ export default function InteractiveSimulator({ selectedObject, activeTool, showH
   };
 
   return (
-    <div className="w-full h-full relative min-h-[350px] flex items-center justify-center bg-[#7A1540] dark:bg-slate-900 text-white/50 rounded-xl border border-white/5 overflow-hidden" ref={containerRef}>
+    <div className="w-full h-full relative min-h-[350px] flex items-center justify-center bg-slate-100 dark:bg-slate-900 text-slate-500 dark:text-white/50 rounded-xl border border-slate-200 dark:border-white/5 overflow-hidden" ref={containerRef}>
       
       {/* Table Surface */}
       <div className="absolute bottom-0 w-full h-[100px] bg-gradient-to-b from-slate-800 to-slate-900 border-t border-slate-700"></div>
@@ -131,7 +131,7 @@ export default function InteractiveSimulator({ selectedObject, activeTool, showH
       {/* Starting Area for Object */}
       {!isPlaced && (
          <div className="absolute left-[50px] bottom-[100px] flex flex-col items-center gap-2">
-            <div className="text-[10px] text-lab-muted font-bold uppercase tracking-widest bg-black/40 px-2 py-1 rounded">Start Area</div>
+            <div className="text-[10px] text-slate-600 dark:text-lab-muted font-bold uppercase tracking-widest bg-white/80 dark:bg-black/40 px-2 py-1 rounded border border-slate-200 dark:border-transparent">Start Area</div>
          </div>
       )}
 

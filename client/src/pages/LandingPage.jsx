@@ -3,18 +3,12 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Cpu, Activity, Lightbulb, Zap, Microscope, BookOpen, Star, Users, GraduationCap, Award } from 'lucide-react';
 import logo from '../../public/logo.png';
+import LandingNavbar from '../components/LandingNavbar';
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white text-slate-900 overflow-x-hidden font-sans">
-      {/* Layer 1: Simple IAR Navbar Style */}
-      <nav className="w-full bg-white flex items-center justify-center border-b border-slate-200 shadow-md py-4">
-        <img
-          src={logo}
-          alt="IAR Logo"
-          className="w-3/4 max-w-2xl h-auto object-contain"
-        />
-      </nav>
+      <LandingNavbar />
 
       {/* Layer 2: Hero Section (IAR AI Quantum Lab) */}
       <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden bg-[#FAFAFA]">

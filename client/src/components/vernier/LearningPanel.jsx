@@ -24,14 +24,13 @@ export default function LearningPanel() {
         </p>
         
         <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-sm text-lab-muted">
-          <div className="font-semibold text-white mb-2">Least Count (LC)</div>
+          <div className="font-semibold text-slate-900 dark:text-white mb-2">Least Count (LC)</div>
           <p className="mb-2">The smallest value that can be measured by the measuring instrument is called its least count.</p>
-          <div className="bg-black/30 p-3 rounded-lg font-mono text-xs text-lab-accent2 mb-2">
-            LC = 1 MSD - 1 VSD<br/>
-            LC = (Value of 1 MSD) / (Total divisions on Vernier Scale)
+          <div className="bg-slate-100 dark:bg-black/30 p-3 rounded-lg font-mono text-xs text-sky-700 dark:text-lab-accent2 mb-2 border border-slate-200 dark:border-transparent">
+            Least Count = Value of 1 Main Scale Division / Total number of divisions on the Vernier Scale
           </div>
           <p>For a standard caliper: 1 MSD = 1mm, 10 VSD = 9 MSD.<br/>
-          LC = 1mm / 10 = <span className="text-white font-bold">0.1 mm</span></p>
+          LC = 1mm / 10 = <span className="text-slate-900 dark:text-white font-bold">0.1 mm</span></p>
         </div>
       </div>
 

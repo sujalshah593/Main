@@ -175,10 +175,10 @@ export default function MatrixEqSimulator({
               <circle cx={intersect.px} cy={intersect.py} r="4" fill="#fbbf24" className="shadow-[0_0_10px_#fbbf24]" />
             )}
           </svg>
-          <div className="absolute top-2 right-2 bg-black/60 p-2 rounded text-xs">
-            <div className="text-pink-400">Line 1</div>
-            <div className="text-sky-400">Line 2</div>
-            {intersect && <div className="text-amber-400 mt-1">Intersection</div>}
+          <div className="absolute top-2 right-2 bg-slate-100/90 dark:bg-black/60 p-2 rounded text-xs border border-slate-200 dark:border-white/10 shadow-sm">
+            <div className="text-pink-600 dark:text-pink-400 font-bold">Line 1</div>
+            <div className="text-sky-600 dark:text-sky-400 font-bold">Line 2</div>
+            {intersect && <div className="text-amber-600 dark:text-amber-400 mt-1 font-bold">Intersection</div>}
           </div>
         </div>
       );
@@ -208,9 +208,9 @@ export default function MatrixEqSimulator({
                     <h4 className="text-pink-400 font-bold uppercase tracking-wider text-sm mb-2">Final Solution</h4>
                     <div className="flex gap-4">
                       {result.solution.map((val, idx) => (
-                        <div key={idx} className="bg-black/40 px-3 py-1 rounded border border-white/10">
-                          <span className="text-lab-muted mr-2">x<sub>{idx+1}</sub> =</span>
-                          <span className="text-white font-mono font-bold">{val[0].toFixed(4)}</span>
+                        <div key={idx} className="bg-slate-200/50 dark:bg-black/40 px-3 py-1 rounded border border-slate-300 dark:border-white/10">
+                          <span className="text-slate-600 dark:text-lab-muted mr-2">x<sub>{idx+1}</sub> =</span>
+                          <span className="text-slate-900 dark:text-white font-mono font-bold">{val[0].toFixed(4)}</span>
                         </div>
                       ))}
                     </div>

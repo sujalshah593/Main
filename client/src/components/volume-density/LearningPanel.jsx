@@ -21,13 +21,13 @@ export default function LearningPanel() {
             <h3 className="text-xs font-bold uppercase tracking-wider text-lab-accent2 flex items-center gap-2">
               <Calculator size={14} /> Formulas
             </h3>
-            <div className="font-mono text-center py-2 bg-black/30 rounded border border-white/5 text-sky-300">
+            <div className="font-mono text-center py-2 bg-slate-100 dark:bg-black/30 rounded border border-slate-200 dark:border-white/5 text-sky-700 dark:text-sky-300 font-bold">
               Density (ρ) = Mass (m) / Volume (V)
             </div>
-            <div className="font-mono text-center py-2 bg-black/30 rounded border border-white/5 text-emerald-300">
+            <div className="font-mono text-center py-2 bg-slate-100 dark:bg-black/30 rounded border border-slate-200 dark:border-white/5 text-emerald-700 dark:text-emerald-300 font-bold">
               Volume (Regular) = L × B × H
             </div>
-            <div className="font-mono text-center py-2 bg-black/30 rounded border border-white/5 text-blue-300">
+            <div className="font-mono text-center py-2 bg-slate-100 dark:bg-black/30 rounded border border-slate-200 dark:border-white/5 text-blue-700 dark:text-blue-300 font-bold">
               Volume (Irregular) = Final Water Level - Initial Water Level
             </div>
           </div>

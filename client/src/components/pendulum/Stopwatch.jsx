@@ -63,8 +63,8 @@ export default function Stopwatch({ onRecordTime, isReactionErrorEnabled }) {
         <Timer size={16} className="text-rose-400" /> Stopwatch
       </h3>
       
-      <div className="bg-[#0f172a] p-6 rounded-lg border border-slate-600 flex flex-col items-center shadow-inner">
-        <div className="text-4xl font-mono font-bold text-white mb-6 tracking-wider" style={{ fontVariantNumeric: 'tabular-nums' }}>
+      <div className="bg-slate-100 dark:bg-[#0f172a] p-6 rounded-lg border border-slate-200 dark:border-slate-600 flex flex-col items-center shadow-inner transition-colors">
+        <div className="text-4xl font-mono font-bold text-slate-900 dark:text-white mb-6 tracking-wider" style={{ fontVariantNumeric: 'tabular-nums' }}>
           {formatTime(time)}
         </div>
         

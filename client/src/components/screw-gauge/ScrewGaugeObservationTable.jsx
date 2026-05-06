@@ -63,8 +63,8 @@ export default function ScrewGaugeObservationTable({ thimblePosition, selectedOb
   return (
     <div className="glass-panel p-6 rounded-2xl shadow-xl flex-1 flex flex-col min-h-[300px]">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider">
-          <BookOpen size={18} className="text-lab-accent2" />
+        <h3 className="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+          <BookOpen size={18} className="text-sky-600 dark:text-lab-accent2" />
           Observation Table
         </h3>
 
@@ -80,9 +80,9 @@ export default function ScrewGaugeObservationTable({ thimblePosition, selectedOb
         )}
       </div>
 
-      <div className="mb-6 flex flex-wrap items-center justify-between gap-4 bg-white/5 border border-white/10 p-4 rounded-xl">
-        <div className="text-sm text-lab-muted">
-          Current Object: <span className="text-white font-semibold">{selectedObject?.name}</span>
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-4 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-4 rounded-xl">
+        <div className="text-sm text-slate-500 dark:text-lab-muted">
+          Current Object: <span className="text-slate-900 dark:text-white font-semibold">{selectedObject?.name}</span>
         </div>
         <button 
           onClick={handleRecord}
@@ -93,9 +93,9 @@ export default function ScrewGaugeObservationTable({ thimblePosition, selectedOb
         </button>
       </div>
 
-      <div className="flex-1 overflow-x-auto rounded-xl border border-white/10 bg-black/20 custom-scrollbar">
-        <table className="w-full text-left text-sm text-lab-muted">
-          <thead className="bg-white/5 text-xs uppercase text-white font-semibold border-b border-white/10 sticky top-0">
+      <div className="flex-1 overflow-x-auto rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-black/20 custom-scrollbar">
+        <table className="w-full text-left text-sm text-slate-600 dark:text-lab-muted">
+          <thead className="bg-slate-100 dark:bg-white/5 text-xs uppercase text-slate-900 dark:text-white font-bold border-b border-slate-200 dark:border-white/10 sticky top-0">
             <tr>
               <th className="px-4 py-3">Object</th>
               <th className="px-4 py-3">PSR (mm)</th>
@@ -114,14 +114,13 @@ export default function ScrewGaugeObservationTable({ thimblePosition, selectedOb
                 </td>
               </tr>
             ) : (
-              observations.map((obs) => (
-                <tr key={obs.id} className="hover:bg-white/5 transition-colors">
-                  <td className="px-4 py-3 font-medium text-white">{obs.object}</td>
-                  <td className="px-4 py-3">{obs.psr}</td>
-                  <td className="px-4 py-3">{obs.csr}</td>
-                  <td className="px-4 py-3 hidden sm:table-cell">{obs.measured.toFixed(2)}</td>
-                  <td className="px-4 py-3 hidden md:table-cell">{obs.zeroError > 0 ? `+${obs.zeroError}` : obs.zeroError}</td>
-                  <td className="px-4 py-3 text-white font-mono">{obs.final.toFixed(2)}</td>
+                <tr key={obs.id} className="hover:bg-slate-100 dark:hover:bg-white/5 transition-colors border-b border-slate-100 dark:border-white/5">
+                  <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">{obs.object}</td>
+                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">{obs.psr}</td>
+                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">{obs.csr}</td>
+                  <td className="px-4 py-3 hidden sm:table-cell text-slate-600 dark:text-slate-300">{obs.measured.toFixed(2)}</td>
+                  <td className="px-4 py-3 hidden md:table-cell text-slate-600 dark:text-slate-300">{obs.zeroError > 0 ? `+${obs.zeroError}` : obs.zeroError}</td>
+                  <td className="px-4 py-3 text-slate-900 dark:text-white font-mono font-bold">{obs.final.toFixed(2)}</td>
                   <td className="px-4 py-3">
                     {mode === 'test' ? (
                       obs.correct ? (
