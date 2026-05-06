@@ -42,9 +42,9 @@ export default function LandingPage() {
           className="relative z-10 text-center w-full max-w-4xl mx-auto flex flex-col items-center gap-8"
         >
           <h2 className="font-display text-4xl md:text-6xl lg:text-[90px] font-black tracking-tighter leading-tight text-white drop-shadow-xl">
-            Simulated <br />
+            Qauntum &nbsp;AI  <br />
             <span className="inline-block pb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-400">
-              Experiments Hub
+              SIMULATOR
             </span>
           </h2>
 
@@ -479,7 +479,21 @@ export default function LandingPage() {
             The Quantum AI Virtual Lab was conceptualized and developed by dedicated innovators at IAR.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-2xl mx-auto">
+            {/* Dean / Founder - Dr. Anand K. Tiwari */}
+            <div className="flex flex-col items-center max-w-xs group">
+              <div className="w-40 h-40 rounded-[2rem] bg-slate-100 overflow-hidden mb-6 relative border-4 border-amber-200 shadow-xl group-hover:-translate-y-2 transition-transform">
+                <div className="absolute inset-0 bg-gradient-to-tr from-amber-500 to-yellow-300 opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                <div className="w-full h-full flex items-center justify-center bg-amber-50 text-amber-400">
+                  <GraduationCap size={64} />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900">Dr. Anand K. Tiwari</h3>
+              <p className="text-amber-600 font-bold text-sm uppercase tracking-wide mb-1">Founder</p>
+              <p className="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-3">Dean, Institute of Advanced Research</p>
+              <p className="text-slate-600 text-sm text-center">Visionary academic leader pioneering the integration of quantum technology and AI-driven education at IAR.</p>
+            </div>
+
             {/* Founder 1 */}
             <div className="flex flex-col items-center max-w-xs group">
               <div className="w-40 h-40 rounded-[2rem] bg-slate-100 overflow-hidden mb-6 relative border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform">
