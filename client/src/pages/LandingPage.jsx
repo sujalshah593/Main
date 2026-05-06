@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Beaker, Play, Shield, Cpu, Activity, Lightbulb, Zap, Microscope, BookOpen, Star, Users, GraduationCap, Award } from 'lucide-react';
+import { ArrowRight, Cpu, Activity, Lightbulb, Zap, Microscope, BookOpen, Star, Users, GraduationCap, Award } from 'lucide-react';
 import IAR from '../../public/IAR.png';
 
 export default function LandingPage() {
@@ -45,12 +45,12 @@ export default function LandingPage() {
           className="relative z-10 text-center w-full max-w-4xl mx-auto flex flex-col items-center gap-8"
         >
           <h2 className="font-display text-4xl md:text-6xl lg:text-[90px] font-black tracking-tighter leading-tight text-slate-900">
-            IAR Quantum AI <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7A1540] to-purple-600">
-              Virtual lab
+            Simulated <br />
+            <span className="inline-block pb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#7A1540] to-purple-600">
+              Experiments Hub
             </span>
           </h2>
-          
+
           <p className="text-lg md:text-2xl text-slate-600 max-w-2xl leading-relaxed font-medium">
             Step into the future of scientific exploration. Harnessing the power of Artificial Intelligence
             and Quantum Mechanics to redefine interactive learning.
@@ -65,59 +65,11 @@ export default function LandingPage() {
               <ArrowRight size={20} className="group-hover:translate-x-1.5 transition-transform" />
             </Link>
 
-            <button className="flex items-center gap-3 px-8 py-4 rounded-2xl border border-slate-200 bg-white text-slate-700 font-bold hover:bg-slate-50 transition-all shadow-sm hover:shadow-md">
-              <Play size={18} className="text-[#7A1540]" fill="currentColor" /> Watch Intro
-            </button>
+
           </div>
         </motion.div>
       </section>
 
-      {/* Layer 3: Video Section */}
-      <section className="px-6 lg:px-12 py-24 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="relative aspect-video w-full rounded-[40px] overflow-hidden border border-slate-200 bg-slate-100 shadow-2xl group"
-          >
-            {/* Actual Video */}
-            <video
-              src="/videos/iarvideo.mp4"
-              className="absolute inset-0 w-full h-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              controls
-            />
-          </motion.div>
-
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-slate-100 pt-12">
-            <div className="space-y-3">
-              <div className="h-12 w-12 rounded-2xl bg-[#7A1540]/5 flex items-center justify-center text-[#7A1540] border border-[#7A1540]/10">
-                <Beaker size={24} />
-              </div>
-              <h4 className="text-xl font-bold text-slate-900">Research Grade</h4>
-              <p className="text-slate-600 text-[15px] leading-relaxed">Simulations backed by advanced computational models and academic research.</p>
-            </div>
-            <div className="space-y-3">
-              <div className="h-12 w-12 rounded-2xl bg-purple-500/5 flex items-center justify-center text-purple-600 border border-purple-500/10">
-                <Play size={24} />
-              </div>
-              <h4 className="text-xl font-bold text-slate-900">AI Driven</h4>
-              <p className="text-slate-600 text-[15px] leading-relaxed">Integrated AI assistants to guide students through complex practical workflows.</p>
-            </div>
-            <div className="space-y-3">
-              <div className="h-12 w-12 rounded-2xl bg-emerald-500/5 flex items-center justify-center text-emerald-600 border border-emerald-500/10">
-                <Shield size={24} />
-              </div>
-              <h4 className="text-xl font-bold text-slate-900">Verified Learning</h4>
-              <p className="text-slate-600 text-[15px] leading-relaxed">Systematic approach to learning with persistent tracking and validated outcomes.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Layer 4: Popular Experiments Grid */}
       <section className="py-24 bg-slate-50 border-t border-slate-100">
@@ -245,87 +197,35 @@ export default function LandingPage() {
                 NEW ADMISSIONS OPEN
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-6">
-                BSc in <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Quantum Technology</span>
+                B.Sc.(H) in <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Quantum Technology</span>
               </h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                Be at the forefront of the next technological revolution. Our new BSc program combines deep physics, advanced mathematics, and cutting-edge computing to prepare you for the Quantum Era.
+                Be at the forefront of the next technological revolution. Our new B.Sc.(H) program combines deep physics, advanced mathematics, and cutting-edge computing to prepare you for the Quantum Era.
               </p>
               <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3 text-slate-700 font-medium"><GraduationCap className="text-[#7A1540]"/> 3-Year Undergraduate Program</div>
-                <div className="flex items-center gap-3 text-slate-700 font-medium"><Cpu className="text-[#7A1540]"/> Hands-on Quantum Algorithms</div>
-                <div className="flex items-center gap-3 text-slate-700 font-medium"><Microscope className="text-[#7A1540]"/> Industry-Aligned Curriculum</div>
+                <div className="flex items-center gap-3 text-slate-700 font-medium"><GraduationCap className="text-[#7A1540]" /> 4-Year Undergraduate Program</div>
+                <div className="flex items-center gap-3 text-slate-700 font-medium"><Cpu className="text-[#7A1540]" /> Hands-on Quantum Algorithms</div>
+                <div className="flex items-center gap-3 text-slate-700 font-medium"><Microscope className="text-[#7A1540]" /> Industry-Aligned Curriculum</div>
               </div>
               <button className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-[#7A1540] transition-colors w-max shadow-lg shadow-slate-900/20">
                 Download Brochure
               </button>
             </div>
             <div className="lg:w-1/2 bg-gradient-to-br from-indigo-900 to-[#7A1540] p-8 md:p-12 flex items-center justify-center relative overflow-hidden min-h-[300px]">
-               {/* Abstract Quantum Graphic */}
-               <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMSkiLz48L3N2Zz4=')]"></div>
-               <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 border-4 border-white/20 rounded-full flex items-center justify-center animate-[spin_30s_linear_infinite]">
-                  <div className="w-48 h-48 border-4 border-white/40 rounded-full flex items-center justify-center animate-[spin_20s_linear_infinite_reverse]">
-                     <div className="w-32 h-32 bg-white/10 backdrop-blur-md rounded-full border border-white/50 flex items-center justify-center shadow-[0_0_50px_rgba(255,255,255,0.2)]">
-                        <Cpu size={48} className="text-white" />
-                     </div>
+              {/* Abstract Quantum Graphic */}
+              <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMSkiLz48L3N2Zz4=')]"></div>
+              <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 border-4 border-white/20 rounded-full flex items-center justify-center animate-[spin_30s_linear_infinite]">
+                <div className="w-48 h-48 border-4 border-white/40 rounded-full flex items-center justify-center animate-[spin_20s_linear_infinite_reverse]">
+                  <div className="w-32 h-32 bg-white/10 backdrop-blur-md rounded-full border border-white/50 flex items-center justify-center shadow-[0_0_50px_rgba(255,255,255,0.2)]">
+                    <Cpu size={48} className="text-white" />
                   </div>
-               </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Layer 7: Meet the Builders */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 mb-4">
-            Meet the <span className="text-[#7A1540]">Builders</span>
-          </h2>
-          <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-16">
-            The Quantum AI Virtual Lab was conceptualized and developed by dedicated innovators at IAR.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-12">
-            {/* Founder 1 */}
-            <div className="flex flex-col items-center max-w-xs group">
-              <div className="w-40 h-40 rounded-[2rem] bg-slate-100 overflow-hidden mb-6 relative border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#7A1540] to-pink-400 opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                <div className="w-full h-full flex items-center justify-center bg-slate-200 text-slate-400">
-                  <Users size={64} />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900">Keval Gandhi</h3>
-              <p className="text-[#7A1540] font-bold text-sm uppercase tracking-wide mb-3">Founder</p>
-              <p className="text-slate-600 text-sm">Visionary leader driving the future of quantum education and interactive learning.</p>
-            </div>
-
-            {/* Engineer 1 */}
-            <div className="flex flex-col items-center max-w-xs group">
-              <div className="w-40 h-40 rounded-[2rem] bg-slate-100 overflow-hidden mb-6 relative border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform">
-                <div className="absolute inset-0 bg-gradient-to-tr from-indigo-600 to-sky-400 opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                <div className="w-full h-full flex items-center justify-center bg-slate-200 text-slate-400">
-                  <Cpu size={64} />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900">Sujal Shah</h3>
-              <p className="text-indigo-600 font-bold text-sm uppercase tracking-wide mb-3">Lead Engineer</p>
-              <p className="text-slate-600 text-sm">Spearheading the integration of computational models and modern web architectures.</p>
-            </div>
-
-            {/* Engineer 2 */}
-            <div className="flex flex-col items-center max-w-xs group">
-              <div className="w-40 h-40 rounded-[2rem] bg-slate-100 overflow-hidden mb-6 relative border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform">
-                <div className="absolute inset-0 bg-gradient-to-tr from-emerald-600 to-teal-400 opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                <div className="w-full h-full flex items-center justify-center bg-slate-200 text-slate-400">
-                  <Cpu size={64} />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900">Nidhi Chaudhary</h3>
-              <p className="text-emerald-600 font-bold text-sm uppercase tracking-wide mb-3">Lead Engineer</p>
-              <p className="text-slate-600 text-sm">Architecting robust backend systems and real-time physics engine simulations.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Layer 8: Reviews / Testimonials */}
       <section className="py-24 bg-slate-50 border-t border-slate-200">
@@ -387,14 +287,14 @@ export default function LandingPage() {
 
       {/* Layer 9: Call to Action Banner */}
       <section className="py-20 bg-[#7A1540] text-center px-6">
-         <div className="max-w-3xl mx-auto flex flex-col items-center">
-            <Award size={48} className="text-pink-300 mb-6" />
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-6">Ready to Innovate?</h2>
-            <p className="text-white/80 text-xl mb-10">Join thousands of students performing state-of-the-art virtual experiments today.</p>
-            <Link to="/dashboard" className="bg-white text-[#7A1540] px-10 py-5 rounded-2xl font-black text-xl hover:bg-slate-100 transition-colors shadow-2xl hover:scale-105 active:scale-95 flex items-center gap-3">
-               Enter Virtual Lab <ArrowRight size={24} />
-            </Link>
-         </div>
+        <div className="max-w-3xl mx-auto flex flex-col items-center">
+          <Award size={48} className="text-pink-300 mb-6" />
+          <h2 className="text-3xl md:text-4xl font-black text-white mb-6">Ready to Innovate?</h2>
+          <p className="text-white/80 text-xl mb-10">Join thousands of students performing state-of-the-art virtual experiments today.</p>
+          <Link to="/dashboard" className="bg-white text-[#7A1540] px-10 py-5 rounded-2xl font-black text-xl hover:bg-slate-100 transition-colors shadow-2xl hover:scale-105 active:scale-95 flex items-center gap-3">
+            Enter Virtual Lab <ArrowRight size={24} />
+          </Link>
+        </div>
       </section>
 
       {/* Layer 10: Our Vision */}
@@ -412,6 +312,59 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Layer 7: Meet the Builders */}
+      <section className="py-24 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 mb-4">
+            Meet the <span className="text-[#7A1540]">Builders</span>
+          </h2>
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-16">
+            The Quantum AI Virtual Lab was conceptualized and developed by dedicated innovators at IAR.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-12">
+            {/* Founder 1 */}
+            <div className="flex flex-col items-center max-w-xs group">
+              <div className="w-40 h-40 rounded-[2rem] bg-slate-100 overflow-hidden mb-6 relative border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#7A1540] to-pink-400 opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                <div className="w-full h-full flex items-center justify-center bg-slate-200 text-slate-400">
+                  <Users size={64} />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900">Keval Gandhi</h3>
+              <p className="text-[#7A1540] font-bold text-sm uppercase tracking-wide mb-3">Founder</p>
+              <p className="text-slate-600 text-sm">Visionary leader driving the future of quantum education and interactive learning.</p>
+            </div>
+
+            {/* Engineer 1 */}
+            <div className="flex flex-col items-center max-w-xs group">
+              <div className="w-40 h-40 rounded-[2rem] bg-slate-100 overflow-hidden mb-6 relative border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform">
+                <div className="absolute inset-0 bg-gradient-to-tr from-indigo-600 to-sky-400 opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                <div className="w-full h-full flex items-center justify-center bg-slate-200 text-slate-400">
+                  <Cpu size={64} />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900">Sujal Shah</h3>
+              <p className="text-indigo-600 font-bold text-sm uppercase tracking-wide mb-3">Lead Engineer</p>
+              <p className="text-slate-600 text-sm">Spearheading the integration of computational models and modern web architectures.</p>
+            </div>
+
+            {/* Engineer 2 */}
+            <div className="flex flex-col items-center max-w-xs group">
+              <div className="w-40 h-40 rounded-[2rem] bg-slate-100 overflow-hidden mb-6 relative border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform">
+                <div className="absolute inset-0 bg-gradient-to-tr from-emerald-600 to-teal-400 opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                <div className="w-full h-full flex items-center justify-center bg-slate-200 text-slate-400">
+                  <Cpu size={64} />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900">Nidhi Chaudhary</h3>
+              <p className="text-emerald-600 font-bold text-sm uppercase tracking-wide mb-3">Lead Engineer</p>
+              <p className="text-slate-600 text-sm">Architecting robust backend systems and real-time physics engine simulations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Layer 11: Expanded Footer */}
       <footer className="bg-slate-900 text-slate-300 pt-20 pb-10 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -426,14 +379,14 @@ export default function LandingPage() {
               </p>
               <div className="flex gap-4">
                 <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#7A1540] hover:text-white transition-colors">
-                   <Users size={18} />
+                  <Users size={18} />
                 </a>
                 <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#7A1540] hover:text-white transition-colors">
-                   <BookOpen size={18} />
+                  <BookOpen size={18} />
                 </a>
               </div>
             </div>
-            
+
             <div>
               <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
               <ul className="space-y-4 text-sm text-slate-400">
@@ -454,7 +407,7 @@ export default function LandingPage() {
               </ul>
             </div>
           </div>
-          
+
           <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 uppercase tracking-widest font-bold">
             <p>&copy; 2026 Institute of Advanced Research. All Rights Reserved.</p>
             <div className="flex gap-6">
