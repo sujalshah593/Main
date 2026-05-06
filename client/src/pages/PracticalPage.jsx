@@ -70,7 +70,7 @@ export default function PracticalPage() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
             >
-              <h2 className="font-display text-5xl font-black text-black dark:text-white tracking-tight">{selectedSubject.subject}</h2>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-black dark:text-white tracking-tight">{selectedSubject.subject}</h2>
               <p className="mt-4 text-[13px] font-black uppercase tracking-widest text-slate-700 dark:text-slate-400">
                 Credits {selectedSubject.meta?.credits} &bull; Contact Hours {selectedSubject.meta?.hours} &bull;{' '}
                 <span className="text-amber-700 dark:text-amber-500">{selectedSubject.meta?.type}</span>

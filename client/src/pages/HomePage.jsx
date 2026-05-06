@@ -52,7 +52,7 @@ export default function HomePage() {
               Next-Gen Learning
             </div>
  
-            <h1 className="font-display text-5xl lg:text-8xl font-extrabold text-lab-text leading-none tracking-tight">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-8xl font-extrabold text-lab-text leading-tight tracking-tight">
               Explore the <span className="text-gradient-tri">Quantum</span> World
             </h1>
  
@@ -109,7 +109,7 @@ export default function HomePage() {
       </section>
 
       {/* Feature Grid */}
-      <section className="grid md:grid-cols-3 gap-8">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {FEATURES.map((feature, i) => (
           <motion.div
             key={i}
@@ -131,11 +131,11 @@ export default function HomePage() {
       {/* Semesters Section */}
       <section id="semesters" className="space-y-10 scroll-mt-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div className="space-y-2">
-            <h2 className="text-4xl font-display font-bold text-lab-text">Your Learning Journey</h2>
+          <div className="space-y-2 text-center md:text-left">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-lab-text">Your Learning Journey</h2>
             <p className="text-lab-muted font-medium">Select a semester to explore its curriculum and practicals.</p>
           </div>
-          <div className="badge-secondary gap-2 px-4 py-2">
+          <div className="badge-secondary gap-2 px-4 py-2 mx-auto md:mx-0">
             <Layers size={14} />
             Academic Year 2026-27
           </div>
@@ -197,18 +197,18 @@ export default function HomePage() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="rounded-[40px] border border-sky-200 bg-gradient-to-br from-sky-500 to-indigo-600 p-12 text-center relative overflow-hidden group shadow-2xl"
+        className="rounded-[30px] md:rounded-[40px] border border-sky-200 bg-gradient-to-br from-sky-500 to-indigo-600 p-8 md:p-12 text-center relative overflow-hidden group shadow-2xl"
       >
         <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-        <div className="relative z-10 space-y-8">
-          <h2 className="text-4xl font-display font-extrabold text-white">Ready to start your first experiment?</h2>
-          <p className="text-sky-50 max-w-xl mx-auto text-lg font-medium">
+        <div className="relative z-10 space-y-6 md:space-y-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white">Ready to start your first experiment?</h2>
+          <p className="text-sky-50 max-w-xl mx-auto text-base md:text-lg font-medium px-4">
             Dive into our collection of interactive labs designed to make complex concepts intuitive and engaging.
           </p>
-          <div className="flex justify-center pt-4">
+          <div className="flex justify-center pt-2 md:pt-4">
             <Link
               to="/semester/sem-1"
-              className="rounded-2xl bg-white text-sky-600 hover:bg-sky-50 px-12 py-5 text-lg font-bold flex items-center gap-4 transition-all shadow-xl hover:-translate-y-1"
+              className="rounded-2xl bg-white text-sky-600 hover:bg-sky-50 px-8 md:px-12 py-4 md:py-5 text-base md:text-lg font-bold flex items-center gap-3 md:gap-4 transition-all shadow-xl hover:-translate-y-1"
             >
               <Beaker size={24} />
               Launch Lab Portal

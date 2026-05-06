@@ -29,7 +29,7 @@ export default function SemesterHubPage() {
         <div className="absolute left-0 top-0 -ml-20 -mt-20 h-64 w-64 rounded-full bg-lab-accent3/10 blur-[80px]" />
         <div className="relative z-10">
           <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-lab-accent3">{semester.id.toUpperCase()}</p>
-          <h1 className="mt-4 font-display text-4xl font-extrabold text-black dark:text-white">{semester.label}</h1>
+          <h1 className="mt-4 font-display text-3xl md:text-4xl font-extrabold text-black dark:text-white">{semester.label}</h1>
           <p className="mt-4 text-[15px] leading-relaxed text-white/80 max-w-2xl">{semester.subtitle}</p>
         </div>
       </motion.header>

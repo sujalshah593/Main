@@ -101,7 +101,7 @@ export default function TheoryPage() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
             >
-              <h2 className="font-display text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">{selectedChapter.title}</h2>
+              <h2 className="font-display text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">{selectedChapter.title}</h2>
               {selectedChapter.details && (
                 <p className="mt-4 text-[15px] leading-relaxed text-lab-muted/90">{selectedChapter.details}</p>
               )}
@@ -134,9 +134,9 @@ export default function TheoryPage() {
 
               <div className="mt-8 space-y-6 rounded-3xl border border-lab-panelBorder bg-lab-panel/100 p-8 backdrop-blur-md">
                 {selectedSubject?.meta && (
-                  <div className="flex items-center gap-3 text-xs font-bold text-lab-muted uppercase tracking-wider mb-6 pb-6 border-b border-lab-panelBorder">
-                    <MapPin size={14} className="text-lab-tertiary" />
-                    {selectedSubject.meta.programme} &bull; Semester {selectedSubject.meta.semester} &bull; Credits {selectedSubject.meta.credits} &bull; Contact Hours {selectedSubject.meta.hours}
+                  <div className="flex flex-wrap items-center gap-3 text-xs font-bold text-lab-muted uppercase tracking-wider mb-6 pb-6 border-b border-lab-panelBorder">
+                    <MapPin size={14} className="text-lab-tertiary shrink-0" />
+                    <span className="break-words">{selectedSubject.meta.programme} &bull; Semester {selectedSubject.meta.semester} &bull; Credits {selectedSubject.meta.credits} &bull; Contact Hours {selectedSubject.meta.hours}</span>
                   </div>
                 )}
 

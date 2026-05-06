@@ -14,9 +14,9 @@ export default function LandingPage() {
           <img
             src={IAR}
             alt="IAR Logo"
-            className="h-16 w-auto object-contain mb-1"
+            className="h-20 w-auto object-contain mb-1"
           />
-          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#7A1540]">IAR University</span>
+          {/* <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#7A1540]">IAR University</span> */}
         </div>
 
         {/* Brand Text Section */}
@@ -44,7 +44,7 @@ export default function LandingPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-10 text-center w-full max-w-4xl mx-auto flex flex-col items-center gap-8"
         >
-          <h2 className="font-display text-5xl md:text-7xl lg:text-[90px] font-black tracking-tighter leading-tight text-slate-900">
+          <h2 className="font-display text-4xl md:text-6xl lg:text-[90px] font-black tracking-tighter leading-tight text-slate-900">
             IAR Quantum AI <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7A1540] to-purple-600">
               Virtual lab
@@ -236,7 +236,7 @@ export default function LandingPage() {
       <section className="py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="bg-white rounded-[40px] shadow-xl overflow-hidden flex flex-col lg:flex-row border border-slate-100">
-            <div className="lg:w-1/2 p-12 lg:p-16 flex flex-col justify-center">
+            <div className="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 font-bold text-sm w-max mb-6">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
@@ -259,10 +259,10 @@ export default function LandingPage() {
                 Download Brochure
               </button>
             </div>
-            <div className="lg:w-1/2 bg-gradient-to-br from-indigo-900 to-[#7A1540] p-12 flex items-center justify-center relative overflow-hidden">
+            <div className="lg:w-1/2 bg-gradient-to-br from-indigo-900 to-[#7A1540] p-8 md:p-12 flex items-center justify-center relative overflow-hidden min-h-[300px]">
                {/* Abstract Quantum Graphic */}
                <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMSkiLz48L3N2Zz4=')]"></div>
-               <div className="relative w-64 h-64 md:w-80 md:h-80 border-4 border-white/20 rounded-full flex items-center justify-center animate-[spin_30s_linear_infinite]">
+               <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 border-4 border-white/20 rounded-full flex items-center justify-center animate-[spin_30s_linear_infinite]">
                   <div className="w-48 h-48 border-4 border-white/40 rounded-full flex items-center justify-center animate-[spin_20s_linear_infinite_reverse]">
                      <div className="w-32 h-32 bg-white/10 backdrop-blur-md rounded-full border border-white/50 flex items-center justify-center shadow-[0_0_50px_rgba(255,255,255,0.2)]">
                         <Cpu size={48} className="text-white" />
@@ -389,7 +389,7 @@ export default function LandingPage() {
       <section className="py-20 bg-[#7A1540] text-center px-6">
          <div className="max-w-3xl mx-auto flex flex-col items-center">
             <Award size={48} className="text-pink-300 mb-6" />
-            <h2 className="text-4xl font-black text-white mb-6">Ready to Innovate?</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-6">Ready to Innovate?</h2>
             <p className="text-white/80 text-xl mb-10">Join thousands of students performing state-of-the-art virtual experiments today.</p>
             <Link to="/dashboard" className="bg-white text-[#7A1540] px-10 py-5 rounded-2xl font-black text-xl hover:bg-slate-100 transition-colors shadow-2xl hover:scale-105 active:scale-95 flex items-center gap-3">
                Enter Virtual Lab <ArrowRight size={24} />
