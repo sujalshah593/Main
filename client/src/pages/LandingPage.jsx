@@ -2,32 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Beaker, Play, Shield, Cpu, Activity, Lightbulb, Zap, Microscope, BookOpen, Star, Users, GraduationCap, Award } from 'lucide-react';
-import IAR from '../../public/IAR.png';
+import logo from '../../public/logo.png';
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white text-slate-900 overflow-x-hidden font-sans">
       {/* Layer 1: Simple IAR Navbar Style */}
-      <nav className="w-full bg-white flex flex-col md:flex-row items-stretch border-b border-slate-200 shadow-md">
-        {/* Logo Section */}
-        <div className="p-4 md:px-12 flex flex-col items-center justify-center min-w-[220px]">
-          <img
-            src={IAR}
-            alt="IAR Logo"
-            className="h-20 w-auto object-contain mb-1"
-          />
-          {/* <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#7A1540]">IAR University</span> */}
-        </div>
-
-        {/* Brand Text Section */}
-        <div className="flex-1 bg-[#7A1540] w-full py-8 px-10 flex flex-col justify-center text-center md:text-left">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-display font-extrabold tracking-tight text-white">
-            Institute of Advanced Research
-          </h1>
-          <p className="text-lg md:text-xl italic font-serif text-white/90 mt-1">
-            The University for Innovation
-          </p>
-        </div>
+      <nav className="w-full bg-white flex items-center justify-center border-b border-slate-200 shadow-md py-4">
+        <img
+          src={logo}
+          alt="IAR Logo"
+          className="w-3/4 max-w-2xl h-auto object-contain"
+        />
       </nav>
 
       {/* Layer 2: Hero Section (IAR AI Quantum Lab) */}
@@ -50,7 +36,7 @@ export default function LandingPage() {
               Virtual lab
             </span>
           </h2>
-          
+
           <p className="text-lg md:text-2xl text-slate-600 max-w-2xl leading-relaxed font-medium">
             Step into the future of scientific exploration. Harnessing the power of Artificial Intelligence
             and Quantum Mechanics to redefine interactive learning.
@@ -251,24 +237,24 @@ export default function LandingPage() {
                 Be at the forefront of the next technological revolution. Our new BSc program combines deep physics, advanced mathematics, and cutting-edge computing to prepare you for the Quantum Era.
               </p>
               <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3 text-slate-700 font-medium"><GraduationCap className="text-[#7A1540]"/> 3-Year Undergraduate Program</div>
-                <div className="flex items-center gap-3 text-slate-700 font-medium"><Cpu className="text-[#7A1540]"/> Hands-on Quantum Algorithms</div>
-                <div className="flex items-center gap-3 text-slate-700 font-medium"><Microscope className="text-[#7A1540]"/> Industry-Aligned Curriculum</div>
+                <div className="flex items-center gap-3 text-slate-700 font-medium"><GraduationCap className="text-[#7A1540]" /> 3-Year Undergraduate Program</div>
+                <div className="flex items-center gap-3 text-slate-700 font-medium"><Cpu className="text-[#7A1540]" /> Hands-on Quantum Algorithms</div>
+                <div className="flex items-center gap-3 text-slate-700 font-medium"><Microscope className="text-[#7A1540]" /> Industry-Aligned Curriculum</div>
               </div>
               <button className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-[#7A1540] transition-colors w-max shadow-lg shadow-slate-900/20">
                 Download Brochure
               </button>
             </div>
             <div className="lg:w-1/2 bg-gradient-to-br from-indigo-900 to-[#7A1540] p-8 md:p-12 flex items-center justify-center relative overflow-hidden min-h-[300px]">
-               {/* Abstract Quantum Graphic */}
-               <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMSkiLz48L3N2Zz4=')]"></div>
-               <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 border-4 border-white/20 rounded-full flex items-center justify-center animate-[spin_30s_linear_infinite]">
-                  <div className="w-48 h-48 border-4 border-white/40 rounded-full flex items-center justify-center animate-[spin_20s_linear_infinite_reverse]">
-                     <div className="w-32 h-32 bg-white/10 backdrop-blur-md rounded-full border border-white/50 flex items-center justify-center shadow-[0_0_50px_rgba(255,255,255,0.2)]">
-                        <Cpu size={48} className="text-white" />
-                     </div>
+              {/* Abstract Quantum Graphic */}
+              <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMSkiLz48L3N2Zz4=')]"></div>
+              <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 border-4 border-white/20 rounded-full flex items-center justify-center animate-[spin_30s_linear_infinite]">
+                <div className="w-48 h-48 border-4 border-white/40 rounded-full flex items-center justify-center animate-[spin_20s_linear_infinite_reverse]">
+                  <div className="w-32 h-32 bg-white/10 backdrop-blur-md rounded-full border border-white/50 flex items-center justify-center shadow-[0_0_50px_rgba(255,255,255,0.2)]">
+                    <Cpu size={48} className="text-white" />
                   </div>
-               </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -283,7 +269,7 @@ export default function LandingPage() {
           <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-16">
             The Quantum AI Virtual Lab was conceptualized and developed by dedicated innovators at IAR.
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-12">
             {/* Founder 1 */}
             <div className="flex flex-col items-center max-w-xs group">
@@ -387,14 +373,14 @@ export default function LandingPage() {
 
       {/* Layer 9: Call to Action Banner */}
       <section className="py-20 bg-[#7A1540] text-center px-6">
-         <div className="max-w-3xl mx-auto flex flex-col items-center">
-            <Award size={48} className="text-pink-300 mb-6" />
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-6">Ready to Innovate?</h2>
-            <p className="text-white/80 text-xl mb-10">Join thousands of students performing state-of-the-art virtual experiments today.</p>
-            <Link to="/dashboard" className="bg-white text-[#7A1540] px-10 py-5 rounded-2xl font-black text-xl hover:bg-slate-100 transition-colors shadow-2xl hover:scale-105 active:scale-95 flex items-center gap-3">
-               Enter Virtual Lab <ArrowRight size={24} />
-            </Link>
-         </div>
+        <div className="max-w-3xl mx-auto flex flex-col items-center">
+          <Award size={48} className="text-pink-300 mb-6" />
+          <h2 className="text-3xl md:text-4xl font-black text-white mb-6">Ready to Innovate?</h2>
+          <p className="text-white/80 text-xl mb-10">Join thousands of students performing state-of-the-art virtual experiments today.</p>
+          <Link to="/dashboard" className="bg-white text-[#7A1540] px-10 py-5 rounded-2xl font-black text-xl hover:bg-slate-100 transition-colors shadow-2xl hover:scale-105 active:scale-95 flex items-center gap-3">
+            Enter Virtual Lab <ArrowRight size={24} />
+          </Link>
+        </div>
       </section>
 
       {/* Layer 10: Our Vision */}
@@ -418,7 +404,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <img src={IAR} alt="IAR Logo" className="h-10 w-auto object-contain brightness-0 invert opacity-90" />
+                <img src={logo} alt="IAR Logo" className="h-10 w-auto object-contain brightness-0 invert opacity-90" />
                 <span className="font-display font-bold text-white text-2xl tracking-wide">Quantum AI Lab</span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
@@ -426,14 +412,14 @@ export default function LandingPage() {
               </p>
               <div className="flex gap-4">
                 <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#7A1540] hover:text-white transition-colors">
-                   <Users size={18} />
+                  <Users size={18} />
                 </a>
                 <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#7A1540] hover:text-white transition-colors">
-                   <BookOpen size={18} />
+                  <BookOpen size={18} />
                 </a>
               </div>
             </div>
-            
+
             <div>
               <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
               <ul className="space-y-4 text-sm text-slate-400">
@@ -454,7 +440,7 @@ export default function LandingPage() {
               </ul>
             </div>
           </div>
-          
+
           <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 uppercase tracking-widest font-bold">
             <p>&copy; 2026 Institute of Advanced Research. All Rights Reserved.</p>
             <div className="flex gap-6">
@@ -467,3 +453,6 @@ export default function LandingPage() {
     </div>
   );
 }
+
+
+
