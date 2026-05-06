@@ -2,32 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Cpu, Activity, Lightbulb, Zap, Microscope, BookOpen, Star, Users, GraduationCap, Award } from 'lucide-react';
-import IAR from '../../public/IAR.png';
+import logo from '../../public/logo.png';
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white text-slate-900 overflow-x-hidden font-sans">
       {/* Layer 1: Simple IAR Navbar Style */}
-      <nav className="w-full bg-white flex flex-col md:flex-row items-stretch border-b border-slate-200 shadow-md">
-        {/* Logo Section */}
-        <div className="p-4 md:px-12 flex flex-col items-center justify-center min-w-[220px]">
-          <img
-            src={IAR}
-            alt="IAR Logo"
-            className="h-20 w-auto object-contain mb-1"
-          />
-          {/* <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#7A1540]">IAR University</span> */}
-        </div>
-
-        {/* Brand Text Section */}
-        <div className="flex-1 bg-[#7A1540] w-full py-8 px-10 flex flex-col justify-center text-center md:text-left">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-display font-extrabold tracking-tight text-white">
-            Institute of Advanced Research
-          </h1>
-          <p className="text-lg md:text-xl italic font-serif text-white/90 mt-1">
-            The University for Innovation
-          </p>
-        </div>
+      <nav className="w-full bg-white flex items-center justify-center border-b border-slate-200 shadow-md py-4">
+        <img
+          src={logo}
+          alt="IAR Logo"
+          className="w-3/4 max-w-2xl h-auto object-contain"
+        />
       </nav>
 
       {/* Layer 2: Hero Section (IAR AI Quantum Lab) */}
@@ -227,6 +213,7 @@ export default function LandingPage() {
       </section>
 
 
+
       {/* Layer 8: Reviews / Testimonials */}
       <section className="py-24 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -371,7 +358,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <img src={IAR} alt="IAR Logo" className="h-10 w-auto object-contain brightness-0 invert opacity-90" />
+                <img src={logo} alt="IAR Logo" className="h-10 w-auto object-contain brightness-0 invert opacity-90" />
                 <span className="font-display font-bold text-white text-2xl tracking-wide">Quantum AI Lab</span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
@@ -420,3 +407,6 @@ export default function LandingPage() {
     </div>
   );
 }
+
+
+
