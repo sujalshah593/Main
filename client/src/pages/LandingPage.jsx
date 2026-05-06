@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Cpu, Activity, Lightbulb, Zap, Microscope, BookOpen, Star, Users, GraduationCap, Award } from 'lucide-react';
 import logo from '../../public/logo.png';
+import dashboard from '../../public/snapshots/dashboard.png'
+import theory from '../../public/snapshots/theory.png'
+import mpractial from '../../public/snapshots/mpractial.png'
+import ppractical from '../../public/snapshots/ppractical.png'
+import pythoneditor from '../../public/snapshots/pythoneditor.png'
 
 export default function LandingPage() {
   return (
@@ -12,17 +17,23 @@ export default function LandingPage() {
         <img
           src={logo}
           alt="IAR Logo"
-          className="w-3/4 max-w-2xl h-auto object-contain"
+          className="w-96 max-w-2xl h-auto object-contain"
         />
       </nav>
 
       {/* Layer 2: Hero Section (IAR AI Quantum Lab) */}
-      <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden bg-[#FAFAFA]">
-        {/* Abstract Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] rounded-full bg-gradient-to-br from-[#7A1540]/5 to-purple-400/5 blur-[120px]" />
-          <div className="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] rounded-full bg-gradient-to-tr from-sky-400/5 to-indigo-400/5 blur-[120px]" />
-        </div>
+      <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden">
+        {/* Background Video */}
+        <video
+          src="/videos/iarvideo.mp4"
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/55" />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 10 }}
@@ -30,14 +41,14 @@ export default function LandingPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-10 text-center w-full max-w-4xl mx-auto flex flex-col items-center gap-8"
         >
-          <h2 className="font-display text-4xl md:text-6xl lg:text-[90px] font-black tracking-tighter leading-tight text-slate-900">
+          <h2 className="font-display text-4xl md:text-6xl lg:text-[90px] font-black tracking-tighter leading-tight text-white drop-shadow-xl">
             Simulated <br />
-            <span className="inline-block pb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#7A1540] to-purple-600">
+            <span className="inline-block pb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-400">
               Experiments Hub
             </span>
           </h2>
 
-          <p className="text-lg md:text-2xl text-slate-600 max-w-2xl leading-relaxed font-medium">
+          <p className="text-lg md:text-2xl text-white/80 max-w-2xl leading-relaxed font-medium drop-shadow">
             Step into the future of scientific exploration. Harnessing the power of Artificial Intelligence
             and Quantum Mechanics to redefine interactive learning.
           </p>
@@ -45,17 +56,176 @@ export default function LandingPage() {
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <Link
               to="/dashboard"
-              className="group relative flex items-center justify-center gap-3 bg-[#7A1540] text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 hover:bg-[#601032] shadow-xl hover:shadow-[#7A1540]/20"
+              className="group relative flex items-center justify-center gap-3 bg-[#ffcc00] text-black px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 hover:bg-[#601032] shadow-xl hover:shadow-[#7A1540]/40"
             >
               <span>Explore Labs</span>
               <ArrowRight size={20} className="group-hover:translate-x-1.5 transition-transform" />
             </Link>
-
-
           </div>
         </motion.div>
       </section>
 
+      {/* Platform Preview: Alternating Showcase */}
+      <section className="py-24 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 space-y-32">
+
+          {/* Section Header */}
+          <div className="text-center max-w-2xl mx-auto">
+            <span className="inline-block text-xs font-black uppercase tracking-[0.2em] text-[#7A1540] bg-[#7A1540]/8 px-4 py-1.5 rounded-full mb-4">Platform Preview</span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 mb-4">
+              Everything You Need,{' '}
+              <span className="text-[#7A1540]">In One Place</span>
+            </h2>
+            <p className="text-slate-500 text-lg">A fully integrated virtual science platform — from theory to simulation to live coding.</p>
+          </div>
+
+          {/* Row 1: Text Left | Image Right */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20"
+          >
+            <div className="lg:w-1/2 flex flex-col gap-5">
+              <span className="text-xs font-black uppercase tracking-widest text-[#7A1540]">🌐 Quantum World Dashboard</span>
+              <h3 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight">
+                Your Gateway to the <span className="text-[#7A1540]">Quantum World</span>
+              </h3>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                A clean, intuitive dashboard designed for students — navigate across AI Lab Assistants, Interactive Simulations, and the Theory Portal from a single unified interface.
+              </p>
+              <ul className="space-y-2 text-slate-600 text-[15px]">
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#7A1540] inline-block" />Sidebar navigation across all modules</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#7A1540] inline-block" />Interactive simulation card grid</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#7A1540] inline-block" />AI Lab Assistant integration</li>
+              </ul>
+            </div>
+            <div className="lg:w-1/2">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 ring-1 ring-black/5">
+                <img src={dashboard} alt="Quantum World Dashboard" className="w-full h-auto object-cover" />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Row 2: Image Left | Text Right */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20"
+          >
+            <div className="lg:w-1/2 flex flex-col gap-5">
+              <span className="text-xs font-black uppercase tracking-widest text-indigo-600">📖 Theory Portal</span>
+              <h3 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight">
+                Deep-Dive <span className="text-indigo-600">Theory &amp; Chapter Notes</span>
+              </h3>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                Access subject-wise theory modules, embedded PDF chapter notes, and application summaries — all organized by unit, seamlessly linked to your practicals.
+              </p>
+              <ul className="space-y-2 text-slate-600 text-[15px]">
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-indigo-600 inline-block" />Organized by subjects & units</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-indigo-600 inline-block" />Inline PDF viewer with page controls</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-indigo-600 inline-block" />Highlighted application sections</li>
+              </ul>
+            </div>
+            <div className="lg:w-1/2">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 ring-1 ring-black/5">
+                <img src={theory} alt="Theory Portal" className="w-full h-auto object-cover" />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Row 3: Text Left | Image Right */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20"
+          >
+            <div className="lg:w-1/2 flex flex-col gap-5">
+              <span className="text-xs font-black uppercase tracking-widest text-purple-600">📐 Advanced Math Labs</span>
+              <h3 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight">
+                Visualize <span className="text-purple-600">3D Mathematics</span> in Real-Time
+              </h3>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                Explore partial derivatives, gradient descent, and multivariate calculus through live 3D surface plots. Adjust parameters and watch the math come alive.
+              </p>
+              <ul className="space-y-2 text-slate-600 text-[15px]">
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-purple-600 inline-block" />Interactive 3D surface renderer</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-purple-600 inline-block" />Real-time coordinate sliders</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-purple-600 inline-block" />Theory + Explore dual panel view</li>
+              </ul>
+            </div>
+            <div className="lg:w-1/2">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 ring-1 ring-black/5">
+                <img src={mpractial} alt="3D Math Visualization" className="w-full h-auto object-cover" />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Row 4: Image Left | Text Right */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20"
+          >
+            <div className="lg:w-1/2 flex flex-col gap-5">
+              <span className="text-xs font-black uppercase tracking-widest text-emerald-600">⚗️ Physics Simulations</span>
+              <h3 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight">
+                Run Real <span className="text-emerald-600">Physics Experiments</span> Virtually
+              </h3>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                Simulate classic experiments like the Simple Pendulum with a full apparatus panel, live stopwatch, and an auto-populating observation data table for analysis.
+              </p>
+              <ul className="space-y-2 text-slate-600 text-[15px]">
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-emerald-600 inline-block" />Physics engine with real dynamics</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-emerald-600 inline-block" />Precision stopwatch & data recorder</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-emerald-600 inline-block" />T² vs L graph auto-generation</li>
+              </ul>
+            </div>
+            <div className="lg:w-1/2">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 ring-1 ring-black/5">
+                <img src={ppractical} alt="Simple Pendulum Simulation" className="w-full h-auto object-cover" />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Row 5: Text Left | Image Right */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20"
+          >
+            <div className="lg:w-1/2 flex flex-col gap-5">
+              <span className="text-xs font-black uppercase tracking-widest text-amber-600">🐍 Python Workbench</span>
+              <h3 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight">
+                Code, Run &amp; Experiment with <span className="text-amber-600">Live Python</span>
+              </h3>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                A fully integrated Python IDE with an interactive terminal — write, run, and debug scientific programs right in the browser without any installation required.
+              </p>
+              <ul className="space-y-2 text-slate-600 text-[15px]">
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-amber-600 inline-block" />Live Python runtime in the browser</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-amber-600 inline-block" />Syntax-highlighted code editor</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-amber-600 inline-block" />Interactive terminal with stdin support</li>
+              </ul>
+            </div>
+            <div className="lg:w-1/2">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 ring-1 ring-black/5">
+                <img src={pythoneditor} alt="Python Workbench" className="w-full h-auto object-cover" />
+              </div>
+            </div>
+          </motion.div>
+
+        </div>
+      </section>
 
       {/* Layer 4: Popular Experiments Grid */}
       <section className="py-24 bg-slate-50 border-t border-slate-100">
