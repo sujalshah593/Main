@@ -1,4 +1,6 @@
-import { Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import MainLayout from './layouts/MainLayout.jsx';
 import LandingPage from './pages/LandingPage.jsx';
 import HomePage from './pages/HomePage.jsx';
@@ -34,47 +36,78 @@ import BasicProbabilityPage from './pages/BasicProbabilityPage.jsx';
 import BasicStatisticsPage from './pages/BasicStatisticsPage.jsx';
 import SimpleSimulationsPage from './pages/SimpleSimulationsPage.jsx';
 import ComplexNumbersPage from './pages/ComplexNumbersPage.jsx';
+import IntroAnimation from './components/shared/IntroAnimation.jsx';
 
 export default function App() {
+  const location = useLocation();
+  const [showIntro, setShowIntro] = useState(() => {
+    // TEMPORARILY FORCING SHOW FOR VERIFICATION
+    const isRoot = location.pathname === '/' || location.pathname === '';
+    return isRoot; 
+  });
+
+  useEffect(() => {
+    // TEMPORARILY FORCING SHOW FOR VERIFICATION
+    const isRoot = location.pathname === '/' || location.pathname === '';
+    
+    if (isRoot) {
+      setShowIntro(true);
+    }
+  }, [location.pathname]);
+
+  const handleIntroComplete = () => {
+    console.log("Intro complete - transitioning to landing page");
+    setShowIntro(false);
+    sessionStorage.setItem('seen_quantum_intro', 'true');
+  };
+
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route element={<MainLayout />}>
-        <Route path="/dashboard" element={<HomePage />} />
-        <Route path="/semester/:semesterId" element={<SemesterHubPage />} />
-        <Route path="/semester/:semesterId/theory" element={<TheoryPage />} />
-        <Route path="/semester/:semesterId/practical" element={<PracticalPage />} />
-        <Route path="/python-editor" element={<PythonEditorPage />} />
-        <Route path="/labs" element={<LabsPage />} />
-        <Route path="/labs/:labId/experiments" element={<ExperimentsPage />} />
-        <Route path="/experiment/:id" element={<ExperimentDetailPage />} />
-        <Route path="/experiment/:id/simulator" element={<SimulatorPage />} />
-        <Route path="/vernier-caliper" element={<VernierCaliperPage />} />
-        <Route path="/screw-gauge" element={<ScrewGaugePage />} />
-        <Route path="/volume-density" element={<VolumeDensityPage />} />
-        <Route path="/errors-and-sig-figs" element={<ErrorsAndSigFigPage />} />
-        <Route path="/pendulum" element={<PendulumPage mode="motion" />} />
-        <Route path="/pendulum-gravity" element={<PendulumPage mode="gravity" />} />
-        <Route path="/motion-equations" element={<MotionEquationsPage />} />
-        <Route path="/hookes-law" element={<SpringLawPage />} />
-        <Route path="/energy-conservation" element={<EnergyConservationPage />} />
-        <Route path="/function-plotter" element={<FunctionPlotterPage />} />
-        <Route path="/flywheel" element={<FlywheelPage />} />
-        <Route path="/graph-transformations" element={<GraphTransformationsPage />} />
-        <Route path="/friction" element={<FrictionPage />} />
-        <Route path="/limits-continuity" element={<LimitsContinuityPage />} />
-        <Route path="/inclined-plane" element={<InclinedFrictionPage />} />
-        <Route path="/activation-functions" element={<ActivationFunctionsPage />} />
-        <Route path="/vectors-matrices" element={<VectorsMatricesPage />} />
-        <Route path="/matrix-equations" element={<MatrixEquationsPage />} />
-        <Route path="/derivatives-slopes" element={<DerivativesSlopesPage />} />
-        <Route path="/partial-derivatives" element={<PartialDerivativesPage />} />
-        <Route path="/gradient-descent" element={<GradientDescentPage />} />
-        <Route path="/basic-probability" element={<BasicProbabilityPage />} />
-        <Route path="/basic-statistics" element={<BasicStatisticsPage />} />
-        <Route path="/simple-simulations" element={<SimpleSimulationsPage />} />
-        <Route path="/complex-numbers" element={<ComplexNumbersPage />} />
-      </Route>
-    </Routes>
+    <>
+      <AnimatePresence mode="wait">
+        {showIntro && (
+          <IntroAnimation key="intro" onComplete={handleIntroComplete} />
+        )}
+      </AnimatePresence>
+
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route element={<MainLayout />}>
+          <Route path="/dashboard" element={<HomePage />} />
+          <Route path="/semester/:semesterId" element={<SemesterHubPage />} />
+          <Route path="/semester/:semesterId/theory" element={<TheoryPage />} />
+          <Route path="/semester/:semesterId/practical" element={<PracticalPage />} />
+          <Route path="/python-editor" element={<PythonEditorPage />} />
+          <Route path="/labs" element={<LabsPage />} />
+          <Route path="/labs/:labId/experiments" element={<ExperimentsPage />} />
+          <Route path="/experiment/:id" element={<ExperimentDetailPage />} />
+          <Route path="/experiment/:id/simulator" element={<SimulatorPage />} />
+          <Route path="/vernier-caliper" element={<VernierCaliperPage />} />
+          <Route path="/screw-gauge" element={<ScrewGaugePage />} />
+          <Route path="/volume-density" element={<VolumeDensityPage />} />
+          <Route path="/errors-and-sig-figs" element={<ErrorsAndSigFigPage />} />
+          <Route path="/pendulum" element={<PendulumPage mode="motion" />} />
+          <Route path="/pendulum-gravity" element={<PendulumPage mode="gravity" />} />
+          <Route path="/motion-equations" element={<MotionEquationsPage />} />
+          <Route path="/hookes-law" element={<SpringLawPage />} />
+          <Route path="/energy-conservation" element={<EnergyConservationPage />} />
+          <Route path="/function-plotter" element={<FunctionPlotterPage />} />
+          <Route path="/flywheel" element={<FlywheelPage />} />
+          <Route path="/graph-transformations" element={<GraphTransformationsPage />} />
+          <Route path="/friction" element={<FrictionPage />} />
+          <Route path="/limits-continuity" element={<LimitsContinuityPage />} />
+          <Route path="/inclined-plane" element={<InclinedFrictionPage />} />
+          <Route path="/activation-functions" element={<ActivationFunctionsPage />} />
+          <Route path="/vectors-matrices" element={<VectorsMatricesPage />} />
+          <Route path="/matrix-equations" element={<MatrixEquationsPage />} />
+          <Route path="/derivatives-slopes" element={<DerivativesSlopesPage />} />
+          <Route path="/partial-derivatives" element={<PartialDerivativesPage />} />
+          <Route path="/gradient-descent" element={<GradientDescentPage />} />
+          <Route path="/basic-probability" element={<BasicProbabilityPage />} />
+          <Route path="/basic-statistics" element={<BasicStatisticsPage />} />
+          <Route path="/simple-simulations" element={<SimpleSimulationsPage />} />
+          <Route path="/complex-numbers" element={<ComplexNumbersPage />} />
+        </Route>
+      </Routes>
+    </>
   );
 }

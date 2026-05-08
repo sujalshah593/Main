@@ -5,7 +5,7 @@ export default function ObservationTable({ jawPosition, selectedObject, zeroErro
   const [observations, setObservations] = useState([]);
   const [score, setScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(300); // 5 mins for test mode
-  
+
   // To avoid calculating values constantly if the user hasn't pressed "Record"
   const mainScaleReading = Math.floor(jawPosition);
   const vernierCoincidence = Math.round((jawPosition % 1) * 10);
@@ -33,7 +33,7 @@ export default function ObservationTable({ jawPosition, selectedObject, zeroErro
 
   const handleRecord = () => {
     const isCorrect = Math.abs(finalReading - trueValue) <= 0.1; // allow small tolerance
-    
+
     const newObs = {
       id: Date.now(),
       object: selectedObject?.name,
@@ -69,21 +69,21 @@ export default function ObservationTable({ jawPosition, selectedObject, zeroErro
 
         {mode === 'test' && (
           <div className="flex items-center gap-4">
-             <div className="flex items-center gap-1.5 text-rose-400 font-mono text-sm bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">
-               <Clock size={14} /> {formatTime(timeLeft)}
-             </div>
-             <div className="text-sm font-bold text-emerald-400">
-               Score: {score}
-             </div>
+            <div className="flex items-center gap-1.5 text-rose-400 font-mono text-sm bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">
+              <Clock size={14} /> {formatTime(timeLeft)}
+            </div>
+            <div className="text-sm font-bold text-emerald-400">
+              Score: {score}
+            </div>
           </div>
         )}
       </div>
 
       <div className="mb-6 flex items-center justify-between bg-white/5 border border-white/10 p-4 rounded-xl">
-        <div className="text-sm text-lab-muted">
+        <div className="text-sm text-white">
           Current Object: <span className="text-white font-semibold">{selectedObject?.name}</span>
         </div>
-        <button 
+        <button
           onClick={handleRecord}
           disabled={mode === 'test' && timeLeft === 0}
           className="bg-lab-accent text-[#0f172a] font-bold text-sm px-6 py-2 rounded-lg hover:bg-lab-accent/90 transition-all shadow-[0_0_15px_rgba(45,212,191,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
@@ -93,7 +93,7 @@ export default function ObservationTable({ jawPosition, selectedObject, zeroErro
       </div>
 
       <div className="flex-1 overflow-x-auto rounded-xl border border-white/10 bg-black/20 custom-scrollbar">
-        <table className="w-full text-left text-sm text-lab-muted">
+        <table className="w-full text-left text-sm text-white">
           <thead className="bg-white/5 text-xs uppercase text-white font-semibold border-b border-white/10 sticky top-0">
             <tr>
               <th className="px-4 py-3">Object</th>
@@ -108,7 +108,7 @@ export default function ObservationTable({ jawPosition, selectedObject, zeroErro
           <tbody className="divide-y divide-white/5">
             {observations.length === 0 ? (
               <tr>
-                <td colSpan="7" className="px-4 py-8 text-center text-lab-muted/50">
+                <td colSpan="7" className="px-4 py-8 text-center text-white">
                   No observations recorded yet. Align the jaws and click 'Record Reading'.
                 </td>
               </tr>
@@ -124,12 +124,12 @@ export default function ObservationTable({ jawPosition, selectedObject, zeroErro
                   <td className="px-4 py-3">
                     {mode === 'test' ? (
                       obs.correct ? (
-                        <span className="flex items-center gap-1 text-emerald-400 text-xs font-bold"><CheckCircle size={14}/> Correct</span>
+                        <span className="flex items-center gap-1 text-emerald-400 text-xs font-bold"><CheckCircle size={14} /> Correct</span>
                       ) : (
-                        <span className="flex items-center gap-1 text-rose-400 text-xs font-bold"><XCircle size={14}/> Incorrect</span>
+                        <span className="flex items-center gap-1 text-rose-400 text-xs font-bold"><XCircle size={14} /> Incorrect</span>
                       )
                     ) : (
-                      <span className="text-xs text-lab-muted">Recorded</span>
+                      <span className="text-xs text-white">Recorded</span>
                     )}
                   </td>
                 </tr>
