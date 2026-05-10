@@ -79,15 +79,9 @@ export default function ObservationTable({ jawPosition, selectedObject, zeroErro
         )}
       </div>
 
-<<<<<<< HEAD
       <div className="mb-6 flex items-center justify-between bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-4 rounded-xl">
         <div className="text-sm text-slate-500 dark:text-lab-muted">
           Current Object: <span className="text-slate-900 dark:text-white font-semibold">{selectedObject?.name}</span>
-=======
-      <div className="mb-6 flex items-center justify-between bg-white/5 border border-white/10 p-4 rounded-xl">
-        <div className="text-sm text-white">
-          Current Object: <span className="text-white font-semibold">{selectedObject?.name}</span>
->>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
         </div>
         <button
           onClick={handleRecord}
@@ -98,15 +92,9 @@ export default function ObservationTable({ jawPosition, selectedObject, zeroErro
         </button>
       </div>
 
-<<<<<<< HEAD
       <div className="flex-1 overflow-x-auto rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-black/20 custom-scrollbar">
         <table className="w-full text-left text-sm text-slate-600 dark:text-lab-muted">
           <thead className="bg-slate-100 dark:bg-white/5 text-xs uppercase text-slate-900 dark:text-white font-bold border-b border-slate-200 dark:border-white/10 sticky top-0">
-=======
-      <div className="flex-1 overflow-x-auto rounded-xl border border-white/10 bg-black/20 custom-scrollbar">
-        <table className="w-full text-left text-sm text-white">
-          <thead className="bg-white/5 text-xs uppercase text-white font-semibold border-b border-white/10 sticky top-0">
->>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
             <tr>
               <th className="px-4 py-3">Object</th>
               <th className="px-4 py-3">MSR (mm)</th>
@@ -120,13 +108,8 @@ export default function ObservationTable({ jawPosition, selectedObject, zeroErro
           <tbody className="divide-y divide-white/5">
             {observations.length === 0 ? (
               <tr>
-<<<<<<< HEAD
                 <td colSpan="7" className="px-4 py-6 text-sm text-center text-slate-500 dark:text-lab-muted">
                   No observations recorded yet.
-=======
-                <td colSpan="7" className="px-4 py-8 text-center text-white">
-                  No observations recorded yet. Align the jaws and click 'Record Reading'.
->>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
                 </td>
               </tr>
             ) : (

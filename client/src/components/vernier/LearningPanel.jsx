@@ -22,7 +22,6 @@ export default function LearningPanel() {
         <p className="text-sm text-white leading-relaxed mb-4">
           A Vernier Caliper is a high-precision measurement instrument. It consists of a fixed main scale and a movable vernier scale. The difference between one main scale division (MSD) and one vernier scale division (VSD) allows for precise measurements.
         </p>
-<<<<<<< HEAD
         
         <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-sm text-lab-muted">
           <div className="font-semibold text-slate-900 dark:text-white mb-2">Least Count (LC)</div>
@@ -32,18 +31,6 @@ export default function LearningPanel() {
           </div>
           <p>For a standard caliper: 1 MSD = 1mm, 10 VSD = 9 MSD.<br/>
           LC = 1mm / 10 = <span className="text-slate-900 dark:text-white font-bold">0.1 mm</span></p>
-=======
-
-        <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-sm text-white">
-          <div className="font-semibold text-white mb-2">Least Count (LC)</div>
-          <p className="mb-2">The smallest value that can be measured by the measuring instrument is called its least count.</p>
-          <div className="bg-black/30 p-3 rounded-lg font-mono text-xs text-lab-accent2 mb-2">
-            LC = 1 MSD - 1 VSD<br />
-            LC = (Value of 1 MSD) / (Total divisions on Vernier Scale)
-          </div>
-          <p>For a standard caliper: 1 MSD = 1mm, 10 VSD = 9 MSD.<br />
-            LC = 1mm / 10 = <span className="text-white font-bold">0.1 mm</span></p>
->>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
         </div>
       </div>
 

@@ -80,15 +80,9 @@ export default function ScrewGaugeObservationTable({ thimblePosition, selectedOb
         )}
       </div>
 
-<<<<<<< HEAD
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-4 rounded-xl">
         <div className="text-sm text-slate-500 dark:text-lab-muted">
           Current Object: <span className="text-slate-900 dark:text-white font-semibold">{selectedObject?.name}</span>
-=======
-      <div className="mb-6 flex flex-wrap items-center justify-between gap-4 bg-white/5 border border-white/10 p-4 rounded-xl">
-        <div className="text-sm text-white">
-          Current Object: <span className="text-white font-semibold">{selectedObject?.name}</span>
->>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
         </div>
         <button
           onClick={handleRecord}
@@ -120,27 +114,15 @@ export default function ScrewGaugeObservationTable({ thimblePosition, selectedOb
                 </td>
               </tr>
             ) : (
-<<<<<<< HEAD
-                observations.map((obs) => (
-                  <tr key={obs.id} className="hover:bg-slate-100 dark:hover:bg-white/5 transition-colors border-b border-slate-100 dark:border-white/5">
-                    <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">{obs.object}</td>
+              observations.map((obs) => (
+                <tr key={obs.id} className="hover:bg-slate-100 dark:hover:bg-white/5 transition-colors border-b border-slate-100 dark:border-white/5">
+                  <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">{obs.object}</td>
                   <td className="px-4 py-3 text-slate-600 dark:text-slate-300">{obs.psr}</td>
                   <td className="px-4 py-3 text-slate-600 dark:text-slate-300">{obs.csr}</td>
                   <td className="px-4 py-3 hidden sm:table-cell text-slate-600 dark:text-slate-300">{obs.measured.toFixed(2)}</td>
                   <td className="px-4 py-3 hidden md:table-cell text-slate-600 dark:text-slate-300">{obs.zeroError > 0 ? `+${obs.zeroError}` : obs.zeroError}</td>
                   <td className="px-4 py-3 text-slate-900 dark:text-white font-mono font-bold">{obs.final.toFixed(2)}</td>
                   <td className="px-4 py-3">
-=======
-              observations.map((obs) => (
-                <tr key={obs.id} className="hover:bg-white/5 transition-colors">
-                  <td className="px-4 py-3 font-medium text-white">{obs.object}</td>
-                  <td className="px-4 py-3 text-white">{obs.psr}</td>
-                  <td className="px-4 py-3 text-white">{obs.csr}</td>
-                  <td className="px-4 py-3 hidden sm:table-cell text-white">{obs.measured.toFixed(2)}</td>
-                  <td className="px-4 py-3 hidden md:table-cell text-white">{obs.zeroError > 0 ? `+${obs.zeroError}` : obs.zeroError}</td>
-                  <td className="px-4 py-3 text-white font-mono">{obs.final.toFixed(2)}</td>
-                  <td className="px-4 py-3 text-white">
->>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
                     {mode === 'test' ? (
                       obs.correct ? (
                         <span className="flex items-center gap-1 text-emerald-400 text-xs font-bold"><CheckCircle size={14} /> Correct</span>

@@ -2,12 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Cpu, Activity, Lightbulb, Zap, Microscope, BookOpen, Star, Users, GraduationCap, Award } from 'lucide-react';
-<<<<<<< HEAD
-import logo from '../../public/snapshots/logo.png'
-import LandingNavbar from '../components/LandingNavbar';
-=======
-import IAR from '../../public/IAR.png';
->>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
+import IAR from '../../public/IAR.png'
 import dashboard from '../../public/snapshots/dashboard.png'
 import theory from '../../public/snapshots/theory.png'
 import mpractial from '../../public/snapshots/mpractial.png'
@@ -18,69 +13,92 @@ import QuantumNavbar from '../components/shared/QuantumNavbar.jsx';
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white text-slate-900 overflow-x-hidden font-sans">
-<<<<<<< HEAD
-=======
+
       <QuantumNavbar />
->>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
 
-      <LandingNavbar />
 
-      {/* Layer 2: Hero Section (Quantum AI Simulation Lab) */}
-      <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden">
-        {/* Background Video */}
-        <video
-          src="/videos/iarvideo.mp4"
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
-        {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-black/55" />
+      {/* Layer 2: Hero Section (True Split Screen) */}
+      <section className="relative min-h-screen flex flex-col lg:flex-row overflow-hidden bg-black">
+        
+        {/* Left Side: Video + Hero Content */}
+        <div className="relative w-full lg:w-1/2 min-h-[70vh] lg:min-h-screen flex items-center px-6 md:px-12 lg:px-20 py-32 overflow-hidden border-b lg:border-b-0 lg:border-r border-white/5">
+          {/* Background Video (Contained to Left Side) */}
+          <video
+            src="/videos/iarvideo.mp4"
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+          {/* Deep Overlay for readability */}
+          <div className="absolute inset-0 bg-black/65" />
+          
+          {/* Glassy border effect on the right edge of the left side */}
+          <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-pink-500/30 to-transparent" />
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 10 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative z-10 text-center w-full max-w-4xl mx-auto flex flex-col items-center gap-8"
-        >
-          <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.6em] text-pink-300 drop-shadow-md">
-            Simulating Intelligence at the Quantum Level
-          </span>
-          <h2 className="font-display text-4xl md:text-6xl lg:text-[90px] font-black tracking-tighter leading-tight text-white drop-shadow-xl">
-<<<<<<< HEAD
-            Quantum AI <br />
-            <span className="inline-block pb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-400">
-              Simulation Lab
-=======
-            Quantum &nbsp;AI  <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-400">
-              SIMULATOR
->>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
+          {/* Hero Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative z-10 flex flex-col items-start gap-8"
+          >
+            <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.6em] text-pink-300 drop-shadow-md">
+              Simulating Intelligence at the Quantum Level
             </span>
-          </h2>
+            <h2 className="font-display text-4xl md:text-6xl lg:text-[75px] font-black tracking-tighter leading-[1.1] text-white drop-shadow-xl">
+              Quantum AI <br />
+              <span className="inline-block pb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-400">
+                Simulation Lab
+              </span>
+            </h2>
 
-          <p className="text-lg md:text-2xl text-white/80 max-w-2xl leading-relaxed font-medium drop-shadow">
-Discover the future of scientific learning with the power of AI and Quantum Mechanics.
-          </p>
+            <p className="text-lg md:text-xl text-white/70 max-w-xl leading-relaxed font-medium drop-shadow">
+              Discover the future of scientific learning with the power of AI and Quantum Mechanics.
+              Experience high-fidelity simulations in a state-of-the-art virtual environment.
+            </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-            <Link
-              to="/dashboard"
-              className="group relative flex items-center justify-center gap-3 bg-[#ffcc00] text-black px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 hover:bg-[#601032] shadow-xl hover:shadow-[#7A1540]/40"
-            >
-              <span>Explore Labs</span>
-              <ArrowRight size={20} className="group-hover:translate-x-1.5 transition-transform" />
-            </Link>
-          </div>
-        </motion.div>
+            <div className="flex flex-wrap items-center gap-4 pt-4">
+              <Link
+                to="/simulator"
+                className="group relative flex items-center justify-center gap-3 bg-[#ffcc00] text-black px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 hover:bg-white shadow-xl hover:shadow-white/20"
+              >
+                <span>Explore SIMULATOR</span>
+                <ArrowRight size={20} className="group-hover:translate-x-1.5 transition-transform" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Right Side: Quantum HUD */}
+        <div className="relative w-full lg:w-1/2 min-h-[500px] lg:min-h-screen flex items-center justify-center bg-black px-6">
+          {/* Subtle glow background */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-pink-500/5 blur-[120px] rounded-full" />
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, x: 30 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="relative w-full max-w-2xl"
+          >
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500/20 to-purple-500/20 blur-xl rounded-3xl opacity-50" />
+            <div className="relative bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
+              <QuantumHUD height={600} />
+            </div>
+            
+            {/* HUD Title Overlay (Optional - for extra WOW) */}
+            <div className="absolute top-4 left-6 flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
+              <span className="text-[10px] font-bold text-white/40 uppercase tracking-[0.3em]">Quantum_Core_Active</span>
+            </div>
+          </motion.div>
+        </div>
+
       </section>
 
-      {/* Layer 12: Quantum HUD Animation */}
-      <section className="py-24 bg-black overflow-hidden flex items-center justify-center min-h-[600px]">
-        <QuantumHUD />
-      </section>
+
+
 
       {/* Platform Preview: Alternating Showcase */}
       <section className="py-24 bg-white border-t border-slate-100">
@@ -331,11 +349,7 @@ Discover the future of scientific learning with the power of AI and Quantum Mech
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-<<<<<<< HEAD
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 text-white">
-              How the <span className="text-pink-300">Simulation Lab</span> Works
-=======
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -345,7 +359,6 @@ Discover the future of scientific learning with the power of AI and Quantum Mech
             <span className="text-[10px] font-black uppercase tracking-[0.5em] text-pink-400 mb-4 block">Workflow</span>
             <h2 className="font-display text-4xl md:text-6xl font-black mb-6 text-white tracking-tight">
               How the <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-[#7A1540]">Virtual Lab</span> Works
->>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
             </h2>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed font-medium">
               A scientifically rigorous workflow designed to bridge the gap between theoretical concept and practical mastery.
@@ -700,44 +713,6 @@ Discover the future of scientific learning with the power of AI and Quantum Mech
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Layer 9: Call to Action Banner */}
-      <section className="py-20 bg-[#7A1540] text-center px-6">
-        <div className="max-w-3xl mx-auto flex flex-col items-center">
-          <Award size={48} className="text-pink-300 mb-6" />
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-6">Ready to Innovate?</h2>
-          <p className="text-white/80 text-xl mb-10">Join thousands of students performing state-of-the-art virtual experiments today.</p>
-          <Link to="/dashboard" className="bg-white text-[#7A1540] px-10 py-5 rounded-2xl font-black text-xl hover:bg-slate-100 transition-colors shadow-2xl hover:scale-105 active:scale-95 flex items-center gap-3">
-            Enter Simulation Lab <ArrowRight size={24} />
-          </Link>
-        </div>
-      </section>
-
-      {/* Layer 10: Our Vision */}
-      <section className="py-24 bg-white border-t border-slate-100">
-        <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-          <div className="w-16 h-16 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center mx-auto mb-8 shadow-sm">
-            <Lightbulb size={32} className="text-[#7A1540]" />
-          </div>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 mb-8">
-            Our <span className="text-[#7A1540]">Vision</span>
-          </h2>
-          <p className="text-xl md:text-2xl text-slate-600 leading-relaxed font-medium">
-            "To democratize access to high-fidelity scientific equipment by bringing the physical laboratory directly into the digital realm. We believe that immersive, AI-guided simulations are the key to unlocking the next generation of quantum researchers, engineers, and physicists across the globe."
-          </p>
-        </div>
-      </section>
-
-      {/* Layer 7: Meet the Builders */}
-      <section className="py-24 bg-white border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 mb-4">
-            Meet the <span className="text-[#7A1540]">Builders</span>
-          </h2>
-          <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-16">
-            The Quantum AI Simulation Lab was conceptualized and developed by dedicated innovators at IAR.
-          </p>
-=======
       {/* Layer 7: Meet the Builders */}
       <section className="py-24 bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
@@ -753,7 +728,6 @@ Discover the future of scientific learning with the power of AI and Quantum Mech
               The Quantum AI Virtual Lab was conceptualized and developed by dedicated innovators at IAR.
             </p>
           </motion.div>
->>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 max-w-4xl mx-auto">
             {/* Dean / Founder - Dr. Anand K. Tiwari */}
@@ -837,24 +811,14 @@ Discover the future of scientific learning with the power of AI and Quantum Mech
       </section>
 
 
-      {/* Layer 12: Quantum HUD Animation */}
-      <section className="py-24 bg-black overflow-hidden flex items-center justify-center min-h-[600px]">
-        <QuantumHUD />
-      </section>
-
       {/* Layer 11: Expanded Footer */}
       <footer className="bg-slate-900 text-slate-300 pt-20 pb-10 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-<<<<<<< HEAD
-                <img src={logo} alt="IAR Logo" className="h-10 w-auto object-contain brightness-0 invert opacity-90" />
-                <span className="font-display font-bold text-white text-2xl tracking-wide">Quantum AI Simulation Lab</span>
-=======
                 <img src={IAR} alt="IAR Logo" className="h-10 w-auto object-contain brightness-0 invert opacity-90" />
-                <span className="font-display font-bold text-white text-2xl tracking-wide">Quantum AI Lab</span>
->>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
+                <span className="font-display font-bold text-white text-2xl tracking-wide">Quantum AI Simulation Lab</span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
                 Pioneering the intersection of artificial intelligence, quantum computing, and interactive physics simulations for higher education.

@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom';
-import logo from '../../public/logo.png';
+import logo from '../../public/snapshots/logo.png';
 
 const pill = ({ isActive }) =>
   [
     'rounded-full px-4 py-1.5 text-xs font-bold transition-all duration-200 border',
-    isActive 
-      ? 'bg-sky-100 text-sky-700 border-sky-300 shadow-sm' 
+    isActive
+      ? 'bg-sky-100 text-sky-700 border-sky-300 shadow-sm'
       : 'text-slate-500 border-transparent hover:bg-slate-100 hover:text-slate-900',
   ].join(' ');
 
