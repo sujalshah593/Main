@@ -46,8 +46,7 @@ export default function LandingPage() {
           </h2>
 
           <p className="text-lg md:text-2xl text-white/80 max-w-2xl leading-relaxed font-medium drop-shadow">
-            Step into the future of scientific exploration. Harnessing the power of Artificial Intelligence
-            and Quantum Mechanics to redefine interactive learning.
+Discover the future of scientific learning with the power of AI and Quantum Mechanics.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
@@ -75,10 +74,10 @@ export default function LandingPage() {
           >
             <span className="inline-block text-xs font-black uppercase tracking-[0.2em] text-[#7A1540] bg-[#7A1540]/8 px-4 py-1.5 rounded-full mb-4">Platform Preview</span>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 mb-4">
-              Everything You Need,{' '}
-              <span className="text-[#7A1540]">In One Place</span>
+              Everything You Need
             </h2>
-            <p className="text-slate-500 text-lg">A fully integrated virtual science platform — from theory to simulation to live coding.</p>
+            <span className="text-[#7A1540] font-display text-3xl md:text-5xl font-bold tracking-tight mb-5">In One Place</span>
+            <p className="text-slate-500 text-lg mt-3">A fully integrated virtual science platform — from theory to simulation to live coding.</p>
           </motion.div>
 
           {/* Row 1: Text Left | Image Right */}

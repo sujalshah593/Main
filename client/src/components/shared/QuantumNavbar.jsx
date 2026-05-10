@@ -14,22 +14,22 @@ export default function QuantumNavbar() {
           <img
             src={IAR}
             alt="IAR Logo"
-            className="h-full w-auto object-contain animate-pulse-slow group-hover:scale-105 transition-transform duration-700 ease-in-out"
+            className="h-full w-auto object-contain  group-hover:scale-105 transition-transform duration-700 ease-in-out"
           />
         </div>
 
         {/* Center: Main Branding with Metallic Gradient & Hover Effects */}
         <div className="flex-grow flex flex-col justify-center items-center overflow-hidden px-4">
-          <h1 className="text-3xl md:text-6xl lg:text-8xl font-display font-black tracking-[-0.03em] md:tracking-[0.02em] uppercase leading-none text-center whitespace-nowrap
+          <h1 className="text-3xl md:text-6xl lg:text-6xl font-display font-black tracking-[-0.03em] md:tracking-[0.02em] uppercase leading-none text-center whitespace-nowrap
                          bg-clip-text text-transparent bg-gradient-to-b from-[#7A1540] to-[#b12a5d]
                          drop-shadow-[0_2px_15px_rgba(122,21,64,0.15)]
                          hover:scale-[1.02] transition-transform duration-500 cursor-default select-none">
-            QUANTUM AI LAB
+            INSTITUTE OF ADVANCED RESEARCH
           </h1>
           {/* Subtext/Slogan under the main title */}
           <div className="mt-1 hidden md:flex items-center gap-4">
             <div className="h-[1px] w-12 bg-slate-200" />
-            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em]">Advanced Research Portal</span>
+            <span className="text-[13px] font-bold text-slate-400 uppercase tracking-[0.4em]">Advanced Research Portal</span>
             <div className="h-[1px] w-12 bg-slate-200" />
           </div>
         </div>
