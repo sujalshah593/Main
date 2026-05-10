@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { FlaskConical } from 'lucide-react';
+import logo from '../../public/logo.png';
 
 const pill = ({ isActive }) =>
   [
@@ -13,9 +13,9 @@ export default function MobileNav() {
   return (
     <div className="sticky top-0 z-40 border-b border-lab-panelBorder bg-lab-panel backdrop-blur-3xl md:hidden shadow-lg">
       <div className="flex flex-col gap-3 px-4 py-3">
-        <div className="flex items-center gap-2">
-          <FlaskConical size={18} className="text-lab-primary" />
-          <div className="font-display text-base font-bold tracking-tight text-lab-text">Virtual Lab</div>
+        <div className="flex items-center gap-3">
+          <img src={logo} alt="IAR Logo" className="h-8 w-auto object-contain" />
+          <div className="font-display text-lg font-black tracking-tight text-[#7A1540]">QUANTUM AI LAB</div>
         </div>
         <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
           <NavLink to="/dashboard" className={pill} end>

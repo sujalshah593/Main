@@ -5,7 +5,7 @@ export default function ScrewGaugeObservationTable({ thimblePosition, selectedOb
   const [observations, setObservations] = useState([]);
   const [score, setScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(300); // 5 mins for test mode
-  
+
   // To avoid calculating values constantly if the user hasn't pressed "Record"
   const psr = Math.floor(thimblePosition);
   const csr = Math.round((thimblePosition % 1) * 100);
@@ -33,8 +33,8 @@ export default function ScrewGaugeObservationTable({ thimblePosition, selectedOb
 
   const handleRecord = () => {
     // 0.02 mm tolerance
-    const isCorrect = Math.abs(finalReading - trueValue) <= 0.02; 
-    
+    const isCorrect = Math.abs(finalReading - trueValue) <= 0.02;
+
     const newObs = {
       id: Date.now(),
       object: selectedObject?.name,
@@ -70,21 +70,27 @@ export default function ScrewGaugeObservationTable({ thimblePosition, selectedOb
 
         {mode === 'test' && (
           <div className="flex items-center gap-4">
-             <div className="flex items-center gap-1.5 text-rose-400 font-mono text-sm bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">
-               <Clock size={14} /> {formatTime(timeLeft)}
-             </div>
-             <div className="text-sm font-bold text-emerald-400">
-               Score: {score}
-             </div>
+            <div className="flex items-center gap-1.5 text-rose-400 font-mono text-sm bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">
+              <Clock size={14} /> {formatTime(timeLeft)}
+            </div>
+            <div className="text-sm font-bold text-emerald-400">
+              Score: {score}
+            </div>
           </div>
         )}
       </div>
 
+<<<<<<< HEAD
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-4 rounded-xl">
         <div className="text-sm text-slate-500 dark:text-lab-muted">
           Current Object: <span className="text-slate-900 dark:text-white font-semibold">{selectedObject?.name}</span>
+=======
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-4 bg-white/5 border border-white/10 p-4 rounded-xl">
+        <div className="text-sm text-white">
+          Current Object: <span className="text-white font-semibold">{selectedObject?.name}</span>
+>>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
         </div>
-        <button 
+        <button
           onClick={handleRecord}
           disabled={mode === 'test' && timeLeft === 0}
           className="bg-lab-accent2 text-[#0f172a] font-bold text-sm px-6 py-2 rounded-lg hover:bg-lab-accent2/90 transition-all shadow-[0_0_15px_rgba(56,189,248,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
@@ -114,6 +120,7 @@ export default function ScrewGaugeObservationTable({ thimblePosition, selectedOb
                 </td>
               </tr>
             ) : (
+<<<<<<< HEAD
                 observations.map((obs) => (
                   <tr key={obs.id} className="hover:bg-slate-100 dark:hover:bg-white/5 transition-colors border-b border-slate-100 dark:border-white/5">
                     <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">{obs.object}</td>
@@ -123,14 +130,25 @@ export default function ScrewGaugeObservationTable({ thimblePosition, selectedOb
                   <td className="px-4 py-3 hidden md:table-cell text-slate-600 dark:text-slate-300">{obs.zeroError > 0 ? `+${obs.zeroError}` : obs.zeroError}</td>
                   <td className="px-4 py-3 text-slate-900 dark:text-white font-mono font-bold">{obs.final.toFixed(2)}</td>
                   <td className="px-4 py-3">
+=======
+              observations.map((obs) => (
+                <tr key={obs.id} className="hover:bg-white/5 transition-colors">
+                  <td className="px-4 py-3 font-medium text-white">{obs.object}</td>
+                  <td className="px-4 py-3 text-white">{obs.psr}</td>
+                  <td className="px-4 py-3 text-white">{obs.csr}</td>
+                  <td className="px-4 py-3 hidden sm:table-cell text-white">{obs.measured.toFixed(2)}</td>
+                  <td className="px-4 py-3 hidden md:table-cell text-white">{obs.zeroError > 0 ? `+${obs.zeroError}` : obs.zeroError}</td>
+                  <td className="px-4 py-3 text-white font-mono">{obs.final.toFixed(2)}</td>
+                  <td className="px-4 py-3 text-white">
+>>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
                     {mode === 'test' ? (
                       obs.correct ? (
-                        <span className="flex items-center gap-1 text-emerald-400 text-xs font-bold"><CheckCircle size={14}/> Correct</span>
+                        <span className="flex items-center gap-1 text-emerald-400 text-xs font-bold"><CheckCircle size={14} /> Correct</span>
                       ) : (
-                        <span className="flex items-center gap-1 text-rose-400 text-xs font-bold"><XCircle size={14}/> Incorrect</span>
+                        <span className="flex items-center gap-1 text-rose-400 text-xs font-bold"><XCircle size={14} /> Incorrect</span>
                       )
                     ) : (
-                      <span className="text-xs text-lab-muted">Recorded</span>
+                      <span className="text-xs text-white">Recorded</span>
                     )}
                   </td>
                 </tr>

@@ -20,7 +20,7 @@ export default function ScrewGaugeControls({
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Object Selection */}
         <div className="flex flex-col gap-2">
-          <label className="text-xs font-semibold text-lab-muted uppercase">Select Object</label>
+          <label className="text-xs font-semibold text-white uppercase">Select Object</label>
           <select
             value={selectedObjectId}
             onChange={(e) => {
@@ -39,6 +39,7 @@ export default function ScrewGaugeControls({
 
         {/* Mode Selection */}
         <div className="flex flex-col gap-2">
+<<<<<<< HEAD
           <label className="text-xs font-semibold text-lab-muted uppercase">Mode</label>
           <div className="flex rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 p-1">
             <button
@@ -46,14 +47,21 @@ export default function ScrewGaugeControls({
               className={`flex-1 text-xs font-bold py-1.5 rounded-lg transition-all ${
                 mode === 'practice' ? 'bg-sky-500 dark:bg-lab-accent2 text-white dark:text-[#0f172a] shadow-sm' : 'text-slate-500 dark:text-lab-muted hover:text-slate-900 dark:hover:text-white'
               }`}
+=======
+          <label className="text-xs font-semibold text- white uppercase">Mode</label>
+          <div className="flex rounded-xl overflow-hidden border border-white/10 bg-white/5 p-1">
+            <button
+              onClick={() => setMode('practice')}
+              className={`flex-1 text-xs font-bold py-1.5 rounded-lg transition-all ${mode === 'practice' ? 'bg-lab-accent2 text-[#0f172a] shadow-sm' : 'text-lab-muted hover:text-white'
+                }`}
+>>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
             >
               Practice
             </button>
             <button
               onClick={() => setMode('test')}
-              className={`flex-1 text-xs font-bold py-1.5 rounded-lg transition-all ${
-                mode === 'test' ? 'bg-rose-500 text-white shadow-sm' : 'text-lab-muted hover:text-white'
-              }`}
+              className={`flex-1 text-xs font-bold py-1.5 rounded-lg transition-all ${mode === 'test' ? 'bg-rose-500 text-white shadow-sm' : 'text-lab-muted hover:text-white'
+                }`}
             >
               Test
             </button>
@@ -63,12 +71,13 @@ export default function ScrewGaugeControls({
         {/* Zero Error Adjustment */}
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-             <label className="text-xs font-semibold text-lab-muted uppercase">Zero Error (mm)</label>
-             <button onClick={() => setZeroError(0)} className="text-[10px] text-lab-accent2 hover:underline flex items-center gap-1">
-               <RefreshCw size={10} /> Reset
-             </button>
+            <label className="text-xs font-semibold text-white uppercase">Zero Error (mm)</label>
+            <button onClick={() => setZeroError(0)} className="text-[10px] text-lab-accent2 hover:underline flex items-center gap-1">
+              <RefreshCw size={10} /> Reset
+            </button>
           </div>
           <div className="flex items-center gap-2">
+<<<<<<< HEAD
              <button 
                onClick={() => setZeroError(prev => parseFloat((prev - 0.01).toFixed(2)))}
                className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-white/20"
@@ -80,6 +89,19 @@ export default function ScrewGaugeControls({
                onClick={() => setZeroError(prev => parseFloat((prev + 0.01).toFixed(2)))}
                className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-white/20"
              >+</button>
+=======
+            <button
+              onClick={() => setZeroError(prev => parseFloat((prev - 0.01).toFixed(2)))}
+              className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-white/20"
+            >-</button>
+            <div className="flex-1 text-center font-mono text-sm bg-white/5 border border-white/10 rounded-lg py-1.5 text-white">
+              {zeroError > 0 ? `+${zeroError}` : zeroError}
+            </div>
+            <button
+              onClick={() => setZeroError(prev => parseFloat((prev + 0.01).toFixed(2)))}
+              className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-white/20"
+            >+</button>
+>>>>>>> a52c40dd03a4f368a6dbf5364445cb3430223416
           </div>
         </div>
       </div>
