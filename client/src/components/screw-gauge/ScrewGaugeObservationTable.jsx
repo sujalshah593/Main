@@ -114,8 +114,9 @@ export default function ScrewGaugeObservationTable({ thimblePosition, selectedOb
                 </td>
               </tr>
             ) : (
-                <tr key={obs.id} className="hover:bg-slate-100 dark:hover:bg-white/5 transition-colors border-b border-slate-100 dark:border-white/5">
-                  <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">{obs.object}</td>
+                observations.map((obs) => (
+                  <tr key={obs.id} className="hover:bg-slate-100 dark:hover:bg-white/5 transition-colors border-b border-slate-100 dark:border-white/5">
+                    <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">{obs.object}</td>
                   <td className="px-4 py-3 text-slate-600 dark:text-slate-300">{obs.psr}</td>
                   <td className="px-4 py-3 text-slate-600 dark:text-slate-300">{obs.csr}</td>
                   <td className="px-4 py-3 hidden sm:table-cell text-slate-600 dark:text-slate-300">{obs.measured.toFixed(2)}</td>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Computer HUD Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        #hud {
+            width: 100%;
+            max-width: 780px;
+            height: 600px;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            font-family: 'Courier New', monospace;
+        }
+
+        canvas#qc {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        #overlay {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .hud-tl,
+        .hud-tr,
+        .hud-bl,
+        .hud-br {
+            position: absolute;
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        .hud-tl {
+            top: 18px;
+            left: 18px;
+            color: #00ffcc;
+        }
+
+        .hud-tr {
+            top: 18px;
+            right: 18px;
+            text-align: right;
+            color: #00ffcc;
+        }
+
+        .hud-bl {
+            bottom: 52px;
+            left: 18px;
+            color: #00ffcc;
+        }
+
+        .hud-br {
+            bottom: 52px;
+            right: 18px;
+            text-align: right;
+            color: #00ffcc;
+        }
+
+        .lbl {
+            color: #00ff8877;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        .val {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        #scanline {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ffcc55, #00ffff99, #00ffcc55, transparent);
+            pointer-events: none;
+        }
+
+        .cbracket {
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            opacity: 0.55;
+        }
+
+        .tl {
+            top: 10px;
+            left: 10px;
+            border-top: 1px solid #00ffcc;
+            border-left: 1px solid #00ffcc;
+        }
+
+        .tr {
+            top: 10px;
+            right: 10px;
+            border-top: 1px solid #00ffcc;
+            border-right: 1px solid #00ffcc;
+        }
+
+        .bl {
+            bottom: 48px;
+            left: 10px;
+            border-bottom: 1px solid #00ffcc;
+            border-left: 1px solid #00ffcc;
+        }
+
+        .br {
+            bottom: 48px;
+            right: 10px;
+            border-bottom: 1px solid #00ffcc;
+            border-right: 1px solid #00ffcc;
+        }
+
+        #glitch {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0;
+            background: rgba(0, 255, 200, 0.03);
+        }
+
+        #centerlabel {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -220px);
+            color: #00ffcc;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.8s;
+        }
+
+        #phasebar {
+            position: absolute;
+            bottom: 38px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 7px;
+        }
+
+        .pdot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            border: 1px solid #00ffcc;
+            background: transparent;
+            transition: background 0.3s;
+        }
+
+        .pdot.on {
+            background: #00ffcc;
+        }
+
+        #ctrl {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.7);
+            border-top: 0.5px solid #00ffcc22;
+        }
+
+        #ctrl button {
+            background: transparent;
+            border: 0.5px solid #00ffcc55;
+            color: #00ffcc;
+            padding: 5px 13px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: 'Courier New', monospace;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+
+        #ctrl button:hover {
+            background: #00ffcc18;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="hud">
+        <canvas id="qc"></canvas>
+        <div id="overlay">
+            <div class="cbracket tl"></div>
+            <div class="cbracket tr"></div>
+            <div class="cbracket bl"></div>
+            <div class="cbracket br"></div>
+            <div id="scanline"></div>
+            <div id="glitch"></div>
+            <div class="hud-tl">
+                <div class="lbl">QUANTUM SYSTEM</div>
+                <div>DEVICE: <span class="val">QPU-CRYO-127</span></div>
+                <div>TYPE: <span class="val">DILUTION REFRIG.</span></div>
+                <div>QUBITS: <span class="val" id="qbits">0</span></div>
+                <div>COHERENCE: <span class="val" id="coher">---</span></div>
+            </div>
+            <div class="hud-tr">
+                <div class="lbl">CRYOGENICS</div>
+                <div>STAGE: <span class="val" id="stage">INIT</span></div>
+                <div>TEMP: <span class="val" id="temp">---</span> mK</div>
+                <div>RINGS: <span class="val" id="rings">0</span> / 7</div>
+                <div>MESH: <span class="val" id="meshc">0</span> pts</div>
+            </div>
+            <div class="hud-bl">
+                <div class="lbl">CALIBRATION</div>
+                <div>FIDELITY: <span class="val" id="fidel">0.0</span>%</div>
+                <div>GATE ERR: <span class="val" id="gerr">---</span></div>
+                <div>FREQ: <span class="val" id="freq">5.0</span> GHz</div>
+            </div>
+            <div class="hud-br">
+                <div class="lbl">STATUS</div>
+                <div>SCAN: <span class="val" id="scanst">ACTIVE</span></div>
+                <div>LOCK: <span class="val" id="lockst">---</span></div>
+                <div>INTEGRITY: <span class="val" id="integ">0</span>%</div>
+            </div>
+            <div id="centerlabel">QUANTUM PROCESSOR</div>
+            <div id="phasebar">
+                <div class="pdot on" id="pd0"></div>
+                <div class="pdot" id="pd1"></div>
+                <div class="pdot" id="pd2"></div>
+                <div class="pdot" id="pd3"></div>
+                <div class="pdot" id="pd4"></div>
+                <div class="pdot" id="pd5"></div>
+            </div>
+        </div>
+        <div id="ctrl">
+            <button onclick="restart()">RESCAN</button>
+            <button onclick="triggerGlitch()">GLITCH</button>
+            <button onclick="toggleColor()">COLOR MODE</button>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('qc');
+        const ctx = canvas.getContext('2d');
+        const hudEl = document.getElementById('hud');
+
+        function resize() {
+            canvas.width = hudEl.offsetWidth || 780;
+            canvas.height = 600;
+        }
+        resize();
+        window.addEventListener('resize', () => { resize(); });
+
+        const W = () => canvas.width, H = () => canvas.height;
+        const cx = () => W() / 2, cy = () => H() / 2 - 20;
+
+        const COLORS = [
+            { core: '#00ffcc', bright: '#ffffff', glow: '#00ffcc', grid: '#00ffff' },
+            { core: '#aa44ff', bright: '#ffffff', glow: '#cc88ff', grid: '#8844ff' },
+            { core: '#ff6600', bright: '#ffdd88', glow: '#ff8833', grid: '#ff4400' }
+        ];
+        let colorIdx = 0, C = COLORS[0];
+
+        function buildQuantumPoints() {
+            const pts = [];
+            const numRings = 7;
+            for (let r = 0; r < numRings; r++) {
+                const radius = 0.28 + r * 0.04;
+                const y = 0.45 - r * 0.15;
+                const ringPts = 40 + r * 8;
+                for (let i = 0; i < ringPts; i++) {
+                    const a = (i / ringPts) * Math.PI * 2;
+                    const jitter = (Math.random() - 0.5) * 0.025;
+                    pts.push([Math.cos(a) * (radius + jitter), y + (Math.random() - 0.5) * 0.03, Math.sin(a) * (radius + jitter), 'ring', r]);
+                }
+                const rods = 12 + r * 2;
+                for (let i = 0; i < rods; i++) {
+                    const a = (i / rods) * Math.PI * 2;
+                    const topY = 0.55, botY = -0.6, steps = 8;
+                    for (let s = 0; s < steps; s++) {
+                        const t = s / steps;
+                        const ry = topY - t * (topY - botY);
+                        if (ry >= y - 0.08 && ry <= y + 0.08) {
+                            pts.push([Math.cos(a) * radius, ry, Math.sin(a) * radius, 'rod', r]);
+                        }
+                    }
+                }
+            }
+            for (let i = 0; i < 80; i++) {
+                const t = i / 80;
+                const y = 0.6 - t * 1.3;
+                const jitter = (Math.random() - 0.5) * 0.015;
+                pts.push([jitter, y, jitter, 'spine', 0]);
+            }
+            for (let r = 0; r < numRings; r++) {
+                const radius = 0.28 + r * 0.04;
+                const y = 0.45 - r * 0.15;
+                const n = 16;
+                for (let i = 0; i < n; i++) {
+                    const a = (i / n) * Math.PI * 2;
+                    for (let s = 0; s < 5; s++) {
+                        const sr = radius * (0.5 + Math.random() * 0.5);
+                        pts.push([Math.cos(a) * sr + (Math.random() - 0.5) * 0.02, y + (Math.random() - 0.5) * 0.06, Math.sin(a) * sr + (Math.random() - 0.5) * 0.02, 'coil', r]);
+                    }
+                }
+            }
+            for (let i = 0; i < 60; i++) {
+                const a = Math.random() * Math.PI * 2;
+                const rr = 0.28 + Math.floor(Math.random() * 7) * 0.04;
+                const y = 0.45 - Math.floor(Math.random() * 7) * 0.15;
+                pts.push([Math.cos(a) * rr, y - 0.08 - Math.random() * 0.12, Math.sin(a) * rr, 'wire', 0]);
+            }
+            return pts;
+        }
+
+        function buildRingEdges() {
+            const edges = [];
+            for (let r = 0; r < 7; r++) edges.push({ type: 'ring', r, radius: 0.28 + r * 0.04, y: 0.45 - r * 0.15 });
+            for (let i = 0; i < 14; i++) edges.push({ type: 'rod', a: (i / 14) * Math.PI * 2, radius: 0.32 });
+            return edges;
+        }
+
+        let allPts = buildQuantumPoints();
+        let allEdges = buildRingEdges();
+        let buildProgress = 0, rotAngle = 0, scanY = 0, frameCount = 0;
+        let particles = [];
+
+        function initParticles() {
+            particles = [];
+            for (let i = 0; i < 150; i++) {
+                const target = allPts[Math.floor(Math.random() * allPts.length)];
+                particles.push({
+                    x: (Math.random() - 0.5) * 2, y: (Math.random() - 0.5) * 2, z: (Math.random() - 0.5) * 2,
+                    vx: (Math.random() - 0.5) * 0.015, vy: (Math.random() - 0.5) * 0.015, vz: (Math.random() - 0.5) * 0.015,
+                    life: 1, target
+                });
+            }
+        }
+
+        function project(x, y, z) {
+            const cosR = Math.cos(rotAngle), sinR = Math.sin(rotAngle);
+            const rx = x * cosR - z * sinR, rz = x * sinR + z * cosR;
+            const tC = Math.cos(0.18), tS = Math.sin(0.18);
+            const ry2 = y * tC - rz * tS, rz2 = y * tS + rz * tC;
+            const sc = Math.min(W(), H()) * 0.44;
+            const persp = 500 / (500 + rz2 * sc * 0.6);
+            return { sx: cx() + rx * sc * persp, sy: cy() + ry2 * sc * persp, depth: rz2, alpha: Math.min(1, (rz2 + 1.5) / 2.5) };
+        }
+
+        function draw() {
+            frameCount++;
+            ctx.fillStyle = 'rgba(0,0,0,0.22)';
+            ctx.fillRect(0, 0, W(), H());
+
+            rotAngle += 0.005;
+            scanY = (scanY + 1.8) % H();
+            document.getElementById('scanline').style.top = scanY + 'px';
+
+            const total = allPts.length;
+            const visible = Math.min(Math.floor(buildProgress), total);
+            const prog = visible / total;
+
+            document.getElementById('integ').textContent = Math.round(prog * 100);
+            document.getElementById('meshc').textContent = visible;
+            document.getElementById('rings').textContent = Math.min(7, Math.floor(prog * 8));
+            document.getElementById('qbits').textContent = Math.floor(prog * 127);
+            document.getElementById('fidel').textContent = (prog * 99.7).toFixed(1);
+
+            if (prog > 0.15) { document.getElementById('stage').textContent = 'COOLING'; document.getElementById('temp').textContent = (15 - prog * 14).toFixed(1); }
+            if (prog > 0.5) { document.getElementById('stage').textContent = 'STABLE'; document.getElementById('temp').textContent = (15 - prog * 14).toFixed(2); }
+            if (prog > 0.8) { document.getElementById('stage').textContent = 'LOCKED'; document.getElementById('lockst').textContent = 'ACQUIRED'; document.getElementById('gerr').textContent = '0.12%'; document.getElementById('coher').textContent = '99μs'; }
+            if (prog >= 1) { document.getElementById('scanst').textContent = 'COMPLETE'; document.getElementById('centerlabel').style.opacity = '0.9'; }
+
+            const ap = Math.min(5, Math.floor(prog * 6));
+            for (let i = 0; i < 6; i++) document.getElementById('pd' + i).classList.toggle('on', i <= ap);
+
+            const sorted = allPts.slice(0, visible).map(([x, y, z, type, ring]) => ({ p: project(x, y, z), type, ring, x, y, z })).sort((a, b) => a.p.depth - b.p.depth);
+
+            sorted.forEach(({ p, type }) => {
+                const { sx, sy, alpha } = p;
+                if (type === 'ring') {
+                    const r = Math.max(0.5, 1.8 * (0.4 + alpha * 0.6));
+                    ctx.beginPath(); ctx.arc(sx, sy, r * 5, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(0,255,200,${alpha * 0.06})`; ctx.fill();
+                    ctx.beginPath(); ctx.arc(sx, sy, r, 0, Math.PI * 2);
+                    const g = ctx.createRadialGradient(sx, sy, 0, sx, sy, r);
+                    g.addColorStop(0, 'rgba(255,255,255,' + (alpha * 0.95) + ')');
+                    g.addColorStop(1, C.core + 'aa');
+                    ctx.fillStyle = g; ctx.fill();
+                } else if (type === 'spine') {
+                    ctx.beginPath(); ctx.arc(sx, sy, 0.8, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255,255,255,${alpha * 0.7})`; ctx.fill();
+                } else if (type === 'coil') {
+                    ctx.beginPath(); ctx.arc(sx, sy, 0.9, 0, Math.PI * 2);
+                    ctx.fillStyle = C.glow + Math.round(alpha * 180).toString(16).padStart(2, '0'); ctx.fill();
+                } else {
+                    ctx.beginPath(); ctx.arc(sx, sy, 0.7, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(0,255,200,${alpha * 0.5})`; ctx.fill();
+                }
+            });
+
+            if (prog > 0.3) {
+                const a = Math.min(1, (prog - 0.3) / 0.3);
+                allEdges.forEach(e => {
+                    if (e.type === 'ring') {
+                        if (e.r > Math.min(7, Math.round(prog * 8))) return;
+                        ctx.beginPath();
+                        for (let i = 0; i <= 64; i++) {
+                            const ang = (i / 64) * Math.PI * 2 + rotAngle;
+                            const cosT = Math.cos(ang), sinT = Math.sin(ang);
+                            const rx3 = cosT * e.radius, rz3 = sinT * e.radius;
+                            const tC = Math.cos(0.18), tS = Math.sin(0.18);
+                            const ry2 = e.y * tC - rz3 * tS, rz2 = e.y * tS + rz3 * tC;
+                            const sc = Math.min(W(), H()) * 0.44;
+                            const persp = 500 / (500 + rz2 * sc * 0.6);
+                            const sx2 = cx() + rx3 * sc * persp, sy2 = cy() + ry2 * sc * persp;
+                            i === 0 ? ctx.moveTo(sx2, sy2) : ctx.lineTo(sx2, sy2);
+                        }
+                        ctx.strokeStyle = C.core + Math.round(a * 0.7 * 255).toString(16).padStart(2, '0');
+                        ctx.lineWidth = 0.9; ctx.stroke();
+                    } else if (e.type === 'rod' && prog > 0.5) {
+                        const ra = Math.min(1, (prog - 0.5) / 0.3);
+                        const topP = project(Math.cos(e.a) * e.radius, 0.55, Math.sin(e.a) * e.radius);
+                        const botP = project(Math.cos(e.a) * e.radius, -0.6, Math.sin(e.a) * e.radius);
+                        ctx.beginPath(); ctx.moveTo(topP.sx, topP.sy); ctx.lineTo(botP.sx, botP.sy);
+                        ctx.strokeStyle = C.core + Math.round(ra * 0.35 * 255).toString(16).padStart(2, '0');
+                        ctx.lineWidth = 0.6; ctx.stroke();
+                    }
+                });
+            }
+
+            if (prog > 0.65) {
+                const a = Math.min(1, (prog - 0.65) / 0.2);
+                const hudLines = [
+                    { x: 0.33, y: 0.45, z: 0, lbl: 'RING 1', lx: cx() + 155, ly: cy() - 130 },
+                    { x: -0.36, y: 0.15, z: 0, lbl: 'STAGE 3', lx: cx() - 160, ly: cy() - 40 },
+                    { x: 0.0, y: 0.6, z: 0, lbl: 'SPINE', lx: cx() + 90, ly: cy() - 170 },
+                    { x: 0.3, y: -0.3, z: 0, lbl: 'QUBIT ARRAY', lx: cx() + 150, ly: cy() + 90 },
+                    { x: -0.3, y: -0.45, z: 0, lbl: 'COLD PLATE', lx: cx() - 155, ly: cy() + 110 },
+                ];
+                hudLines.forEach(l => {
+                    const p = project(l.x, l.y, l.z);
+                    ctx.beginPath(); ctx.moveTo(p.sx, p.sy); ctx.lineTo(l.lx, l.ly);
+                    ctx.strokeStyle = `rgba(0,255,200,${a * 0.45})`; ctx.lineWidth = 0.6;
+                    ctx.setLineDash([3, 5]); ctx.stroke(); ctx.setLineDash([]);
+                    ctx.fillStyle = `rgba(0,255,180,${a})`; ctx.font = '10px Courier New';
+                    ctx.fillText(l.lbl, l.lx + 4, l.ly - 3);
+                    ctx.beginPath(); ctx.arc(p.sx, p.sy, 3, 0, Math.PI * 2);
+                    ctx.strokeStyle = `rgba(0,255,220,${a})`; ctx.lineWidth = 1; ctx.stroke();
+                    ctx.fillStyle = `rgba(0,255,130,${a * 0.7})`; ctx.font = '9px Courier New';
+                    ctx.fillText(`${(l.x * 100).toFixed(1)},${(l.y * 100).toFixed(1)}`, l.lx + 4, l.ly + 9);
+                });
+            }
+
+            if (prog > 0.55) {
+                const a = Math.min(1, (prog - 0.55) / 0.2) * 0.18;
+                for (let gz = -3; gz <= 3; gz++) {
+                    ctx.beginPath();
+                    for (let i = 0; i <= 32; i++) { const t = i / 32, x3 = t * 0.8 - 0.4, z3 = gz * 0.12, p = project(x3, 0, z3); i === 0 ? ctx.moveTo(p.sx, p.sy) : ctx.lineTo(p.sx, p.sy); }
+                    ctx.strokeStyle = `rgba(0,220,255,${a})`; ctx.lineWidth = 0.5; ctx.stroke();
+                    ctx.beginPath();
+                    for (let i = 0; i <= 32; i++) { const t = i / 32, z3 = t * 0.8 - 0.4, x3 = gz * 0.12, p = project(x3, 0, z3); i === 0 ? ctx.moveTo(p.sx, p.sy) : ctx.lineTo(p.sx, p.sy); }
+                    ctx.stroke();
+                }
+            }
+
+            particles.forEach(p => {
+                p.x += (p.target[0] - p.x) * 0.035 + p.vx;
+                p.y += (p.target[1] - p.y) * 0.035 + p.vy;
+                p.z += (p.target[2] - p.z) * 0.035 + p.vz;
+                p.life = Math.max(0, p.life - 0.004);
+                const pp = project(p.x, p.y, p.z);
+                ctx.beginPath(); ctx.arc(pp.sx, pp.sy, 1, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(0,255,180,${p.life * 0.45})`; ctx.fill();
+            });
+            particles = particles.filter(p => p.life > 0);
+
+            if (frameCount % 7 === 0) document.getElementById('freq').textContent = (5.0 + Math.random() * 0.02 - 0.01).toFixed(3);
+            if (buildProgress < total * 1.4) buildProgress += 1.2;
+            requestAnimationFrame(draw);
+        }
+
+        function triggerGlitch() {
+            const g = document.getElementById('glitch');
+            g.style.opacity = '1'; g.style.transform = `translateX(${(Math.random() - 0.5) * 5}px)`;
+            setTimeout(() => { g.style.opacity = '0'; g.style.transform = ''; }, 70);
+            setTimeout(() => { g.style.opacity = '0.6'; g.style.transform = `translateX(${(Math.random() - 0.5) * 3}px)`; }, 110);
+            setTimeout(() => { g.style.opacity = '0'; g.style.transform = ''; }, 190);
+        }
+
+        function restart() {
+            buildProgress = 0; rotAngle = 0;
+            document.getElementById('centerlabel').style.opacity = '0';
+            document.getElementById('scanst').textContent = 'ACTIVE';
+            document.getElementById('lockst').textContent = '---';
+            document.getElementById('stage').textContent = 'INIT';
+            document.getElementById('temp').textContent = '---';
+            document.getElementById('gerr').textContent = '---';
+            document.getElementById('coher').textContent = '---';
+            for (let i = 0; i < 6; i++) document.getElementById('pd' + i).classList.toggle('on', i === 0);
+            initParticles();
+        }
+
+        function toggleColor() {
+            colorIdx = (colorIdx + 1) % COLORS.length;
+            C = COLORS[colorIdx];
+        }
+
+        setInterval(triggerGlitch, 4500 + Math.random() * 3000);
+        initParticles();
+        draw();
+    </script>
+</body>
+
+</html>

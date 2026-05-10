@@ -2,34 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Cpu, Activity, Lightbulb, Zap, Microscope, BookOpen, Star, Users, GraduationCap, Award } from 'lucide-react';
-import logo from '../../public/logo.png';
-<<<<<<< HEAD
+import logo from '../../public/snapshots/logo.png'
 import LandingNavbar from '../components/LandingNavbar';
-=======
 import dashboard from '../../public/snapshots/dashboard.png'
 import theory from '../../public/snapshots/theory.png'
 import mpractial from '../../public/snapshots/mpractial.png'
 import ppractical from '../../public/snapshots/ppractical.png'
 import pythoneditor from '../../public/snapshots/pythoneditor.png'
->>>>>>> 855cd86e3b586ca3e127eaf9c63d15416c471932
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white text-slate-900 overflow-x-hidden font-sans">
-<<<<<<< HEAD
-      <LandingNavbar />
-=======
-      {/* Layer 1: Simple IAR Navbar Style */}
-      <nav className="w-full bg-white flex items-center justify-center border-b border-slate-200 shadow-md py-4">
-        <img
-          src={logo}
-          alt="IAR Logo"
-          className="w-96 max-w-2xl h-auto object-contain"
-        />
-      </nav>
->>>>>>> 855cd86e3b586ca3e127eaf9c63d15416c471932
 
-      {/* Layer 2: Hero Section (IAR AI Quantum Lab) */}
+      <LandingNavbar />
+
+      {/* Layer 2: Hero Section (Quantum AI Simulation Lab) */}
       <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden">
         {/* Background Video */}
         <video
@@ -50,9 +37,9 @@ export default function LandingPage() {
           className="relative z-10 text-center w-full max-w-4xl mx-auto flex flex-col items-center gap-8"
         >
           <h2 className="font-display text-4xl md:text-6xl lg:text-[90px] font-black tracking-tighter leading-tight text-white drop-shadow-xl">
-            Simulated <br />
+            Quantum AI <br />
             <span className="inline-block pb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-400">
-              Experiments Hub
+              Simulation Lab
             </span>
           </h2>
 
@@ -71,6 +58,11 @@ export default function LandingPage() {
             </Link>
           </div>
         </motion.div>
+      </section>
+
+      {/* Layer 12: Quantum HUD Animation */}
+      <section className="py-24 bg-black overflow-hidden flex items-center justify-center min-h-[600px]">
+        <QuantumHUD />
       </section>
 
       {/* Platform Preview: Alternating Showcase */}
@@ -304,7 +296,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 text-white">
-              How the <span className="text-pink-300">Virtual Lab</span> Works
+              How the <span className="text-pink-300">Simulation Lab</span> Works
             </h2>
             <p className="text-white/80 text-lg">
               A seamless workflow designed to enhance understanding through interactive validation.
@@ -457,7 +449,7 @@ export default function LandingPage() {
           <h2 className="text-3xl md:text-4xl font-black text-white mb-6">Ready to Innovate?</h2>
           <p className="text-white/80 text-xl mb-10">Join thousands of students performing state-of-the-art virtual experiments today.</p>
           <Link to="/dashboard" className="bg-white text-[#7A1540] px-10 py-5 rounded-2xl font-black text-xl hover:bg-slate-100 transition-colors shadow-2xl hover:scale-105 active:scale-95 flex items-center gap-3">
-            Enter Virtual Lab <ArrowRight size={24} />
+            Enter Simulation Lab <ArrowRight size={24} />
           </Link>
         </div>
       </section>
@@ -484,7 +476,7 @@ export default function LandingPage() {
             Meet the <span className="text-[#7A1540]">Builders</span>
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-16">
-            The Quantum AI Virtual Lab was conceptualized and developed by dedicated innovators at IAR.
+            The Quantum AI Simulation Lab was conceptualized and developed by dedicated innovators at IAR.
           </p>
 
           <div className="flex flex-wrap justify-center gap-12">
@@ -530,6 +522,12 @@ export default function LandingPage() {
         </div>
       </section>
 
+
+      {/* Layer 12: Quantum HUD Animation */}
+      <section className="py-24 bg-black overflow-hidden flex items-center justify-center min-h-[600px]">
+        <QuantumHUD />
+      </section>
+
       {/* Layer 11: Expanded Footer */}
       <footer className="bg-slate-900 text-slate-300 pt-20 pb-10 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -537,7 +535,7 @@ export default function LandingPage() {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
                 <img src={logo} alt="IAR Logo" className="h-10 w-auto object-contain brightness-0 invert opacity-90" />
-                <span className="font-display font-bold text-white text-2xl tracking-wide">Quantum AI Lab</span>
+                <span className="font-display font-bold text-white text-2xl tracking-wide">Quantum AI Simulation Lab</span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
                 Pioneering the intersection of artificial intelligence, quantum computing, and interactive physics simulations for higher education.
@@ -583,6 +581,20 @@ export default function LandingPage() {
         </div>
       </footer>
     </div>
+  );
+}
+
+function QuantumHUD({ height = 600 }) {
+  return (
+    <iframe
+      src="/code.html"
+      width="100%"
+      height={height}
+      frameBorder="0"
+      scrolling="no"
+      style={{ display: 'block', borderRadius: '12px', border: 'none' }}
+      title="Quantum Computer HUD Animation"
+    />
   );
 }
 
