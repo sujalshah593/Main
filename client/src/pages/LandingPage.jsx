@@ -19,7 +19,7 @@ export default function LandingPage() {
 
       {/* Layer 2: Hero Section (True Split Screen) */}
       <section className="relative min-h-screen flex flex-col lg:flex-row overflow-hidden bg-black">
-        
+
         {/* Left Side: Video + Hero Content */}
         <div className="relative w-full lg:w-1/2 min-h-[70vh] lg:min-h-screen flex items-center px-6 md:px-12 lg:px-20 py-32 overflow-hidden border-b lg:border-b-0 lg:border-r border-white/5">
           {/* Background Video (Contained to Left Side) */}
@@ -33,7 +33,7 @@ export default function LandingPage() {
           />
           {/* Deep Overlay for readability */}
           <div className="absolute inset-0 bg-black/65" />
-          
+
           {/* Glassy border effect on the right edge of the left side */}
           <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-pink-500/30 to-transparent" />
 
@@ -61,7 +61,7 @@ export default function LandingPage() {
 
             <div className="flex flex-wrap items-center gap-4 pt-4">
               <Link
-                to="/simulator"
+                to="/dashboard"
                 className="group relative flex items-center justify-center gap-3 bg-[#ffcc00] text-black px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 hover:bg-white shadow-xl hover:shadow-white/20"
               >
                 <span>Explore SIMULATOR</span>
@@ -75,7 +75,7 @@ export default function LandingPage() {
         <div className="relative w-full lg:w-1/2 min-h-[500px] lg:min-h-screen flex items-center justify-center bg-black px-6">
           {/* Subtle glow background */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-pink-500/5 blur-[120px] rounded-full" />
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9, x: 30 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -86,7 +86,7 @@ export default function LandingPage() {
             <div className="relative bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
               <QuantumHUD height={600} />
             </div>
-            
+
             {/* HUD Title Overlay (Optional - for extra WOW) */}
             <div className="absolute top-4 left-6 flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
