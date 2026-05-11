@@ -3,7 +3,7 @@ const os = require('os');
 const path = require('path');
 const { spawn } = require('child_process');
 
-const PYTHON_BIN = process.env.PYTHON_BIN || 'python';
+const PYTHON_BIN = process.env.PYTHON_BIN || 'python3';
 
 function attachPythonLabSocket(io) {
   io.on('connection', (socket) => {
