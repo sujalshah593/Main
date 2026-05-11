@@ -14,20 +14,27 @@ const { attachPythonLabSocket } = require('./realtime/pythonLabSocket');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const clientOrigin = process.env.CLIENT_ORIGIN || 'http://localhost:5173';
+// Allow both with and without trailing slash
+const allowedOrigins = [
+  clientOrigin.replace(/\/$/, ''),
+  `${clientOrigin.replace(/\/$/, '')}/`
+];
+
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: clientOrigin,
+    origin: allowedOrigins,
     credentials: true,
   },
 });
 
 app.use(
   cors({
-    origin: clientOrigin,
+    origin: allowedOrigins,
     credentials: true,
   })
 );
+
 app.use(express.json());
 
 app.use('/practicals', express.static(path.join(__dirname, 'public', 'practicals')));
