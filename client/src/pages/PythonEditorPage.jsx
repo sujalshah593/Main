@@ -121,7 +121,8 @@ export default function PythonEditorPage() {
     term.write('\r\n$ ');
     terminalRef.current = term;
 
-    const socket = io('/', { path: '/socket.io', transports: ['websocket'] });
+    const socketUrl = import.meta.env.VITE_API_URL || window.location.origin;
+    const socket = io(socketUrl, { path: '/socket.io', transports: ['websocket'] });
     socketRef.current = socket;
 
     socket.on('connect', () => {
