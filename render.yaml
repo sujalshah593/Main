@@ -1,5 +1,5 @@
 services:
-  # Backend Web Service
+  # Backend Web Service (Node.js)
   - type: web
     name: quantum-lab-api
     env: node
@@ -16,9 +16,10 @@ services:
       - key: CLIENT_ORIGIN
         sync: false
 
-# Frontend Static Site
-static_sites:
-  - name: quantum-lab-ui
+  # Frontend Static Site (React/Vite)
+  - type: web
+    name: quantum-lab-ui
+    env: static
     region: singapore
     plan: free
     rootDir: client
