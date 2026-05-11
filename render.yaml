@@ -16,12 +16,10 @@ services:
       - key: CLIENT_ORIGIN
         sync: false
 
-  # Frontend Static Site
-  # Frontend Static Site
-  - type: static_site
-    name: quantum-lab-ui
+# Frontend Static Site
+static_sites:
+  - name: quantum-lab-ui
     region: singapore
-
     plan: free
     rootDir: client
     buildCommand: npm install && npm run build
