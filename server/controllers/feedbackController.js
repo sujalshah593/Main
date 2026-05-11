@@ -1,6 +1,7 @@
 const Feedback = require('../models/Feedback');
 const Experiment = require('../models/Experiment');
 const mongoose = require('mongoose');
+const { sendFeedbackEmail } = require('../services/emailService');
 
 async function createFeedback(req, res) {
   try {
@@ -9,8 +10,12 @@ async function createFeedback(req, res) {
       return res.status(400).json({ message: 'experimentId or experimentTitle, message, and rating are required' });
     }
     
-    if (experimentId && !mongoose.isValidObjectId(experimentId)) {
-      return res.status(400).json({ message: 'Invalid experiment id' });
+    let validExperimentId = null;
+    if (experimentId && mongoose.isValidObjectId(experimentId)) {
+      const exists = await Experiment.exists({ _id: experimentId });
+      if (exists) {
+        validExperimentId = experimentId;
+      }
     }
 
     const r = Number(rating);
@@ -18,19 +23,24 @@ async function createFeedback(req, res) {
       return res.status(400).json({ message: 'rating must be a number between 1 and 5' });
     }
 
-    if (experimentId) {
-      const exists = await Experiment.exists({ _id: experimentId });
-      if (!exists) {
-        return res.status(404).json({ message: 'Experiment not found' });
-      }
-    }
-
     const doc = await Feedback.create({ 
-      experimentId: experimentId || null, 
+      experimentId: validExperimentId, 
       experimentTitle: experimentTitle || null,
       message: String(message).trim(), 
       rating: r 
     });
+
+    // Send email notification
+    try {
+      await sendFeedbackEmail({
+        experimentTitle: experimentTitle || 'General Feedback',
+        message: String(message).trim(),
+        rating: r
+      });
+    } catch (emailError) {
+      console.error('Failed to send feedback email:', emailError);
+    }
+
     res.status(201).json(doc);
   } catch (err) {
     res.status(500).json({ message: 'Failed to save feedback', error: err.message });
