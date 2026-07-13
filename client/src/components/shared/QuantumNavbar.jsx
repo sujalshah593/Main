@@ -1,44 +1,38 @@
 import React from 'react';
-import IAR from '../../../public/IAR.png';
+import { Link } from 'react-router-dom';
+import { Cpu } from 'lucide-react';
 
 export default function QuantumNavbar() {
   return (
-    <nav className="w-full bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
-      {/* Decorative top accent line */}
-      <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#7A1540] via-pink-500 to-[#7A1540] opacity-80" />
-
-      <div className="max-w-[1920px] mx-auto px-6 md:px-12 h-20 md:h-32 flex items-center justify-between">
-
-        {/* Left: Institution Logo with Breathing Animation */}
-        <div className="flex-shrink-0 flex items-center h-full py-4 group">
-          <img
-            src={IAR}
-            alt="IAR Logo"
-            className="h-full w-auto object-contain  group-hover:scale-105 transition-transform duration-700 ease-in-out"
-          />
-        </div>
-
-        {/* Center: Main Branding with Metallic Gradient & Hover Effects */}
-        <div className="flex-grow flex flex-col justify-center items-center overflow-hidden px-4">
-          <h1 className="text-3xl md:text-6xl lg:text-6xl font-display font-black tracking-[-0.03em] md:tracking-[0.02em] uppercase leading-none text-center whitespace-nowrap
-                         bg-clip-text text-transparent bg-gradient-to-b from-[#7A1540] to-[#b12a5d]
-                         drop-shadow-[0_2px_15px_rgba(122,21,64,0.15)]
-                         hover:scale-[1.02] transition-transform duration-500 cursor-default select-none">
-            INSTITUTE OF ADVANCED RESEARCH
-          </h1>
-          {/* Subtext/Slogan under the main title */}
-          <div className="mt-1 hidden md:flex items-center gap-4">
-            <div className="h-[1px] w-12 bg-slate-200" />
-            <span className="text-[13px] font-bold text-slate-400 uppercase tracking-[0.4em]">Advanced Research Portal</span>
-            <div className="h-[1px] w-12 bg-slate-200" />
+    <nav className="w-full bg-white/80 backdrop-blur-xl sticky top-0 z-50 border-b border-slate-200 transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        
+        {/* Left: Text Logo */}
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-blue-600/20 group-hover:scale-105 transition-transform">
+            <Cpu size={20} />
           </div>
+          <span className="font-display font-black text-xl tracking-tight text-slate-900">
+            NiSuX<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Labs</span>
+          </span>
+        </Link>
+
+        {/* Center: Navigation Links (Hidden on Mobile) */}
+        <div className="hidden md:flex items-center gap-8">
+          <Link to="/" className="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors">Platform</Link>
+          <Link to="/" className="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors">Simulations</Link>
+          <Link to="/" className="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors">Theory</Link>
+          <Link to="/" className="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors">Enterprise</Link>
         </div>
 
+        {/* Right: CTA Button */}
+        <div className="flex items-center">
+          <Link to="/dashboard" className="px-6 py-2.5 rounded-full bg-blue-600 text-white text-sm font-bold border border-blue-600 hover:bg-blue-700 hover:border-blue-700 transition-all shadow-[0_4px_15px_rgba(37,99,235,0.3)]">
+            Launch Console
+          </Link>
+        </div>
 
       </div>
-
-      {/* Bottom subtle glow line */}
-      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7A1540]/10 to-transparent" />
     </nav>
   );
 }

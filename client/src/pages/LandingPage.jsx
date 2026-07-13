@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Cpu, Activity, Lightbulb, Zap, Microscope, BookOpen, Star, Users, GraduationCap, Award } from 'lucide-react';
-import IAR from '../../public/IAR.png'
+
 import dashboard from '../../public/snapshots/dashboard.png'
 import theory from '../../public/snapshots/theory.png'
 import mpractial from '../../public/snapshots/mpractial.png'
@@ -17,64 +17,62 @@ export default function LandingPage() {
       <QuantumNavbar />
 
 
-      {/* Layer 2: Hero Section (True Split Screen) */}
-      <section className="relative min-h-screen flex flex-col lg:flex-row overflow-hidden bg-black">
-
-        {/* Left Side: Video + Hero Content */}
-        <div className="relative w-full lg:w-1/2 min-h-[70vh] lg:min-h-screen flex items-center px-6 md:px-12 lg:px-20 py-32 overflow-hidden border-b lg:border-b-0 lg:border-r border-white/5">
-          {/* Background Video (Contained to Left Side) */}
-          <video
-            src="/videos/iarvideo.mp4"
-            className="absolute inset-0 w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
-          {/* Deep Overlay for readability */}
-          <div className="absolute inset-0 bg-black/65" />
-
-          {/* Glassy border effect on the right edge of the left side */}
-          <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-pink-500/30 to-transparent" />
-
-          {/* Hero Content */}
+      {/* Layer 2: Hero Section (Split Screen - Light Theme) */}
+      <section className="relative min-h-screen flex flex-col lg:flex-row overflow-hidden bg-slate-50 mt-[-80px]">
+        
+        {/* Left Side: Hero Content */}
+        <div className="relative w-full lg:w-1/2 min-h-[70vh] lg:min-h-screen flex items-center px-6 md:px-12 lg:px-20 py-32 overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-200 bg-white">
+          {/* Subtle Light Theme Background Effects */}
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,rgba(37,99,235,0.05),transparent_50%)] pointer-events-none" />
+          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_100%,rgba(6,182,212,0.05),transparent_50%)] pointer-events-none" />
+          
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative z-10 flex flex-col items-start gap-8"
+            className="relative z-10 flex flex-col items-start gap-8 mt-16"
           >
-            <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.6em] text-pink-300 drop-shadow-md">
-              Simulating Intelligence at the Quantum Level
-            </span>
-            <h2 className="font-display text-4xl md:text-6xl lg:text-[75px] font-black tracking-tighter leading-[1.1] text-white drop-shadow-xl">
-              Quantum AI <br />
-              <span className="inline-block pb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-400">
-                Simulation Lab
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 shadow-sm mb-2">
+              <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+              <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-blue-600">
+                System Online & Ready
+              </span>
+            </div>
+            
+            <h2 className="font-display text-5xl md:text-6xl lg:text-[75px] font-black tracking-tighter leading-[1.05] text-slate-900">
+              Simulating <br />
+              <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-violet-600 to-cyan-500 mt-2">
+                True Intelligence
               </span>
             </h2>
 
-            <p className="text-lg md:text-xl text-white/70 max-w-xl leading-relaxed font-medium drop-shadow">
-              Discover the future of scientific learning with the power of AI and Quantum Mechanics.
-              Experience high-fidelity simulations in a state-of-the-art virtual environment.
+            <p className="text-lg md:text-xl text-slate-500 max-w-xl leading-relaxed font-medium mt-2">
+              Step into a high-fidelity virtual universe. Accelerate your understanding of quantum mechanics and AI through our revolutionary simulation lab.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-4">
+            <div className="flex flex-wrap items-center gap-4 pt-4 mt-2">
               <Link
                 to="/dashboard"
-                className="group relative flex items-center justify-center gap-3 bg-[#ffcc00] text-black px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 hover:bg-white shadow-xl hover:shadow-white/20"
+                className="group relative flex items-center justify-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 hover:bg-blue-700 shadow-[0_4px_20px_rgba(37,99,235,0.3)]"
               >
                 <span>Explore SIMULATOR</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1.5 transition-transform" />
+              </Link>
+              
+              <Link
+                to="/theory"
+                className="group flex items-center justify-center gap-3 px-8 py-4 rounded-full font-bold text-lg text-slate-900 border border-slate-200 hover:bg-slate-50 transition-all bg-white shadow-sm"
+              >
+                <span>View Docs</span>
               </Link>
             </div>
           </motion.div>
         </div>
 
-        {/* Right Side: Quantum HUD */}
-        <div className="relative w-full lg:w-1/2 min-h-[500px] lg:min-h-screen flex items-center justify-center bg-black px-6">
-          {/* Subtle glow background */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-pink-500/5 blur-[120px] rounded-full" />
+        {/* Right Side: Quantum HUD (Light Theme) */}
+        <div className="relative w-full lg:w-1/2 min-h-[500px] lg:min-h-screen flex items-center justify-center bg-slate-50 px-6">
+          {/* Subtle glow background for the HUD in light mode */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-gradient-to-br from-blue-100 to-cyan-100 blur-[100px] rounded-full opacity-60 pointer-events-none" />
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9, x: 30 }}
@@ -82,15 +80,15 @@ export default function LandingPage() {
             transition={{ duration: 1, delay: 0.2 }}
             className="relative w-full max-w-2xl"
           >
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500/20 to-purple-500/20 blur-xl rounded-3xl opacity-50" />
-            <div className="relative bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-300 to-cyan-300 blur-xl rounded-3xl opacity-30" />
+            <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl border border-white/60 overflow-hidden shadow-[0_20px_50px_rgba(37,99,235,0.1)]">
               <QuantumHUD height={600} />
             </div>
 
-            {/* HUD Title Overlay (Optional - for extra WOW) */}
+            {/* HUD Title Overlay for Light Theme */}
             <div className="absolute top-4 left-6 flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
-              <span className="text-[10px] font-bold text-white/40 uppercase tracking-[0.3em]">Quantum_Core_Active</span>
+              <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+              <span className="text-[10px] font-bold text-blue-600/70 uppercase tracking-[0.3em]">Quantum_Core_Active</span>
             </div>
           </motion.div>
         </div>
@@ -111,11 +109,11 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center max-w-2xl mx-auto"
           >
-            <span className="inline-block text-xs font-black uppercase tracking-[0.2em] text-[#7A1540] bg-[#7A1540]/8 px-4 py-1.5 rounded-full mb-4">Platform Preview</span>
+            <span className="inline-block text-xs font-black uppercase tracking-[0.2em] text-blue-600 bg-blue-600/10 px-4 py-1.5 rounded-full mb-4">Platform Preview</span>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 mb-4">
               Everything You Need
             </h2>
-            <span className="text-[#7A1540] font-display text-3xl md:text-5xl font-bold tracking-tight mb-5">In One Place</span>
+            <span className="text-blue-600 font-display text-3xl md:text-5xl font-bold tracking-tight mb-5">In One Place</span>
             <p className="text-slate-500 text-lg mt-3">A fully integrated virtual science platform — from theory to simulation to live coding.</p>
           </motion.div>
 
@@ -128,17 +126,17 @@ export default function LandingPage() {
             className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20"
           >
             <div className="lg:w-1/2 flex flex-col gap-5">
-              <span className="text-xs font-black uppercase tracking-widest text-[#7A1540]">🌐 Quantum World Dashboard</span>
+              <span className="text-xs font-black uppercase tracking-widest text-blue-600">🌐 Quantum World Dashboard</span>
               <h3 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight">
-                Your Gateway to the <span className="text-[#7A1540]">Quantum World</span>
+                Your Gateway to the <span className="text-blue-600">Quantum World</span>
               </h3>
               <p className="text-slate-600 text-lg leading-relaxed">
                 A clean, intuitive dashboard designed for students — navigate across AI Lab Assistants, Interactive Simulations, and the Theory Portal from a single unified interface.
               </p>
               <ul className="space-y-2 text-slate-600 text-[15px]">
-                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#7A1540] inline-block" />Sidebar navigation across all modules</li>
-                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#7A1540] inline-block" />Interactive simulation card grid</li>
-                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#7A1540] inline-block" />AI Lab Assistant integration</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-blue-600 inline-block" />Sidebar navigation across all modules</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-blue-600 inline-block" />Interactive simulation card grid</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-blue-600 inline-block" />AI Lab Assistant integration</li>
               </ul>
             </div>
             <div className="lg:w-1/2">
@@ -276,9 +274,9 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center max-w-2xl mx-auto mb-16"
           >
-            <span className="inline-block text-xs font-black uppercase tracking-widest text-[#7A1540] mb-4">Popular Experiments</span>
+            <span className="inline-block text-xs font-black uppercase tracking-widest text-blue-600 mb-4">Popular Experiments</span>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 mb-4">
-              Explore Our <span className="text-[#7A1540]">Virtual Labs</span>
+              Explore Our <span className="text-blue-600">Virtual Labs</span>
             </h2>
             <p className="text-slate-500 text-lg">Perform complex physics and engineering experiments right from your browser with highly accurate simulations.</p>
           </motion.div>
@@ -289,14 +287,14 @@ export default function LandingPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-slate-50 rounded-3xl p-8 border border-slate-100 transition-all hover:shadow-xl hover:bg-white group"
+              className="bg-white rounded-3xl p-8 border border-slate-200 transition-all hover:shadow-xl hover:border-blue-100 group"
             >
-              <div className="w-14 h-14 bg-rose-50 text-[#7A1540] rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <Activity size={28} />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-3">Simple Pendulum</h3>
               <p className="text-slate-600 mb-8">Investigate the relationship between pendulum length, mass, and time period with real-time graphing.</p>
-              <Link to="/dashboard" className="inline-flex items-center gap-2 text-[#7A1540] font-bold hover:gap-4 transition-all">
+              <Link to="/dashboard" className="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-4 transition-all">
                 Try Simulator <ArrowRight size={18} />
               </Link>
             </motion.div>
@@ -341,11 +339,11 @@ export default function LandingPage() {
       </section>
 
       {/* Layer 5: How It Works - Redesigned for High-End Technical Aesthetic */}
-      <section className="py-32 bg-slate-900 relative overflow-hidden">
+      <section className="py-32 bg-slate-50 relative overflow-hidden">
         {/* Technical Background Elements */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTMwIDB2NjBNMCAzMGg2MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDMpIiBmaWxsPSJub25lIi8+PC9zdmc+')] opacity-50" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#7A1540] rounded-full blur-[160px] opacity-10 animate-pulse-slow" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600 rounded-full blur-[160px] opacity-[0.03] animate-pulse-slow" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
@@ -356,19 +354,19 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-24"
           >
-            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-pink-400 mb-4 block">Workflow</span>
-            <h2 className="font-display text-4xl md:text-6xl font-black mb-6 text-white tracking-tight">
-              How the <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-[#7A1540]">Virtual Lab</span> Works
+            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-blue-600 mb-4 block">Workflow</span>
+            <h2 className="font-display text-4xl md:text-6xl font-black mb-6 text-slate-900 tracking-tight">
+              How the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Virtual Lab</span> Works
             </h2>
-            <p className="text-slate-400 text-lg md:text-xl leading-relaxed font-medium">
+            <p className="text-slate-600 text-lg md:text-xl leading-relaxed font-medium">
               A scientifically rigorous workflow designed to bridge the gap between theoretical concept and practical mastery.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
             {/* Connecting Line - Animated Path */}
-            <div className="hidden md:block absolute top-[4.5rem] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-pink-500/0 via-pink-500/20 to-pink-500/0 z-0">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-pink-400 to-transparent w-1/3 animate-[shimmer_3s_infinite]" />
+            <div className="hidden md:block absolute top-[4.5rem] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-blue-500/0 via-blue-500/20 to-blue-500/0 z-0">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400 to-transparent w-1/3 animate-[shimmer_3s_infinite]" />
             </div>
 
             {/* Step 1 */}
@@ -378,13 +376,13 @@ export default function LandingPage() {
               transition={{ delay: 0.1 }}
               className="relative z-10 flex flex-col items-center text-center group"
             >
-              <div className="w-36 h-36 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center mb-8 relative group-hover:border-pink-500/50 transition-all duration-500 shadow-2xl">
-                <div className="absolute inset-2 rounded-full border border-pink-500/10 animate-spin-slow" />
-                <div className="w-10 h-10 rounded-full bg-pink-500 text-white flex items-center justify-center font-black text-lg absolute -top-2 -right-2 shadow-lg shadow-pink-500/20">1</div>
-                <BookOpen size={48} className="text-white group-hover:scale-110 transition-transform" />
+              <div className="w-36 h-36 rounded-full bg-white border border-slate-200 flex items-center justify-center mb-8 relative group-hover:border-blue-500/50 transition-all duration-500 shadow-xl">
+                <div className="absolute inset-2 rounded-full border border-blue-500/10 animate-spin-slow" />
+                <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-lg absolute -top-2 -right-2 shadow-lg shadow-blue-500/20">1</div>
+                <BookOpen size={48} className="text-blue-600 group-hover:scale-110 transition-transform" />
               </div>
-              <h3 className="text-2xl font-black text-white mb-4 tracking-tight">Theory Portal</h3>
-              <p className="text-slate-400 leading-relaxed font-medium">
+              <h3 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">Theory Portal</h3>
+              <p className="text-slate-600 leading-relaxed font-medium">
                 Master the underlying physics and mathematical models before entering the simulation workbench.
               </p>
             </motion.div>
@@ -396,13 +394,13 @@ export default function LandingPage() {
               transition={{ delay: 0.2 }}
               className="relative z-10 flex flex-col items-center text-center group"
             >
-              <div className="w-36 h-36 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center mb-8 relative group-hover:border-sky-500/50 transition-all duration-500 shadow-2xl">
-                <div className="absolute inset-2 rounded-full border border-sky-500/10 animate-spin-slow reverse" />
-                <div className="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center font-black text-lg absolute -top-2 -right-2 shadow-lg shadow-sky-500/20">2</div>
-                <Microscope size={48} className="text-white group-hover:scale-110 transition-transform" />
+              <div className="w-36 h-36 rounded-full bg-white border border-slate-200 flex items-center justify-center mb-8 relative group-hover:border-cyan-500/50 transition-all duration-500 shadow-xl">
+                <div className="absolute inset-2 rounded-full border border-cyan-500/10 animate-spin-slow reverse" />
+                <div className="w-10 h-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-black text-lg absolute -top-2 -right-2 shadow-lg shadow-cyan-500/20">2</div>
+                <Microscope size={48} className="text-cyan-500 group-hover:scale-110 transition-transform" />
               </div>
-              <h3 className="text-2xl font-black text-white mb-4 tracking-tight">Interactive Setup</h3>
-              <p className="text-slate-400 leading-relaxed font-medium">
+              <h3 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">Interactive Setup</h3>
+              <p className="text-slate-600 leading-relaxed font-medium">
                 Configure your apparatus in a 3D environment that obeys real-world physical constraints and dynamics.
               </p>
             </motion.div>
@@ -414,13 +412,13 @@ export default function LandingPage() {
               transition={{ delay: 0.3 }}
               className="relative z-10 flex flex-col items-center text-center group"
             >
-              <div className="w-36 h-36 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center mb-8 relative group-hover:border-emerald-500/50 transition-all duration-500 shadow-2xl">
-                <div className="absolute inset-2 rounded-full border border-emerald-500/10 animate-spin-slow" />
-                <div className="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-black text-lg absolute -top-2 -right-2 shadow-lg shadow-emerald-500/20">3</div>
-                <Lightbulb size={48} className="text-white group-hover:scale-110 transition-transform" />
+              <div className="w-36 h-36 rounded-full bg-white border border-slate-200 flex items-center justify-center mb-8 relative group-hover:border-violet-500/50 transition-all duration-500 shadow-xl">
+                <div className="absolute inset-2 rounded-full border border-violet-500/10 animate-spin-slow" />
+                <div className="w-10 h-10 rounded-full bg-violet-500 text-white flex items-center justify-center font-black text-lg absolute -top-2 -right-2 shadow-lg shadow-violet-500/20">3</div>
+                <Lightbulb size={48} className="text-violet-500 group-hover:scale-110 transition-transform" />
               </div>
-              <h3 className="text-2xl font-black text-white mb-4 tracking-tight">Data Synthesis</h3>
-              <p className="text-slate-400 leading-relaxed font-medium">
+              <h3 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">Data Synthesis</h3>
+              <p className="text-slate-600 leading-relaxed font-medium">
                 Execute experiments, capture high-precision data, and generate real-time analytical visualizations.
               </p>
             </motion.div>
@@ -428,9 +426,12 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Layer 7: BSc Quantum Technology - Restored to original layout */}
-      <section className="py-24 bg-white border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      {/* Layer 7: Custom Section (Replacement for New Program) */}
+      <section className="py-24 bg-white border-t border-slate-200 relative overflow-hidden">
+        {/* Subtle glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-gradient-to-r from-blue-500/5 via-violet-500/5 to-cyan-500/5 blur-[100px] pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -438,38 +439,66 @@ export default function LandingPage() {
             className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20"
           >
             <div className="lg:w-1/2">
-              <span className="text-xs font-black uppercase tracking-widest text-[#7A1540] mb-4 block">New Program</span>
-              <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 mb-6">
-                B.Sc.(H) <span className="text-[#7A1540]">Quantum Tech</span>
+              <span className="text-xs font-black uppercase tracking-widest text-blue-600 mb-4 block drop-shadow-sm">Next-Gen Education</span>
+              <h2 className="font-display text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
+                Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Quantum Intelligence</span>
               </h2>
-              <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                Be a part of India's first dedicated undergraduate program in Quantum Technology.
-                Gain hands-on experience with quantum algorithms, hardware architectures, and AI integration.
+              <p className="text-slate-600 text-lg leading-relaxed mb-8 font-medium">
+                Immerse yourself in a state-of-the-art virtual curriculum. Push the boundaries of scientific computing by designing, simulating, and validating complex quantum algorithms in our high-fidelity virtual labs.
               </p>
               <div className="space-y-4 mb-10">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#7A1540]/5 flex items-center justify-center text-[#7A1540]">
-                    <Award size={20} />
+                <div className="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-200 backdrop-blur-md">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center text-white shadow-lg">
+                    <Activity size={24} />
                   </div>
-                  <span className="font-bold text-slate-800">UGC Recognized Honors Degree</span>
+                  <span className="font-bold text-slate-900">Real-time Visualization Engine</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#7A1540]/5 flex items-center justify-center text-[#7A1540]">
-                    <Users size={20} />
+                <div className="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-200 backdrop-blur-md">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center text-white shadow-lg">
+                    <Zap size={24} />
                   </div>
-                  <span className="font-bold text-slate-800">Industry Integrated Curriculum</span>
+                  <span className="font-bold text-slate-900">AI-Powered Validation</span>
                 </div>
               </div>
-              <button className="bg-[#7A1540] text-white px-8 py-4 rounded-2xl font-bold transition-all hover:scale-105 shadow-lg shadow-[#7A1540]/20">
-                Explore Curriculum
+              <button className="group relative bg-blue-600 text-white px-8 py-4 rounded-2xl font-black text-lg transition-all hover:scale-105 hover:bg-blue-700 shadow-[0_4px_20px_rgba(37,99,235,0.3)] overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                <span className="relative z-10 flex items-center gap-2">Start Journey <ArrowRight size={20} /></span>
               </button>
             </div>
-            <div className="lg:w-1/2 relative">
-              <div className="w-full aspect-video rounded-3xl bg-slate-900 overflow-hidden shadow-2xl relative group">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#7A1540]/20 to-transparent opacity-60" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full border-2 border-white/20 flex items-center justify-center animate-ping" />
-                  <Cpu size={64} className="text-white absolute" />
+            
+            <div className="lg:w-1/2 relative w-full h-[400px]">
+              {/* Floating glassmorphism cards */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute w-[120%] h-[120%] bg-[radial-gradient(circle_at_50%_50%,rgba(37,99,235,0.05),transparent)] blur-xl pointer-events-none" />
+                
+                {/* Main Card */}
+                <div className="relative z-20 w-80 h-96 bg-white/80 backdrop-blur-2xl border border-slate-200 rounded-[2rem] shadow-xl p-6 flex flex-col items-center justify-center overflow-hidden hover:scale-105 transition-transform duration-500">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-[50px] rounded-full" />
+                  <div className="w-24 h-24 rounded-full border border-blue-100 flex items-center justify-center relative mb-6 bg-blue-50">
+                    <div className="absolute inset-0 rounded-full border-t-2 border-blue-500 animate-[spin_4s_linear_infinite]" />
+                    <Cpu size={40} className="text-blue-600" />
+                  </div>
+                  <h3 className="text-slate-900 font-bold text-xl text-center mb-2">Quantum Core Sync</h3>
+                  <p className="text-slate-500 text-sm text-center">Neural pathways active and stabilizing.</p>
+                </div>
+                
+                {/* Accent Cards */}
+                <div className="absolute top-4 -right-8 z-10 w-48 h-32 bg-white/90 backdrop-blur-xl border border-slate-200 rounded-2xl p-4 shadow-lg">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+                    <span className="text-blue-600 text-xs font-bold uppercase tracking-widest">Status</span>
+                  </div>
+                  <div className="text-slate-900 font-black text-lg">System Online</div>
+                </div>
+                
+                <div className="absolute bottom-8 -left-12 z-30 w-56 h-32 bg-white/90 backdrop-blur-xl border border-slate-200 rounded-2xl p-4 shadow-lg">
+                  <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden mb-3">
+                    <div className="w-3/4 h-full bg-gradient-to-r from-cyan-500 to-blue-600 animate-pulse" />
+                  </div>
+                  <div className="flex justify-between text-xs font-bold">
+                    <span className="text-slate-500">Processing</span>
+                    <span className="text-blue-600">75%</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -478,11 +507,10 @@ export default function LandingPage() {
       </section>
 
 
-
       {/* Layer 8: Reviews / Testimonials - Redesigned to be 'Damn Attractive' */}
       <section className="py-32 bg-slate-50 relative overflow-hidden">
         {/* Subtle decorative elements */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(122,21,64,0.03),transparent)] pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(37,99,235,0.03),transparent)] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <motion.div
@@ -491,11 +519,11 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#7A1540]/5 text-[#7A1540] text-[10px] font-black uppercase tracking-[0.3em] mb-4">Testimonials</span>
+            <span className="inline-block px-4 py-1.5 rounded-full bg-blue-600/10 text-blue-600 text-[10px] font-black uppercase tracking-[0.3em] mb-4">Testimonials</span>
             <h2 className="font-display text-4xl md:text-6xl font-black text-slate-900 mb-4 tracking-tight">
-              What Students <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7A1540] to-pink-600">Say</span>
+              What Students <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Say</span>
             </h2>
-            <div className="h-1.5 w-24 bg-[#7A1540] mx-auto rounded-full opacity-20" />
+            <div className="h-1.5 w-24 bg-blue-600 mx-auto rounded-full opacity-20" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
@@ -505,25 +533,25 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="group bg-white rounded-[3rem] p-10 shadow-[0_10px_50px_rgba(0,0,0,0.04)] border border-slate-100 relative transition-all duration-500 hover:shadow-[0_20px_70px_rgba(122,21,64,0.1)] hover:border-[#7A1540]/20"
+              className="group bg-white rounded-[3rem] p-10 shadow-[0_10px_50px_rgba(0,0,0,0.04)] border border-slate-100 relative transition-all duration-500 hover:shadow-[0_20px_70px_rgba(37,99,235,0.1)] hover:border-blue-600/20"
             >
               <div className="absolute top-8 right-10 opacity-5 group-hover:opacity-10 transition-opacity">
-                <span className="text-8xl font-serif text-[#7A1540]">“</span>
+                <span className="text-8xl font-serif text-blue-600">“</span>
               </div>
 
-              <div className="flex gap-1 text-amber-400 mb-8">
+              <div className="flex gap-1 text-cyan-500 mb-8">
                 {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" stroke="none" />)}
               </div>
 
-              <p className="text-slate-700 text-lg leading-relaxed font-medium mb-10 relative z-10">
+              <p className="text-slate-600 text-lg leading-relaxed font-medium mb-10 relative z-10">
                 "The drag-and-drop circuit building feels <span className="text-slate-900 font-bold">incredibly realistic</span>. It helped me understand energy conservation much better than standard textbook diagrams."
               </p>
 
               <div className="flex items-center gap-5 pt-8 border-t border-slate-50">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#7A1540] to-pink-500 flex items-center justify-center font-black text-white text-xl shadow-lg shadow-[#7A1540]/20">AS</div>
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center font-black text-white text-xl shadow-lg shadow-blue-600/20">AS</div>
                 <div>
                   <div className="font-black text-slate-900 tracking-tight">Aryan Sharma</div>
-                  <div className="text-xs font-bold text-[#7A1540] uppercase tracking-widest">BSc Physics, 2nd Year</div>
+                  <div className="text-xs font-bold text-blue-600 uppercase tracking-widest">BSc Physics, 2nd Year</div>
                 </div>
               </div>
             </motion.div>
@@ -535,25 +563,25 @@ export default function LandingPage() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
               whileHover={{ y: -10 }}
-              className="group bg-white rounded-[3rem] p-10 shadow-[0_10px_50px_rgba(0,0,0,0.04)] border border-slate-100 relative transition-all duration-500 hover:shadow-[0_20px_70px_rgba(79,70,229,0.1)] hover:border-indigo-500/20"
+              className="group bg-white rounded-[3rem] p-10 shadow-[0_10px_50px_rgba(0,0,0,0.04)] border border-slate-100 relative transition-all duration-500 hover:shadow-[0_20px_70px_rgba(6,182,212,0.1)] hover:border-cyan-500/20"
             >
               <div className="absolute top-8 right-10 opacity-5 group-hover:opacity-10 transition-opacity">
-                <span className="text-8xl font-serif text-indigo-600">“</span>
+                <span className="text-8xl font-serif text-cyan-500">“</span>
               </div>
 
-              <div className="flex gap-1 text-amber-400 mb-8">
+              <div className="flex gap-1 text-cyan-500 mb-8">
                 {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" stroke="none" />)}
               </div>
 
-              <p className="text-slate-700 text-lg leading-relaxed font-medium mb-10 relative z-10">
+              <p className="text-slate-600 text-lg leading-relaxed font-medium mb-10 relative z-10">
                 "Having the automated physics engine plot graphs <span className="text-slate-900 font-bold">instantly</span> as I tweak the simple pendulum length is mind-blowing. Amazing platform!"
               </p>
 
               <div className="flex items-center gap-5 pt-8 border-t border-slate-50">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-600 to-sky-500 flex items-center justify-center font-black text-white text-xl shadow-lg shadow-indigo-600/20">RP</div>
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center font-black text-white text-xl shadow-lg shadow-cyan-500/20">RP</div>
                 <div>
                   <div className="font-black text-slate-900 tracking-tight">Riya Patel</div>
-                  <div className="text-xs font-bold text-indigo-600 uppercase tracking-widest">BSc Computer Science</div>
+                  <div className="text-xs font-bold text-cyan-500 uppercase tracking-widest">BSc Computer Science</div>
                 </div>
               </div>
             </motion.div>
@@ -565,25 +593,25 @@ export default function LandingPage() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               whileHover={{ y: -10 }}
-              className="group bg-white rounded-[3rem] p-10 shadow-[0_10px_50px_rgba(0,0,0,0.04)] border border-slate-100 relative transition-all duration-500 hover:shadow-[0_20px_70px_rgba(16,185,129,0.1)] hover:border-emerald-500/20"
+              className="group bg-white rounded-[3rem] p-10 shadow-[0_10px_50px_rgba(0,0,0,0.04)] border border-slate-100 relative transition-all duration-500 hover:shadow-[0_20px_70px_rgba(124,58,237,0.1)] hover:border-violet-500/20"
             >
               <div className="absolute top-8 right-10 opacity-5 group-hover:opacity-10 transition-opacity">
-                <span className="text-8xl font-serif text-emerald-600">“</span>
+                <span className="text-8xl font-serif text-violet-600">“</span>
               </div>
 
-              <div className="flex gap-1 text-amber-400 mb-8">
+              <div className="flex gap-1 text-cyan-500 mb-8">
                 {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" stroke="none" />)}
               </div>
 
-              <p className="text-slate-700 text-lg leading-relaxed font-medium mb-10 relative z-10">
+              <p className="text-slate-600 text-lg leading-relaxed font-medium mb-10 relative z-10">
                 "No more fighting for lab equipment time. I can practice my flywheel experiments at <span className="text-slate-900 font-bold">2 AM from my dorm</span>. The validation system is perfect."
               </p>
 
               <div className="flex items-center gap-5 pt-8 border-t border-slate-50">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-500 flex items-center justify-center font-black text-white text-xl shadow-lg shadow-emerald-600/20">KD</div>
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-600 to-blue-500 flex items-center justify-center font-black text-white text-xl shadow-lg shadow-violet-600/20">KD</div>
                 <div>
                   <div className="font-black text-slate-900 tracking-tight">Karan Desai</div>
-                  <div className="text-xs font-bold text-emerald-600 uppercase tracking-widest">Engineering Student</div>
+                  <div className="text-xs font-bold text-violet-600 uppercase tracking-widest">Engineering Student</div>
                 </div>
               </div>
             </motion.div>
@@ -592,12 +620,11 @@ export default function LandingPage() {
       </section>
 
       {/* Layer 9: Call to Action Banner - Redesigned for WOW factor */}
-      <section className="relative py-32 overflow-hidden bg-slate-900">
+      <section className="relative py-32 overflow-hidden bg-slate-50">
         {/* Animated Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#7A1540] rounded-full blur-[120px] opacity-20 animate-pulse-slow"></div>
-          <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-purple-600 rounded-full blur-[140px] opacity-20 animate-blob"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-30"></div>
+          <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-600 rounded-full blur-[120px] opacity-10 animate-pulse-slow"></div>
+          <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-cyan-500 rounded-full blur-[140px] opacity-10 animate-blob"></div>
         </div>
 
         <div className="max-w-5xl mx-auto px-6 relative z-10">
@@ -605,28 +632,28 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[4rem] p-12 md:p-20 text-center shadow-2xl relative overflow-hidden group"
+            className="bg-white border border-slate-200 rounded-[4rem] p-12 md:p-20 text-center shadow-xl relative overflow-hidden group hover:shadow-[0_20px_60px_rgba(37,99,235,0.1)] transition-shadow duration-500"
           >
             {/* Subtle internal glow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#7A1540]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
             <div className="relative z-10 flex flex-col items-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-[#7A1540] to-pink-500 rounded-3xl flex items-center justify-center mb-10 shadow-lg shadow-[#7A1540]/30 rotate-3 group-hover:rotate-6 transition-transform">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-3xl flex items-center justify-center mb-10 shadow-lg shadow-blue-600/30 rotate-3 group-hover:rotate-6 transition-transform">
                 <Award size={40} className="text-white" />
               </div>
 
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white mb-8 tracking-tighter leading-tight">
-                Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-[#7A1540]">Innovate?</span>
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-slate-900 mb-8 tracking-tighter leading-tight">
+                Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Innovate?</span>
               </h2>
 
-              <p className="text-slate-400 text-lg md:text-2xl max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
+              <p className="text-slate-600 text-lg md:text-2xl max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
                 Join thousands of students performing state-of-the-art virtual experiments.
                 Step into the future of scientific exploration today.
               </p>
 
               <Link
                 to="/dashboard"
-                className="group relative inline-flex items-center justify-center gap-4 bg-white text-slate-900 px-12 py-6 rounded-2xl font-black text-2xl transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:shadow-[#7A1540]/40 overflow-hidden"
+                className="group relative inline-flex items-center justify-center gap-4 bg-blue-600 text-white px-12 py-6 rounded-2xl font-black text-2xl transition-all hover:scale-105 active:scale-95 shadow-[0_10px_30px_rgba(37,99,235,0.3)] hover:shadow-blue-600/40 overflow-hidden"
               >
                 {/* Button shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
@@ -636,9 +663,9 @@ export default function LandingPage() {
               </Link>
 
               <div className="mt-12 flex items-center gap-8 text-slate-500 font-bold text-xs uppercase tracking-[0.3em]">
-                <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#7A1540]" /> 100+ Experiments</span>
-                <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#7A1540]" /> AI Assisted</span>
-                <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#7A1540]" /> Cloud Sync</span>
+                <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-600" /> 100+ Experiments</span>
+                <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-600" /> AI Assisted</span>
+                <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-600" /> Cloud Sync</span>
               </div>
             </div>
           </motion.div>
@@ -650,8 +677,8 @@ export default function LandingPage() {
         {/* Abstract Background Patterns (Particles/Waves) */}
         <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
           <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path d="M0 50 Q 25 0, 50 50 T 100 50" fill="none" stroke="#7A1540" strokeWidth="0.5" className="animate-pulse" />
-            <path d="M0 60 Q 25 10, 50 60 T 100 60" fill="none" stroke="#7A1540" strokeWidth="0.5" className="animate-pulse" style={{ animationDelay: '1s' }} />
+            <path d="M0 50 Q 25 0, 50 50 T 100 50" fill="none" stroke="#2563EB" strokeWidth="0.5" className="animate-pulse" />
+            <path d="M0 60 Q 25 10, 50 60 T 100 60" fill="none" stroke="#2563EB" strokeWidth="0.5" className="animate-pulse" style={{ animationDelay: '1s' }} />
           </svg>
         </div>
 
@@ -661,10 +688,10 @@ export default function LandingPage() {
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
-              className="w-24 h-24 bg-gradient-to-br from-[#7A1540]/5 to-[#7A1540]/10 rounded-full flex items-center justify-center mb-12 relative"
+              className="w-24 h-24 bg-gradient-to-br from-blue-600/5 to-blue-600/10 rounded-full flex items-center justify-center mb-12 relative"
             >
-              <div className="absolute inset-0 rounded-full border border-[#7A1540]/20 animate-ping opacity-20" />
-              <Lightbulb size={40} className="text-[#7A1540] relative z-10" />
+              <div className="absolute inset-0 rounded-full border border-blue-600/20 animate-ping opacity-20" />
+              <Lightbulb size={40} className="text-blue-600 relative z-10" />
             </motion.div>
 
             <div className="text-center">
@@ -672,7 +699,7 @@ export default function LandingPage() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="text-[10px] font-black uppercase tracking-[0.5em] text-[#7A1540] mb-4 block"
+                className="text-[10px] font-black uppercase tracking-[0.5em] text-blue-600 mb-4 block"
               >
                 Manifesto
               </motion.span>
@@ -682,14 +709,14 @@ export default function LandingPage() {
                 viewport={{ once: true }}
                 className="font-display text-4xl md:text-7xl font-black text-slate-900 mb-12 tracking-tight"
               >
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7A1540] to-pink-600">Vision</span>
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Vision</span>
               </motion.h2>
             </div>
 
             <div className="relative max-w-5xl mx-auto">
               {/* Large Stylized Quotes */}
-              <span className="absolute -top-12 -left-8 text-9xl font-serif text-[#7A1540]/10 select-none">“</span>
-              <span className="absolute -bottom-24 -right-8 text-9xl font-serif text-[#7A1540]/10 select-none">”</span>
+              <span className="absolute -top-12 -left-8 text-9xl font-serif text-blue-600/10 select-none">“</span>
+              <span className="absolute -bottom-24 -right-8 text-9xl font-serif text-blue-600/10 select-none">”</span>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -698,10 +725,10 @@ export default function LandingPage() {
                 className="relative z-10"
               >
                 <p className="text-2xl md:text-4xl lg:text-5xl text-slate-800 leading-[1.3] font-medium text-center italic tracking-tight">
-                  To democratize access to <span className="text-[#7A1540] font-black">high-fidelity scientific equipment</span> by bringing the physical laboratory directly into the digital realm.
+                  To democratize access to <span className="text-blue-600 font-black">high-fidelity scientific equipment</span> by bringing the physical laboratory directly into the digital realm.
                 </p>
 
-                <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#7A1540] to-transparent mx-auto my-12" />
+                <div className="w-24 h-1 bg-gradient-to-r from-transparent via-blue-600 to-transparent mx-auto my-12" />
 
                 <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto text-center leading-relaxed font-medium">
                   We believe that immersive, AI-guided simulations are the key to unlocking the next generation of
@@ -714,7 +741,7 @@ export default function LandingPage() {
       </section>
 
       {/* Layer 7: Meet the Builders */}
-      <section className="py-24 bg-white border-t border-slate-100">
+      <section className="py-24 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -722,54 +749,16 @@ export default function LandingPage() {
             viewport={{ once: true }}
           >
             <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 mb-4">
-              Meet the <span className="text-[#7A1540]">Builders</span>
+              Meet the <span className="text-blue-600">Builders</span>
             </h2>
             <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-16">
-              The Quantum AI Virtual Lab was conceptualized and developed by dedicated innovators at IAR.
+              The Quantum AI Virtual Lab was conceptualized and developed by dedicated innovators.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 max-w-4xl mx-auto">
-            {/* Dean / Founder - Dr. Anand K. Tiwari */}
-            <motion.div
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              className="flex flex-col items-center group"
-            >
-              <div className="w-40 h-40 rounded-[2rem] bg-slate-100 overflow-hidden mb-6 relative border-4 border-amber-200 shadow-xl group-hover:-translate-y-2 transition-transform">
-                <div className="absolute inset-0 bg-gradient-to-tr from-amber-500 to-yellow-300 opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                <div className="w-full h-full flex items-center justify-center bg-amber-50 text-amber-400">
-                  <GraduationCap size={64} />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900">Dr. Anand K. Tiwari</h3>
-              <p className="text-amber-600 font-bold text-sm uppercase tracking-wide mb-1">Founder</p>
-              <p className="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-3">Dean, Institute of Advanced Research</p>
-              <p className="text-slate-600 text-sm text-center">Visionary academic leader pioneering the integration of quantum technology and AI-driven education at IAR.</p>
-            </motion.div>
 
-            {/* Founder 1 - Keval Gandhi */}
-            <motion.div
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              className="flex flex-col items-center group"
-            >
-              <div className="w-40 h-40 rounded-[2rem] bg-slate-100 overflow-hidden mb-6 relative border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#7A1540] to-pink-400 opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                <div className="w-full h-full flex items-center justify-center bg-slate-200 text-slate-400">
-                  <Users size={64} />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900">Keval Gandhi</h3>
-              <p className="text-[#7A1540] font-bold text-sm uppercase tracking-wide mb-3">Founder</p>
-              <p className="text-slate-600 text-sm text-center">Visionary leader driving the future of quantum education and interactive learning.</p>
-            </motion.div>
-
-            {/* Engineer 1 - Sujal Shah */}
+            {/* Engineer 1 - Nidhi Chaudhary */}
             <motion.div
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -777,18 +766,18 @@ export default function LandingPage() {
               transition={{ duration: 1, ease: "easeOut" }}
               className="flex flex-col items-center group"
             >
-              <div className="w-40 h-40 rounded-[2rem] bg-slate-100 overflow-hidden mb-6 relative border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform">
-                <div className="absolute inset-0 bg-gradient-to-tr from-indigo-600 to-sky-400 opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                <div className="w-full h-full flex items-center justify-center bg-slate-200 text-slate-400">
+              <div className="w-40 h-40 rounded-[2rem] bg-slate-50 overflow-hidden mb-6 relative border border-slate-200 shadow-lg group-hover:-translate-y-2 transition-transform">
+                <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-blue-600 opacity-10 group-hover:opacity-20 transition-opacity"></div>
+                <div className="w-full h-full flex items-center justify-center text-cyan-600">
                   <Cpu size={64} />
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-slate-900">Nidhi Chaudhary</h3>
-              <p className="text-indigo-600 font-bold text-sm uppercase tracking-wide mb-3">Lead Engineer</p>
+              <p className="text-cyan-600 font-bold text-sm uppercase tracking-wide mb-3">Founder</p>
               <p className="text-slate-600 text-sm text-center">Spearheading the integration of computational models and modern web architectures.</p>
             </motion.div>
 
-            {/* Engineer 2 - Nidhi Chaudhary */}
+            {/* Engineer 2 - Sujal Shah */}
             <motion.div
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -796,14 +785,14 @@ export default function LandingPage() {
               transition={{ duration: 1, ease: "easeOut" }}
               className="flex flex-col items-center group"
             >
-              <div className="w-40 h-40 rounded-[2rem] bg-slate-100 overflow-hidden mb-6 relative border-4 border-white shadow-xl group-hover:-translate-y-2 transition-transform">
-                <div className="absolute inset-0 bg-gradient-to-tr from-emerald-600 to-teal-400 opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                <div className="w-full h-full flex items-center justify-center bg-slate-200 text-slate-400">
+              <div className="w-40 h-40 rounded-[2rem] bg-slate-50 overflow-hidden mb-6 relative border border-slate-200 shadow-lg group-hover:-translate-y-2 transition-transform">
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-violet-600 opacity-10 group-hover:opacity-20 transition-opacity"></div>
+                <div className="w-full h-full flex items-center justify-center text-blue-600">
                   <Cpu size={64} />
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-slate-900">Sujal Shah</h3>
-              <p className="text-emerald-600 font-bold text-sm uppercase tracking-wide mb-3">Lead Engineer</p>
+              <p className="text-blue-600 font-bold text-sm uppercase tracking-wide mb-3">Founder</p>
               <p className="text-slate-600 text-sm text-center">Architecting robust backend systems and real-time physics engine simulations.</p>
             </motion.div>
           </div>
@@ -812,41 +801,40 @@ export default function LandingPage() {
 
 
       {/* Layer 11: Expanded Footer */}
-      <footer className="bg-slate-900 text-slate-300 pt-20 pb-10 border-t border-slate-800">
+      <footer className="bg-slate-50 text-slate-600 pt-20 pb-10 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <img src={IAR} alt="IAR Logo" className="h-10 w-auto object-contain brightness-0 invert opacity-90" />
-                <span className="font-display font-bold text-white text-2xl tracking-wide">Quantum AI Simulation Lab</span>
+                <span className="font-display font-bold text-slate-900 text-2xl tracking-wide">NiSuX Labs</span>
               </div>
-              <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
+              <p className="text-slate-500 text-sm leading-relaxed max-w-sm mb-6">
                 Pioneering the intersection of artificial intelligence, quantum computing, and interactive physics simulations for higher education.
               </p>
               <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#7A1540] hover:text-white transition-colors">
+                <a href="#" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-blue-50 text-blue-600 transition-colors shadow-sm">
                   <Users size={18} />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#7A1540] hover:text-white transition-colors">
+                <a href="#" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-blue-50 text-blue-600 transition-colors shadow-sm">
                   <BookOpen size={18} />
                 </a>
               </div>
             </div>
 
             <div>
-              <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
-              <ul className="space-y-4 text-sm text-slate-400">
-                <li><Link to="/dashboard" className="hover:text-pink-300 transition-colors">Simulations Dashboard</Link></li>
-                <li><Link to="/theory" className="hover:text-pink-300 transition-colors">Theory & Manuals</Link></li>
-                <li><a href="#" className="hover:text-pink-300 transition-colors">BSc Quantum Tech</a></li>
-                <li><a href="#" className="hover:text-pink-300 transition-colors">Documentation</a></li>
+              <h4 className="text-slate-900 font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+              <ul className="space-y-4 text-sm text-slate-500">
+                <li><Link to="/dashboard" className="hover:text-blue-600 transition-colors">Simulations Dashboard</Link></li>
+                <li><Link to="/theory" className="hover:text-blue-600 transition-colors">Theory & Manuals</Link></li>
+                <li><a href="#" className="hover:text-blue-600 transition-colors">BSc Quantum Tech</a></li>
+                <li><a href="#" className="hover:text-blue-600 transition-colors">Documentation</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact Us</h4>
-              <ul className="space-y-4 text-sm text-slate-400">
-                <li>Institute of Advanced Research</li>
+              <h4 className="text-slate-900 font-bold mb-6 uppercase tracking-wider text-sm">Contact Us</h4>
+              <ul className="space-y-4 text-sm text-slate-500">
+                <li>NiSuX Labs</li>
                 <li>Gandhinagar, Gujarat, India</li>
                 <li>Email: research@iar.ac.in</li>
                 <li>Support: labs@iar.ac.in</li>
@@ -854,11 +842,11 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 uppercase tracking-widest font-bold">
-            <p>&copy; 2026 Institute of Advanced Research. All Rights Reserved.</p>
+          <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 uppercase tracking-widest font-bold">
+            <p>&copy; 2026 NiSuX Labs. All Rights Reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-slate-300">Privacy Policy</a>
-              <a href="#" className="hover:text-slate-300">Terms of Service</a>
+              <a href="#" className="hover:text-blue-600">Privacy Policy</a>
+              <a href="#" className="hover:text-blue-600">Terms of Service</a>
             </div>
           </div>
         </div>
