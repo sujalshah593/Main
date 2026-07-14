@@ -834,16 +834,16 @@ export default function LandingPage() {
             <div>
               <h4 className="text-slate-900 font-bold mb-6 uppercase tracking-wider text-sm">Contact Us</h4>
               <ul className="space-y-4 text-sm text-slate-500">
-                <li>NiSuX Labs</li>
+                <li>Quantum AI Labs</li>
                 <li>Gandhinagar, Gujarat, India</li>
-                <li>Email: research@iar.ac.in</li>
-                <li>Support: labs@iar.ac.in</li>
+                <li>Email: growify.in@gmail.com</li>
+                <li>Support: growify.in@gmail.com</li>
               </ul>
             </div>
           </div>
 
           <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 uppercase tracking-widest font-bold">
-            <p>&copy; 2026 NiSuX Labs. All Rights Reserved.</p>
+            <p>&copy; 2026 Quantum AI Labs. All Rights Reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-blue-600">Privacy Policy</a>
               <a href="#" className="hover:text-blue-600">Terms of Service</a>
