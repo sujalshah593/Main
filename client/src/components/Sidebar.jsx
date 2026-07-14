@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LayoutDashboard, BookOpen, TerminalSquare, FlaskConical, PanelLeftClose, PanelLeftOpen } from 'lucide-react';
 import ThemeToggle from './ThemeToggle.jsx';
-import IAR from '../../public/IAR.png';
 
 const linkClass = (isActive, isOpen) =>
   [
@@ -24,10 +23,6 @@ export default function Sidebar() {
         {/* Header */}
         <div className={`flex items-start mb-10 ${isOpen ? 'justify-between px-2' : 'flex-col items-center gap-6'} overflow-hidden`}>
           <div className="flex flex-col items-center">
-            <div className={`flex items-center justify-center rounded-xl overflow-hidden shrink-0 ${isOpen ? 'h-12 w-12' : 'h-10 w-10'}`}>
-              <img src={IAR} alt="IAR Logo" className="h-full w-full object-contain" />
-            </div>
-
             <AnimatePresence>
               {isOpen && (
                 <motion.div
@@ -37,7 +32,6 @@ export default function Sidebar() {
                   className="flex flex-col items-center mt-3 overflow-hidden whitespace-nowrap"
                 >
                   <div className="text-xl font-display font-black text-[#7A1540] dark:text-[#A11E55] tracking-tight">QUANTUM AI LAB</div>
-                  <p className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">Institute of Advanced Research</p>
                 </motion.div>
               )}
             </AnimatePresence>

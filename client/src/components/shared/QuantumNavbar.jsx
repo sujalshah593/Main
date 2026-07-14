@@ -13,7 +13,7 @@ export default function QuantumNavbar() {
             <Cpu size={20} />
           </div>
           <span className="font-display font-black text-xl tracking-tight text-slate-900">
-            NiSuX<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Labs</span>
+            Quantum AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Lab</span>
           </span>
         </Link>
 

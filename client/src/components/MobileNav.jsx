@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import logo from '../../public/snapshots/logo.png';
 
 const pill = ({ isActive }) =>
   [
@@ -14,7 +13,6 @@ export default function MobileNav() {
     <div className="sticky top-0 z-40 border-b border-lab-panelBorder bg-lab-panel backdrop-blur-3xl md:hidden shadow-lg">
       <div className="flex flex-col gap-3 px-4 py-3">
         <div className="flex items-center gap-3">
-          <img src={logo} alt="IAR Logo" className="h-8 w-auto object-contain" />
           <div className="font-display text-lg font-black tracking-tight text-[#7A1540]">QUANTUM AI LAB</div>
         </div>
         <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">

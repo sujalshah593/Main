@@ -806,7 +806,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <span className="font-display font-bold text-slate-900 text-2xl tracking-wide">NiSuX Labs</span>
+                <span className="font-display font-bold text-slate-900 text-2xl tracking-wide">Quantum AI Labs</span>
               </div>
               <p className="text-slate-500 text-sm leading-relaxed max-w-sm mb-6">
                 Pioneering the intersection of artificial intelligence, quantum computing, and interactive physics simulations for higher education.

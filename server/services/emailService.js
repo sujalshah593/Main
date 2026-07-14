@@ -14,7 +14,7 @@ const sendFeedbackEmail = async (feedbackData) => {
 
   // Email content
   const mailOptions = {
-    from: `"IAR Virtual Lab Feedback" <${process.env.EMAIL_USER}>`,
+    from: `"Quantum AI Lab Feedback" <${process.env.EMAIL_USER}>`,
     to: process.env.EMAIL_USER, // Sending to the same email as the user requested
     subject: `New Feedback: ${experimentTitle || 'General Lab Feedback'}`,
     html: `
@@ -25,7 +25,7 @@ const sendFeedbackEmail = async (feedbackData) => {
         <div style="background-color: #ffffff; padding: 15px; border-radius: 5px; border: 1px solid #ddd; margin-top: 10px;">
           <p style="margin: 0; color: #333; line-height: 1.5;">${message}</p>
         </div>
-        <p style="font-size: 12px; color: #666; margin-top: 20px;">This email was sent automatically from the IAR Quantum AI Virtual Lab platform.</p>
+        <p style="font-size: 12px; color: #666; margin-top: 20px;">This email was sent automatically from the Quantum AI Lab platform.</p>
       </div>
     `,
   };
