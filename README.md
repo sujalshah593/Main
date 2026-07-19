@@ -1,84 +1,62 @@
 # Quantum AI Virtual Lab
 
-Production-style MERN educational web app for virtual physics practicals with drag-and-drop wiring (React Flow), Express API, and MongoDB.
+Created by:
+- [sujalshah593](https://github.com/sujalshah593)
+- [nidhiv1303](https://github.com/nidhiv1303)
 
-## Prerequisites
+---
 
-- Node.js 18+
-- MongoDB running locally (or set `MONGODB_URI` to Atlas)
+## 📖 Overview
 
-## Quick start
+**Quantum AI Virtual Lab** is a production-ready, interactive educational web application designed for running virtual physics and electronics practicals. It provides a highly visual, drag-and-drop wiring interface for students to simulate and validate complex circuit setups in a browser environment.
 
-### 1. Backend
+## ✨ Key Features
+
+- **Interactive Simulator Workspace**: Uses React Flow for an intuitive, node-based drag-and-drop canvas.
+- **Real-Time Validation**: Evaluates the user's wiring diagram against expected configurations to provide instant "Correct setup" or "Incorrect setup" feedback.
+- **Component Palette**: Easily pull in nodes representing different physical components (e.g., batteries, resistors, logic gates, voltmeters).
+- **Comprehensive API**: A robust Express and MongoDB backend to manage lab categories, theoretical material, and simulator configurations.
+- **Responsive Design**: Adapts beautifully across various screen sizes—featuring a spacious sidebar for desktops and a compact top navigation for mobile devices.
+- **No Friction**: Publicly accessible routes meant to provide immediate access to learning tools without the need for authentication.
+
+## 🛠️ Tech Stack
+
+**Frontend:**
+- [React.js](https://reactjs.org/) & [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/) for rapid, modern styling
+- [React Flow (`@xyflow/react`)](https://reactflow.dev/) for the node-based simulator canvas
+
+**Backend:**
+- [Node.js](https://nodejs.org/) & [Express.js](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/) & [Mongoose](https://mongoosejs.com/) for data modeling
+
+## 🚀 Getting Started
+
+Follow these instructions to set up the project locally for development and testing.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en/download/) (v18 or higher recommended)
+- [MongoDB](https://www.mongodb.com/try/download/community) (Running locally, or set up a cluster on MongoDB Atlas)
+
+### 1. Backend Setup
+
+Navigate to the server directory, install dependencies, and start the development server.
 
 ```bash
 cd server
-# Linux/macOS: cp .env.example .env
-# Windows PowerShell: Copy-Item .env.example .env
+
+# Copy the sample environment file
+# On Linux/macOS:
+cp .env.example .env
+# On Windows PowerShell:
+Copy-Item .env.example .env
+
+# Install dependencies
 npm install
+
+# Seed the database with initial lab data
 npm run seed
+
+# Start the Express API server (runs on http://localhost:5000 by default)
 npm run dev
-```
-
-API listens on `http://localhost:5000` (or `PORT` from `.env`).
-
-### 2. Frontend
-
-```bash
-cd client
-npm install
-npm run dev
-```
-
-Open `http://localhost:5173`. Vite proxies `/api` to the Express server.
-
-### 3. Production build (client)
-
-```bash
-cd client
-npm run build
-npm run preview
-```
-
-Set `VITE_API_URL` when the API is hosted on another origin.
-
-## Project layout
-
-```
-Main/
-├── client/                 # React + Vite + Tailwind
-│   └── src/
-│       ├── api/
-│       ├── components/
-│       │   └── simulator/  # React Flow bench + LabNode
-│       ├── hooks/
-│       ├── layouts/
-│       ├── pages/
-│       └── utils/
-├── server/                 # Express + Mongoose
-│   ├── config/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   └── seed/
-└── README.md
-```
-
-## HTTP API
-
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/labs` | List lab categories |
-| GET | `/api/experiments/:labId` | List experiments for a lab |
-| GET | `/api/experiment/:id` | Full experiment (theory, simulator config, etc.) |
-| POST | `/api/feedback` | Body: `{ experimentId, message, rating }` |
-
-## Simulator validation
-
-Each experiment ships a `simulatorConfig` with a `palette` and `correctConnections`. The client resolves each edge to `(fromType, fromHandle → toType, toHandle)` and compares sorted multisets to the expected list. Matching wiring shows **Correct setup**; otherwise **Incorrect setup**.
-
-## Tech choices
-
-- **React Flow** (`@xyflow/react`) for nodes, edges, and palette drag-and-drop onto the canvas.
-- **No authentication** — all routes are public as requested.
-- **Responsive UI** — sidebar on large screens, compact top navigation on small screens.
